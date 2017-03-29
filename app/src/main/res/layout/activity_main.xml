@@ -30,10 +30,12 @@
                android:layout_height="wrap_content" />
 
             <EditText
+                android:textColor="@color/colorPrimaryDark"
                 android:inputType="text"
                 android:hint="@string/user"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:id="@+id/edtUser"/>
         </LinearLayout>
 
         <LinearLayout
@@ -47,10 +49,12 @@
                android:layout_height="wrap_content" />
 
             <EditText
-                android:inputType="text"
-                android:hint="@string/password"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/edtpassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="text" />
         </LinearLayout>
         <TextView
             android:textSize="@dimen/h2"
@@ -58,7 +62,9 @@
             android:text="@string/new_register"
             android:textColor="#68c69f"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNewRegister"
+            android:clickable="true"/>
 
     </LinearLayout>
 
@@ -68,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
-
+        android:id="@+id/btnLogin"
         />
 
 
