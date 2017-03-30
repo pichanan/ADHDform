@@ -18,6 +18,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/imvRegister"
                 android:src="@drawable/ic_user_web"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="250dp"
@@ -36,6 +37,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:id="@+id/edtName"
                     android:inputType="text"
                     android:hint="@string/name"
                     android:layout_width="match_parent"
@@ -53,6 +55,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:id="@+id/edtUser"
                     android:inputType="text"
                     android:hint="๊User :"
                     android:layout_width="match_parent"
@@ -73,6 +76,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:id="@+id/edtPassword"
                     android:inputType="text"
                     android:hint="Password :"
                     android:layout_width="match_parent"
@@ -87,10 +91,12 @@
 
 
                 <ImageView
+                    android:id="@+id/imvBirthDay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_calendar"/>
                 <TextView
+                    android:id="@+id/txtBirthDay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Your Birth Day"
@@ -104,28 +110,72 @@
                 android:layout_marginTop="@dimen/my_margin2"
                 android:textStyle="bold"
                 android:textSize="@dimen/h2"
-                android:text="Sex"
+                android:text="@string/gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <RadioGroup
+                android:id="@+id/ragGender"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
               <RadioButton
+                  android:id="@+id/radMale"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:text="Male">
+                  android:text="@string/male">
 
               </RadioButton>
 
                 <RadioButton
+                    android:id="@+id/radFemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Femail"></RadioButton>
+                    android:text="@string/femaale"></RadioButton>
 
             </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spnClass"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></Spinner>
+
+            <TextView
+                android:layout_marginTop="@dimen/my_margin2"
+                android:textStyle="bold"
+                android:textSize="@dimen/h2"
+                android:text="@string/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/ragType"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teacher">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parent"></RadioButton>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:text="@string/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
 
