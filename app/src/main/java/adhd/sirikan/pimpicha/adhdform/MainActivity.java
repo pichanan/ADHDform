@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView = (TextView) findViewById(R.id.txtNewRegister);
         button  = (Button) findViewById(R.id.btnLogin);
 
+
     }
 
     @Override
