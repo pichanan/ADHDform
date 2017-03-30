@@ -13,6 +13,8 @@
     <string name="teacher">Teacher</string>
     <string name="parent">Parent</string>
     <string name="title_havespace">Have Space</string>
-    <string name="message_havespece">Plwase Fill Every Blank</string>
+    <string name="message_havespece">Please Fill Every Blank</string>
+    <string name="title_nonset">Without Check Type</string>
+    <string name="message_noncheck">Please Check on Type</string>
 
 </resources>
