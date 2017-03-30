@@ -108,17 +108,20 @@
 
             </RadioGroup>
 
-            <Button
 
-                android:id="@+id/btnSave"
-                android:text="@string/save"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
 
 
 
         </LinearLayout>
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnSave"
+        android:text="@string/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 
