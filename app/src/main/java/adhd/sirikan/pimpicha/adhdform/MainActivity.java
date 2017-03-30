@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         passwordEditText = (EditText) findViewById(R.id.edtpassword);
         textView = (TextView) findViewById(R.id.txtNewRegister);
         button  = (Button) findViewById(R.id.btnLogin);
-
-
     }
 
     @Override
