@@ -12,5 +12,7 @@
     <string name="type">Type</string>
     <string name="teacher">Teacher</string>
     <string name="parent">Parent</string>
+    <string name="title_havespace">Have Space</string>
+    <string name="message_havespece">Plwase Fill Every Blank</string>
 
 </resources>
