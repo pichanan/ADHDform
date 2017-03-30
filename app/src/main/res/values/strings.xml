@@ -16,5 +16,9 @@
     <string name="message_havespece">Please Fill Every Blank</string>
     <string name="title_nonset">Without Check Type</string>
     <string name="message_noncheck">Please Check on Type</string>
+    <string name="title_userfalse">User False</string>
+    <string name="message_userfalse">No This User in my Database</string>
+    <string name="title_passwordfalse">Password False</string>
+    <string name="message_passwordfalse">Please Try Again Password False</string>
 
 </resources>
