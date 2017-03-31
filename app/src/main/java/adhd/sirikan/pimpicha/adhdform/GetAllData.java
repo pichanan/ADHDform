@@ -16,6 +16,7 @@ public class GetAllData extends AsyncTask<String, Void, String>{
 
     private Context context;
 
+    //ตำแหน่ง usr ที่ต้องการโยน
     public GetAllData(Context context) {
         this.context = context;
     }

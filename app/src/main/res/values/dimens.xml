@@ -7,4 +7,5 @@
     <dimen name="my_margin2">30dp</dimen>
     <dimen name="height_layout">150dp</dimen>
     <dimen name="h1">50sp</dimen>
+    <dimen name="icon">120dp</dimen>
 </resources>

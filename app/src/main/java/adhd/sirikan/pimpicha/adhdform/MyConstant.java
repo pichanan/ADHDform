@@ -5,15 +5,49 @@ package adhd.sirikan.pimpicha.adhdform;
  */
 
 public class MyConstant {
+
     //Explicit
     private String urlAddUser = "http://adhdpj.com/app/addUserPim.php";
     private String urlGetUser = "http://adhdpj.com/app/getUser.php";
     private String[] columnUser = new String[]{"id", "User", "Password", "Type"};
+    private String urlAddChild = "http://adhdpj.com/app/addChildPim.php";
+    private  String urlGetChild = "http://adhdpj.com/app/getChild.php";
+    //ถ้าใส่ตารางเพิ่มเข้อมูลเด็กต้องมาใส่ตรงนี้ด้วย
+    private String[] columnChild = new String[]{"id","id_Login","Name","Age","Image"};
 
+        //for FTP
     private String hostString = "ftp.adhdpj.com";
     private String userString = "adhd@adhdpj.com";
     private String passwordString = "Pimpluempj402";
     private int portAnInt = 21;
+
+    public String[] getColumnChild() {
+        return columnChild;
+    }
+
+    public String getUrlGetChild() {
+        return urlGetChild;
+    }
+
+    public String getUrlAddChild() {
+        return urlAddChild;
+    }
+
+    public String getHostString() {
+        return hostString;
+    }
+
+    public String getUserString() {
+        return userString;
+    }
+
+    public String getPasswordString() {
+        return passwordString;
+    }
+
+    public int getPortAnInt() {
+        return portAnInt;
+    }
 
     public String[] getColumnUser() {
         return columnUser;

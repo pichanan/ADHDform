@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import org.jibble.simpleftp.SimpleFTP;
+
+import java.io.File;
+import java.util.jar.Attributes;
 
 public class AddChildActivity extends AppCompatActivity implements View.OnClickListener {
     // Explecit
@@ -51,6 +58,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
     private void initialView() {
         imageView = (ImageView) findViewById(R.id.imvRegister);
         nameEditText = (EditText) findViewById(R.id.edtName);
+        ageEditText = (EditText) findViewById(R.id.edtAge);
         radioGroup = (RadioGroup) findViewById(R.id.ragGender);
         maleRadioButton = (RadioButton) findViewById(R.id.radMale);
         femaleRadioButton = (RadioButton) findViewById(R.id.radFemale);
@@ -156,7 +164,46 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
     }//butn controller
 
     private void uploadDataToserver() {
+        try {
+        // Change policy ให้ใช้ FTP protocal
+            StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
+                    .Builder().permitAll().build(); // ใช้ ปลดล็อก FTP protocal
+            StrictMode.setThreadPolicy(threadPolicy);
 
+            //set up value
+            MyConstant myConstant = new MyConstant();
+            String[] loginStrings = getIntent().getStringArrayExtra("Login");
+            nameImageString = "http://adhdpj.com/app/Image" + nameImageString;
+
+            //Upload
+            SimpleFTP simpleFTP = new SimpleFTP();
+            simpleFTP.connect(myConstant.getHostString(), myConstant.getPortAnInt(),
+                    myConstant.getUserString(), myConstant.getPasswordString());
+            simpleFTP.bin(); //เปลี่ยนภาพเแป็นอักษร
+            simpleFTP.cwd("Image"); // folder
+            simpleFTP.stor(new File(pathImageString));
+            simpleFTP.disconnect();
+
+            //Upload value to mySql
+
+            PostChild postChild = new PostChild(AddChildActivity.this);
+            postChild.execute(loginStrings[0], nameChildString,ageString,
+                    nameImageString,myConstant.getUrlAddChild());
+
+            String strResult = postChild.get();
+            Log.d(tag, "strResult ==>" + strResult);
+
+            if (Boolean.parseBoolean(strResult)) {
+                finish();
+            } else {
+                Toast.makeText(AddChildActivity.this, "Cannot save Data" ,Toast.LENGTH_SHORT).show();
+
+            }
+
+
+        } catch (Exception e) {
+            Log.d(tag,"e upload ==>" + e.toString());
+        }
 
     }// upload
 }

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String[] loginStrings;
     private boolean aBoolean = true;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //initial widget
         initialWidget();
+
+
+
         //controller
         controller();
         Button buttonIntent = (Button)findViewById(R.id.toSnap);
@@ -47,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }// main method
+
+
 
     private void controller() {
         textView.setOnClickListener(MainActivity.this);

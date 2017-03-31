@@ -3,7 +3,7 @@
     package="adhd.sirikan.pimpicha.adhdform">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +23,8 @@
         <activity android:name=".AddChildActivity" />
         <activity android:name=".ToldTestActivity" />
         <activity android:name=".SnapActivity" />
-        <activity android:name=".ThassActivity"></activity>
+        <activity android:name=".ThassActivity" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>

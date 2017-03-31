@@ -3,10 +3,15 @@ package adhd.sirikan.pimpicha.adhdform;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView userTextView,typeTextView;
@@ -14,6 +19,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     private ListView listView;
     private String[] loginString;
     private String[] showTypeStrings = new String[]{"Teacher","Children"};
+    private String tag = "31MarchV2";
 
     @Override
 
@@ -31,6 +37,60 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         imageView.setOnClickListener(ServiceActivity.this);
 
     }//main method
+
+    @Override
+    protected void onPostResume() {//**************************************
+        super.onPostResume();
+        createListView();
+    }
+
+    private void createListView() {
+
+
+        try {
+            GetAllData getAllData = new GetAllData(ServiceActivity.this);
+            MyConstant myConstant = new MyConstant();
+            getAllData.execute(myConstant.getUrlGetChild());
+
+            String strJSON = getAllData.get();
+            Log.d(tag, "JSoN ==>" + strJSON);
+
+            String[] columnChileStrings = myConstant.getColumnChild();
+            JSONArray jsonArray = new JSONArray(strJSON);
+            final String[] idStrings = new String[jsonArray.length()];
+            final String[] nameChildStrings = new String[jsonArray.length()];
+            String[] imageStrings = new String[jsonArray.length()];
+            for (int i = 0 ;i<jsonArray.length();i++) {
+
+
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                idStrings[i] = jsonObject.getString(columnChileStrings[0]);
+                nameChildStrings[i] = jsonObject.getString(columnChileStrings[2]);
+                imageStrings[i] = jsonObject.getString(columnChileStrings[4]);
+
+            }
+            //Build ListView
+            ChildAdapter childAdapter = new ChildAdapter(ServiceActivity.this, imageStrings,
+                    nameChildStrings);
+            listView.setAdapter(childAdapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent intent = new Intent(ServiceActivity.this, DetailActivity.class);
+                    intent.putExtra("Login", loginString);
+                    intent.putExtra("Index", idStrings[position]);
+                    startActivity(intent);
+                    // ไม่ต้อง หยุด เพราะจะให้ย้อนกลับได้
+                }
+            });
+
+
+        } catch (Exception e) {
+            Log.d(tag, "e createListView ==>" + e.toString());
+        }
+
+    }
 
     private void showView() {
         userTextView.setText(loginString[1]);
