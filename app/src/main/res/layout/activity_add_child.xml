@@ -63,21 +63,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_calendar"/>
-                <TextView
-                    android:id="@+id/txtBirthDay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Your Birth Day"
-                    android:textSize="@dimen/h2"
-                    android:layout_gravity="center_vertical"/>
+                <EditText
+                    android:id="@+id/edtAge"
+                    android:inputType="text"
+                    android:hint="@string/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
 
             </LinearLayout>
-
-            <Spinner
-                android:id="@+id/spnClass"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"></Spinner>
             <TextView
                 android:layout_marginTop="@dimen/my_margin2"
                 android:textStyle="bold"
