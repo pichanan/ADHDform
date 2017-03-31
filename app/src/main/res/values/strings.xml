@@ -20,6 +20,13 @@
     <string name="message_userfalse">No This User in my Database</string>
     <string name="title_passwordfalse">Password False</string>
     <string name="message_passwordfalse">Please Try Again Password False</string>
+    <string name="title_nonChooseImage">No choose Image</string>
+    <string name="message_nonChooseImage">Pleashe choose image</string>
+    <string name="title_nonGender">Without Check gender</string>
+    <string name="message_nonGender">Please check on gender</string>
+
+
+
     <string name="text">ท่านกำลังทำแบบประเมินของ</string>
     <string name="text2">ด้วยแบบประเมิน</string>
     <string name="text3">กรุณาตอบคำถามให้้ครบ</string>

@@ -11,7 +11,10 @@
     <ScrollView
         android:padding="@dimen/my_margin2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
 
@@ -65,7 +68,7 @@
                     android:src="@mipmap/ic_calendar"/>
                 <EditText
                     android:id="@+id/edtAge"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:hint="@string/age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

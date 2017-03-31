@@ -10,6 +10,11 @@ public class MyConstant {
     private String urlGetUser = "http://adhdpj.com/app/getUser.php";
     private String[] columnUser = new String[]{"id", "User", "Password", "Type"};
 
+    private String hostString = "ftp.adhdpj.com";
+    private String userString = "adhd@adhdpj.com";
+    private String passwordString = "Pimpluempj402";
+    private int portAnInt = 21;
+
     public String[] getColumnUser() {
         return columnUser;
     }

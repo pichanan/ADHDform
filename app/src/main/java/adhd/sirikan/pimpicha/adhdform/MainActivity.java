@@ -118,6 +118,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //User False
                 objMyAlert.myDialog(getResources().getString(R.string.title_userfalse),
                         getResources().getString(R.string.message_userfalse));
+            }else if(!(passString.equals(loginStrings[2]))){ //if pw false
+                objMyAlert.myDialog(getResources().getString(R.string.title_passwordfalse),
+                        getResources().getString(R.string.message_passwordfalse));
+
+            }else{
+            //pass fail
+                Intent intent = new Intent(MainActivity.this,ServiceActivity.class);
+                intent.putExtra("Login", loginStrings);
+                startActivity(intent);
+                finish(); // protect back login
             }
 
         } catch (Exception e) {
