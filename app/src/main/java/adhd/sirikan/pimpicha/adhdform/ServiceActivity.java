@@ -18,7 +18,8 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     private ImageView imageView;
     private ListView listView;
     private String[] loginString;
-    private String[] showTypeStrings = new String[]{"Teacher","Children"};
+
+    private String[] showTypeStrings = new String[]{"Teacher","Parent"};
     private String tag = "31MarchV2";
 
     @Override
@@ -59,19 +60,28 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
             JSONArray jsonArray = new JSONArray(strJSON);
             final String[] idStrings = new String[jsonArray.length()];
             final String[] nameChildStrings = new String[jsonArray.length()];
+            final String[] userString = new String[jsonArray.length()];
             String[] imageStrings = new String[jsonArray.length()];
+            int j =0;
             for (int i = 0 ;i<jsonArray.length();i++) {
 
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                idStrings[i] = jsonObject.getString(columnChileStrings[0]);
-                nameChildStrings[i] = jsonObject.getString(columnChileStrings[2]);
-                imageStrings[i] = jsonObject.getString(columnChileStrings[4]);
+                if(jsonObject.getString(columnChileStrings[1]).equals(loginString[0])){
+                    userString[j] = jsonObject.getString(columnChileStrings[1]);
+                    idStrings[j] = jsonObject.getString(columnChileStrings[0]);
+                    nameChildStrings[j] = jsonObject.getString(columnChileStrings[2]);
+                    imageStrings[j] = jsonObject.getString(columnChileStrings[4]);
+                    j++;
+                }
+
 
             }
+
+            final String[] countChildString = new String[j];
             //Build ListView
             ChildAdapter childAdapter = new ChildAdapter(ServiceActivity.this, imageStrings,
-                    nameChildStrings);
+                    nameChildStrings,countChildString);
             listView.setAdapter(childAdapter);
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -79,7 +89,8 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent intent = new Intent(ServiceActivity.this, DetailActivity.class);
                     intent.putExtra("Login", loginString);
-                    intent.putExtra("Index", idStrings[position]);
+                    intent.putExtra("tmpIndex", idStrings[position]);
+                    Log.d("2ApilV1", "Child id  ==> " +idStrings[position] );
                     startActivity(intent);
                     // ไม่ต้อง หยุด เพราะจะให้ย้อนกลับได้
                 }

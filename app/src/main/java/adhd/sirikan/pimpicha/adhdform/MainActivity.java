@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             JSONArray jsonArray = new JSONArray(strJSON);
             for (int i=0;i<jsonArray.length();i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                if (userString.equals(jsonObject.getString(columnStrings[1]))) {
+                if (userString.equals(jsonObject.getString(columnStrings[1]))) { // แนวนอน
                     loginStrings = new String[columnStrings.length];
                     for (int i1=0;i1<loginStrings.length;i1++) {
                         loginStrings[i1] = jsonObject.getString(columnStrings[i1]);
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         getResources().getString(R.string.message_passwordfalse));
 
             }else{
-            //pass fail
+                //pass fail
                 Intent intent = new Intent(MainActivity.this,ServiceActivity.class);
                 intent.putExtra("Login", loginStrings);
                 startActivity(intent);

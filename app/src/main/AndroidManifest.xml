@@ -21,10 +21,10 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ServiceActivity" />
         <activity android:name=".AddChildActivity" />
-        <activity android:name=".ToldTestActivity" />
         <activity android:name=".SnapActivity" />
         <activity android:name=".ThassActivity" />
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".BeforeTestActivity"></activity>
     </application>
 
 </manifest>

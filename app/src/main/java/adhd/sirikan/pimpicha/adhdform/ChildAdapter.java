@@ -16,19 +16,20 @@ import com.squareup.picasso.Picasso;
 
 public class ChildAdapter extends BaseAdapter {// for Listview / bestadap วนวาง
     private Context context;
-    private String[] iconStrings , childStrings;
+    private String[] iconStrings , childStrings,cnt;
     private TextView textView;
     private ImageView imageView;
 
-    public ChildAdapter(Context context, String[] iconStrings, String[] childStrings) {
+    public ChildAdapter(Context context, String[] iconStrings, String[] childStrings,String[] cnt) {
         this.context = context;
         this.iconStrings = iconStrings;
         this.childStrings = childStrings;
+        this.cnt=cnt;
     }
 
     @Override
     public int getCount() {// count of listview ,how many
-        return childStrings.length;
+        return cnt.length;
     }
 
     @Override
