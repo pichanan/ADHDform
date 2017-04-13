@@ -123,7 +123,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         if (v.equals(imageView)) {
             Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
             intent.setType("image/*");
-            startActivityForResult(Intent.createChooser(intent,"Pleach choose App?"),1);   // 1 mean  1 photo
+            startActivityForResult(Intent.createChooser(intent,"Please choose App?"),1);   // 1 mean  1 photo
 
         }
 
@@ -190,7 +190,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
 
             PostChild postChild = new PostChild(AddChildActivity.this);
             postChild.execute(loginStrings[0], nameChildString,ageString,
-                    nameImageString,myConstant.getUrlAddChild());
+                    nameImageString,myConstant.getUrlAddChild());  // เรียก method ใน myconstance
 
             String strResult = postChild.get();
             Log.d(tag, "strResult ==>" + strResult);

@@ -306,7 +306,7 @@
 
     <Button
 
-        android:id="@+id/submitSnap"
+        android:id="@+id/thass3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

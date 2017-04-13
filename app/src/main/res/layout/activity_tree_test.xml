@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="adhd.sirikan.pimpicha.adhdform.TreeTestActivity"
+android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_layout"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/imvTree1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/treeUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:textColor="#fbf9f9"
+        android:textSize="@dimen/h1"
+        android:layout_below="@+id/treeShowChild"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/treeShowChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailUserName"
+        android:layout_centerHorizontal="true"
+        android:text="test"
+
+        android:textColor="#fbf9f9"
+        android:textSize="@dimen/h1" />
+
+
+</RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonSdq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="buttonSdq" />
+
+    <Button
+        android:id="@+id/buttonSnap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="buttonSnap" />
+
+    <Button
+        android:id="@+id/buttonThass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="buttonThass" />
+
+
+</LinearLayout>
+
+
+

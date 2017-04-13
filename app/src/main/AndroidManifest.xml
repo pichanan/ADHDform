@@ -22,9 +22,11 @@
         <activity android:name=".ServiceActivity" />
         <activity android:name=".AddChildActivity" />
         <activity android:name=".SnapActivity" />
-        <activity android:name=".ThassActivity" />
+        <activity android:name=".TassActivity" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".BeforeTestActivity"></activity>
+        <activity android:name=".BeforeTestActivity" />
+        <activity android:name=".TreeTestActivity" />
+        <activity android:name=".SdqActivity"></activity>
     </application>
 
 </manifest>

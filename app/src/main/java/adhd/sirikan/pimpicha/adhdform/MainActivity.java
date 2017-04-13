@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         buttonIntent2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ThassActivity.class);
+                Intent intent = new Intent(MainActivity.this, TassActivity.class);
                 startActivity(intent);
             }
         });
