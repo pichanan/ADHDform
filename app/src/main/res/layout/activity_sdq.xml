@@ -239,7 +239,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ทำงานได้จนเสร็จ มีความตั้งใจในการทำงาน"/>
+                    android:text="25.ทำงานได้จนเสร็จ มีความตั้งใจในการทำงาน"/>
                 <Spinner
                     android:id="@+id/spinSdq25"
                     android:layout_width="match_parent"

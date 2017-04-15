@@ -26,7 +26,8 @@
         <activity android:name=".DetailActivity" />
         <activity android:name=".BeforeTestActivity" />
         <activity android:name=".TreeTestActivity" />
-        <activity android:name=".SdqActivity"></activity>
+        <activity android:name=".SdqActivity" />
+        <activity android:name=".GraphActivity"></activity>
     </application>
 
 </manifest>

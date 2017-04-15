@@ -11,6 +11,14 @@
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_layout">
+
+        <ImageView
+            android:id="@+id/imvGraph"
+            android:layout_marginTop="31dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_user"/>
+
         <ImageView
             android:id="@+id/imvChild"
             android:src="@mipmap/ic_launcher"

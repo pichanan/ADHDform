@@ -43,7 +43,7 @@ public class TreeTestActivity extends AppCompatActivity {
         });
         btnSdq.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(TreeTestActivity.this, TassActivity.class);
+                Intent intent = new Intent(TreeTestActivity.this, SdqActivity.class);
                 intent.putExtra("Login", loginString);
                 intent.putExtra("tmpIndex", idString);
                 startActivity(intent);

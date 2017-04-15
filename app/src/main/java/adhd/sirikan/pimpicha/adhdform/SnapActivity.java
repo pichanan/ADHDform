@@ -1,32 +1,40 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.graphics.Color;
+import android.icu.util.Calendar;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class SnapActivity extends AppCompatActivity implements View.OnClickListener {
     // explicit
 
 
     private Button button;
-    Spinner spinnerView,spinnerView2,spinnerView3,spinnerView4,spinnerView5,spinnerView6,spinnerView7,spinnerView8,spinnerView9,spinnerView10,
-    spinnerView11,spinnerView12,spinnerView13,spinnerView14,spinnerView15,spinnerView16,spinnerView17,spinnerView18,spinnerView19
-    ,spinnerView20,spinnerView21,spinnerView22,spinnerView23,spinnerView24,spinnerView25,spinnerView26;
-    String spn,spn2,spn3,spn4,spn5,spn6,spn7,spn8,spn9,spn10,spn11,spn12,spn13,spn14,spn15,spn16,spn17,spn18,spn19,spn20,spn21
-            ,spn22,spn23,spn24,spn25,spn26;
-    String[] spinnerValue = {"-", "0", "1", "2","3"};
+    Spinner spinnerView, spinnerView2, spinnerView3, spinnerView4, spinnerView5, spinnerView6, spinnerView7, spinnerView8, spinnerView9, spinnerView10,
+            spinnerView11, spinnerView12, spinnerView13, spinnerView14, spinnerView15, spinnerView16, spinnerView17, spinnerView18, spinnerView19, spinnerView20, spinnerView21, spinnerView22, spinnerView23, spinnerView24, spinnerView25, spinnerView26;
+    String spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13, spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
+    String[] spinnerValue = {"-", "0", "1", "2", "3"};
     private static String tag = "30MarchV1";
-    String idString,loginString[];
+    String idString, loginString[];
+    TextView textView;
 
+    private java.util.Calendar calendar;
+    private String currentDateString;
 
 
     @Override
@@ -39,6 +47,10 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
         initialSpinner();
         initialView();
 
+        //find currentDate
+        findCurrentDate();
+
+        textView = (TextView) findViewById(R.id.qsnap1);
 
 
         //btn controller
@@ -47,35 +59,42 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
 
     }//main method
 
+    private void findCurrentDate() {
+        calendar = java.util.Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        currentDateString = dateFormat.format(calendar.getTime());
+        Log.d("10AprilV1", "currentDate" + currentDateString);
+    }
+
     private void initialSpinner() {
 
 
-        spinnerView =(Spinner)findViewById(R.id.spinner1);
-        spinnerView2 =(Spinner)findViewById(R.id.spinner2);
-        spinnerView3 =(Spinner)findViewById(R.id.spinner3);
-        spinnerView4 =(Spinner)findViewById(R.id.spinner4);
-        spinnerView5 =(Spinner)findViewById(R.id.spinner5);
-        spinnerView6 =(Spinner)findViewById(R.id.spinner6);
-        spinnerView7 =(Spinner)findViewById(R.id.spinner7);
-        spinnerView8 =(Spinner)findViewById(R.id.spinner8);
-        spinnerView9 =(Spinner)findViewById(R.id.spinner9);
-        spinnerView10 =(Spinner)findViewById(R.id.spinner10);
-        spinnerView11 =(Spinner)findViewById(R.id.spinner11);
-        spinnerView12 =(Spinner)findViewById(R.id.spinner12);
-        spinnerView13 =(Spinner)findViewById(R.id.spinner13);
-        spinnerView14 =(Spinner)findViewById(R.id.spinner14);
-        spinnerView15 =(Spinner)findViewById(R.id.spinner15);
-        spinnerView16 =(Spinner)findViewById(R.id.spinner16);
-        spinnerView17 =(Spinner)findViewById(R.id.spinner17);
-        spinnerView18 =(Spinner)findViewById(R.id.spinner18);
-        spinnerView19 =(Spinner)findViewById(R.id.spinner19);
-        spinnerView20 =(Spinner)findViewById(R.id.spinner20);
-        spinnerView21 =(Spinner)findViewById(R.id.spinner21);
-        spinnerView22 =(Spinner)findViewById(R.id.spinner22);
-        spinnerView23 =(Spinner)findViewById(R.id.spinner23);
-        spinnerView24 =(Spinner)findViewById(R.id.spinner24);
-        spinnerView25 =(Spinner)findViewById(R.id.spinner25);
-        spinnerView26 =(Spinner)findViewById(R.id.spinner26);
+        spinnerView = (Spinner) findViewById(R.id.spinner1);
+        spinnerView2 = (Spinner) findViewById(R.id.spinner2);
+        spinnerView3 = (Spinner) findViewById(R.id.spinner3);
+        spinnerView4 = (Spinner) findViewById(R.id.spinner4);
+        spinnerView5 = (Spinner) findViewById(R.id.spinner5);
+        spinnerView6 = (Spinner) findViewById(R.id.spinner6);
+        spinnerView7 = (Spinner) findViewById(R.id.spinner7);
+        spinnerView8 = (Spinner) findViewById(R.id.spinner8);
+        spinnerView9 = (Spinner) findViewById(R.id.spinner9);
+        spinnerView10 = (Spinner) findViewById(R.id.spinner10);
+        spinnerView11 = (Spinner) findViewById(R.id.spinner11);
+        spinnerView12 = (Spinner) findViewById(R.id.spinner12);
+        spinnerView13 = (Spinner) findViewById(R.id.spinner13);
+        spinnerView14 = (Spinner) findViewById(R.id.spinner14);
+        spinnerView15 = (Spinner) findViewById(R.id.spinner15);
+        spinnerView16 = (Spinner) findViewById(R.id.spinner16);
+        spinnerView17 = (Spinner) findViewById(R.id.spinner17);
+        spinnerView18 = (Spinner) findViewById(R.id.spinner18);
+        spinnerView19 = (Spinner) findViewById(R.id.spinner19);
+        spinnerView20 = (Spinner) findViewById(R.id.spinner20);
+        spinnerView21 = (Spinner) findViewById(R.id.spinner21);
+        spinnerView22 = (Spinner) findViewById(R.id.spinner22);
+        spinnerView23 = (Spinner) findViewById(R.id.spinner23);
+        spinnerView24 = (Spinner) findViewById(R.id.spinner24);
+        spinnerView25 = (Spinner) findViewById(R.id.spinner25);
+        spinnerView26 = (Spinner) findViewById(R.id.spinner26);
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(SnapActivity.this, android.R.layout.simple_list_item_1, spinnerValue);
@@ -105,7 +124,6 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
         spinnerView24.setAdapter(adapter);
         spinnerView25.setAdapter(adapter);
         spinnerView26.setAdapter(adapter);
-
 
 
     }
@@ -152,8 +170,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             spn26 = spinnerView26.getSelectedItem().toString();
 
 
-
-            if (spn.equals("") ) {
+            if (spn.equals("-")) {
                 //have space
                 myAlert objMyAlert = new myAlert(SnapActivity.this);
                 objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
@@ -175,15 +192,19 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             String strURL = myConstant.getUrlAddTest();
 
             PostTest postTest = new PostTest(SnapActivity.this);
-            postTest.execute(spn, spn2,spn3,spn4,spn5, spn6,spn7,spn8,spn9, spn10,spn11,spn12,spn13,
-                    spn14, spn15,spn16,spn17,spn18, spn19,spn20,spn21,spn22, spn23,spn24,spn25,spn26,loginString[0],idString,strURL);
+            postTest.execute(spn, spn2, spn3, spn4, spn5,
+                    spn6, spn7, spn8, spn9, spn10,
+                    spn11, spn12, spn13, spn14, spn15,
+                    spn16, spn17, spn18, spn19, spn20,
+                    spn21, spn22, spn23, spn24, spn25,
+                    spn26, loginString[0], idString, strURL);
 
             Log.d(tag, "Result ==>" + postTest.get());
 
             if (Boolean.parseBoolean((postTest.get()))) {
                 finish();
-            }else{
-                Toast.makeText(SnapActivity.this,"Cannot save user",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(SnapActivity.this, "Cannot save user", Toast.LENGTH_SHORT).show();
             }
 
         } catch (Exception e) {

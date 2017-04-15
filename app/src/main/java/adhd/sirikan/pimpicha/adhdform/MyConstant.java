@@ -15,6 +15,9 @@ public class MyConstant {
     private  String urlAddSnap = "http://adhdpj.com/app/addSnapPim.php";
     private  String urlAddTest = "http://adhdpj.com/app/addTest.php";
     private  String urlAddTass = "http://adhdpj.com/app/addThass.php";
+    private String urlGetUrlThestWhere = "http://adhdpj.com/app/getTestWhere.php";
+
+
     //ถ้าใส่ตารางเพิ่มเข้อมูลเด็กต้องมาใส่ตรงนี้ด้วย
     private String[] columnChild = new String[]{"id","id_Login","Name","Age","Image"};
     private  String[] columnSnap = new String[]{"ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8"
@@ -26,6 +29,10 @@ public class MyConstant {
     private String userString = "adhd@adhdpj.com";
     private String passwordString = "Pimpluempj402";
     private int portAnInt = 21;
+
+    public String getUrlGetUrlThestWhere() {
+        return urlGetUrlThestWhere;
+    }
 
     public String[] getColumnChild() {
         return columnChild;

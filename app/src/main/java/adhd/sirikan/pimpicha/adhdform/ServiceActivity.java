@@ -15,9 +15,10 @@ import org.json.JSONObject;
 
 public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView userTextView,typeTextView;
-    private ImageView imageView;
+
     private ListView listView;
     private String[] loginString;
+    private  ImageView imageView , graphImageView;
 
     private String[] showTypeStrings = new String[]{"Teacher","Parent"};
     private String tag = "31MarchV2";
@@ -30,14 +31,23 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
 
         InitialView();
         //get value
-        loginString = getIntent().getStringArrayExtra("Login");
+        getValue();
 
         //show view
         showView();
         //Image controller
-        imageView.setOnClickListener(ServiceActivity.this);
+        imageController();
 
     }//main method
+
+    private void imageController() {
+        imageView.setOnClickListener(ServiceActivity.this);
+        graphImageView.setOnClickListener(ServiceActivity.this);
+    }
+
+    private void getValue() {
+        loginString = getIntent().getStringArrayExtra("Login");
+    }
 
     @Override
     protected void onPostResume() {//**************************************
@@ -112,15 +122,26 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         userTextView = (TextView) findViewById(R.id.txtUser);
         typeTextView = (TextView) findViewById(R.id.txtType);
         imageView = (ImageView) findViewById(R.id.imvChild);
-
+        graphImageView = (ImageView) findViewById(R.id.imvGraph);
         listView = (ListView) findViewById(R.id.livChild);
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(ServiceActivity.this,AddChildActivity.class);
-        intent.putExtra("Login",loginString);
-        startActivity(intent);
+
+        // for imageView
+        if (v==imageView) {
+            Intent intent = new Intent(ServiceActivity.this,AddChildActivity.class);
+            intent.putExtra("Login",loginString);
+            startActivity(intent);
+        }
+
+        //for graph
+        if (v==graphImageView) {
+            Intent intent = new Intent(ServiceActivity.this,GraphActivity.class);
+            intent.putExtra("Login",loginString);
+            startActivity(intent);
+        }
 
     }
 }//main class
