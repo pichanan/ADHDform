@@ -78,29 +78,9 @@
         android:id="@+id/btnLogin"
         />
 
-    <Button
-    android:id="@+id/toSnap"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="52dp"
-    android:layout_marginLeft="48dp"
-    android:layout_marginStart="48dp"
-    android:text="Go to snap"
-    android:layout_above="@+id/btnLogin"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/toThass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Goto thass"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        android:layout_alignBottom="@+id/toSnap"
-        android:layout_alignRight="@+id/linearLayout"
-        android:layout_alignEnd="@+id/linearLayout"
-        android:layout_marginBottom="7dp" />
+
+
 
 
 </RelativeLayout>
