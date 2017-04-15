@@ -34,20 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //controller
         controller();
-        Button buttonIntent = (Button)findViewById(R.id.toSnap);
-        Button buttonIntent2 = (Button)findViewById(R.id.toThass);
-        buttonIntent.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SnapActivity.class);
-                startActivity(intent);
-            }
-        });
-        buttonIntent2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TassActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
+//
 
 
     }// main method
