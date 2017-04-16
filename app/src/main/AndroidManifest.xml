@@ -28,7 +28,8 @@
         <activity android:name=".TreeTestActivity" />
         <activity android:name=".SdqActivity" />
         <activity android:name=".GraphActivity" />
-        <activity android:name=".ShowTwoTable"></activity>
+        <activity android:name=".ShowTwoTable" />
+        <activity android:name=".ShowChildDetail"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -63,10 +64,15 @@ public class DetailActivity extends AppCompatActivity {
 
             JSONArray jsonArray = new JSONArray(strJSON);
             String[] showDateStrings = new String[jsonArray.length()];
+            final String[] idStrings = new String[jsonArray.length()];
+
+
             for (int i=0;i<jsonArray.length();i++){
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 showDateStrings[i] = jsonObject.getString("CurrentDate");
+                idStrings[i] = jsonObject.getString("id");
+
 
 
             } // for
@@ -75,6 +81,17 @@ public class DetailActivity extends AppCompatActivity {
             ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(DetailActivity.this,
                     android.R.layout.simple_list_item_1, showDateStrings);
             listView.setAdapter(stringArrayAdapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Log.d(tag, "id =>" + idStrings[position]);
+
+                    Intent intent = new Intent(DetailActivity.this, ShowChildDetail.class);
+                    intent.putExtra("id", idStrings[position]);
+                    startActivity(intent);
+
+                }
+            });
 
 
 
