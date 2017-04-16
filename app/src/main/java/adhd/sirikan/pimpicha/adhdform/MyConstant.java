@@ -9,26 +9,41 @@ public class MyConstant {
     //Explicit
     private String urlAddUser = "http://adhdpj.com/app/addUserPim.php";
     private String urlGetUser = "http://adhdpj.com/app/getUser.php";
-    private String[] columnUser = new String[]{"id", "User", "Password", "Type"};
+
     private String urlAddChild = "http://adhdpj.com/app/addChildPim.php";
     private  String urlGetChild = "http://adhdpj.com/app/getChild.php";
     private  String urlAddSnap = "http://adhdpj.com/app/addSnapPim.php";
     private  String urlAddTest = "http://adhdpj.com/app/addTest.php";
     private  String urlAddTass = "http://adhdpj.com/app/addThass.php";
     private String urlGetUrlThestWhere = "http://adhdpj.com/app/getTestWhere.php";
+    private String urlEditSpecial = "http://adhdpj.com/app/editSpecial.php";
+
+
+
+    private String urlGetChildWhereID = "http://adhdpj.com/app/getChildWhereID.php";
 
 
     //ถ้าใส่ตารางเพิ่มเข้อมูลเด็กต้องมาใส่ตรงนี้ด้วย
+    private String[] columnUser = new String[]{"id", "User", "Password", "Type"};
     private String[] columnChild = new String[]{"id","id_Login","Name","Age","Image"};
-    private  String[] columnSnap = new String[]{"ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8"
+    private  String[] columnTest = new String[]{"id","ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8"
             ,"ch9","ch10","ch11","ch12","ch13","ch14","ch15","ch16","ch17","ch18","ch19","ch20","ch21","ch22"
-            ,"ch23","ch24","ch25","ch26","childID","id","risk1","risk2","risk3"};
+            ,"ch23","ch24","ch25","ch26","userID","childID","risk1","risk2","risk3","doType","Special","CurrentDate"};
+
+
 
         //for FTP
     private String hostString = "ftp.adhdpj.com";
     private String userString = "adhd@adhdpj.com";
     private String passwordString = "Pimpluempj402";
     private int portAnInt = 21;
+
+    public String getUrlGetChildWhereID() {
+        return urlGetChildWhereID;
+    }
+    public String getUrlEditSpecial() {
+        return urlEditSpecial;
+    }
 
     public String getUrlGetUrlThestWhere() {
         return urlGetUrlThestWhere;
@@ -74,7 +89,7 @@ public class MyConstant {
         return urlAddUser;
     }
     public  String[]  getColumnSnap(){
-        return  columnSnap;
+        return  columnTest;
     }
     public  String getUrlAddSnap(){
         return  urlAddSnap;

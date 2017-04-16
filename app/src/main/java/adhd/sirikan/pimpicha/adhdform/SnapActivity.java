@@ -29,7 +29,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             spinnerView11, spinnerView12, spinnerView13, spinnerView14, spinnerView15, spinnerView16, spinnerView17, spinnerView18, spinnerView19, spinnerView20, spinnerView21, spinnerView22, spinnerView23, spinnerView24, spinnerView25, spinnerView26;
     String spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13, spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
     String[] spinnerValue = {"-", "0", "1", "2", "3"};
-    private static String tag = "30MarchV1";
+    private static String tag = "30MarchV1",tag2 = "16AprilV1";
     String idString, loginString[];
     TextView textView;
 
@@ -41,8 +41,10 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_snap);
-        idString = getIntent().getStringExtra("tmpIndex");
-        loginString = getIntent().getStringArrayExtra("Login");
+
+        //Get value from Intent
+        getValueFromIntent();
+
         //initial view
         initialSpinner();
         initialView();
@@ -58,6 +60,15 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }//main method
+
+    private void getValueFromIntent() {
+        idString = getIntent().getStringExtra("tmpIndex");
+        loginString = getIntent().getStringArrayExtra("Login");
+
+        for(int i = 0 ;i<loginString.length;i++) {
+            Log.d("tag2", "loginString(" + i + ")==>" + loginString[i]);
+        }
+    }
 
     private void findCurrentDate() {
         calendar = java.util.Calendar.getInstance();
@@ -170,18 +181,57 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             spn26 = spinnerView26.getSelectedItem().toString();
 
 
-            if (spn.equals("-")) {
+            if (checkSpinner()) {
                 //have space
                 myAlert objMyAlert = new myAlert(SnapActivity.this);
                 objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
                         getResources().getString(R.string.message_havespece));
-            } else {// checked
+            } else {
+                // check special
+                checkSpecial(idString, loginString[3]);
                 uploadValueToServer();
 
             }
 
 
         }
+    }
+
+    private void checkSpecial(String childID, String doType) {
+        try {
+            MyConstant myConstant = new MyConstant();
+            String urlPhp = myConstant.getUrlEditSpecial();
+
+            EditSpecial editSpecial = new EditSpecial(SnapActivity.this);
+            editSpecial.execute(childID, doType, urlPhp);
+
+            Log.d("16AprilV2", "Result ==>" + editSpecial.get());
+
+        } catch (Exception e) {
+            Log.d(tag2, "e checkSpecial ==>" + e.toString());
+        }
+    }
+
+    private boolean checkSpinner() {
+
+        if (spn.equals("-") || spn2.equals("-")||spn3.equals("-") ||
+                spn4.equals("-")||spn5.equals("-") || spn6.equals("-")||
+                spn7.equals("-")||spn8.equals("-") || spn9.equals("-")||
+                spn10.equals("-") || spn11.equals("-")||spn12.equals("-") ||
+                spn13.equals("-")||spn14.equals("-") || spn15.equals("-")||
+                spn16.equals("-") || spn17.equals("-")||spn18.equals("-") ||
+                spn19.equals("-")||spn20.equals("-") || spn21.equals("-")||
+                spn22.equals("-") || spn23.equals("-")||spn24.equals("-") ||
+                spn25.equals("-")|| spn26.equals("-") ) {
+            return true;
+
+
+
+        } else {
+            return false;
+        }
+
+
     }
 
     private void uploadValueToServer() {
@@ -197,7 +247,8 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                     spn11, spn12, spn13, spn14, spn15,
                     spn16, spn17, spn18, spn19, spn20,
                     spn21, spn22, spn23, spn24, spn25,
-                    spn26, loginString[0], idString, strURL);
+                    spn26, loginString[0], idString, strURL,
+                    "10", "20", "30", loginString[3], currentDateString);
 
             Log.d(tag, "Result ==>" + postTest.get());
 

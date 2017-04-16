@@ -58,6 +58,11 @@ public class PostTest extends AsyncTask<String, Void,String> {
                     .add("ch26" , params[25])
                     .add("userID", params[26])
                     .add("childID" , params[27])
+                    .add("risk1", params[29])
+                    .add("risk2", params[30])
+                    .add("risk3", params[31])
+                    .add("doType", params[32])
+                    .add("CurrentDate", params[33])
                     .build();
             Request.Builder builder = new Request.Builder();
             Request request = builder.url(params[28]).post(requestBody).build();
