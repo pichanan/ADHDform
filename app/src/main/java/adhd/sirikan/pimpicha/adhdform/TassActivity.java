@@ -2,15 +2,21 @@ package adhd.sirikan.pimpicha.adhdform;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 public class TassActivity extends AppCompatActivity implements View.OnClickListener {
     String[] spinnerValue = {"-", "0", "1", "2","3"};
+    private static String tag = "30MarchV1",tag2 = "16AprilV1";
     Button button;
+    private  int risk1,risk2,risk3;
     String spn,spn2,spn3,spn4,spn5,spn6,spn7,spn8,spn9,spn10,spn11,spn12,spn13,spn14,spn15,spn16,spn17,spn18,spn19,spn20,spn21
             ,spn22,spn23,spn24,spn25,spn26,spn27,spn28,spn29,spn30 ;
     Spinner spinThass1,spinThass2,spinThass3,spinThass4,spinThass5,spinThass6,spinThass7,spinThass8
@@ -18,7 +24,9 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             ,spinThass17,spinThass18,spinThass19,spinThass20,spinThass21,spinThass22,spinThass23,spinThass24
             ,spinThass25,spinThass26,spinThass27,spinThass28,spinThass29,spinThass30;
     String idString,loginString[];
-    String a="c",b="d";
+
+    private java.util.Calendar calendar;
+    private String currentDateString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +35,17 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             setContentView(R.layout.activity_thass);
             idString = getIntent().getStringExtra("tmpIndex");
             loginString = getIntent().getStringArrayExtra("Login");
+            findCurrentDate();
             initialSpinner();
             initialView();
             button.setOnClickListener(TassActivity.this);
         }
+    private void findCurrentDate() {
+        calendar = java.util.Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        currentDateString = dateFormat.format(calendar.getTime());
+        Log.d("10AprilV1", "currentDate" + currentDateString);
+    }
 
     private void initialSpinner() {
       spinThass1 = (Spinner) findViewById(R.id.spinThass1);
@@ -101,6 +116,21 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
         button = (Button) findViewById(R.id.thass3);
     }
 
+    private void checkSpecial(String childID, String doType) {
+        try {
+            MyConstant myConstant = new MyConstant();
+            String urlPhp = myConstant.getUrlEditSpecial2();
+
+            EditSpecial2 editSpecial = new EditSpecial2(TassActivity.this);
+            editSpecial.execute(childID, doType, urlPhp);
+
+            Log.d("16AprilV2", "Result ==>" + editSpecial.get());
+
+        } catch (Exception e) {
+            Log.d(tag2, "e checkSpecial ==>" + e.toString());
+        }
+    }
+
     @Override
     public void onClick(View v) {
         if (v == button) {
@@ -139,9 +169,30 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             spn30= spinThass30.getSelectedItem().toString();
 
 
-
-
+            if (checkSpinner()) {
+                //have space
+                myAlert objMyAlert = new myAlert(TassActivity.this);
+                objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
+                        getResources().getString(R.string.message_havespece));
+            } else {
+                // check special
+                checkSpecial(idString, loginString[3]);
+                risk1 = Integer.parseInt(spn)+Integer.parseInt(spn2)+Integer.parseInt(spn3)+Integer.parseInt(spn4)+Integer.parseInt(spn5)
+                        +Integer.parseInt(spn6)+Integer.parseInt(spn7)+Integer.parseInt(spn8)+Integer.parseInt(spn9)+
+                        Integer.parseInt(spn10) + Integer.parseInt(spn11) + Integer.parseInt(spn12) + Integer.parseInt(spn13)
+                        + Integer.parseInt(spn14) + Integer.parseInt(spn15);
+                risk2 =  + Integer.parseInt(spn16) + Integer.parseInt(spn17)
+                        + Integer.parseInt(spn18)+Integer.parseInt(spn19) + Integer.parseInt(spn20)
+                        + Integer.parseInt(spn21) + Integer.parseInt(spn22) + Integer.parseInt(spn23)
+                        + Integer.parseInt(spn24) + Integer.parseInt(spn25) + Integer.parseInt(spn26)
+                        + Integer.parseInt(spn27)+ Integer.parseInt(spn28)+ Integer.parseInt(spn29)
+                        + Integer.parseInt(spn30);
+                risk3 = risk1+risk2;
                 uploadValueToServer();
+
+            }
+
+
 
 
 
@@ -157,9 +208,13 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             String strURL = myConstant.getUrlAddTass();
 
             PostTass postTass = new PostTass(TassActivity.this);
-            postTass.execute(spn,spn2,spn3,spn4,spn5,spn6,spn7,spn8,spn9, spn10,spn11,spn12,spn13,spn14, spn15,spn16,spn17,spn18,
-                    spn19,spn20,spn21,spn22, spn23,spn24,spn25,spn26,spn27,spn28,spn29,spn30,loginString[0],idString,strURL);
-
+            postTass.execute(spn,spn2,spn3,spn4,spn5,spn6,spn7,spn8,spn9, spn10,
+                    spn11,spn12,spn13,spn14, spn15,spn16,spn17,spn18,
+                    spn19,spn20,spn21,spn22, spn23,spn24,spn25,spn26,
+                    spn27,spn28,spn29,spn30, loginString[0], idString,
+                    Integer.toString(risk1), Integer.toString(risk2), Integer.toString(risk3),
+                    loginString[3], currentDateString, strURL);
+            Log.d(tag2, "e checkSpecial ==>" + currentDateString + " " +Integer.toString(risk1));
 
 
             if (Boolean.parseBoolean((postTass.get()))) {
@@ -171,6 +226,29 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
         } catch (Exception e) {
 
         }
+    }
+
+    private boolean checkSpinner() {
+
+       if (spn.equals("-") || spn2.equals("-")||spn3.equals("-") ||
+                spn4.equals("-")||spn5.equals("-") || spn6.equals("-")||
+                spn7.equals("-")||spn8.equals("-") || spn9.equals("-")||
+                spn10.equals("-") || spn11.equals("-")||spn12.equals("-") ||
+                spn13.equals("-")||spn14.equals("-") || spn15.equals("-")||
+                spn16.equals("-") || spn17.equals("-")||spn18.equals("-") ||
+                spn19.equals("-")||spn20.equals("-") || spn21.equals("-")||
+                spn22.equals("-") || spn23.equals("-")||spn24.equals("-") ||
+                spn25.equals("-")|| spn26.equals("-")|| spn27.equals("-")|| spn28.equals("-")
+                || spn29.equals("-")|| spn30.equals("-")) {
+            return true;
+
+
+
+        } else {
+            return false;
+        }
+
+
     }
 }
 

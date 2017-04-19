@@ -15,9 +15,17 @@ public class MyConstant {
     private String urlAddSnap = "http://adhdpj.com/app/addSnapPim.php";
     private String urlAddTest = "http://adhdpj.com/app/addTest.php";
     private String urlAddTass = "http://adhdpj.com/app/addThass.php";
+    private String urlAddSdq = "http://adhdpj.com/app/addSdq.php";
     private String urlGetUrlThestWhere = "http://adhdpj.com/app/getTestWhere.php";
+
     private String urlEditSpecial = "http://adhdpj.com/app/editSpecial.php";
+    private String urlEditSpecial2 = "http://adhdpj.com/app/editSpecial2.php";
+    private String urlEditSpecial3 = "http://adhdpj.com/app/editSpecial3.php";
+
     private String urlGetChildWhereID = "http://adhdpj.com/app/getChildWhereID.php";
+    private String urlGetChildWhereID2 = "http://adhdpj.com/app/getChildWhereID2.php";
+    private String urlGetChildWhereID3 = "http://adhdpj.com/app/getChildWhereID3.php";
+
     private String urlGetTestWhereID = "http://adhdpj.com/app/getTestWhereID.php";
 
 
@@ -109,5 +117,25 @@ public class MyConstant {
 
     public String getUrlAddTass() {
         return urlAddTass;
+    }
+
+    public String getUrlEditSpecial2() {
+        return urlEditSpecial2;
+    }
+
+    public String getUrlEditSpecial3() {
+        return urlEditSpecial3;
+    }
+
+    public String getUrlAddSdq() {
+        return urlAddSdq;
+    }
+
+    public String getUrlGetChildWhereID2() {
+        return urlGetChildWhereID2;
+    }
+
+    public String getUrlGetChildWhereID3() {
+        return urlGetChildWhereID3;
     }
 }//main class

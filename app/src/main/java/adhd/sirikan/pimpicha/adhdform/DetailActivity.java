@@ -41,10 +41,122 @@ public class DetailActivity extends AppCompatActivity {
 
         // Create ListView Table1
         createListViewTable1();
+        createListViewTable2();
+        createListViewTable3();
 
 
 
     }// main method
+
+    private void createListViewTable3() {
+        try {
+
+            Log.d(tag, "ChilID ==>" + idString);
+            Log.d(tag, "userID ==>" + loginString[0]);
+
+            MyConstant myConstant = new MyConstant();
+            String urlPHP = myConstant.getUrlGetChildWhereID3();
+
+
+            GetTestwhereChildAndUser3 getTestwhereChildAndUser3 = new GetTestwhereChildAndUser3(DetailActivity.this);
+            getTestwhereChildAndUser3.execute(idString,loginString[0], urlPHP);
+
+            String strJSON = getTestwhereChildAndUser3.get();
+
+
+            JSONArray jsonArray = new JSONArray(strJSON);
+            String[] showDateStrings = new String[jsonArray.length()];
+            final String[] idStrings = new String[jsonArray.length()];
+
+
+            for (int i=0;i<jsonArray.length();i++){
+
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                showDateStrings[i] = jsonObject.getString("CurrentDate");
+                idStrings[i] = jsonObject.getString("id");
+
+
+
+            } // for
+            // Create ListView
+            ListView listView = (ListView) findViewById(R.id.liveTable3);
+            ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(DetailActivity.this,
+                    android.R.layout.simple_list_item_1, showDateStrings);
+            listView.setAdapter(stringArrayAdapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Log.d(tag, "id =>" + idStrings[position]);
+
+                    Intent intent = new Intent(DetailActivity.this, ShowChildDetail.class);
+                    intent.putExtra("id", idStrings[position]);
+                    startActivity(intent);
+
+                }
+            });
+
+
+
+        } catch (Exception e) {
+            Log.d(tag, "e table1 ==>" +e.toString());
+
+        }
+    }
+
+    private void createListViewTable2() {
+        try {
+
+            Log.d(tag, "ChilID ==>" + idString);
+            Log.d(tag, "userID ==>" + loginString[0]);
+
+            MyConstant myConstant = new MyConstant();
+            String urlPHP = myConstant.getUrlGetChildWhereID2(); // ต้องสร้าง php
+
+
+            GetTestwhereChildAndUser2 getTestwhereChildAndUser2 = new GetTestwhereChildAndUser2(DetailActivity.this);
+            getTestwhereChildAndUser2.execute(idString,loginString[0], urlPHP); //ไม่ต้อง
+
+            String strJSON = getTestwhereChildAndUser2.get();
+
+
+            JSONArray jsonArray = new JSONArray(strJSON);
+            String[] showDateStrings = new String[jsonArray.length()];
+            final String[] idStrings = new String[jsonArray.length()];
+
+
+            for (int i=0;i<jsonArray.length();i++){
+
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                showDateStrings[i] = jsonObject.getString("CurrentDate");
+                idStrings[i] = jsonObject.getString("id");
+
+
+
+            } // for
+            // Create ListView
+            ListView listView = (ListView) findViewById(R.id.liveTable2);
+            ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(DetailActivity.this,
+                    android.R.layout.simple_list_item_1, showDateStrings);
+            listView.setAdapter(stringArrayAdapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Log.d(tag, "id =>" + idStrings[position]);
+
+                    Intent intent = new Intent(DetailActivity.this, ShowChildDetail.class);
+                    intent.putExtra("id", idStrings[position]);
+                    startActivity(intent);
+
+                }
+            });
+
+
+
+        } catch (Exception e) {
+            Log.d(tag, "e table1 ==>" +e.toString());
+
+        }
+    }
 
     private void createListViewTable1() {
         try {

@@ -59,9 +59,14 @@ public class PostTass extends AsyncTask<String, Void,String> {
                     .add("t30" , params[29])
                     .add("tuserID", params[30])
                     .add("tchildID" , params[31])
+                    .add("risk1", params[32])
+                    .add("risk2", params[33])
+                    .add("risk3", params[34])
+                    .add("doType", params[35])
+                    .add("CurrentDate", params[36])
                     .build();
             Request.Builder builder = new Request.Builder();
-            Request request = builder.url(params[32]).post(requestBody).build();
+            Request request = builder.url(params[37]).post(requestBody).build();
             Response response = okHttpClient.newCall((request)).execute();
             return  response.body().string();
         }catch (Exception e){

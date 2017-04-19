@@ -30,6 +30,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
     String spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13, spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
     String[] spinnerValue = {"-", "0", "1", "2", "3"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
+    private  int risk1,risk2,risk3;
     String idString, loginString[];
     TextView textView;
 
@@ -189,6 +190,13 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             } else {
                 // check special
                 checkSpecial(idString, loginString[3]);
+                risk1 = Integer.parseInt(spn)+Integer.parseInt(spn2)+Integer.parseInt(spn3)+Integer.parseInt(spn4)+Integer.parseInt(spn5)
+                        +Integer.parseInt(spn6)+Integer.parseInt(spn7)+Integer.parseInt(spn8)+Integer.parseInt(spn9);
+                risk2 = Integer.parseInt(spn10) + Integer.parseInt(spn11) + Integer.parseInt(spn12) + Integer.parseInt(spn13)
+                        + Integer.parseInt(spn14) + Integer.parseInt(spn15) + Integer.parseInt(spn16) + Integer.parseInt(spn17)
+                        + Integer.parseInt(spn18);
+                risk3 = Integer.parseInt(spn19) + Integer.parseInt(spn20) + Integer.parseInt(spn21) + Integer.parseInt(spn22) + Integer.parseInt(spn23)
+                        + Integer.parseInt(spn24) + Integer.parseInt(spn25) + Integer.parseInt(spn26);
                 uploadValueToServer();
 
             }
@@ -247,8 +255,9 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                     spn11, spn12, spn13, spn14, spn15,
                     spn16, spn17, spn18, spn19, spn20,
                     spn21, spn22, spn23, spn24, spn25,
-                    spn26, loginString[0], idString, strURL,
-                    "10", "20", "30", loginString[3], currentDateString);
+                    spn26, loginString[0], idString,
+                    Integer.toString(risk1), Integer.toString(risk2), Integer.toString(risk3),
+                    loginString[3], currentDateString, strURL);
 
             Log.d(tag, "Result ==>" + postTest.get());
 
