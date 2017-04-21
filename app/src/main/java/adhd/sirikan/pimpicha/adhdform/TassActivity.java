@@ -226,13 +226,13 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
              }else{//ครู เด็กชาย ******************* ตารางหน้า 68
                  if(age>=6&&age<9){
-
+                     boyTeacher6To8();
                  }else if(age>=9&&age<=11){
-
+                     boyTeacher9To11();
                  }else if(age>=12&&age<=14){
-
+                     boyTeacher12To14();
                  }else if(age>=15&&age<=18){
-
+                     boyTeacher15To18();
                  }
 
              }
@@ -242,24 +242,25 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
         }else{//ผู้หญิง gender==1
             if(type==1){ //ผู้ปกครอง เด็กหญิง ******************* ตารางหน้า 66
                 if(age>=6&&age<9){
+                    girlParent6To8();
 
                 }else if(age>=9&&age<=11){
-
+                    girlParent9To11();
                 }else if(age>=12&&age<=14){
-
+                    girlParent12To14();
                 }else if(age>=15&&age<=18){
-
+                    girlParent15To18();
                 }
 
             }else{//ครู เด็กหญิง  ******************* ตารางหน้า 70
                 if(age>=6&&age<9){
-
+                    girlTeacher6To8();
                 }else if(age>=9&&age<=11){
-
+                    girlTeacher9To11();
                 }else if(age>=12&&age<=14){
-
+                    girlTeacher12To14();
                 }else if(age>=15&&age<=18){
-
+                    girlTeacher15To18();
                 }
 
             }
@@ -268,6 +269,7686 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
+    }
+
+    private void girlTeacher15To18() {
+        switch (trisk1) { // ด้าน 1 หญิง ครู
+            case 0:
+                trisk1 = 40;
+                break;
+            case 1:
+                trisk1 = 41;
+                break;
+            case 2:
+                trisk1 = 42;
+                break;
+            case 3:
+                trisk1 = 43;
+                break;
+            case 4:
+                trisk1 = 44;
+                break;
+            case 5:
+                trisk1 = 45;
+                break;
+            case 6:
+                trisk1 = 47;
+                break;
+            case 7:
+                trisk1 = 48;
+                break;
+            case 8:
+                trisk1 = 49;
+                break;
+            case 9:
+                trisk1 = 50;
+                break;
+            case 10:
+                trisk1 = 51;
+                break;
+            case 11:
+                trisk1 = 52;
+                break;
+            case 12:
+                trisk1 = 54;
+                break;
+            case 13:
+                trisk1 = 55;
+                break;
+            case 14:
+                trisk1 = 56;
+                break;
+            case 15:
+                trisk1 = 57;
+                break;
+            case 16:
+                trisk1 = 58;
+                break;
+            case 17:
+                trisk1 = 59;
+                break;
+            case 18:
+                trisk1 = 61;
+                break;
+            case 19:
+                trisk1 = 62;
+                break;
+            case 20:
+                trisk1 = 63;
+                break;
+            case 21:
+                trisk1 = 64;
+                break;
+            case 22:
+                trisk1 = 65;
+                break;
+            case 23:
+                trisk1 = 66;
+                break;
+            case 24:
+                trisk1 = 68;
+                break;
+            case 25:
+                trisk1 = 69;
+                break;
+            case 26:
+                trisk1 = 70;
+                break;
+            case 27:
+                trisk1 = 71;
+                break;
+            case 28:
+                trisk1 = 72;
+                break;
+            case 29:
+                trisk1 = 73;
+                break;
+            case 30:
+                trisk1 = 75;
+                break;
+            case 31:
+                trisk1 = 76;
+                break;
+            case 32:
+                trisk1 = 77;
+                break;
+            case 33:
+                trisk1 = 78;
+                break;
+            case 34:
+                trisk1 = 79;
+                break;
+            case 35:
+                trisk1 = 80;
+                break;
+            case 36:
+                trisk1 = 82;
+                break;
+            case 37:
+                trisk1 = 83;
+                break;
+            case 38:
+                trisk1 = 84;
+                break;
+            case 39:
+                trisk1 = 85;
+                break;
+            case 40:
+                trisk1 = 86;
+                break;
+            case 41:
+                trisk1 = 87;
+                break;
+            case 42:
+                trisk1 = 88;
+                break;
+            case 43:
+                trisk1 = 89;
+                break;
+            case 44:
+                trisk1 = 91;
+                break;
+            case 45:
+                trisk1 = 92;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ครู
+            case 0:
+                trisk2 = 38;
+                break;
+            case 1:
+                trisk2 = 39;
+
+                break;
+            case 2:
+                trisk2 = 40;
+                break;
+            case 3:
+                trisk2 = 41;
+
+                break;
+            case 4:
+                trisk2 = 42;
+
+                break;
+            case 5:
+                trisk2 = 43;
+
+                break;
+            case 6:
+                trisk2 = 44;
+
+                break;
+            case 7:
+                trisk2 = 45;
+
+                break;
+            case 8:
+                trisk2 = 46;
+                break;
+            case 9:
+                trisk2 = 47;
+
+                break;
+            case 10:
+                trisk2 = 48;
+
+                break;
+            case 11:
+                trisk2 = 49;
+
+                break;
+            case 12:
+                trisk2 = 50;
+
+                break;
+            case 13:
+                trisk2 = 51;
+
+                break;
+            case 14:
+                trisk2 = 52;
+
+                break;
+            case 15:
+                trisk2 = 53;
+
+                break;
+            case 16:
+                trisk2 = 54;
+                break;
+            case 17:
+                trisk2 = 55;
+
+                break;
+            case 18:
+                trisk2 = 56;
+
+                break;
+            case 19:
+                trisk2 = 57;
+
+                break;
+            case 20:
+                trisk2 = 58;
+
+                break;
+            case 21:
+                trisk2 = 59;
+
+                break;
+            case 22:
+                trisk2 = 60;
+
+                break;
+            case 23:
+                trisk2 = 61;
+
+                break;
+            case 24:
+                trisk2 = 62;
+                break;
+            case 25:
+                trisk2 = 63;
+
+                break;
+            case 26:
+                trisk2 = 64;
+
+                break;
+            case 27:
+                trisk2 = 65;
+
+                break;
+            case 28:
+                trisk2 = 66;
+
+                break;
+            case 29:
+                trisk2 = 67;
+
+                break;
+            case 30:
+                trisk2 = 68;
+
+                break;
+            case 31:
+                trisk2 = 69;
+
+                break;
+            case 32:
+                trisk2 = 70;
+                break;
+            case 33:
+                trisk2 = 71;
+
+                break;
+            case 34:
+                trisk2 = 72;
+
+                break;
+            case 35:
+                trisk2 = 73;
+
+                break;
+            case 36:
+                trisk2 = 74;
+
+                break;
+            case 37:
+                trisk2 = 75;
+
+                break;
+            case 38:
+                trisk2 = 76;
+
+                break;
+            case 39:
+                trisk2 = 77;
+
+                break;
+            case 40:
+                trisk2 = 78;
+                break;
+            case 41:
+                trisk2 = 79;
+
+                break;
+            case 42:
+                trisk2 = 80;
+
+                break;
+            case 43:
+                trisk2 = 81;
+
+                break;
+            case 44:
+                trisk2 = 82;
+
+                break;
+            case 45:
+                trisk2 = 83;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ครู
+            case 0:
+                trisk3 = 36;
+                break;
+            case 1:
+                trisk3 = 37;
+
+                break;
+            case 2:
+                trisk3 = 38;
+                break;
+            case 3:
+                trisk3 = 39;
+
+                break;
+            case 4:
+                trisk3 = 40;
+
+                break;
+            case 5:
+                trisk3 = 41;
+
+                break;
+            case 6:
+                trisk3 = 41;
+
+                break;
+            case 7:
+                trisk3 = 42;
+
+                break;
+            case 8:
+                trisk3 = 42;
+                break;
+            case 9:
+                trisk3 = 43;
+
+                break;
+            case 10:
+                trisk3 = 44;
+
+                break;
+            case 11:
+                trisk3 = 44;
+
+                break;
+            case 12:
+                trisk3 = 45;
+
+                break;
+            case 13:
+                trisk3 = 45;
+
+                break;
+            case 14:
+                trisk3 = 46;
+
+                break;
+            case 15:
+                trisk3 = 47;
+
+                break;
+            case 16:
+                trisk3 = 47;
+                break;
+            case 17:
+                trisk3 = 48;
+
+                break;
+            case 18:
+                trisk3 = 48;
+
+                break;
+            case 19:
+                trisk3 = 49;
+
+                break;
+            case 20:
+                trisk3 = 50;
+
+                break;
+            case 21:
+                trisk3 = 50;
+
+                break;
+            case 22:
+                trisk3 = 51;
+
+                break;
+            case 23:
+                trisk3 = 51;
+
+                break;
+            case 24:
+                trisk3 = 52;
+                break;
+            case 25:
+                trisk3 = 52;
+
+                break;
+            case 26:
+                trisk3 = 53;
+
+                break;
+            case 27:
+                trisk3 = 54;
+
+                break;
+            case 28:
+                trisk3 = 54;
+
+                break;
+            case 29:
+                trisk3 = 55;
+
+                break;
+            case 30:
+                trisk3 = 55;
+
+                break;
+            case 31:
+                trisk3 = 56;
+
+                break;
+            case 32:
+                trisk3 = 57;
+                break;
+            case 33:
+                trisk3 = 57;
+
+                break;
+            case 34:
+                trisk3 = 58;
+
+                break;
+            case 35:
+                trisk3 = 58;
+
+                break;
+            case 36:
+                trisk3 = 59;
+
+                break;
+            case 37:
+                trisk3 = 60;
+
+                break;
+            case 38:
+                trisk3 = 60;
+
+                break;
+            case 39:
+                trisk3 = 61;
+
+                break;
+            case 40:
+                trisk3 = 61;
+                break;
+            case 41:
+                trisk3 = 62;
+
+                break;
+            case 42:
+                trisk3 = 63;
+
+                break;
+            case 43:
+                trisk3 = 63;
+
+                break;
+            case 44:
+                trisk3 = 64;
+
+                break;
+            case 45:
+                trisk3 = 64;
+                break;
+            case 46:
+                trisk3 = 65;
+                break;
+            case 47:
+                trisk3 = 65;
+                break;
+            case 48:
+                trisk3 = 66;
+                break;
+            case 49:
+                trisk3 = 67;
+                break;
+            case 50:
+                trisk3 = 67;
+                break;
+            case 51:
+                trisk3 = 68;
+                break;
+            case 52:
+                trisk3 = 68;
+                break;
+            case 53:
+                trisk3 = 69;
+                break;
+            case 54:
+                trisk3 = 70;
+                break;
+            case 55:
+                trisk3 = 70;
+                break;
+            case 56:
+                trisk3 = 71;
+                break;
+            case 57:
+                trisk3 = 71;
+                break;
+            case 58:
+                trisk3 = 72;
+                break;
+            case 59:
+                trisk3 = 72;
+                break;
+            case 60:
+                trisk3 = 73;
+                break;
+            case 61:
+                trisk3 = 74;
+                break;
+            case 62:
+                trisk3 = 74;
+                break;
+            case 63:
+                trisk3 = 75;
+            case 64:
+                trisk3 = 75;
+                break;
+            case 65:
+                trisk3 = 76;
+                break;
+            case 66:
+                trisk3 = 77;
+                break;
+            case 67:
+                trisk3 = 77;
+                break;
+            case 68:
+                trisk3 = 78;
+                break;
+            case 69:
+                trisk3 = 79;
+                break;
+            case 70:
+                trisk3 = 79;
+                break;
+            case 71:
+                trisk3 = 80;
+                break;
+            case 72:
+                trisk3 = 80;
+                break;
+            case 73:
+                trisk3 = 81;
+                break;
+            case 74:
+                trisk3 = 81;
+                break;
+            case 75:
+                trisk3 = 82;
+                break;
+            case 76:
+                trisk3 = 82;
+                break;
+            case 77:
+                trisk3 = 83;
+                break;
+            case 78:
+                trisk3 = 84;
+                break;
+            case 79:
+                trisk3 = 84;
+                break;
+            case 80:
+                trisk3 = 85;
+                break;
+            case 81:
+                trisk3 = 85;
+                break;
+            case 82:
+                trisk3 = 86;
+                break;
+            case 83:
+                trisk3 = 86;
+                break;
+            case 84:
+                trisk3 = 87;
+                break;
+            case 85:
+                trisk3 = 88;
+                break;
+            case 86:
+                trisk3 = 88;
+                break;
+            case 87:
+                trisk3 = 89;
+                break;
+            case 88:
+                trisk3 = 89;
+                break;
+            case 89:
+                trisk3 = 90;
+                break;
+            case 90:
+                trisk3 = 91;
+                break;
+
+
+        }
+    }
+
+    private void girlTeacher12To14(){
+        switch (trisk1) { // ด้าน 1 หญิง ครู
+            case 0:
+                trisk1 = 40;
+                break;
+            case 1:
+                trisk1 = 41;
+                break;
+            case 2:
+                trisk1 = 42;
+                break;
+            case 3:
+                trisk1 = 44;
+                break;
+            case 4:
+                trisk1 = 45;
+                break;
+            case 5:
+                trisk1 = 46;
+                break;
+            case 6:
+                trisk1 = 47;
+                break;
+            case 7:
+                trisk1 = 48;
+                break;
+            case 8:
+                trisk1 = 49;
+                break;
+            case 9:
+                trisk1 = 50;
+                break;
+            case 10:
+                trisk1 = 51;
+                break;
+            case 11:
+                trisk1 = 53;
+                break;
+            case 12:
+                trisk1 = 54;
+                break;
+            case 13:
+                trisk1 = 55;
+                break;
+            case 14:
+                trisk1 = 56;
+                break;
+            case 15:
+                trisk1 = 57;
+                break;
+            case 16:
+                trisk1 = 58;
+                break;
+            case 17:
+                trisk1 = 59;
+                break;
+            case 18:
+                trisk1 = 61;
+                break;
+            case 19:
+                trisk1 = 62;
+                break;
+            case 20:
+                trisk1 = 63;
+                break;
+            case 21:
+                trisk1 = 64;
+                break;
+            case 22:
+                trisk1 = 65;
+                break;
+            case 23:
+                trisk1 = 66;
+                break;
+            case 24:
+                trisk1 = 67;
+                break;
+            case 25:
+                trisk1 = 68;
+                break;
+            case 26:
+                trisk1 = 70;
+                break;
+            case 27:
+                trisk1 = 71;
+                break;
+            case 28:
+                trisk1 = 72;
+                break;
+            case 29:
+                trisk1 = 73;
+                break;
+            case 30:
+                trisk1 = 74;
+                break;
+            case 31:
+                trisk1 = 75;
+                break;
+            case 32:
+                trisk1 = 76;
+                break;
+            case 33:
+                trisk1 = 77;
+                break;
+            case 34:
+                trisk1 = 79;
+                break;
+            case 35:
+                trisk1 = 80;
+                break;
+            case 36:
+                trisk1 = 81;
+                break;
+            case 37:
+                trisk1 = 82;
+                break;
+            case 38:
+                trisk1 = 83;
+                break;
+            case 39:
+                trisk1 = 84;
+                break;
+            case 40:
+                trisk1 = 85;
+                break;
+            case 41:
+                trisk1 = 86;
+                break;
+            case 42:
+                trisk1 = 87;
+                break;
+            case 43:
+                trisk1 = 88;
+                break;
+            case 44:
+                trisk1 = 89;
+                break;
+            case 45:
+                trisk1 = 90;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ครู
+            case 0:
+                trisk2 = 39;
+                break;
+            case 1:
+                trisk2 = 40;
+
+                break;
+            case 2:
+                trisk2 = 41;
+                break;
+            case 3:
+                trisk2 = 42;
+
+                break;
+            case 4:
+                trisk2 = 43;
+
+                break;
+            case 5:
+                trisk2 = 44;
+
+                break;
+            case 6:
+                trisk2 = 45;
+
+                break;
+            case 7:
+                trisk2 = 46;
+
+                break;
+            case 8:
+                trisk2 = 46;
+                break;
+            case 9:
+                trisk2 = 47;
+
+                break;
+            case 10:
+                trisk2 = 48;
+
+                break;
+            case 11:
+                trisk2 = 49;
+
+                break;
+            case 12:
+                trisk2 = 50;
+
+                break;
+            case 13:
+                trisk2 = 51;
+
+                break;
+            case 14:
+                trisk2 = 52;
+
+                break;
+            case 15:
+                trisk2 = 53;
+
+                break;
+            case 16:
+                trisk2 = 54;
+                break;
+            case 17:
+                trisk2 = 55;
+
+                break;
+            case 18:
+                trisk2 = 56;
+
+                break;
+            case 19:
+                trisk2 = 57;
+
+                break;
+            case 20:
+                trisk2 = 58;
+
+                break;
+            case 21:
+                trisk2 = 58;
+
+                break;
+            case 22:
+                trisk2 = 59;
+
+                break;
+            case 23:
+                trisk2 = 60;
+
+                break;
+            case 24:
+                trisk2 = 61;
+                break;
+            case 25:
+                trisk2 = 62;
+
+                break;
+            case 26:
+                trisk2 = 63;
+
+                break;
+            case 27:
+                trisk2 = 64;
+
+                break;
+            case 28:
+                trisk2 = 65;
+
+                break;
+            case 29:
+                trisk2 = 66;
+
+                break;
+            case 30:
+                trisk2 = 67;
+
+                break;
+            case 31:
+                trisk2 = 68;
+
+                break;
+            case 32:
+                trisk2 = 69;
+                break;
+            case 33:
+                trisk2 = 70;
+
+                break;
+            case 34:
+                trisk2 = 71;
+
+                break;
+            case 35:
+                trisk2 = 71;
+
+                break;
+            case 36:
+                trisk2 = 72;
+
+                break;
+            case 37:
+                trisk2 = 73;
+
+                break;
+            case 38:
+                trisk2 = 74;
+
+                break;
+            case 39:
+                trisk2 = 75;
+
+                break;
+            case 40:
+                trisk2 = 76;
+                break;
+            case 41:
+                trisk2 = 77;
+
+                break;
+            case 42:
+                trisk2 = 78;
+
+                break;
+            case 43:
+                trisk2 = 79;
+
+                break;
+            case 44:
+                trisk2 = 80;
+
+                break;
+            case 45:
+                trisk2 = 81;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ครู
+            case 0:
+                trisk3 = 37;
+                break;
+            case 1:
+                trisk3 = 38;
+
+                break;
+            case 2:
+                trisk3 = 39;
+                break;
+            case 3:
+                trisk3 = 40;
+
+                break;
+            case 4:
+                trisk3 = 41;
+
+                break;
+            case 5:
+                trisk3 = 41;
+
+                break;
+            case 6:
+                trisk3 = 42;
+
+                break;
+            case 7:
+                trisk3 = 43;
+
+                break;
+            case 8:
+                trisk3 = 43;
+                break;
+            case 9:
+                trisk3 = 44;
+
+                break;
+            case 10:
+                trisk3 = 44;
+
+                break;
+            case 11:
+                trisk3 = 45;
+
+                break;
+            case 12:
+                trisk3 = 45;
+
+                break;
+            case 13:
+                trisk3 = 46;
+
+                break;
+            case 14:
+                trisk3 = 46;
+
+                break;
+            case 15:
+                trisk3 = 47;
+
+                break;
+            case 16:
+                trisk3 = 48;
+                break;
+            case 17:
+                trisk3 = 48;
+
+                break;
+            case 18:
+                trisk3 = 49;
+
+                break;
+            case 19:
+                trisk3 = 49;
+
+                break;
+            case 20:
+                trisk3 = 50;
+
+                break;
+            case 21:
+                trisk3 = 50;
+
+                break;
+            case 22:
+                trisk3 = 51;
+
+                break;
+            case 23:
+                trisk3 = 51;
+
+                break;
+            case 24:
+                trisk3 = 52;
+                break;
+            case 25:
+                trisk3 = 52;
+
+                break;
+            case 26:
+                trisk3 = 53;
+
+                break;
+            case 27:
+                trisk3 = 54;
+
+                break;
+            case 28:
+                trisk3 = 54;
+
+                break;
+            case 29:
+                trisk3 = 55;
+
+                break;
+            case 30:
+                trisk3 = 55;
+
+                break;
+            case 31:
+                trisk3 = 56;
+
+                break;
+            case 32:
+                trisk3 = 56;
+                break;
+            case 33:
+                trisk3 = 57;
+
+                break;
+            case 34:
+                trisk3 = 57;
+
+                break;
+            case 35:
+                trisk3 = 58;
+
+                break;
+            case 36:
+                trisk3 = 59;
+
+                break;
+            case 37:
+                trisk3 = 59;
+
+                break;
+            case 38:
+                trisk3 = 60;
+
+                break;
+            case 39:
+                trisk3 = 60;
+
+                break;
+            case 40:
+                trisk3 = 61;
+                break;
+            case 41:
+                trisk3 = 61;
+
+                break;
+            case 42:
+                trisk3 = 62;
+
+                break;
+            case 43:
+                trisk3 = 62;
+
+                break;
+            case 44:
+                trisk3 = 63;
+
+                break;
+            case 45:
+                trisk3 = 64;
+                break;
+            case 46:
+                trisk3 = 64;
+                break;
+            case 47:
+                trisk3 = 65;
+                break;
+            case 48:
+                trisk3 = 65;
+                break;
+            case 49:
+                trisk3 = 66;
+                break;
+            case 50:
+                trisk3 = 66;
+                break;
+            case 51:
+                trisk3 = 67;
+                break;
+            case 52:
+                trisk3 = 67;
+                break;
+            case 53:
+                trisk3 = 68;
+                break;
+            case 54:
+                trisk3 = 69;
+                break;
+            case 55:
+                trisk3 = 69;
+                break;
+            case 56:
+                trisk3 = 70;
+                break;
+            case 57:
+                trisk3 = 70;
+                break;
+            case 58:
+                trisk3 = 71;
+                break;
+            case 59:
+                trisk3 = 71;
+                break;
+            case 60:
+                trisk3 = 72;
+                break;
+            case 61:
+                trisk3 = 72;
+                break;
+            case 62:
+                trisk3 = 73;
+                break;
+            case 63:
+                trisk3 = 73;
+                break;
+            case 64:
+                trisk3 = 74;
+                break;
+            case 65:
+                trisk3 = 75;
+                break;
+            case 66:
+                trisk3 = 75;
+                break;
+            case 67:
+                trisk3 = 76;
+                break;
+            case 68:
+                trisk3 = 76;
+                break;
+            case 69:
+                trisk3 = 77;
+                break;
+            case 70:
+                trisk3 = 77;
+                break;
+            case 71:
+                trisk3 = 78;
+                break;
+            case 72:
+                trisk3 = 78;
+                break;
+            case 73:
+                trisk3 = 79;
+                break;
+            case 74:
+                trisk3 = 79;
+                break;
+            case 75:
+                trisk3 = 80;
+                break;
+            case 76:
+                trisk3 = 80;
+                break;
+            case 77:
+                trisk3 = 81;
+                break;
+            case 78:
+                trisk3 = 82;
+                break;
+            case 79:
+                trisk3 = 82;
+                break;
+            case 80:
+                trisk3 = 83;
+                break;
+            case 81:
+                trisk3 = 83;
+                break;
+            case 82:
+                trisk3 = 84;
+                break;
+            case 83:
+                trisk3 = 84;
+                break;
+            case 84:
+                trisk3 = 85;
+                break;
+            case 85:
+                trisk3 = 85;
+                break;
+            case 86:
+                trisk3 = 86;
+                break;
+            case 87:
+                trisk3 = 86;
+                break;
+            case 88:
+                trisk3 = 87;
+                break;
+            case 89:
+                trisk3 = 88;
+                break;
+            case 90:
+                trisk3 = 89;
+                break;
+
+
+        }
+    }
+
+    private void girlTeacher9To11() {
+        switch (trisk1) { // ด้าน 1 หญิง ครู
+            case 0:
+                trisk1 = 40;
+                break;
+            case 1:
+                trisk1 = 41;
+                break;
+            case 2:
+                trisk1 = 43;
+                break;
+            case 3:
+                trisk1 = 44;
+                break;
+            case 4:
+                trisk1 = 45;
+                break;
+            case 5:
+                trisk1 = 46;
+                break;
+            case 6:
+                trisk1 = 7;
+                break;
+            case 7:
+                trisk1 = 48;
+                break;
+            case 8:
+                trisk1 = 49;
+                break;
+            case 9:
+                trisk1 = 50;
+                break;
+            case 10:
+                trisk1 = 51;
+                break;
+            case 11:
+                trisk1 = 52;
+                break;
+            case 12:
+                trisk1 = 53;
+                break;
+            case 13:
+                trisk1 = 54;
+                break;
+            case 14:
+                trisk1 = 55;
+                break;
+            case 15:
+                trisk1 = 56;
+                break;
+            case 16:
+                trisk1 = 57;
+                break;
+            case 17:
+                trisk1 = 58;
+                break;
+            case 18:
+                trisk1 = 59;
+                break;
+            case 19:
+                trisk1 = 60;
+                break;
+            case 20:
+                trisk1 = 61;
+                break;
+            case 21:
+                trisk1 = 62;
+                break;
+            case 22:
+                trisk1 = 63;
+                break;
+            case 23:
+                trisk1 = 65;
+                break;
+            case 24:
+                trisk1 = 66;
+                break;
+            case 25:
+                trisk1 = 67;
+                break;
+            case 26:
+                trisk1 = 68;
+                break;
+            case 27:
+                trisk1 = 69;
+                break;
+            case 28:
+                trisk1 = 70;
+                break;
+            case 29:
+                trisk1 = 71;
+                break;
+            case 30:
+                trisk1 = 72;
+                break;
+            case 31:
+                trisk1 = 73;
+                break;
+            case 32:
+                trisk1 = 74;
+                break;
+            case 33:
+                trisk1 = 75;
+                break;
+            case 34:
+                trisk1 = 76;
+                break;
+            case 35:
+                trisk1 = 77;
+                break;
+            case 36:
+                trisk1 = 78;
+                break;
+            case 37:
+                trisk1 = 79;
+                break;
+            case 38:
+                trisk1 = 80;
+                break;
+            case 39:
+                trisk1 = 81;
+                break;
+            case 40:
+                trisk1 = 82;
+                break;
+            case 41:
+                trisk1 = 83;
+                break;
+            case 42:
+                trisk1 = 84;
+                break;
+            case 43:
+                trisk1 = 85;
+                break;
+            case 44:
+                trisk1 = 85;
+                break;
+            case 45:
+                trisk1 = 87;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ครู
+            case 0:
+                trisk2 = 39;
+                break;
+            case 1:
+                trisk2 = 40;
+
+                break;
+            case 2:
+                trisk2 = 41;
+                break;
+            case 3:
+                trisk2 = 42;
+
+                break;
+            case 4:
+                trisk2 = 43;
+
+                break;
+            case 5:
+                trisk2 = 44;
+
+                break;
+            case 6:
+                trisk2 = 44;
+
+                break;
+            case 7:
+                trisk2 = 45;
+
+                break;
+            case 8:
+                trisk2 = 46;
+                break;
+            case 9:
+                trisk2 = 47;
+
+                break;
+            case 10:
+                trisk2 = 48;
+
+                break;
+            case 11:
+                trisk2 = 49;
+
+                break;
+            case 12:
+                trisk2 = 49;
+
+                break;
+            case 13:
+                trisk2 = 50;
+
+                break;
+            case 14:
+                trisk2 = 51;
+
+                break;
+            case 15:
+                trisk2 = 52;
+
+                break;
+            case 16:
+                trisk2 = 53;
+                break;
+            case 17:
+                trisk2 = 54;
+
+                break;
+            case 18:
+                trisk2 = 54;
+
+                break;
+            case 19:
+                trisk2 = 55;
+
+                break;
+            case 20:
+                trisk2 = 56;
+
+                break;
+            case 21:
+                trisk2 = 57;
+
+                break;
+            case 22:
+                trisk2 = 58;
+
+                break;
+            case 23:
+                trisk2 = 59;
+
+                break;
+            case 24:
+                trisk2 = 59;
+                break;
+            case 25:
+                trisk2 = 60;
+
+                break;
+            case 26:
+                trisk2 = 61;
+
+                break;
+            case 27:
+                trisk2 = 62;
+
+                break;
+            case 28:
+                trisk2 = 63;
+
+                break;
+            case 29:
+                trisk2 = 64;
+
+                break;
+            case 30:
+                trisk2 = 64;
+
+                break;
+            case 31:
+                trisk2 = 65;
+
+                break;
+            case 32:
+                trisk2 = 66;
+                break;
+            case 33:
+                trisk2 = 67;
+
+                break;
+            case 34:
+                trisk2 = 68;
+
+                break;
+            case 35:
+                trisk2 = 69;
+
+                break;
+            case 36:
+                trisk2 = 69;
+
+                break;
+            case 37:
+                trisk2 = 70;
+
+                break;
+            case 38:
+                trisk2 = 71;
+
+                break;
+            case 39:
+                trisk2 = 72;
+
+                break;
+            case 40:
+                trisk2 = 73;
+                break;
+            case 41:
+                trisk2 = 74;
+
+                break;
+            case 42:
+                trisk2 = 74;
+
+                break;
+            case 43:
+                trisk2 = 75;
+
+                break;
+            case 44:
+                trisk2 = 76;
+
+                break;
+            case 45:
+                trisk2 = 77;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ครู
+            case 0:
+                trisk3 = 36;
+                break;
+            case 1:
+                trisk3 = 37;
+
+                break;
+            case 2:
+                trisk3 = 38;
+                break;
+            case 3:
+                trisk3 = 39;
+
+                break;
+            case 4:
+                trisk3 = 40;
+
+                break;
+            case 5:
+                trisk3 = 41;
+
+                break;
+            case 6:
+                trisk3 = 42;
+
+                break;
+            case 7:
+                trisk3 = 43;
+
+                break;
+            case 8:
+                trisk3 = 43;
+                break;
+            case 9:
+                trisk3 = 44;
+
+                break;
+            case 10:
+                trisk3 = 44;
+
+                break;
+            case 11:
+                trisk3 = 45;
+
+                break;
+            case 12:
+                trisk3 = 45;
+
+                break;
+            case 13:
+                trisk3 = 46;
+
+                break;
+            case 14:
+                trisk3 = 46;
+
+                break;
+            case 15:
+                trisk3 = 47;
+
+                break;
+            case 16:
+                trisk3 = 47;
+                break;
+            case 17:
+                trisk3 = 48;
+
+                break;
+            case 18:
+                trisk3 = 48;
+
+                break;
+            case 19:
+                trisk3 = 49;
+
+                break;
+            case 20:
+                trisk3 = 49;
+
+                break;
+            case 21:
+                trisk3 = 50;
+
+                break;
+            case 22:
+                trisk3 = 50;
+
+                break;
+            case 23:
+                trisk3 = 51;
+
+                break;
+            case 24:
+                trisk3 = 51;
+                break;
+            case 25:
+                trisk3 = 52;
+
+                break;
+            case 26:
+                trisk3 = 52;
+
+                break;
+            case 27:
+                trisk3 = 53;
+
+                break;
+            case 28:
+                trisk3 = 53;
+
+                break;
+            case 29:
+                trisk3 = 54;
+
+                break;
+            case 30:
+                trisk3 = 54;
+
+                break;
+            case 31:
+                trisk3 = 55;
+
+                break;
+            case 32:
+                trisk3 = 55;
+                break;
+            case 33:
+                trisk3 = 56;
+
+                break;
+            case 34:
+                trisk3 = 56;
+
+                break;
+            case 35:
+                trisk3 = 57;
+
+                break;
+            case 36:
+                trisk3 = 57;
+
+                break;
+            case 37:
+                trisk3 = 58;
+
+                break;
+            case 38:
+                trisk3 = 58;
+
+                break;
+            case 39:
+                trisk3 = 59;
+
+                break;
+            case 40:
+                trisk3 = 59;
+                break;
+            case 41:
+                trisk3 = 60;
+
+                break;
+            case 42:
+                trisk3 = 60;
+
+                break;
+            case 43:
+                trisk3 = 61;
+
+                break;
+            case 44:
+                trisk3 = 61;
+
+                break;
+            case 45:
+                trisk3 = 62;
+                break;
+            case 46:
+                trisk3 = 62;
+                break;
+            case 47:
+                trisk3 = 63;
+                break;
+            case 48:
+                trisk3 = 63;
+                break;
+            case 49:
+                trisk3 = 64;
+                break;
+            case 50:
+                trisk3 = 64;
+                break;
+            case 51:
+                trisk3 = 65;
+                break;
+            case 52:
+                trisk3 = 65;
+                break;
+            case 53:
+                trisk3 = 66;
+                break;
+            case 54:
+                trisk3 = 66;
+                break;
+            case 55:
+                trisk3 = 67;
+                break;
+            case 56:
+                trisk3 = 67;
+                break;
+            case 57:
+                trisk3 = 68;
+                break;
+            case 58:
+                trisk3 = 68;
+                break;
+            case 59:
+                trisk3 = 69;
+                break;
+            case 60:
+                trisk3 = 69;
+                break;
+            case 61:
+                trisk3 = 70;
+                break;
+            case 62:
+                trisk3 = 70;
+                break;
+            case 63:
+                trisk3 = 71;
+                break;
+            case 64:
+                trisk3 = 71;
+                break;
+            case 65:
+                trisk3 = 72;
+                break;
+            case 66:
+                trisk3 = 72;
+                break;
+            case 67:
+                trisk3 = 73;
+                break;
+            case 68:
+                trisk3 = 73;
+                break;
+            case 69:
+                trisk3 = 74;
+                break;
+            case 70:
+                trisk3 = 74;
+                break;
+            case 71:
+                trisk3 = 75;
+                break;
+            case 72:
+                trisk3 = 75;
+                break;
+            case 73:
+                trisk3 = 76;
+                break;
+            case 74:
+                trisk3 = 76;
+                break;
+            case 75:
+                trisk3 = 76;
+                break;
+            case 76:
+                trisk3 = 77;
+                break;
+            case 77:
+                trisk3 = 77;
+                break;
+            case 78:
+                trisk3 = 78;
+                break;
+            case 79:
+                trisk3 = 78;
+                break;
+            case 80:
+                trisk3 = 79;
+                break;
+            case 81:
+                trisk3 = 79;
+                break;
+            case 82:
+                trisk3 = 80;
+                break;
+            case 83:
+                trisk3 = 80;
+                break;
+            case 84:
+                trisk3 = 81;
+                break;
+            case 85:
+                trisk3 = 81;
+                break;
+            case 86:
+                trisk3 = 82;
+                break;
+            case 87:
+                trisk3 = 82;
+                break;
+            case 88:
+                trisk3 = 83;
+                break;
+            case 89:
+                trisk3 = 84;
+                break;
+            case 90:
+                trisk3 = 85;
+                break;
+
+
+        }
+    }
+
+    private void girlTeacher6To8() {
+        switch (trisk1) { // ด้าน 1 หญิง ครู
+            case 0:
+                trisk1 = 39;
+                break;
+            case 1:
+                trisk1 = 40;
+                break;
+            case 2:
+                trisk1 = 41;
+                break;
+            case 3:
+                trisk1 = 42;
+                break;
+            case 4:
+                trisk1 = 43;
+                break;
+            case 5:
+                trisk1 = 44;
+                break;
+            case 6:
+                trisk1 = 45;
+                break;
+            case 7:
+                trisk1 = 46;
+                break;
+            case 8:
+                trisk1 = 47;
+                break;
+            case 9:
+                trisk1 = 48;
+                break;
+            case 10:
+                trisk1 = 49;
+                break;
+            case 11:
+                trisk1 = 50;
+                break;
+            case 12:
+                trisk1 = 51;
+                break;
+            case 13:
+                trisk1 = 52;
+                break;
+            case 14:
+                trisk1 = 53;
+                break;
+            case 15:
+                trisk1 = 54;
+                break;
+            case 16:
+                trisk1 = 55;
+                break;
+            case 17:
+                trisk1 = 56;
+                break;
+            case 18:
+                trisk1 = 57;
+                break;
+            case 19:
+                trisk1 = 58;
+                break;
+            case 20:
+                trisk1 = 59;
+                break;
+            case 21:
+                trisk1 = 60;
+                break;
+            case 22:
+                trisk1 = 61;
+                break;
+            case 23:
+                trisk1 = 62;
+                break;
+            case 24:
+                trisk1 = 63;
+                break;
+            case 25:
+                trisk1 = 64;
+                break;
+            case 26:
+                trisk1 = 65;
+                break;
+            case 27:
+                trisk1 = 66;
+                break;
+            case 28:
+                trisk1 = 67;
+                break;
+            case 29:
+                trisk1 = 68;
+                break;
+            case 30:
+                trisk1 = 69;
+                break;
+            case 31:
+                trisk1 = 70;
+                break;
+            case 32:
+                trisk1 = 71;
+                break;
+            case 33:
+                trisk1 = 72;
+                break;
+            case 34:
+                trisk1 = 73;
+                break;
+            case 35:
+                trisk1 = 74;
+                break;
+            case 36:
+                trisk1 = 75;
+                break;
+            case 37:
+                trisk1 = 76;
+                break;
+            case 38:
+                trisk1 = 77;
+                break;
+            case 39:
+                trisk1 = 78;
+                break;
+            case 40:
+                trisk1 = 79;
+                break;
+            case 41:
+                trisk1 = 80;
+                break;
+            case 42:
+                trisk1 = 81;
+                break;
+            case 43:
+                trisk1 = 82;
+                break;
+            case 44:
+                trisk1 = 83;
+                break;
+            case 45:
+                trisk1 = 84;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ครู
+            case 0:
+                trisk2 = 37;
+                break;
+            case 1:
+                trisk2 = 38;
+
+                break;
+            case 2:
+                trisk2 = 39;
+                break;
+            case 3:
+                trisk2 = 40;
+
+                break;
+            case 4:
+                trisk2 = 41;
+
+                break;
+            case 5:
+                trisk2 = 42;
+
+                break;
+            case 6:
+                trisk2 = 43;
+
+                break;
+            case 7:
+                trisk2 = 43;
+
+                break;
+            case 8:
+                trisk2 = 44;
+                break;
+            case 9:
+                trisk2 = 45;
+
+                break;
+            case 10:
+                trisk2 = 46;
+
+                break;
+            case 11:
+                trisk2 = 47;
+
+                break;
+            case 12:
+                trisk2 = 47;
+
+                break;
+            case 13:
+                trisk2 = 48;
+
+                break;
+            case 14:
+                trisk2 = 49;
+
+                break;
+            case 15:
+                trisk2 = 50;
+
+                break;
+            case 16:
+                trisk2 = 51;
+                break;
+            case 17:
+                trisk2 = 51;
+
+                break;
+            case 18:
+                trisk2 = 52;
+
+                break;
+            case 19:
+                trisk2 = 53;
+
+                break;
+            case 20:
+                trisk2 = 54;
+
+                break;
+            case 21:
+                trisk2 = 55;
+
+                break;
+            case 22:
+                trisk2 = 55;
+
+                break;
+            case 23:
+                trisk2 = 56;
+
+                break;
+            case 24:
+                trisk2 = 57;
+                break;
+            case 25:
+                trisk2 = 58;
+
+                break;
+            case 26:
+                trisk2 = 59;
+
+                break;
+            case 27:
+                trisk2 = 59;
+
+                break;
+            case 28:
+                trisk2 = 60;
+
+                break;
+            case 29:
+                trisk2 = 61;
+
+                break;
+            case 30:
+                trisk2 = 62;
+
+                break;
+            case 31:
+                trisk2 = 63;
+
+                break;
+            case 32:
+                trisk2 = 63;
+                break;
+            case 33:
+                trisk2 = 64;
+
+                break;
+            case 34:
+                trisk2 = 65;
+
+                break;
+            case 35:
+                trisk2 = 66;
+
+                break;
+            case 36:
+                trisk2 = 66;
+
+                break;
+            case 37:
+                trisk2 = 67;
+
+                break;
+            case 38:
+                trisk2 = 68;
+
+                break;
+            case 39:
+                trisk2 = 69;
+
+                break;
+            case 40:
+                trisk2 = 70;
+                break;
+            case 41:
+                trisk2 = 70;
+
+                break;
+            case 42:
+                trisk2 = 71;
+
+                break;
+            case 43:
+                trisk2 = 72;
+
+                break;
+            case 44:
+                trisk2 = 73;
+
+                break;
+            case 45:
+                trisk2 = 74;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ครู
+            case 0:
+                trisk3 = 35;
+                break;
+            case 1:
+                trisk3 = 36;
+
+                break;
+            case 2:
+                trisk3 = 37;
+                break;
+            case 3:
+                trisk3 = 38;
+
+                break;
+            case 4:
+                trisk3 = 39;
+
+                break;
+            case 5:
+                trisk3 = 40;
+
+                break;
+            case 6:
+                trisk3 = 40;
+
+                break;
+            case 7:
+                trisk3 = 41;
+
+                break;
+            case 8:
+                trisk3 = 41;
+                break;
+            case 9:
+                trisk3 = 42;
+
+                break;
+            case 10:
+                trisk3 = 42;
+
+                break;
+            case 11:
+                trisk3 = 43;
+
+                break;
+            case 12:
+                trisk3 = 43;
+
+                break;
+            case 13:
+                trisk3 = 43;
+
+                break;
+            case 14:
+                trisk3 = 44;
+
+                break;
+            case 15:
+                trisk3 = 44;
+
+                break;
+            case 16:
+                trisk3 = 45;
+                break;
+            case 17:
+                trisk3 = 45;
+
+                break;
+            case 18:
+                trisk3 = 46;
+
+                break;
+            case 19:
+                trisk3 = 46;
+
+                break;
+            case 20:
+                trisk3 = 47;
+
+                break;
+            case 21:
+                trisk3 = 47;
+
+                break;
+            case 22:
+                trisk3 = 48;
+
+                break;
+            case 23:
+                trisk3 = 48;
+
+                break;
+            case 24:
+                trisk3 = 49;
+                break;
+            case 25:
+                trisk3 = 49;
+
+                break;
+            case 26:
+                trisk3 = 50;
+
+                break;
+            case 27:
+                trisk3 = 50;
+
+                break;
+            case 28:
+                trisk3 = 51;
+
+                break;
+            case 29:
+                trisk3 = 51;
+
+                break;
+            case 30:
+                trisk3 = 52;
+
+                break;
+            case 31:
+                trisk3 = 52;
+
+                break;
+            case 32:
+                trisk3 = 53;
+                break;
+            case 33:
+                trisk3 = 53;
+
+                break;
+            case 34:
+                trisk3 = 54;
+
+                break;
+            case 35:
+                trisk3 = 54;
+
+                break;
+            case 36:
+                trisk3 = 55;
+
+                break;
+            case 37:
+                trisk3 = 55;
+
+                break;
+            case 38:
+                trisk3 = 56;
+
+                break;
+            case 39:
+                trisk3 = 56;
+
+                break;
+            case 40:
+                trisk3 = 57;
+                break;
+            case 41:
+                trisk3 = 57;
+
+                break;
+            case 42:
+                trisk3 = 58;
+
+                break;
+            case 43:
+                trisk3 = 58;
+
+                break;
+            case 44:
+                trisk3 = 59;
+
+                break;
+            case 45:
+                trisk3 = 59;
+                break;
+            case 46:
+                trisk3 = 60;
+                break;
+            case 47:
+                trisk3 = 60;
+                break;
+            case 48:
+                trisk3 = 61;
+                break;
+            case 49:
+                trisk3 = 61;
+                break;
+            case 50:
+                trisk3 = 61;
+                break;
+            case 51:
+                trisk3 = 62;
+                break;
+            case 52:
+                trisk3 = 62;
+                break;
+            case 53:
+                trisk3 = 63;
+                break;
+            case 54:
+                trisk3 = 63;
+                break;
+            case 55:
+                trisk3 = 64;
+                break;
+            case 56:
+                trisk3 = 64;
+                break;
+            case 57:
+                trisk3 = 65;
+                break;
+            case 58:
+                trisk3 = 65;
+                break;
+            case 59:
+                trisk3 = 66;
+                break;
+            case 60:
+                trisk3 = 66;
+                break;
+            case 61:
+                trisk3 = 67;
+                break;
+            case 62:
+                trisk3 = 67;
+                break;
+            case 63:
+                trisk3 = 68;
+                break;
+            case 64:
+                trisk3 = 68;
+                break;
+            case 65:
+                trisk3 = 69;
+                break;
+            case 66:
+                trisk3 = 69;
+                break;
+            case 67:
+                trisk3 = 70;
+                break;
+            case 68:
+                trisk3 = 70;
+                break;
+            case 69:
+                trisk3 = 71;
+                break;
+            case 70:
+                trisk3 = 71;
+                break;
+            case 71:
+                trisk3 = 72;
+                break;
+            case 72:
+                trisk3 = 72;
+                break;
+            case 73:
+                trisk3 = 73;
+                break;
+            case 74:
+                trisk3 = 73;
+                break;
+            case 75:
+                trisk3 = 74;
+                break;
+            case 76:
+                trisk3 = 74;
+                break;
+            case 77:
+                trisk3 = 75;
+                break;
+            case 78:
+                trisk3 = 75;
+                break;
+            case 79:
+                trisk3 = 76;
+                break;
+            case 80:
+                trisk3 = 76;
+                break;
+            case 81:
+                trisk3 = 77;
+                break;
+            case 82:
+                trisk3 = 77;
+                break;
+            case 83:
+                trisk3 = 78;
+                break;
+            case 84:
+                trisk3 = 78;
+                break;
+            case 85:
+                trisk3 = 78;
+                break;
+            case 86:
+                trisk3 = 79;
+                break;
+            case 87:
+                trisk3 = 79;
+                break;
+            case 88:
+                trisk3 = 80;
+                break;
+            case 89:
+                trisk3 = 81;
+                break;
+            case 90:
+                trisk3 = 82;
+                break;
+
+
+        }
+    }
+
+    private void boyTeacher15To18() {
+        switch (trisk1) { // ด้าน 1 ชาย ครู
+            case 0:
+                trisk1 = 37;
+                break;
+            case 1:
+                trisk1 = 38;
+                break;
+            case 2:
+                trisk1 = 39;
+                break;
+            case 3:
+                trisk1 = 40;
+                break;
+            case 4:
+                trisk1 = 41;
+                break;
+            case 5:
+                trisk1 = 42;
+                break;
+            case 6:
+                trisk1 = 43;
+                break;
+            case 7:
+                trisk1 = 44;
+                break;
+            case 8:
+                trisk1 = 45;
+                break;
+            case 9:
+                trisk1 = 46;
+                break;
+            case 10:
+                trisk1 = 47;
+                break;
+            case 11:
+                trisk1 = 48;
+                break;
+            case 12:
+                trisk1 = 49;
+                break;
+            case 13:
+                trisk1 = 50;
+                break;
+            case 14:
+                trisk1 = 51;
+                break;
+            case 15:
+                trisk1 = 52;
+                break;
+            case 16:
+                trisk1 = 53;
+                break;
+            case 17:
+                trisk1 = 54;
+                break;
+            case 18:
+                trisk1 = 55;
+                break;
+            case 19:
+                trisk1 = 56;
+                break;
+            case 20:
+                trisk1 = 57;
+                break;
+            case 21:
+                trisk1 = 58;
+                break;
+            case 22:
+                trisk1 = 59;
+                break;
+            case 23:
+                trisk1 = 60;
+                break;
+            case 24:
+                trisk1 = 61;
+                break;
+            case 25:
+                trisk1 = 62;
+                break;
+            case 26:
+                trisk1 = 63;
+                break;
+            case 27:
+                trisk1 = 64;
+                break;
+            case 28:
+                trisk1 = 65;
+                break;
+            case 29:
+                trisk1 = 66;
+                break;
+            case 30:
+                trisk1 = 67;
+                break;
+            case 31:
+                trisk1 = 68;
+                break;
+            case 32:
+                trisk1 = 69;
+                break;
+            case 33:
+                trisk1 = 70;
+                break;
+            case 34:
+                trisk1 = 71;
+                break;
+            case 35:
+                trisk1 = 72;
+                break;
+            case 36:
+                trisk1 = 73;
+                break;
+            case 37:
+                trisk1 = 74;
+                break;
+            case 38:
+                trisk1 = 75;
+                break;
+            case 39:
+                trisk1 = 76;
+                break;
+            case 40:
+                trisk1 = 77;
+                break;
+            case 41:
+                trisk1 = 78;
+                break;
+            case 42:
+                trisk1 = 79;
+                break;
+            case 43:
+                trisk1 = 80;
+                break;
+            case 44:
+                trisk1 = 81;
+                break;
+            case 45:
+                trisk1 = 82;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 ชาย ครู
+            case 0:
+                trisk2 = 34;
+                break;
+            case 1:
+                trisk2 = 35;
+
+                break;
+            case 2:
+                trisk2 = 36;
+                break;
+            case 3:
+                trisk2 = 37;
+
+                break;
+            case 4:
+                trisk2 = 38;
+
+                break;
+            case 5:
+                trisk2 = 39;
+
+                break;
+            case 6:
+                trisk2 = 40;
+
+                break;
+            case 7:
+                trisk2 = 41;
+
+                break;
+            case 8:
+                trisk2 = 42;
+                break;
+            case 9:
+                trisk2 = 43;
+
+                break;
+            case 10:
+                trisk2 = 43;
+
+                break;
+            case 11:
+                trisk2 = 44;
+
+                break;
+            case 12:
+                trisk2 = 45;
+
+                break;
+            case 13:
+                trisk2 = 46;
+
+                break;
+            case 14:
+                trisk2 = 47;
+
+                break;
+            case 15:
+                trisk2 = 48;
+
+                break;
+            case 16:
+                trisk2 = 48;
+                break;
+            case 17:
+                trisk2 = 49;
+
+                break;
+            case 18:
+                trisk2 = 50;
+
+                break;
+            case 19:
+                trisk2 = 51;
+
+                break;
+            case 20:
+                trisk2 = 52;
+
+                break;
+            case 21:
+                trisk2 = 53;
+
+                break;
+            case 22:
+                trisk2 = 53;
+
+                break;
+            case 23:
+                trisk2 = 54;
+
+                break;
+            case 24:
+                trisk2 = 55;
+                break;
+            case 25:
+                trisk2 = 56;
+
+                break;
+            case 26:
+                trisk2 = 57;
+
+                break;
+            case 27:
+                trisk2 = 58;
+
+                break;
+            case 28:
+                trisk2 = 58;
+
+                break;
+            case 29:
+                trisk2 = 59;
+
+                break;
+            case 30:
+                trisk2 = 60;
+
+                break;
+            case 31:
+                trisk2 = 61;
+
+                break;
+            case 32:
+                trisk2 = 62;
+                break;
+            case 33:
+                trisk2 = 63;
+
+                break;
+            case 34:
+                trisk2 = 63;
+
+                break;
+            case 35:
+                trisk2 = 64;
+
+                break;
+            case 36:
+                trisk2 = 65;
+
+                break;
+            case 37:
+                trisk2 = 66;
+
+                break;
+            case 38:
+                trisk2 = 67;
+
+                break;
+            case 39:
+                trisk2 = 68;
+
+                break;
+            case 40:
+                trisk2 = 69;
+                break;
+            case 41:
+                trisk2 = 69;
+
+                break;
+            case 42:
+                trisk2 = 70;
+
+                break;
+            case 43:
+                trisk2 = 71;
+
+                break;
+            case 44:
+                trisk2 = 72;
+
+                break;
+            case 45:
+                trisk2 = 73;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 ชาย ครู
+            case 0:
+                trisk3 = 32;
+                break;
+            case 1:
+                trisk3 = 33;
+
+                break;
+            case 2:
+                trisk3 = 34;
+                break;
+            case 3:
+                trisk3 = 35;
+
+                break;
+            case 4:
+                trisk3 = 36;
+
+                break;
+            case 5:
+                trisk3 = 37;
+
+                break;
+            case 6:
+                trisk3 = 38;
+
+                break;
+            case 7:
+                trisk3 = 38;
+
+                break;
+            case 8:
+                trisk3 = 39;
+                break;
+            case 9:
+                trisk3 = 39;
+
+                break;
+            case 10:
+                trisk3 = 40;
+
+                break;
+            case 11:
+                trisk3 = 40;
+
+                break;
+            case 12:
+                trisk3 = 41;
+
+                break;
+            case 13:
+                trisk3 = 41;
+
+                break;
+            case 14:
+                trisk3 = 42;
+
+                break;
+            case 15:
+                trisk3 = 42;
+
+                break;
+            case 16:
+                trisk3 = 43;
+                break;
+            case 17:
+                trisk3 = 43;
+
+                break;
+            case 18:
+                trisk3 = 44;
+
+                break;
+            case 19:
+                trisk3 = 44;
+
+                break;
+            case 20:
+                trisk3 = 45;
+
+                break;
+            case 21:
+                trisk3 = 45;
+
+                break;
+            case 22:
+                trisk3 = 46;
+
+                break;
+            case 23:
+                trisk3 = 46;
+
+                break;
+            case 24:
+                trisk3 = 47;
+                break;
+            case 25:
+                trisk3 = 47;
+
+                break;
+            case 26:
+                trisk3 = 48;
+
+                break;
+            case 27:
+                trisk3 = 48;
+
+                break;
+            case 28:
+                trisk3 = 49;
+
+                break;
+            case 29:
+                trisk3 = 49;
+
+                break;
+            case 30:
+                trisk3 = 50;
+
+                break;
+            case 31:
+                trisk3 = 50;
+
+                break;
+            case 32:
+                trisk3 = 51;
+                break;
+            case 33:
+                trisk3 = 51;
+
+                break;
+            case 34:
+                trisk3 = 52;
+
+                break;
+            case 35:
+                trisk3 = 52;
+
+                break;
+            case 36:
+                trisk3 = 53;
+
+                break;
+            case 37:
+                trisk3 = 53;
+
+                break;
+            case 38:
+                trisk3 = 53;
+
+                break;
+            case 39:
+                trisk3 = 54;
+
+                break;
+            case 40:
+                trisk3 = 54;
+                break;
+            case 41:
+                trisk3 = 55;
+
+                break;
+            case 42:
+                trisk3 = 55;
+
+                break;
+            case 43:
+                trisk3 = 56;
+
+                break;
+            case 44:
+                trisk3 = 56;
+
+                break;
+            case 45:
+                trisk3 = 57;
+                break;
+            case 46:
+                trisk3 = 57;
+                break;
+            case 47:
+                trisk3 = 58;
+                break;
+            case 48:
+                trisk3 = 58;
+                break;
+            case 49:
+                trisk3 = 59;
+                break;
+            case 50:
+                trisk3 = 59;
+                break;
+            case 51:
+                trisk3 = 60;
+                break;
+            case 52:
+                trisk3 = 60;
+                break;
+            case 53:
+                trisk3 = 61;
+                break;
+            case 54:
+                trisk3 = 61;
+                break;
+            case 55:
+                trisk3 = 62;
+                break;
+            case 56:
+                trisk3 = 62;
+                break;
+            case 57:
+                trisk3 = 63;
+                break;
+            case 58:
+                trisk3 = 63;
+                break;
+            case 59:
+                trisk3 = 64;
+                break;
+            case 60:
+                trisk3 = 64;
+                break;
+            case 61:
+                trisk3 = 65;
+                break;
+            case 62:
+                trisk3 = 65;
+                break;
+            case 63:
+                trisk3 = 66;
+                break;
+            case 64:
+                trisk3 = 66;
+                break;
+            case 65:
+                trisk3 = 67;
+                break;
+            case 66:
+                trisk3 = 67;
+                break;
+            case 67:
+                trisk3 = 68;
+                break;
+            case 68:
+                trisk3 = 68;
+                break;
+            case 69:
+                trisk3 = 69;
+                break;
+            case 70:
+                trisk3 = 69;
+                break;
+            case 71:
+                trisk3 = 70;
+                break;
+            case 72:
+                trisk3 = 70;
+                break;
+            case 73:
+                trisk3 = 71;
+                break;
+            case 74:
+                trisk3 = 71;
+                break;
+            case 75:
+                trisk3 = 72;
+                break;
+            case 76:
+                trisk3 = 72;
+                break;
+            case 77:
+                trisk3 = 73;
+                break;
+            case 78:
+                trisk3 = 73;
+                break;
+            case 79:
+                trisk3 = 73;
+                break;
+            case 80:
+                trisk3 = 74;
+                break;
+            case 81:
+                trisk3 = 74;
+                break;
+            case 82:
+                trisk3 = 74;
+                break;
+            case 83:
+                trisk3 = 75;
+                break;
+            case 84:
+                trisk3 = 76;
+                break;
+            case 85:
+                trisk3 = 76;
+                break;
+            case 86:
+                trisk3 = 77;
+                break;
+            case 87:
+                trisk3 = 77;
+                break;
+            case 88:
+                trisk3 = 78;
+                break;
+            case 89:
+                trisk3 = 79;
+                break;
+            case 90:
+                trisk3 = 80;
+                break;
+
+
+        }
+    }
+
+    private void boyTeacher12To14() {
+        switch (trisk1) { // ด้าน 1 ชาย ครู
+            case 0:
+                trisk1 = 36;
+                break;
+            case 1:
+                trisk1 = 37;
+                break;
+            case 2:
+                trisk1 = 38;
+                break;
+            case 3:
+                trisk1 = 39;
+                break;
+            case 4:
+                trisk1 = 40;
+                break;
+            case 5:
+                trisk1 = 41;
+                break;
+            case 6:
+                trisk1 = 42;
+                break;
+            case 7:
+                trisk1 = 43;
+                break;
+            case 8:
+                trisk1 = 44;
+                break;
+            case 9:
+                trisk1 = 44;
+                break;
+            case 10:
+                trisk1 = 45;
+                break;
+            case 11:
+                trisk1 = 46;
+                break;
+            case 12:
+                trisk1 = 47;
+                break;
+            case 13:
+                trisk1 = 48;
+                break;
+            case 14:
+                trisk1 = 49;
+                break;
+            case 15:
+                trisk1 = 50;
+                break;
+            case 16:
+                trisk1 = 51;
+                break;
+            case 17:
+                trisk1 = 52;
+                break;
+            case 18:
+                trisk1 = 53;
+                break;
+            case 19:
+                trisk1 = 54;
+                break;
+            case 20:
+                trisk1 = 55;
+                break;
+            case 21:
+                trisk1 = 55;
+                break;
+            case 22:
+                trisk1 = 56;
+                break;
+            case 23:
+                trisk1 = 57;
+                break;
+            case 24:
+                trisk1 = 58;
+                break;
+            case 25:
+                trisk1 = 59;
+                break;
+            case 26:
+                trisk1 = 60;
+                break;
+            case 27:
+                trisk1 = 61;
+                break;
+            case 28:
+                trisk1 = 62;
+                break;
+            case 29:
+                trisk1 = 63;
+                break;
+            case 30:
+                trisk1 = 64;
+                break;
+            case 31:
+                trisk1 = 65;
+                break;
+            case 32:
+                trisk1 = 66;
+                break;
+            case 33:
+                trisk1 = 66;
+                break;
+            case 34:
+                trisk1 = 67;
+                break;
+            case 35:
+                trisk1 = 68;
+                break;
+            case 36:
+                trisk1 = 69;
+                break;
+            case 37:
+                trisk1 = 70;
+                break;
+            case 38:
+                trisk1 = 71;
+                break;
+            case 39:
+                trisk1 = 72;
+                break;
+            case 40:
+                trisk1 = 73;
+                break;
+            case 41:
+                trisk1 = 74;
+                break;
+            case 42:
+                trisk1 = 75;
+                break;
+            case 43:
+                trisk1 = 76;
+                break;
+            case 44:
+                trisk1 = 76;
+                break;
+            case 45:
+                trisk1 = 77;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 ชาย ครู
+            case 0:
+                trisk2 = 34;
+                break;
+            case 1:
+                trisk2 = 35;
+
+                break;
+            case 2:
+                trisk2 = 36;
+                break;
+            case 3:
+                trisk2 = 37;
+
+                break;
+            case 4:
+                trisk2 = 38;
+
+                break;
+            case 5:
+                trisk2 = 38;
+
+                break;
+            case 6:
+                trisk2 = 39;
+
+                break;
+            case 7:
+                trisk2 = 40;
+
+                break;
+            case 8:
+                trisk2 = 41;
+                break;
+            case 9:
+                trisk2 = 42;
+
+                break;
+            case 10:
+                trisk2 = 42;
+
+                break;
+            case 11:
+                trisk2 = 43;
+
+                break;
+            case 12:
+                trisk2 = 44;
+
+                break;
+            case 13:
+                trisk2 = 45;
+
+                break;
+            case 14:
+                trisk2 = 46;
+
+                break;
+            case 15:
+                trisk2 = 46;
+
+                break;
+            case 16:
+                trisk2 = 47;
+                break;
+            case 17:
+                trisk2 = 48;
+
+                break;
+            case 18:
+                trisk2 = 49;
+
+                break;
+            case 19:
+                trisk2 = 49;
+
+                break;
+            case 20:
+                trisk2 = 50;
+
+                break;
+            case 21:
+                trisk2 = 51;
+
+                break;
+            case 22:
+                trisk2 = 52;
+
+                break;
+            case 23:
+                trisk2 = 53;
+
+                break;
+            case 24:
+                trisk2 = 53;
+                break;
+            case 25:
+                trisk2 = 54;
+
+                break;
+            case 26:
+                trisk2 = 55;
+
+                break;
+            case 27:
+                trisk2 = 56;
+
+                break;
+            case 28:
+                trisk2 = 57;
+
+                break;
+            case 29:
+                trisk2 = 57;
+
+                break;
+            case 30:
+                trisk2 = 58;
+
+                break;
+            case 31:
+                trisk2 = 59;
+
+                break;
+            case 32:
+                trisk2 = 60;
+                break;
+            case 33:
+                trisk2 = 60;
+
+                break;
+            case 34:
+                trisk2 = 61;
+
+                break;
+            case 35:
+                trisk2 = 62;
+
+                break;
+            case 36:
+                trisk2 = 63;
+
+                break;
+            case 37:
+                trisk2 = 64;
+
+                break;
+            case 38:
+                trisk2 = 64;
+
+                break;
+            case 39:
+                trisk2 = 65;
+
+                break;
+            case 40:
+                trisk2 = 66;
+                break;
+            case 41:
+                trisk2 = 67;
+
+                break;
+            case 42:
+                trisk2 = 68;
+
+                break;
+            case 43:
+                trisk2 = 69;
+
+                break;
+            case 44:
+                trisk2 = 70;
+
+                break;
+            case 45:
+                trisk2 = 71;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 ชาย ครู
+            case 0:
+                trisk3 = 32;
+                break;
+            case 1:
+                trisk3 = 33;
+
+                break;
+            case 2:
+                trisk3 = 34;
+                break;
+            case 3:
+                trisk3 = 35;
+
+                break;
+            case 4:
+                trisk3 = 36;
+
+                break;
+            case 5:
+                trisk3 = 37;
+
+                break;
+            case 6:
+                trisk3 = 37;
+
+                break;
+            case 7:
+                trisk3 = 37;
+
+                break;
+            case 8:
+                trisk3 = 38;
+                break;
+            case 9:
+                trisk3 = 38;
+
+                break;
+            case 10:
+                trisk3 = 39;
+
+                break;
+            case 11:
+                trisk3 = 39;
+
+                break;
+            case 12:
+                trisk3 = 40;
+
+                break;
+            case 13:
+                trisk3 = 40;
+
+                break;
+            case 14:
+                trisk3 = 41;
+
+                break;
+            case 15:
+                trisk3 = 41;
+
+                break;
+            case 16:
+                trisk3 = 42;
+                break;
+            case 17:
+                trisk3 = 42;
+
+                break;
+            case 18:
+                trisk3 = 42;
+
+                break;
+            case 19:
+                trisk3 = 43;
+
+                break;
+            case 20:
+                trisk3 = 43;
+
+                break;
+            case 21:
+                trisk3 = 44;
+
+                break;
+            case 22:
+                trisk3 = 44;
+
+                break;
+            case 23:
+                trisk3 = 45;
+
+                break;
+            case 24:
+                trisk3 = 45;
+                break;
+            case 25:
+                trisk3 = 46;
+
+                break;
+            case 26:
+                trisk3 = 46;
+
+                break;
+            case 27:
+                trisk3 = 47;
+
+                break;
+            case 28:
+                trisk3 = 47;
+
+                break;
+            case 29:
+                trisk3 = 47;
+
+                break;
+            case 30:
+                trisk3 = 48;
+
+                break;
+            case 31:
+                trisk3 = 48;
+
+                break;
+            case 32:
+                trisk3 = 49;
+                break;
+            case 33:
+                trisk3 = 49;
+
+                break;
+            case 34:
+                trisk3 = 50;
+
+                break;
+            case 35:
+                trisk3 = 50;
+
+                break;
+            case 36:
+                trisk3 = 51;
+
+                break;
+            case 37:
+                trisk3 = 51;
+
+                break;
+            case 38:
+                trisk3 = 51;
+
+                break;
+            case 39:
+                trisk3 = 52;
+
+                break;
+            case 40:
+                trisk3 = 52;
+                break;
+            case 41:
+                trisk3 = 53;
+
+                break;
+            case 42:
+                trisk3 = 53;
+
+                break;
+            case 43:
+                trisk3 = 54;
+
+                break;
+            case 44:
+                trisk3 = 54;
+
+                break;
+            case 45:
+                trisk3 = 55;
+                break;
+            case 46:
+                trisk3 = 55;
+                break;
+            case 47:
+                trisk3 = 56;
+                break;
+            case 48:
+                trisk3 = 56;
+                break;
+            case 49:
+                trisk3 = 56;
+                break;
+            case 50:
+                trisk3 = 57;
+                break;
+            case 51:
+                trisk3 = 57;
+                break;
+            case 52:
+                trisk3 = 58;
+                break;
+            case 53:
+                trisk3 = 58;
+                break;
+            case 54:
+                trisk3 = 59;
+                break;
+            case 55:
+                trisk3 = 59;
+                break;
+            case 56:
+                trisk3 = 60;
+                break;
+            case 57:
+                trisk3 = 60;
+                break;
+            case 58:
+                trisk3 = 61;
+                break;
+            case 59:
+                trisk3 = 61;
+                break;
+            case 60:
+                trisk3 = 61;
+                break;
+            case 61:
+                trisk3 = 62;
+                break;
+            case 62:
+                trisk3 = 62;
+                break;
+            case 63:
+                trisk3 = 63;
+                break;
+            case 64:
+                trisk3 = 63;
+                break;
+            case 65:
+                trisk3 = 64;
+                break;
+            case 66:
+                trisk3 = 64;
+                break;
+            case 67:
+                trisk3 = 65;
+                break;
+            case 68:
+                trisk3 = 65;
+                break;
+            case 69:
+                trisk3 = 66;
+                break;
+            case 70:
+                trisk3 = 66;
+                break;
+            case 71:
+                trisk3 = 66;
+                break;
+            case 72:
+                trisk3 = 67;
+                break;
+            case 73:
+                trisk3 = 67;
+                break;
+            case 74:
+                trisk3 = 68;
+                break;
+            case 75:
+                trisk3 = 68;
+                break;
+            case 76:
+                trisk3 = 69;
+                break;
+            case 77:
+                trisk3 = 69;
+                break;
+            case 78:
+                trisk3 = 70;
+                break;
+            case 79:
+                trisk3 = 70;
+                break;
+            case 80:
+                trisk3 = 71;
+                break;
+            case 81:
+                trisk3 = 71;
+                break;
+            case 82:
+                trisk3 = 71;
+                break;
+            case 83:
+                trisk3 = 72;
+                break;
+            case 84:
+                trisk3 = 72;
+                break;
+            case 85:
+                trisk3 = 73;
+                break;
+            case 86:
+                trisk3 = 73;
+                break;
+            case 87:
+                trisk3 = 74;
+                break;
+            case 88:
+                trisk3 = 75;
+                break;
+            case 89:
+                trisk3 = 76;
+                break;
+            case 90:
+                trisk3 = 77;
+                break;
+
+
+        }
+    }
+
+    private void boyTeacher9To11() {
+        switch (trisk1) { // ด้าน 1 ชาย ครู
+            case 0:
+                trisk1 = 35;
+                break;
+            case 1:
+                trisk1 = 36;
+                break;
+            case 2:
+                trisk1 = 37;
+                break;
+            case 3:
+                trisk1 = 38;
+                break;
+            case 4:
+                trisk1 = 39;
+                break;
+            case 5:
+                trisk1 = 40;
+                break;
+            case 6:
+                trisk1 = 41;
+                break;
+            case 7:
+                trisk1 = 42;
+                break;
+            case 8:
+                trisk1 = 43;
+                break;
+            case 9:
+                trisk1 = 44;
+                break;
+            case 10:
+                trisk1 = 45;
+                break;
+            case 11:
+                trisk1 = 45;
+                break;
+            case 12:
+                trisk1 = 46;
+                break;
+            case 13:
+                trisk1 = 47;
+                break;
+            case 14:
+                trisk1 = 48;
+                break;
+            case 15:
+                trisk1 = 49;
+                break;
+            case 16:
+                trisk1 = 50;
+                break;
+            case 17:
+                trisk1 = 51;
+                break;
+            case 18:
+                trisk1 = 51;
+                break;
+            case 19:
+                trisk1 = 52;
+                break;
+            case 20:
+                trisk1 = 53;
+                break;
+            case 21:
+                trisk1 = 54;
+                break;
+            case 22:
+                trisk1 = 55;
+                break;
+            case 23:
+                trisk1 = 56;
+                break;
+            case 24:
+                trisk1 = 57;
+                break;
+            case 25:
+                trisk1 = 57;
+                break;
+            case 26:
+                trisk1 = 58;
+                break;
+            case 27:
+                trisk1 = 59;
+                break;
+            case 28:
+                trisk1 = 60;
+                break;
+            case 29:
+                trisk1 = 61;
+                break;
+            case 30:
+                trisk1 = 62;
+                break;
+            case 31:
+                trisk1 = 63;
+                break;
+            case 32:
+                trisk1 = 63;
+                break;
+            case 33:
+                trisk1 = 64;
+                break;
+            case 34:
+                trisk1 = 65;
+                break;
+            case 35:
+                trisk1 = 66;
+                break;
+            case 36:
+                trisk1 = 67;
+                break;
+            case 37:
+                trisk1 = 68;
+                break;
+            case 38:
+                trisk1 = 69;
+                break;
+            case 39:
+                trisk1 = 70;
+                break;
+            case 40:
+                trisk1 = 70;
+                break;
+            case 41:
+                trisk1 = 71;
+                break;
+            case 42:
+                trisk1 = 72;
+                break;
+            case 43:
+                trisk1 = 73;
+                break;
+            case 44:
+                trisk1 = 74;
+                break;
+            case 45:
+                trisk1 = 75;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 ชาย ครู
+            case 0:
+                trisk2 = 33;
+                break;
+            case 1:
+                trisk2 = 34;
+
+                break;
+            case 2:
+                trisk2 = 35;
+                break;
+            case 3:
+                trisk2 = 36;
+
+                break;
+            case 4:
+                trisk2 = 37;
+
+                break;
+            case 5:
+                trisk2 = 38;
+
+                break;
+            case 6:
+                trisk2 = 38;
+
+                break;
+            case 7:
+                trisk2 = 39;
+
+                break;
+            case 8:
+                trisk2 = 40;
+                break;
+            case 9:
+                trisk2 = 41;
+
+                break;
+            case 10:
+                trisk2 = 42;
+
+                break;
+            case 11:
+                trisk2 = 42;
+
+                break;
+            case 12:
+                trisk2 = 43;
+
+                break;
+            case 13:
+                trisk2 = 44;
+
+                break;
+            case 14:
+                trisk2 = 45;
+
+                break;
+            case 15:
+                trisk2 = 45;
+
+                break;
+            case 16:
+                trisk2 = 46;
+                break;
+            case 17:
+                trisk2 = 47;
+
+                break;
+            case 18:
+                trisk2 = 48;
+
+                break;
+            case 19:
+                trisk2 = 48;
+
+                break;
+            case 20:
+                trisk2 = 49;
+
+                break;
+            case 21:
+                trisk2 = 50;
+
+                break;
+            case 22:
+                trisk2 = 51;
+
+                break;
+            case 23:
+                trisk2 = 51;
+
+                break;
+            case 24:
+                trisk2 = 52;
+                break;
+            case 25:
+                trisk2 = 53;
+
+                break;
+            case 26:
+                trisk2 = 54;
+
+                break;
+            case 27:
+                trisk2 = 55;
+
+                break;
+            case 28:
+                trisk2 = 55;
+
+                break;
+            case 29:
+                trisk2 = 56;
+
+                break;
+            case 30:
+                trisk2 = 57;
+
+                break;
+            case 31:
+                trisk2 = 58;
+
+                break;
+            case 32:
+                trisk2 = 58;
+                break;
+            case 33:
+                trisk2 = 59;
+
+                break;
+            case 34:
+                trisk2 = 60;
+
+                break;
+            case 35:
+                trisk2 = 61;
+
+                break;
+            case 36:
+                trisk2 = 61;
+
+                break;
+            case 37:
+                trisk2 = 62;
+
+                break;
+            case 38:
+                trisk2 = 63;
+
+                break;
+            case 39:
+                trisk2 = 64;
+
+                break;
+            case 40:
+                trisk2 = 65;
+                break;
+            case 41:
+                trisk2 = 65;
+
+                break;
+            case 42:
+                trisk2 = 66;
+
+                break;
+            case 43:
+                trisk2 = 67;
+
+                break;
+            case 44:
+                trisk2 = 68;
+
+                break;
+            case 45:
+                trisk2 = 69;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 ชาย ครู
+            case 0:
+                trisk3 = 31;
+                break;
+            case 1:
+                trisk3 = 32;
+
+                break;
+            case 2:
+                trisk3 = 33;
+                break;
+            case 3:
+                trisk3 = 34;
+
+                break;
+            case 4:
+                trisk3 = 35;
+
+                break;
+            case 5:
+                trisk3 = 35;
+
+                break;
+            case 6:
+                trisk3 = 36;
+
+                break;
+            case 7:
+                trisk3 = 36;
+
+                break;
+            case 8:
+                trisk3 = 37;
+                break;
+            case 9:
+                trisk3 = 37;
+
+                break;
+            case 10:
+                trisk3 = 38;
+
+                break;
+            case 11:
+                trisk3 = 38;
+
+                break;
+            case 12:
+                trisk3 = 39;
+
+                break;
+            case 13:
+                trisk3 = 39;
+
+                break;
+            case 14:
+                trisk3 = 40;
+
+                break;
+            case 15:
+                trisk3 = 40;
+
+                break;
+            case 16:
+                trisk3 = 40;
+                break;
+            case 17:
+                trisk3 = 41;
+
+                break;
+            case 18:
+                trisk3 = 41;
+
+                break;
+            case 19:
+                trisk3 = 42;
+
+                break;
+            case 20:
+                trisk3 = 42;
+
+                break;
+            case 21:
+                trisk3 = 43;
+
+                break;
+            case 22:
+                trisk3 = 43;
+
+                break;
+            case 23:
+                trisk3 = 44;
+
+                break;
+            case 24:
+                trisk3 = 44;
+                break;
+            case 25:
+                trisk3 = 44;
+
+                break;
+            case 26:
+                trisk3 = 45;
+
+                break;
+            case 27:
+                trisk3 = 45;
+
+                break;
+            case 28:
+                trisk3 = 46;
+
+                break;
+            case 29:
+                trisk3 = 46;
+
+                break;
+            case 30:
+                trisk3 = 47;
+
+                break;
+            case 31:
+                trisk3 = 47;
+
+                break;
+            case 32:
+                trisk3 = 48;
+                break;
+            case 33:
+                trisk3 = 48;
+
+                break;
+            case 34:
+                trisk3 = 48;
+
+                break;
+            case 35:
+                trisk3 = 49;
+
+                break;
+            case 36:
+                trisk3 = 49;
+
+                break;
+            case 37:
+                trisk3 = 50;
+
+                break;
+            case 38:
+                trisk3 = 50;
+
+                break;
+            case 39:
+                trisk3 = 51;
+
+                break;
+            case 40:
+                trisk3 = 51;
+                break;
+            case 41:
+                trisk3 = 52;
+
+                break;
+            case 42:
+                trisk3 = 52;
+
+                break;
+            case 43:
+                trisk3 = 52;
+
+                break;
+            case 44:
+                trisk3 = 53;
+
+                break;
+            case 45:
+                trisk3 = 53;
+                break;
+            case 46:
+                trisk3 = 54;
+                break;
+            case 47:
+                trisk3 = 54;
+                break;
+            case 48:
+                trisk3 = 55;
+                break;
+            case 49:
+                trisk3 = 55;
+                break;
+            case 50:
+                trisk3 = 56;
+                break;
+            case 51:
+                trisk3 = 56;
+                break;
+            case 52:
+                trisk3 = 56;
+                break;
+            case 53:
+                trisk3 = 57;
+                break;
+            case 54:
+                trisk3 = 57;
+                break;
+            case 55:
+                trisk3 = 58;
+                break;
+            case 56:
+                trisk3 = 58;
+                break;
+            case 57:
+                trisk3 = 59;
+                break;
+            case 58:
+                trisk3 = 59;
+                break;
+            case 59:
+                trisk3 = 60;
+                break;
+            case 60:
+                trisk3 = 60;
+                break;
+            case 61:
+                trisk3 = 60;
+                break;
+            case 62:
+                trisk3 = 61;
+                break;
+            case 63:
+                trisk3 = 61;
+                break;
+            case 64:
+                trisk3 = 62;
+                break;
+            case 65:
+                trisk3 = 62;
+                break;
+            case 66:
+                trisk3 = 63;
+                break;
+            case 67:
+                trisk3 = 63;
+                break;
+            case 68:
+                trisk3 = 64;
+                break;
+            case 69:
+                trisk3 = 64;
+                break;
+            case 70:
+                trisk3 = 64;
+                break;
+            case 71:
+                trisk3 = 65;
+                break;
+            case 72:
+                trisk3 = 65;
+                break;
+            case 73:
+                trisk3 = 66;
+                break;
+            case 74:
+                trisk3 = 66;
+                break;
+            case 75:
+                trisk3 = 67;
+                break;
+            case 76:
+                trisk3 = 67;
+                break;
+            case 77:
+                trisk3 = 68;
+                break;
+            case 78:
+                trisk3 = 68;
+                break;
+            case 79:
+                trisk3 = 68;
+                break;
+            case 80:
+                trisk3 = 69;
+                break;
+            case 81:
+                trisk3 = 69;
+                break;
+            case 82:
+                trisk3 = 70;
+                break;
+            case 83:
+                trisk3 = 70;
+                break;
+            case 84:
+                trisk3 = 71;
+                break;
+            case 85:
+                trisk3 = 71;
+                break;
+            case 86:
+                trisk3 = 72;
+                break;
+            case 87:
+                trisk3 = 72;
+                break;
+            case 88:
+                trisk3 = 73;
+                break;
+            case 89:
+                trisk3 = 74;
+                break;
+            case 90:
+                trisk3 = 75;
+                break;
+
+
+        }
+    }
+
+    private void boyTeacher6To8(){
+        switch (trisk1) { // ด้าน 1 ชาย ครู
+            case 0:
+                trisk1 = 35;
+                break;
+            case 1:
+                trisk1 = 36;
+                break;
+            case 2:
+                trisk1 = 37;
+                break;
+            case 3:
+                trisk1 = 38;
+                break;
+            case 4:
+                trisk1 = 39;
+                break;
+            case 5:
+                trisk1 = 40;
+                break;
+            case 6:
+                trisk1 = 41;
+                break;
+            case 7:
+                trisk1 = 41;
+                break;
+            case 8:
+                trisk1 = 42;
+                break;
+            case 9:
+                trisk1 = 43;
+                break;
+            case 10:
+                trisk1 = 44;
+                break;
+            case 11:
+                trisk1 = 45;
+                break;
+            case 12:
+                trisk1 = 46;
+                break;
+            case 13:
+                trisk1 = 47;
+                break;
+            case 14:
+                trisk1 = 48;
+                break;
+            case 15:
+                trisk1 = 49;
+                break;
+            case 16:
+                trisk1 = 50;
+                break;
+            case 17:
+                trisk1 = 50;
+                break;
+            case 18:
+                trisk1 = 51;
+                break;
+            case 19:
+                trisk1 = 52;
+                break;
+            case 20:
+                trisk1 = 53;
+                break;
+            case 21:
+                trisk1 = 54;
+                break;
+            case 22:
+                trisk1 = 55;
+                break;
+            case 23:
+                trisk1 = 56;
+                break;
+            case 24:
+                trisk1 = 57;
+                break;
+            case 25:
+                trisk1 = 58;
+                break;
+            case 26:
+                trisk1 = 59;
+                break;
+            case 27:
+                trisk1 = 59;
+                break;
+            case 28:
+                trisk1 = 60;
+                break;
+            case 29:
+                trisk1 = 61;
+                break;
+            case 30:
+                trisk1 = 62;
+                break;
+            case 31:
+                trisk1 = 63;
+                break;
+            case 32:
+                trisk1 = 64;
+                break;
+            case 33:
+                trisk1 = 65;
+                break;
+            case 34:
+                trisk1 = 66;
+                break;
+            case 35:
+                trisk1 = 67;
+                break;
+            case 36:
+                trisk1 = 68;
+                break;
+            case 37:
+                trisk1 = 69;
+                break;
+            case 38:
+                trisk1 = 69;
+                break;
+            case 39:
+                trisk1 = 70;
+                break;
+            case 40:
+                trisk1 = 71;
+                break;
+            case 41:
+                trisk1 = 72;
+                break;
+            case 42:
+                trisk1 = 73;
+                break;
+            case 43:
+                trisk1 = 74;
+                break;
+            case 44:
+                trisk1 = 75;
+                break;
+            case 45:
+                trisk1 = 76;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 ชาย ครู
+            case 0:
+                trisk2 = 33;
+                break;
+            case 1:
+                trisk2 = 34;
+
+                break;
+            case 2:
+                trisk2 = 35;
+                break;
+            case 3:
+                trisk2 = 36;
+
+                break;
+            case 4:
+                trisk2 = 37;
+
+                break;
+            case 5:
+                trisk2 = 38;
+
+                break;
+            case 6:
+                trisk2 = 39;
+
+                break;
+            case 7:
+                trisk2 = 39;
+
+                break;
+            case 8:
+                trisk2 = 40;
+                break;
+            case 9:
+                trisk2 = 41;
+
+                break;
+            case 10:
+                trisk2 = 42;
+
+                break;
+            case 11:
+                trisk2 = 43;
+
+                break;
+            case 12:
+                trisk2 = 43;
+
+                break;
+            case 13:
+                trisk2 = 44;
+
+                break;
+            case 14:
+                trisk2 = 45;
+
+                break;
+            case 15:
+                trisk2 = 46;
+
+                break;
+            case 16:
+                trisk2 = 46;
+                break;
+            case 17:
+                trisk2 = 47;
+
+                break;
+            case 18:
+                trisk2 = 48;
+
+                break;
+            case 19:
+                trisk2 = 49;
+
+                break;
+            case 20:
+                trisk2 = 50;
+
+                break;
+            case 21:
+                trisk2 = 50;
+
+                break;
+            case 22:
+                trisk2 = 51;
+
+                break;
+            case 23:
+                trisk2 = 52;
+
+                break;
+            case 24:
+                trisk2 = 53;
+                break;
+            case 25:
+                trisk2 = 54;
+
+                break;
+            case 26:
+                trisk2 = 54;
+
+                break;
+            case 27:
+                trisk2 = 55;
+
+                break;
+            case 28:
+                trisk2 = 56;
+
+                break;
+            case 29:
+                trisk2 = 57;
+
+                break;
+            case 30:
+                trisk2 = 57;
+
+                break;
+            case 31:
+                trisk2 = 58;
+
+                break;
+            case 32:
+                trisk2 = 59;
+                break;
+            case 33:
+                trisk2 = 60;
+
+                break;
+            case 34:
+                trisk2 = 61;
+
+                break;
+            case 35:
+                trisk2 = 61;
+
+                break;
+            case 36:
+                trisk2 = 62;
+
+                break;
+            case 37:
+                trisk2 = 63;
+
+                break;
+            case 38:
+                trisk2 = 64;
+
+                break;
+            case 39:
+                trisk2 = 65;
+
+                break;
+            case 40:
+                trisk2 = 65;
+                break;
+            case 41:
+                trisk2 = 66;
+
+                break;
+            case 42:
+                trisk2 = 67;
+
+                break;
+            case 43:
+                trisk2 = 68;
+
+                break;
+            case 44:
+                trisk2 = 69;
+
+                break;
+            case 45:
+                trisk2 = 70;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 ชาย ครู
+            case 0:
+                trisk3 = 31;
+                break;
+            case 1:
+                trisk3 = 32;
+
+                break;
+            case 2:
+                trisk3 = 33;
+                break;
+            case 3:
+                trisk3 = 34;
+
+                break;
+            case 4:
+                trisk3 = 35;
+
+                break;
+            case 5:
+                trisk3 = 35;
+
+                break;
+            case 6:
+                trisk3 = 36;
+
+                break;
+            case 7:
+                trisk3 = 36;
+
+                break;
+            case 8:
+                trisk3 = 37;
+                break;
+            case 9:
+                trisk3 = 37;
+
+                break;
+            case 10:
+                trisk3 = 38;
+
+                break;
+            case 11:
+                trisk3 = 38;
+
+                break;
+            case 12:
+                trisk3 = 38;
+
+                break;
+            case 13:
+                trisk3 = 39;
+
+                break;
+            case 14:
+                trisk3 = 39;
+
+                break;
+            case 15:
+                trisk3 = 40;
+
+                break;
+            case 16:
+                trisk3 = 40;
+                break;
+            case 17:
+                trisk3 = 41;
+
+                break;
+            case 18:
+                trisk3 = 41;
+
+                break;
+            case 19:
+                trisk3 = 42;
+
+                break;
+            case 20:
+                trisk3 = 42;
+
+                break;
+            case 21:
+                trisk3 = 43;
+
+                break;
+            case 22:
+                trisk3 = 43;
+
+                break;
+            case 23:
+                trisk3 = 44;
+
+                break;
+            case 24:
+                trisk3 = 44;
+                break;
+            case 25:
+                trisk3 = 44;
+
+                break;
+            case 26:
+                trisk3 = 45;
+
+                break;
+            case 27:
+                trisk3 = 45;
+
+                break;
+            case 28:
+                trisk3 = 46;
+
+                break;
+            case 29:
+                trisk3 = 46;
+
+                break;
+            case 30:
+                trisk3 = 47;
+
+                break;
+            case 31:
+                trisk3 = 47;
+
+                break;
+            case 32:
+                trisk3 = 48;
+                break;
+            case 33:
+                trisk3 = 48;
+
+                break;
+            case 34:
+                trisk3 = 49;
+
+                break;
+            case 35:
+                trisk3 = 49;
+
+                break;
+            case 36:
+                trisk3 = 50;
+
+                break;
+            case 37:
+                trisk3 = 50;
+
+                break;
+            case 38:
+                trisk3 = 50;
+
+                break;
+            case 39:
+                trisk3 = 51;
+
+                break;
+            case 40:
+                trisk3 = 51;
+                break;
+            case 41:
+                trisk3 = 52;
+
+                break;
+            case 42:
+                trisk3 = 52;
+
+                break;
+            case 43:
+                trisk3 = 53;
+
+                break;
+            case 44:
+                trisk3 = 53;
+
+                break;
+            case 45:
+                trisk3 = 54;
+                break;
+            case 46:
+                trisk3 = 54;
+                break;
+            case 47:
+                trisk3 = 55;
+                break;
+            case 48:
+                trisk3 = 55;
+                break;
+            case 49:
+                trisk3 = 56;
+                break;
+            case 50:
+                trisk3 = 56;
+                break;
+            case 51:
+                trisk3 = 56;
+                break;
+            case 52:
+                trisk3 = 57;
+                break;
+            case 53:
+                trisk3 = 57;
+                break;
+            case 54:
+                trisk3 = 58;
+                break;
+            case 55:
+                trisk3 = 58;
+                break;
+            case 56:
+                trisk3 = 59;
+                break;
+            case 57:
+                trisk3 = 59;
+                break;
+            case 58:
+                trisk3 = 60;
+                break;
+            case 59:
+                trisk3 = 60;
+                break;
+            case 60:
+                trisk3 = 61;
+                break;
+            case 61:
+                trisk3 = 61;
+                break;
+            case 62:
+                trisk3 = 62;
+                break;
+            case 63:
+                trisk3 = 62;
+                break;
+            case 64:
+                trisk3 = 62;
+                break;
+            case 65:
+                trisk3 = 63;
+                break;
+            case 66:
+                trisk3 = 63;
+                break;
+            case 67:
+                trisk3 = 64;
+                break;
+            case 68:
+                trisk3 = 64;
+                break;
+            case 69:
+                trisk3 = 65;
+                break;
+            case 70:
+                trisk3 = 65;
+                break;
+            case 71:
+                trisk3 = 66;
+                break;
+            case 72:
+                trisk3 = 66;
+                break;
+            case 73:
+                trisk3 = 67;
+                break;
+            case 74:
+                trisk3 = 67;
+                break;
+            case 75:
+                trisk3 = 68;
+                break;
+            case 76:
+                trisk3 = 68;
+                break;
+            case 77:
+                trisk3 = 68;
+                break;
+            case 78:
+                trisk3 = 69;
+                break;
+            case 79:
+                trisk3 = 69;
+                break;
+            case 80:
+                trisk3 = 70;
+                break;
+            case 81:
+                trisk3 = 70;
+                break;
+            case 82:
+                trisk3 = 71;
+                break;
+            case 83:
+                trisk3 = 71;
+                break;
+            case 84:
+                trisk3 = 72;
+                break;
+            case 85:
+                trisk3 = 72;
+                break;
+            case 86:
+                trisk3 = 73;
+                break;
+            case 87:
+                trisk3 = 73;
+                break;
+            case 88:
+                trisk3 = 74;
+                break;
+            case 89:
+                trisk3 = 75;
+                break;
+            case 90:
+                trisk3 = 76;
+                break;
+
+
+    }
+    }
+
+
+    private void girlParent15To18() {
+        switch (trisk1) { // ด้าน 1 หญิง ผู้ปกครอง
+            case 0:
+                trisk1 = 34;
+                break;
+            case 1:
+                trisk1 = 35;
+                break;
+            case 2:
+                trisk1 = 36;
+                break;
+            case 3:
+                trisk1 = 37;
+                break;
+            case 4:
+                trisk1 = 39;
+                break;
+            case 5:
+                trisk1 = 40;
+                break;
+            case 6:
+                trisk1 = 41;
+                break;
+            case 7:
+                trisk1 = 42;
+                break;
+            case 8:
+                trisk1 = 43;
+                break;
+            case 9:
+                trisk1 = 45;
+                break;
+            case 10:
+                trisk1 = 46;
+                break;
+            case 11:
+                trisk1 = 47;
+                break;
+            case 12:
+                trisk1 = 48;
+                break;
+            case 13:
+                trisk1 = 49;
+                break;
+            case 14:
+                trisk1 = 50;
+                break;
+            case 15:
+                trisk1 = 52;
+                break;
+            case 16:
+                trisk1 = 53;
+                break;
+            case 17:
+                trisk1 = 54;
+                break;
+            case 18:
+                trisk1 = 55;
+                break;
+            case 19:
+                trisk1 = 56;
+                break;
+            case 20:
+                trisk1 = 58;
+                break;
+            case 21:
+                trisk1 = 59;
+                break;
+            case 22:
+                trisk1 = 60;
+                break;
+            case 23:
+                trisk1 = 61;
+                break;
+            case 24:
+                trisk1 = 62;
+                break;
+            case 25:
+                trisk1 = 64;
+                break;
+            case 26:
+                trisk1 = 65;
+                break;
+            case 27:
+                trisk1 = 66;
+                break;
+            case 28:
+                trisk1 = 67;
+                break;
+            case 29:
+                trisk1 = 68;
+                break;
+            case 30:
+                trisk1 = 69;
+                break;
+            case 31:
+                trisk1 = 71;
+                break;
+            case 32:
+                trisk1 = 72;
+                break;
+            case 33:
+                trisk1 = 73;
+                break;
+            case 34:
+                trisk1 = 74;
+                break;
+            case 35:
+                trisk1 = 75;
+                break;
+            case 36:
+                trisk1 = 77;
+                break;
+            case 37:
+                trisk1 = 78;
+                break;
+            case 38:
+                trisk1 = 79;
+                break;
+            case 39:
+                trisk1 = 80;
+                break;
+            case 40:
+                trisk1 = 81;
+                break;
+            case 41:
+                trisk1 = 82;
+                break;
+            case 42:
+                trisk1 = 83;
+                break;
+            case 43:
+                trisk1 = 85;
+                break;
+            case 44:
+                trisk1 = 86;
+                break;
+            case 45:
+                trisk1 = 87;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ผู้ปกครอง
+            case 0:
+                trisk2 = 34;
+                break;
+            case 1:
+                trisk2 = 36;
+
+                break;
+            case 2:
+                trisk2 = 37;
+                break;
+            case 3:
+                trisk2 = 38;
+
+                break;
+            case 4:
+                trisk2 = 39;
+
+                break;
+            case 5:
+                trisk2 = 40;
+
+                break;
+            case 6:
+                trisk2 = 41;
+
+                break;
+            case 7:
+                trisk2 = 42;
+
+                break;
+            case 8:
+                trisk2 = 43;
+                break;
+            case 9:
+                trisk2 = 44;
+
+                break;
+            case 10:
+                trisk2 = 46;
+
+                break;
+            case 11:
+                trisk2 = 47;
+
+                break;
+            case 12:
+                trisk2 = 48;
+
+                break;
+            case 13:
+                trisk2 = 49;
+
+                break;
+            case 14:
+                trisk2 = 50;
+
+                break;
+            case 15:
+                trisk2 = 51;
+
+                break;
+            case 16:
+                trisk2 = 52;
+                break;
+            case 17:
+                trisk2 = 53;
+
+                break;
+            case 18:
+                trisk2 = 54;
+
+                break;
+            case 19:
+                trisk2 = 56;
+
+                break;
+            case 20:
+                trisk2 = 57;
+
+                break;
+            case 21:
+                trisk2 = 58;
+
+                break;
+            case 22:
+                trisk2 = 59;
+
+                break;
+            case 23:
+                trisk2 = 60;
+
+                break;
+            case 24:
+                trisk2 = 61;
+                break;
+            case 25:
+                trisk2 = 62;
+
+                break;
+            case 26:
+                trisk2 = 63;
+
+                break;
+            case 27:
+                trisk2 = 64;
+
+                break;
+            case 28:
+                trisk2 = 66;
+
+                break;
+            case 29:
+                trisk2 = 67;
+
+                break;
+            case 30:
+                trisk2 = 68;
+
+                break;
+            case 31:
+                trisk2 = 69;
+
+                break;
+            case 32:
+                trisk2 = 70;
+                break;
+            case 33:
+                trisk2 = 71;
+
+                break;
+            case 34:
+                trisk2 = 72;
+
+                break;
+            case 35:
+                trisk2 = 73;
+
+                break;
+            case 36:
+                trisk2 = 74;
+
+                break;
+            case 37:
+                trisk2 = 76;
+
+                break;
+            case 38:
+                trisk2 = 77;
+
+                break;
+            case 39:
+                trisk2 = 78;
+
+                break;
+            case 40:
+                trisk2 = 79;
+                break;
+            case 41:
+                trisk2 = 80;
+
+                break;
+            case 42:
+                trisk2 = 81;
+
+                break;
+            case 43:
+                trisk2 = 82;
+
+                break;
+            case 44:
+                trisk2 = 83;
+
+                break;
+            case 45:
+                trisk2 = 84;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ผู้ปกครอง
+            case 0:
+                trisk3 = 32;
+                break;
+            case 1:
+                trisk3 = 33;
+
+                break;
+            case 2:
+                trisk3 = 34;
+                break;
+            case 3:
+                trisk3 = 35;
+
+                break;
+            case 4:
+                trisk3 = 35;
+
+                break;
+            case 5:
+                trisk3 = 36;
+
+                break;
+            case 6:
+                trisk3 = 37;
+
+                break;
+            case 7:
+                trisk3 = 37;
+
+                break;
+            case 8:
+                trisk3 = 38;
+                break;
+            case 9:
+                trisk3 = 39;
+
+                break;
+            case 10:
+                trisk3 = 39;
+
+                break;
+            case 11:
+                trisk3 = 40;
+
+                break;
+            case 12:
+                trisk3 = 40;
+
+                break;
+            case 13:
+                trisk3 = 41;
+
+                break;
+            case 14:
+                trisk3 = 42;
+
+                break;
+            case 15:
+                trisk3 = 42;
+
+                break;
+            case 16:
+                trisk3 = 43;
+                break;
+            case 17:
+                trisk3 = 43;
+
+                break;
+            case 18:
+                trisk3 = 44;
+
+                break;
+            case 19:
+                trisk3 = 45;
+
+                break;
+            case 20:
+                trisk3 = 45;
+
+                break;
+            case 21:
+                trisk3 = 46;
+
+                break;
+            case 22:
+                trisk3 = 47;
+
+                break;
+            case 23:
+                trisk3 = 47;
+
+                break;
+            case 24:
+                trisk3 = 48;
+                break;
+            case 25:
+                trisk3 = 48;
+
+                break;
+            case 26:
+                trisk3 = 49;
+
+                break;
+            case 27:
+                trisk3 = 50;
+
+                break;
+            case 28:
+                trisk3 = 50;
+
+                break;
+            case 29:
+                trisk3 = 51;
+
+                break;
+            case 30:
+                trisk3 = 51;
+
+                break;
+            case 31:
+                trisk3 = 52;
+
+                break;
+            case 32:
+                trisk3 = 53;
+                break;
+            case 33:
+                trisk3 = 53;
+
+                break;
+            case 34:
+                trisk3 = 54;
+
+                break;
+            case 35:
+                trisk3 = 55;
+
+                break;
+            case 36:
+                trisk3 = 55;
+
+                break;
+            case 37:
+                trisk3 = 56;
+
+                break;
+            case 38:
+                trisk3 = 56;
+
+                break;
+            case 39:
+                trisk3 = 57;
+
+                break;
+            case 40:
+                trisk3 = 58;
+                break;
+            case 41:
+                trisk3 = 58;
+
+                break;
+            case 42:
+                trisk3 = 59;
+
+                break;
+            case 43:
+                trisk3 = 59;
+
+                break;
+            case 44:
+                trisk3 = 60;
+
+                break;
+            case 45:
+                trisk3 = 61;
+                break;
+            case 46:
+                trisk3 = 61;
+                break;
+            case 47:
+                trisk3 = 62;
+                break;
+            case 48:
+                trisk3 = 63;
+                break;
+            case 49:
+                trisk3 = 63;
+                break;
+            case 50:
+                trisk3 = 64;
+                break;
+            case 51:
+                trisk3 = 64;
+                break;
+            case 52:
+                trisk3 = 65;
+                break;
+            case 53:
+                trisk3 = 66;
+                break;
+            case 54:
+                trisk3 = 66;
+                break;
+            case 55:
+                trisk3 = 67;
+                break;
+            case 56:
+                trisk3 = 68;
+                break;
+            case 57:
+                trisk3 = 68;
+                break;
+            case 58:
+                trisk3 = 69;
+                break;
+            case 59:
+                trisk3 = 69;
+                break;
+            case 60:
+                trisk3 = 70;
+                break;
+            case 61:
+                trisk3 = 71;
+                break;
+            case 62:
+                trisk3 = 71;
+                break;
+            case 63:
+                trisk3 = 72;
+                break;
+            case 64:
+                trisk3 = 72;
+                break;
+            case 65:
+                trisk3 = 73;
+                break;
+            case 66:
+                trisk3 = 74;
+                break;
+            case 67:
+                trisk3 = 74;
+                break;
+            case 68:
+                trisk3 = 75;
+                break;
+            case 69:
+                trisk3 = 76;
+                break;
+            case 70:
+                trisk3 = 76;
+                break;
+            case 71:
+                trisk3 = 77;
+                break;
+            case 72:
+                trisk3 = 77;
+                break;
+            case 73:
+                trisk3 = 78;
+                break;
+            case 74:
+                trisk3 = 79;
+                break;
+            case 75:
+                trisk3 = 79;
+                break;
+            case 76:
+                trisk3 = 80;
+                break;
+            case 77:
+                trisk3 = 80;
+                break;
+            case 78:
+                trisk3 = 81;
+                break;
+            case 79:
+                trisk3 = 81;
+                break;
+            case 80:
+                trisk3 = 82;
+                break;
+            case 81:
+                trisk3 = 83;
+                break;
+            case 82:
+                trisk3 = 83;
+                break;
+            case 83:
+                trisk3 = 84;
+                break;
+            case 84:
+                trisk3 = 85;
+                break;
+            case 85:
+                trisk3 = 85;
+                break;
+            case 86:
+                trisk3 = 86;
+                break;
+            case 87:
+                trisk3 = 86;
+                break;
+            case 88:
+                trisk3 = 87;
+                break;
+            case 89:
+                trisk3 = 88;
+                break;
+            case 90:
+                trisk3 = 89;
+                break;
+
+
+        }
+    }
+
+    private void girlParent12To14() {
+        switch (trisk1) { // ด้าน 1 หญิง ผู้ปกครอง
+            case 0:
+                trisk1 = 34;
+                break;
+            case 1:
+                trisk1 = 35;
+                break;
+            case 2:
+                trisk1 = 36;
+                break;
+            case 3:
+                trisk1 = 37;
+                break;
+            case 4:
+                trisk1 = 38;
+                break;
+            case 5:
+                trisk1 = 39;
+                break;
+            case 6:
+                trisk1 = 41;
+                break;
+            case 7:
+                trisk1 = 42;
+                break;
+            case 8:
+                trisk1 = 43;
+                break;
+            case 9:
+                trisk1 = 44;
+                break;
+            case 10:
+                trisk1 = 45;
+                break;
+            case 11:
+                trisk1 = 47;
+                break;
+            case 12:
+                trisk1 = 48;
+                break;
+            case 13:
+                trisk1 = 49;
+                break;
+            case 14:
+                trisk1 = 50;
+                break;
+            case 15:
+                trisk1 = 51;
+                break;
+            case 16:
+                trisk1 = 52;
+                break;
+            case 17:
+                trisk1 = 54;
+                break;
+            case 18:
+                trisk1 = 55;
+                break;
+            case 19:
+                trisk1 = 56;
+                break;
+            case 20:
+                trisk1 = 57;
+                break;
+            case 21:
+                trisk1 = 58;
+                break;
+            case 22:
+                trisk1 = 60;
+                break;
+            case 23:
+                trisk1 = 61;
+                break;
+            case 24:
+                trisk1 = 62;
+                break;
+            case 25:
+                trisk1 = 63;
+                break;
+            case 26:
+                trisk1 = 64;
+                break;
+            case 27:
+                trisk1 = 65;
+                break;
+            case 28:
+                trisk1 = 67;
+                break;
+            case 29:
+                trisk1 = 68;
+                break;
+            case 30:
+                trisk1 = 69;
+                break;
+            case 31:
+                trisk1 = 70;
+                break;
+            case 32:
+                trisk1 = 71;
+                break;
+            case 33:
+                trisk1 = 73;
+                break;
+            case 34:
+                trisk1 = 74;
+                break;
+            case 35:
+                trisk1 = 75;
+                break;
+            case 36:
+                trisk1 = 76;
+                break;
+            case 37:
+                trisk1 = 77;
+                break;
+            case 38:
+                trisk1 = 78;
+                break;
+            case 39:
+                trisk1 = 79;
+                break;
+            case 40:
+                trisk1 = 81;
+                break;
+            case 41:
+                trisk1 = 82;
+                break;
+            case 42:
+                trisk1 = 83;
+                break;
+            case 43:
+                trisk1 = 84;
+                break;
+            case 44:
+                trisk1 = 85;
+                break;
+            case 45:
+                trisk1 = 86;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ผู้ปกครอง
+            case 0:
+                trisk2 = 35;
+                break;
+            case 1:
+                trisk2 = 36;
+
+                break;
+            case 2:
+                trisk2 = 37;
+                break;
+            case 3:
+                trisk2 = 38;
+
+                break;
+            case 4:
+                trisk2 = 39;
+
+                break;
+            case 5:
+                trisk2 = 40;
+
+                break;
+            case 6:
+                trisk2 = 41;
+
+                break;
+            case 7:
+                trisk2 = 42;
+
+                break;
+            case 8:
+                trisk2 = 43;
+                break;
+            case 9:
+                trisk2 = 44;
+
+                break;
+            case 10:
+                trisk2 = 45;
+
+                break;
+            case 11:
+                trisk2 = 46;
+
+                break;
+            case 12:
+                trisk2 = 47;
+
+                break;
+            case 13:
+                trisk2 = 48;
+
+                break;
+            case 14:
+                trisk2 = 49;
+
+                break;
+            case 15:
+                trisk2 = 51;
+
+                break;
+            case 16:
+                trisk2 = 52;
+                break;
+            case 17:
+                trisk2 = 53;
+
+                break;
+            case 18:
+                trisk2 = 54;
+
+                break;
+            case 19:
+                trisk2 = 55;
+
+                break;
+            case 20:
+                trisk2 = 56;
+
+                break;
+            case 21:
+                trisk2 = 57;
+
+                break;
+            case 22:
+                trisk2 = 58;
+
+                break;
+            case 23:
+                trisk2 = 59;
+
+                break;
+            case 24:
+                trisk2 = 60;
+                break;
+            case 25:
+                trisk2 = 61;
+
+                break;
+            case 26:
+                trisk2 = 62;
+
+                break;
+            case 27:
+                trisk2 = 63;
+
+                break;
+            case 28:
+                trisk2 = 64;
+
+                break;
+            case 29:
+                trisk2 = 65;
+
+                break;
+            case 30:
+                trisk2 = 66;
+
+                break;
+            case 31:
+                trisk2 = 67;
+
+                break;
+            case 32:
+                trisk2 = 68;
+                break;
+            case 33:
+                trisk2 = 69;
+
+                break;
+            case 34:
+                trisk2 = 70;
+
+                break;
+            case 35:
+                trisk2 = 71;
+
+                break;
+            case 36:
+                trisk2 = 72;
+
+                break;
+            case 37:
+                trisk2 = 73;
+
+                break;
+            case 38:
+                trisk2 = 74;
+
+                break;
+            case 39:
+                trisk2 = 75;
+
+                break;
+            case 40:
+                trisk2 = 76;
+                break;
+            case 41:
+                trisk2 = 77;
+
+                break;
+            case 42:
+                trisk2 = 78;
+
+                break;
+            case 43:
+                trisk2 = 79;
+
+                break;
+            case 44:
+                trisk2 = 80;
+
+                break;
+            case 45:
+                trisk2 = 81;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ผู้ปกครอง
+            case 0:
+                trisk3 = 32;
+                break;
+            case 1:
+                trisk3 = 33;
+
+                break;
+            case 2:
+                trisk3 = 34;
+                break;
+            case 3:
+                trisk3 = 35;
+
+                break;
+            case 4:
+                trisk3 = 36;
+
+                break;
+            case 5:
+                trisk3 = 36;
+
+                break;
+            case 6:
+                trisk3 = 37;
+
+                break;
+            case 7:
+                trisk3 = 37;
+
+                break;
+            case 8:
+                trisk3 = 38;
+                break;
+            case 9:
+                trisk3 = 38;
+
+                break;
+            case 10:
+                trisk3 = 39;
+
+                break;
+            case 11:
+                trisk3 = 40;
+
+                break;
+            case 12:
+                trisk3 = 40;
+
+                break;
+            case 13:
+                trisk3 = 41;
+
+                break;
+            case 14:
+                trisk3 = 41;
+
+                break;
+            case 15:
+                trisk3 = 42;
+
+                break;
+            case 16:
+                trisk3 = 43;
+                break;
+            case 17:
+                trisk3 = 43;
+
+                break;
+            case 18:
+                trisk3 = 44;
+
+                break;
+            case 19:
+                trisk3 = 44;
+
+                break;
+            case 20:
+                trisk3 = 45;
+
+                break;
+            case 21:
+                trisk3 = 46;
+
+                break;
+            case 22:
+                trisk3 = 46;
+
+                break;
+            case 23:
+                trisk3 = 47;
+
+                break;
+            case 24:
+                trisk3 = 47;
+                break;
+            case 25:
+                trisk3 = 48;
+
+                break;
+            case 26:
+                trisk3 = 49;
+
+                break;
+            case 27:
+                trisk3 = 49;
+
+                break;
+            case 28:
+                trisk3 = 50;
+
+                break;
+            case 29:
+                trisk3 = 50;
+
+                break;
+            case 30:
+                trisk3 = 51;
+
+                break;
+            case 31:
+                trisk3 = 52;
+
+                break;
+            case 32:
+                trisk3 = 52;
+                break;
+            case 33:
+                trisk3 = 53;
+
+                break;
+            case 34:
+                trisk3 = 53;
+
+                break;
+            case 35:
+                trisk3 = 54;
+
+                break;
+            case 36:
+                trisk3 = 55;
+
+                break;
+            case 37:
+                trisk3 = 55;
+
+                break;
+            case 38:
+                trisk3 = 56;
+
+                break;
+            case 39:
+                trisk3 = 56;
+
+                break;
+            case 40:
+                trisk3 = 57;
+                break;
+            case 41:
+                trisk3 = 57;
+
+                break;
+            case 42:
+                trisk3 = 58;
+
+                break;
+            case 43:
+                trisk3 = 59;
+
+                break;
+            case 44:
+                trisk3 = 59;
+
+                break;
+            case 45:
+                trisk3 = 60;
+                break;
+            case 46:
+                trisk3 = 60;
+                break;
+            case 47:
+                trisk3 = 61;
+                break;
+            case 48:
+                trisk3 = 62;
+                break;
+            case 49:
+                trisk3 = 62;
+                break;
+            case 50:
+                trisk3 = 63;
+                break;
+            case 51:
+                trisk3 = 63;
+                break;
+            case 52:
+                trisk3 = 64;
+                break;
+            case 53:
+                trisk3 = 65;
+                break;
+            case 54:
+                trisk3 = 65;
+                break;
+            case 55:
+                trisk3 = 66;
+                break;
+            case 56:
+                trisk3 = 66;
+                break;
+            case 57:
+                trisk3 = 67;
+                break;
+            case 58:
+                trisk3 = 68;
+                break;
+            case 59:
+                trisk3 = 68;
+                break;
+            case 60:
+                trisk3 = 69;
+                break;
+            case 61:
+                trisk3 = 69;
+                break;
+            case 62:
+                trisk3 = 70;
+                break;
+            case 63:
+                trisk3 = 71;
+                break;
+            case 64:
+                trisk3 = 71;
+                break;
+            case 65:
+                trisk3 = 72;
+                break;
+            case 66:
+                trisk3 = 72;
+                break;
+            case 67:
+                trisk3 = 73;
+                break;
+            case 68:
+                trisk3 = 73;
+                break;
+            case 69:
+                trisk3 = 74;
+                break;
+            case 70:
+                trisk3 = 75;
+                break;
+            case 71:
+                trisk3 = 75;
+                break;
+            case 72:
+                trisk3 = 76;
+                break;
+            case 73:
+                trisk3 = 76;
+                break;
+            case 74:
+                trisk3 = 77;
+                break;
+            case 75:
+                trisk3 = 78;
+                break;
+            case 76:
+                trisk3 = 78;
+                break;
+            case 77:
+                trisk3 = 79;
+                break;
+            case 78:
+                trisk3 = 79;
+                break;
+            case 79:
+                trisk3 = 80;
+                break;
+            case 80:
+                trisk3 = 80;
+                break;
+            case 81:
+                trisk3 = 81;
+                break;
+            case 82:
+                trisk3 = 82;
+                break;
+            case 83:
+                trisk3 = 82;
+                break;
+            case 84:
+                trisk3 = 83;
+                break;
+            case 85:
+                trisk3 = 83;
+                break;
+            case 86:
+                trisk3 = 84;
+                break;
+            case 87:
+                trisk3 = 84;
+                break;
+            case 88:
+                trisk3 = 85;
+                break;
+            case 89:
+                trisk3 = 86;
+                break;
+            case 90:
+                trisk3 = 87;
+                break;
+
+
+        }
+    }
+
+    private void girlParent9To11() {
+        switch (trisk1) { // ด้าน 1 หญิง ผู้ปกครอง
+            case 0:
+                trisk1 = 34;
+                break;
+            case 1:
+                trisk1 = 35;
+                break;
+            case 2:
+                trisk1 = 36;
+                break;
+            case 3:
+                trisk1 = 37;
+                break;
+            case 4:
+                trisk1 = 38;
+                break;
+            case 5:
+                trisk1 = 39;
+                break;
+            case 6:
+                trisk1 = 41;
+                break;
+            case 7:
+                trisk1 = 42;
+                break;
+            case 8:
+                trisk1 = 43;
+                break;
+            case 9:
+                trisk1 = 44;
+                break;
+            case 10:
+                trisk1 = 45;
+                break;
+            case 11:
+                trisk1 = 46;
+                break;
+            case 12:
+                trisk1 = 47;
+                break;
+            case 13:
+                trisk1 = 49;
+                break;
+            case 14:
+                trisk1 = 50;
+                break;
+            case 15:
+                trisk1 = 51;
+                break;
+            case 16:
+                trisk1 = 52;
+                break;
+            case 17:
+                trisk1 = 53;
+                break;
+            case 18:
+                trisk1 = 54;
+                break;
+            case 19:
+                trisk1 = 56;
+                break;
+            case 20:
+                trisk1 = 57;
+                break;
+            case 21:
+                trisk1 = 58;
+                break;
+            case 22:
+                trisk1 = 59;
+                break;
+            case 23:
+                trisk1 = 60;
+                break;
+            case 24:
+                trisk1 = 61;
+                break;
+            case 25:
+                trisk1 = 62;
+                break;
+            case 26:
+                trisk1 = 64;
+                break;
+            case 27:
+                trisk1 = 65;
+                break;
+            case 28:
+                trisk1 = 66;
+                break;
+            case 29:
+                trisk1 = 67;
+                break;
+            case 30:
+                trisk1 = 68;
+                break;
+            case 31:
+                trisk1 = 69;
+                break;
+            case 32:
+                trisk1 = 70;
+                break;
+            case 33:
+                trisk1 = 72;
+                break;
+            case 34:
+                trisk1 = 73;
+                break;
+            case 35:
+                trisk1 = 74;
+                break;
+            case 36:
+                trisk1 = 75;
+                break;
+            case 37:
+                trisk1 = 76;
+                break;
+            case 38:
+                trisk1 = 77;
+                break;
+            case 39:
+                trisk1 = 78;
+                break;
+            case 40:
+                trisk1 = 80;
+                break;
+            case 41:
+                trisk1 = 81;
+                break;
+            case 42:
+                trisk1 = 82;
+                break;
+            case 43:
+                trisk1 = 83;
+                break;
+            case 44:
+                trisk1 = 84;
+                break;
+            case 45:
+                trisk1 = 85;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ผู้ปกครอง
+            case 0:
+                trisk2 = 35;
+                break;
+            case 1:
+                trisk2 = 36;
+
+                break;
+            case 2:
+                trisk2 = 37;
+                break;
+            case 3:
+                trisk2 = 38;
+
+                break;
+            case 4:
+                trisk2 = 39;
+
+                break;
+            case 5:
+                trisk2 = 40;
+
+                break;
+            case 6:
+                trisk2 = 41;
+
+                break;
+            case 7:
+                trisk2 = 42;
+
+                break;
+            case 8:
+                trisk2 = 43;
+                break;
+            case 9:
+                trisk2 = 44;
+
+                break;
+            case 10:
+                trisk2 = 45;
+
+                break;
+            case 11:
+                trisk2 = 46;
+
+                break;
+            case 12:
+                trisk2 = 47;
+
+                break;
+            case 13:
+                trisk2 = 48;
+
+                break;
+            case 14:
+                trisk2 = 49;
+
+                break;
+            case 15:
+                trisk2 = 50;
+
+                break;
+            case 16:
+                trisk2 = 51;
+                break;
+            case 17:
+                trisk2 = 52;
+
+                break;
+            case 18:
+                trisk2 = 53;
+
+                break;
+            case 19:
+                trisk2 = 54;
+
+                break;
+            case 20:
+                trisk2 = 54;
+
+                break;
+            case 21:
+                trisk2 = 55;
+
+                break;
+            case 22:
+                trisk2 = 56;
+
+                break;
+            case 23:
+                trisk2 = 57;
+
+                break;
+            case 24:
+                trisk2 = 58;
+                break;
+            case 25:
+                trisk2 = 59;
+
+                break;
+            case 26:
+                trisk2 = 60;
+
+                break;
+            case 27:
+                trisk2 = 61;
+
+                break;
+            case 28:
+                trisk2 = 62;
+
+                break;
+            case 29:
+                trisk2 = 63;
+
+                break;
+            case 30:
+                trisk2 = 64;
+
+                break;
+            case 31:
+                trisk2 = 65;
+
+                break;
+            case 32:
+                trisk2 = 66;
+                break;
+            case 33:
+                trisk2 = 67;
+
+                break;
+            case 34:
+                trisk2 = 68;
+
+                break;
+            case 35:
+                trisk2 = 69;
+
+                break;
+            case 36:
+                trisk2 = 70;
+
+                break;
+            case 37:
+                trisk2 = 71;
+
+                break;
+            case 38:
+                trisk2 = 72;
+
+                break;
+            case 39:
+                trisk2 = 72;
+
+                break;
+            case 40:
+                trisk2 = 73;
+                break;
+            case 41:
+                trisk2 = 74;
+
+                break;
+            case 42:
+                trisk2 = 75;
+
+                break;
+            case 43:
+                trisk2 = 76;
+
+                break;
+            case 44:
+                trisk2 = 77;
+
+                break;
+            case 45:
+                trisk2 = 78;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ผู้ปกครอง
+            case 0:
+                trisk3 = 33;
+                break;
+            case 1:
+                trisk3 = 34;
+
+                break;
+            case 2:
+                trisk3 = 35;
+                break;
+            case 3:
+                trisk3 = 35;
+
+                break;
+            case 4:
+                trisk3 = 36;
+
+                break;
+            case 5:
+                trisk3 = 36;
+
+                break;
+            case 6:
+                trisk3 = 37;
+
+                break;
+            case 7:
+                trisk3 = 37;
+
+                break;
+            case 8:
+                trisk3 = 38;
+                break;
+            case 9:
+                trisk3 = 38;
+
+                break;
+            case 10:
+                trisk3 = 39;
+
+                break;
+            case 11:
+                trisk3 = 40;
+
+                break;
+            case 12:
+                trisk3 = 40;
+
+                break;
+            case 13:
+                trisk3 = 41;
+
+                break;
+            case 14:
+                trisk3 = 41;
+
+                break;
+            case 15:
+                trisk3 = 42;
+
+                break;
+            case 16:
+                trisk3 = 42;
+                break;
+            case 17:
+                trisk3 = 43;
+
+                break;
+            case 18:
+                trisk3 = 44;
+
+                break;
+            case 19:
+                trisk3 = 44;
+
+                break;
+            case 20:
+                trisk3 = 45;
+
+                break;
+            case 21:
+                trisk3 = 45;
+
+                break;
+            case 22:
+                trisk3 = 46;
+
+                break;
+            case 23:
+                trisk3 = 46;
+
+                break;
+            case 24:
+                trisk3 = 47;
+                break;
+            case 25:
+                trisk3 = 47;
+
+                break;
+            case 26:
+                trisk3 = 48;
+
+                break;
+            case 27:
+                trisk3 = 49;
+
+                break;
+            case 28:
+                trisk3 = 49;
+
+                break;
+            case 29:
+                trisk3 = 50;
+
+                break;
+            case 30:
+                trisk3 = 50;
+
+                break;
+            case 31:
+                trisk3 = 51;
+
+                break;
+            case 32:
+                trisk3 = 51;
+                break;
+            case 33:
+                trisk3 = 52;
+
+                break;
+            case 34:
+                trisk3 = 53;
+
+                break;
+            case 35:
+                trisk3 = 53;
+
+                break;
+            case 36:
+                trisk3 = 54;
+
+                break;
+            case 37:
+                trisk3 = 54;
+
+                break;
+            case 38:
+                trisk3 = 55;
+
+                break;
+            case 39:
+                trisk3 = 55;
+
+                break;
+            case 40:
+                trisk3 = 56;
+                break;
+            case 41:
+                trisk3 = 56;
+
+                break;
+            case 42:
+                trisk3 = 57;
+
+                break;
+            case 43:
+                trisk3 = 58;
+
+                break;
+            case 44:
+                trisk3 = 58;
+
+                break;
+            case 45:
+                trisk3 = 59;
+                break;
+            case 46:
+                trisk3 = 59;
+                break;
+            case 47:
+                trisk3 = 60;
+                break;
+            case 48:
+                trisk3 = 60;
+                break;
+            case 49:
+                trisk3 = 61;
+                break;
+            case 50:
+                trisk3 = 62;
+                break;
+            case 51:
+                trisk3 = 62;
+                break;
+            case 52:
+                trisk3 = 63;
+                break;
+            case 53:
+                trisk3 = 63;
+                break;
+            case 54:
+                trisk3 = 64;
+                break;
+            case 55:
+                trisk3 = 64;
+                break;
+            case 56:
+                trisk3 = 65;
+                break;
+            case 57:
+                trisk3 = 65;
+                break;
+            case 58:
+                trisk3 = 66;
+                break;
+            case 59:
+                trisk3 = 67;
+                break;
+            case 60:
+                trisk3 = 67;
+                break;
+            case 61:
+                trisk3 = 68;
+                break;
+            case 62:
+                trisk3 = 68;
+                break;
+            case 63:
+                trisk3 = 69;
+                break;
+            case 64:
+                trisk3 = 69;
+                break;
+            case 65:
+                trisk3 = 70;
+                break;
+            case 66:
+                trisk3 = 71;
+                break;
+            case 67:
+                trisk3 = 71;
+                break;
+            case 68:
+                trisk3 = 72;
+                break;
+            case 69:
+                trisk3 = 72;
+                break;
+            case 70:
+                trisk3 = 73;
+                break;
+            case 71:
+                trisk3 = 73;
+                break;
+            case 72:
+                trisk3 = 74;
+                break;
+            case 73:
+                trisk3 = 74;
+                break;
+            case 74:
+                trisk3 = 75;
+                break;
+            case 75:
+                trisk3 = 76;
+                break;
+            case 76:
+                trisk3 = 76;
+                break;
+            case 77:
+                trisk3 = 77;
+                break;
+            case 78:
+                trisk3 = 77;
+                break;
+            case 79:
+                trisk3 = 78;
+                break;
+            case 80:
+                trisk3 = 78;
+                break;
+            case 81:
+                trisk3 = 79;
+                break;
+            case 82:
+                trisk3 = 79;
+                break;
+            case 83:
+                trisk3 = 80;
+                break;
+            case 84:
+                trisk3 = 80;
+                break;
+            case 85:
+                trisk3 = 81;
+                break;
+            case 86:
+                trisk3 = 81;
+                break;
+            case 87:
+                trisk3 = 82;
+                break;
+            case 88:
+                trisk3 = 83;
+                break;
+            case 89:
+                trisk3 = 84;
+                break;
+            case 90:
+                trisk3 = 85;
+                break;
+
+
+        }
+    }
+
+    private void girlParent6To8()  {
+        switch (trisk1) { // ด้าน 1 หญิง ผู้ปกครอง
+            case 0:
+                trisk1 = 32;
+                break;
+            case 1:
+                trisk1 = 34;
+                break;
+            case 2:
+                trisk1 = 35;
+                break;
+            case 3:
+                trisk1 = 36;
+                break;
+            case 4:
+                trisk1 = 37;
+                break;
+            case 5:
+                trisk1 = 38;
+                break;
+            case 6:
+                trisk1 = 39;
+                break;
+            case 7:
+                trisk1 = 40;
+                break;
+            case 8:
+                trisk1 = 41;
+                break;
+            case 9:
+                trisk1 = 43;
+                break;
+            case 10:
+                trisk1 = 44;
+                break;
+            case 11:
+                trisk1 = 45;
+                break;
+            case 12:
+                trisk1 = 46;
+                break;
+            case 13:
+                trisk1 = 47;
+                break;
+            case 14:
+                trisk1 = 48;
+                break;
+            case 15:
+                trisk1 = 49;
+                break;
+            case 16:
+                trisk1 = 51;
+                break;
+            case 17:
+                trisk1 = 52;
+                break;
+            case 18:
+                trisk1 = 53;
+                break;
+            case 19:
+                trisk1 = 54;
+                break;
+            case 20:
+                trisk1 = 55;
+                break;
+            case 21:
+                trisk1 = 56;
+                break;
+            case 22:
+                trisk1 = 57;
+                break;
+            case 23:
+                trisk1 = 58;
+                break;
+            case 24:
+                trisk1 = 60;
+                break;
+            case 25:
+                trisk1 = 61;
+                break;
+            case 26:
+                trisk1 = 62;
+                break;
+            case 27:
+                trisk1 = 63;
+                break;
+            case 28:
+                trisk1 = 64;
+                break;
+            case 29:
+                trisk1 = 65;
+                break;
+            case 30:
+                trisk1 = 66;
+                break;
+            case 31:
+                trisk1 = 67;
+                break;
+            case 32:
+                trisk1 = 69;
+                break;
+            case 33:
+                trisk1 = 70;
+                break;
+            case 34:
+                trisk1 = 71;
+                break;
+            case 35:
+                trisk1 = 72;
+                break;
+            case 36:
+                trisk1 = 73;
+                break;
+            case 37:
+                trisk1 = 74;
+                break;
+            case 38:
+                trisk1 = 75;
+                break;
+            case 39:
+                trisk1 = 77;
+                break;
+            case 40:
+                trisk1 = 78;
+                break;
+            case 41:
+                trisk1 = 79;
+                break;
+            case 42:
+                trisk1 = 80;
+                break;
+            case 43:
+                trisk1 = 81;
+                break;
+            case 44:
+                trisk1 = 82;
+                break;
+            case 45:
+                trisk1 = 83;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk2) { // ด้าน 2 หญิง ผู้ปกครอง
+            case 0:
+                trisk2 = 34;
+                break;
+            case 1:
+                trisk2 = 35;
+
+                break;
+            case 2:
+                trisk2 = 36;
+                break;
+            case 3:
+                trisk2 = 37;
+
+                break;
+            case 4:
+                trisk2 = 38;
+
+                break;
+            case 5:
+                trisk2 = 38;
+
+                break;
+            case 6:
+                trisk2 = 39;
+
+                break;
+            case 7:
+                trisk2 = 40;
+
+                break;
+            case 8:
+                trisk2 = 41;
+                break;
+            case 9:
+                trisk2 = 42;
+
+                break;
+            case 10:
+                trisk2 = 43;
+
+                break;
+            case 11:
+                trisk2 = 44;
+
+                break;
+            case 12:
+                trisk2 = 45;
+
+                break;
+            case 13:
+                trisk2 = 46;
+
+                break;
+            case 14:
+                trisk2 = 47;
+
+                break;
+            case 15:
+                trisk2 = 48;
+
+                break;
+            case 16:
+                trisk2 = 49;
+                break;
+            case 17:
+                trisk2 = 50;
+
+                break;
+            case 18:
+                trisk2 = 51;
+
+                break;
+            case 19:
+                trisk2 = 52;
+
+                break;
+            case 20:
+                trisk2 = 53;
+
+                break;
+            case 21:
+                trisk2 = 54;
+
+                break;
+            case 22:
+                trisk2 = 54;
+
+                break;
+            case 23:
+                trisk2 = 55;
+
+                break;
+            case 24:
+                trisk2 = 56;
+                break;
+            case 25:
+                trisk2 = 57;
+
+                break;
+            case 26:
+                trisk2 = 58;
+
+                break;
+            case 27:
+                trisk2 = 59;
+
+                break;
+            case 28:
+                trisk2 = 60;
+
+                break;
+            case 29:
+                trisk2 = 51;
+
+                break;
+            case 30:
+                trisk2 = 62;
+
+                break;
+            case 31:
+                trisk2 = 63;
+
+                break;
+            case 32:
+                trisk2 = 64;
+                break;
+            case 33:
+                trisk2 = 65;
+
+                break;
+            case 34:
+                trisk2 = 66;
+
+                break;
+            case 35:
+                trisk2 = 67;
+
+                break;
+            case 36:
+                trisk2 = 68;
+
+                break;
+            case 37:
+                trisk2 = 69;
+
+                break;
+            case 38:
+                trisk2 = 69;
+
+                break;
+            case 39:
+                trisk2 = 70;
+
+                break;
+            case 40:
+                trisk2 = 71;
+                break;
+            case 41:
+                trisk2 = 72;
+
+                break;
+            case 42:
+                trisk2 = 73;
+
+                break;
+            case 43:
+                trisk2 = 74;
+
+                break;
+            case 44:
+                trisk2 = 75;
+
+                break;
+            case 45:
+                trisk2 = 76;
+                break;
+        }
+
+        /**************************************************/
+        switch (trisk3) { // ด้าน 3 หญิง ผู้ปกครอง
+            case 0:
+                trisk3 = 31;
+                break;
+            case 1:
+                trisk3 = 32;
+
+                break;
+            case 2:
+                trisk3 = 33;
+                break;
+            case 3:
+                trisk3 = 33;
+
+                break;
+            case 4:
+                trisk3 = 34;
+
+                break;
+            case 5:
+                trisk3 = 34;
+
+                break;
+            case 6:
+                trisk3 = 35;
+
+                break;
+            case 7:
+                trisk3 = 36;
+
+                break;
+            case 8:
+                trisk3 = 36;
+                break;
+            case 9:
+                trisk3 = 37;
+
+                break;
+            case 10:
+                trisk3 = 37;
+
+                break;
+            case 11:
+                trisk3 = 38;
+
+                break;
+            case 12:
+                trisk3 = 38;
+
+                break;
+            case 13:
+                trisk3 = 39;
+
+                break;
+            case 14:
+                trisk3 = 39;
+
+                break;
+            case 15:
+                trisk3 = 40;
+
+                break;
+            case 16:
+                trisk3 = 41;
+                break;
+            case 17:
+                trisk3 = 41;
+
+                break;
+            case 18:
+                trisk3 = 42;
+
+                break;
+            case 19:
+                trisk3 = 42;
+
+                break;
+            case 20:
+                trisk3 = 43;
+
+                break;
+            case 21:
+                trisk3 = 43;
+
+                break;
+            case 22:
+                trisk3 = 44;
+
+                break;
+            case 23:
+                trisk3 = 45;
+
+                break;
+            case 24:
+                trisk3 = 45;
+                break;
+            case 25:
+                trisk3 = 46;
+
+                break;
+            case 26:
+                trisk3 = 46;
+
+                break;
+            case 27:
+                trisk3 = 47;
+
+                break;
+            case 28:
+                trisk3 = 47;
+
+                break;
+            case 29:
+                trisk3 = 48;
+
+                break;
+            case 30:
+                trisk3 = 48;
+
+                break;
+            case 31:
+                trisk3 = 49;
+
+                break;
+            case 32:
+                trisk3 = 50;
+                break;
+            case 33:
+                trisk3 = 50;
+
+                break;
+            case 34:
+                trisk3 = 51;
+
+                break;
+            case 35:
+                trisk3 = 51;
+
+                break;
+            case 36:
+                trisk3 = 52;
+
+                break;
+            case 37:
+                trisk3 = 52;
+
+                break;
+            case 38:
+                trisk3 = 53;
+
+                break;
+            case 39:
+                trisk3 = 53;
+
+                break;
+            case 40:
+                trisk3 = 54;
+                break;
+            case 41:
+                trisk3 = 55;
+
+                break;
+            case 42:
+                trisk3 = 55;
+
+                break;
+            case 43:
+                trisk3 = 56;
+
+                break;
+            case 44:
+                trisk3 = 56;
+
+                break;
+            case 45:
+                trisk3 = 57;
+                break;
+            case 46:
+                trisk3 = 57;
+                break;
+            case 47:
+                trisk3 = 58;
+                break;
+            case 48:
+                trisk3 = 59;
+                break;
+            case 49:
+                trisk3 = 59;
+                break;
+            case 50:
+                trisk3 = 60;
+                break;
+            case 51:
+                trisk3 = 60;
+                break;
+            case 52:
+                trisk3 = 61;
+                break;
+            case 53:
+                trisk3 = 61;
+                break;
+            case 54:
+                trisk3 = 62;
+                break;
+            case 55:
+                trisk3 = 62;
+                break;
+            case 56:
+                trisk3 = 63;
+                break;
+            case 57:
+                trisk3 = 64;
+                break;
+            case 58:
+                trisk3 = 64;
+                break;
+            case 59:
+                trisk3 = 65;
+                break;
+            case 60:
+                trisk3 = 65;
+                break;
+            case 61:
+                trisk3 = 66;
+                break;
+            case 62:
+                trisk3 = 66;
+                break;
+            case 63:
+                trisk3 = 67;
+                break;
+            case 64:
+                trisk3 = 67;
+                break;
+            case 65:
+                trisk3 = 68;
+                break;
+            case 66:
+                trisk3 = 69;
+                break;
+            case 67:
+                trisk3 = 69;
+                break;
+            case 68:
+                trisk3 = 70;
+                break;
+            case 69:
+                trisk3 = 70;
+                break;
+            case 70:
+                trisk3 = 71;
+                break;
+            case 71:
+                trisk3 = 71;
+                break;
+            case 72:
+                trisk3 = 72;
+                break;
+            case 73:
+                trisk3 = 73;
+                break;
+            case 74:
+                trisk3 = 73;
+                break;
+            case 75:
+                trisk3 = 74;
+                break;
+            case 76:
+                trisk3 = 74;
+                break;
+            case 77:
+                trisk3 = 75;
+                break;
+            case 78:
+                trisk3 = 75;
+                break;
+            case 79:
+                trisk3 = 76;
+                break;
+            case 80:
+                trisk3 = 76;
+                break;
+            case 81:
+                trisk3 = 77;
+                break;
+            case 82:
+                trisk3 = 0;
+                break;
+            case 83:
+                trisk3 = 78;
+                break;
+            case 84:
+                trisk3 = 79;
+                break;
+            case 85:
+                trisk3 = 79;
+                break;
+            case 86:
+                trisk3 = 80;
+                break;
+            case 87:
+                trisk3 = 80;
+                break;
+            case 88:
+                trisk3 = 81;
+                break;
+            case 89:
+                trisk3 = 82;
+                break;
+            case 90:
+                trisk3 = 83;
+                break;
+
+
+        }
     }
 
     private void boyParent15To18() {
