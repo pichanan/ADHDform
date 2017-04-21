@@ -22,6 +22,8 @@
     <string name="message_passwordfalse">Please Try Again Password False</string>
     <string name="title_nonChooseImage">No choose Image</string>
     <string name="message_nonChooseImage">Pleashe choose image</string>
+    <string name="message_overAge">please choose age 6 - 18</string>
+    <string name="title_overAge">Wrong Age</string>
     <string name="title_nonGender">Without Check gender</string>
     <string name="message_nonGender">Please check on gender</string>
 

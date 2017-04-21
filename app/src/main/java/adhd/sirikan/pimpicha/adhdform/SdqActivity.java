@@ -1,5 +1,6 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,8 +27,8 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
 
     String[] spinnerValue = {"-", "0", "1", "2", "3"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
-    private  int risk1,risk2,risk3;
-    String idString, loginString[],genderString;
+    private int risk;
+    String idString, loginString[],genderString,ageString;
     TextView textView;
     Button button;
 
@@ -120,6 +121,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
         idString = getIntent().getStringExtra("tmpIndex");
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
 
         for(int i = 0 ;i<loginString.length;i++) {
             Log.d("tag2", "loginString(" + i + ")==>" + loginString[i]);
@@ -168,14 +170,11 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
             } else {
                 // check special
                 checkSpecial(idString, loginString[3]);
-                risk1 = Integer.parseInt(spn)+Integer.parseInt(spn2)+Integer.parseInt(spn3)+Integer.parseInt(spn4)+Integer.parseInt(spn5)
-                        +Integer.parseInt(spn6)+Integer.parseInt(spn7)+Integer.parseInt(spn8)+Integer.parseInt(spn9);
-                risk2 = Integer.parseInt(spn10) + Integer.parseInt(spn11) + Integer.parseInt(spn12) + Integer.parseInt(spn13)
-                        + Integer.parseInt(spn14) + Integer.parseInt(spn15) + Integer.parseInt(spn16) + Integer.parseInt(spn17)
-                        + Integer.parseInt(spn18);
-                risk3 = Integer.parseInt(spn19) + Integer.parseInt(spn20) + Integer.parseInt(spn21) + Integer.parseInt(spn22) + Integer.parseInt(spn23)
-                        + Integer.parseInt(spn24) + Integer.parseInt(spn25) ;
+                risk = Integer.parseInt(spn2) + Integer.parseInt(spn10) + Integer.parseInt(spn15) + Integer.parseInt(spn21)
+                        + Integer.parseInt(spn25);
+
                 uploadValueToServer();
+
 
             }
 
@@ -196,13 +195,18 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
                     spn11, spn12, spn13, spn14, spn15,
                     spn16, spn17, spn18, spn19, spn20,
                     spn21, spn22, spn23, spn24, spn25, loginString[0], idString,
-                    Integer.toString(risk1),
+                    Integer.toString(risk),
                     loginString[3], currentDateString, strURL);
 
             Log.d(tag, "Result ==>" + postSdq.get());
 
             if (Boolean.parseBoolean((postSdq.get()))) {
-                finish();
+                Intent intent = new Intent(SdqActivity.this,riskSdqActivity.class);
+                intent.putExtra("Login", loginString);
+                intent.putExtra("tmpIndex", idString);
+                intent.putExtra("gender", genderString);
+                intent.putExtra("age", ageString);
+                startActivity(intent);
             } else {
                 Toast.makeText(SdqActivity.this, "Cannot save user", Toast.LENGTH_SHORT).show();
             }

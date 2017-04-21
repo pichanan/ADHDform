@@ -35,6 +35,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
     private  String pathImageString ,nameImageString,nameChildString,ageString;
     private boolean aBoolean =true;
     private  String gender;
+    private int ageInt;
 
 
 
@@ -141,6 +142,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         MyConstant myConstant = new MyConstant();
         nameChildString = nameEditText.getText().toString().trim();
         ageString = ageEditText.getText().toString().trim();
+        ageInt = Integer.parseInt(ageString);
 
         //check  choose
         if (aBoolean) {
@@ -157,7 +159,11 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
             objMyAlert.myDialog(getResources().getString(R.string.title_nonGender),
                     getResources().getString(R.string.message_nonGender));
 
-        }else {
+        }else  if(ageInt>18||ageInt<6){
+            objMyAlert.myDialog(getResources().getString(R.string.title_overAge),
+                    getResources().getString(R.string.message_overAge));
+
+        } else{
             //Rad
             if(maleRadioButton.isChecked()){
                 gender = "0";

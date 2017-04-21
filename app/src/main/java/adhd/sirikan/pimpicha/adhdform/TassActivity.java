@@ -1,5 +1,6 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -182,6 +183,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
                 checkSpecial(idString, loginString[3]);
                 calRisk(genderString,loginString[3],ageString); // คำนวนความเสี่ยง
                 uploadValueToServer();
+
 
             }
 
@@ -10528,7 +10530,12 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
 
             if (Boolean.parseBoolean((postTass.get()))) {
-                finish();
+                Intent intent = new Intent(TassActivity.this,riskThassActivity.class);
+                intent.putExtra("Login", loginString);
+                intent.putExtra("tmpIndex", idString);
+                intent.putExtra("gender", genderString);
+                intent.putExtra("age", ageString);
+                startActivity(intent);
             }else{
                 Toast.makeText(TassActivity.this,"Cannot save user",Toast.LENGTH_SHORT).show();
             }

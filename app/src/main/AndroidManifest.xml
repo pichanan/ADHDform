@@ -30,6 +30,9 @@
         <activity android:name=".GraphActivity" />
         <activity android:name=".ShowTwoTable" />
         <activity android:name=".ShowChildDetail" />
+        <activity android:name=".riskSnapActivity" />
+        <activity android:name=".riskThassActivity" />
+        <activity android:name=".riskSdqActivity"></activity>
     </application>
 
 </manifest>

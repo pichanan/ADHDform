@@ -1,5 +1,6 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.icu.util.Calendar;
 import android.support.annotation.IdRes;
@@ -31,7 +32,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
     String[] spinnerValue = {"-", "0", "1", "2", "3"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
     private  int risk1,risk2,risk3;
-    String idString, loginString[],genderString;
+    String idString, loginString[],genderString,ageString;
     TextView textView;
 
     private java.util.Calendar calendar;
@@ -64,8 +65,9 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");
-        genderString = getIntent().getStringExtra("gender");
         loginString = getIntent().getStringArrayExtra("Login");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
 
         for(int i = 0 ;i<loginString.length;i++) {
             Log.d("tag2", "loginString(" + i + ")==>" + loginString[i]);
@@ -200,6 +202,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                         + Integer.parseInt(spn24) + Integer.parseInt(spn25) + Integer.parseInt(spn26);
                 uploadValueToServer();
 
+
             }
 
 
@@ -263,7 +266,16 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             Log.d(tag, "Result ==>" + postTest.get());
 
             if (Boolean.parseBoolean((postTest.get()))) {
-                finish();
+                Intent intent = new Intent(SnapActivity.this,riskSnapActivity.class);
+                intent.putExtra("Login", loginString);
+                intent.putExtra("tmpIndex", idString);
+                intent.putExtra("gender", genderString);
+                intent.putExtra("age", ageString);
+                intent.putExtra("risk1", (int)risk1);
+                intent.putExtra("risk2",(int) risk2);
+                intent.putExtra("risk3",(int) risk3);
+                startActivity(intent);
+
             } else {
                 Toast.makeText(SnapActivity.this, "Cannot save user", Toast.LENGTH_SHORT).show();
             }
