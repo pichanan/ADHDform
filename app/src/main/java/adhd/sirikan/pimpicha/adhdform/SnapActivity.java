@@ -31,7 +31,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
     String[] spinnerValue = {"-", "0", "1", "2", "3"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
     private  int risk1,risk2,risk3;
-    String idString, loginString[];
+    String idString, loginString[],genderString;
     TextView textView;
 
     private java.util.Calendar calendar;
@@ -64,6 +64,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");
+        genderString = getIntent().getStringExtra("gender");
         loginString = getIntent().getStringArrayExtra("Login");
 
         for(int i = 0 ;i<loginString.length;i++) {

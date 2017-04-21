@@ -34,6 +34,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
     private String tag = "31MarchV1";
     private  String pathImageString ,nameImageString,nameChildString,ageString;
     private boolean aBoolean =true;
+    private  String gender;
 
 
 
@@ -158,7 +159,13 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
 
         }else {
             //Rad
+            if(maleRadioButton.isChecked()){
+                gender = "0";
+            }else if(femaleRadioButton.isChecked()){
+                gender = "1";
+            }
             uploadDataToserver();
+
 
         }
 
@@ -190,7 +197,9 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
 
             PostChild postChild = new PostChild(AddChildActivity.this);
             postChild.execute(loginStrings[0], nameChildString,ageString,
-                    nameImageString,myConstant.getUrlAddChild());  // เรียก method ใน myconstance
+                    nameImageString,gender,myConstant.getUrlAddChild());  // เรียก method ใน myconstance
+
+
 
             String strResult = postChild.get();
             Log.d(tag, "strResult ==>" + strResult);

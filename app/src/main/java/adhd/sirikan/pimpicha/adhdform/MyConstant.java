@@ -31,7 +31,7 @@ public class MyConstant {
 
     //ถ้าใส่ตารางเพิ่มเข้อมูลเด็กต้องมาใส่ตรงนี้ด้วย
     private String[] columnUser = new String[]{"id", "User", "Password", "Type"};
-    private String[] columnChild = new String[]{"id", "id_Login", "Name", "Age", "Image"};
+    private String[] columnChild = new String[]{"id", "id_Login", "Name", "Age", "Image","gender"};
     private String[] columnTest = new String[]{"id", "ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8"
             , "ch9", "ch10", "ch11", "ch12", "ch13", "ch14", "ch15", "ch16", "ch17", "ch18", "ch19", "ch20", "ch21", "ch22"
             , "ch23", "ch24", "ch25", "ch26", "userID", "childID", "risk1", "risk2", "risk3", "doType", "Special", "CurrentDate"};

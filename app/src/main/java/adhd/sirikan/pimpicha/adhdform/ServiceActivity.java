@@ -38,6 +38,8 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         //Image controller
         imageController();
 
+
+
     }//main method
 
     private void imageController() {
@@ -49,7 +51,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         loginString = getIntent().getStringArrayExtra("Login");
     }
 
-    @Override
+   @Override
     protected void onPostResume() {//**************************************
         super.onPostResume();
         createListView();
@@ -71,6 +73,8 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
             final String[] idStrings = new String[jsonArray.length()];
             final String[] nameChildStrings = new String[jsonArray.length()];
             final String[] userString = new String[jsonArray.length()];
+            final String[] genderStrings = new String[jsonArray.length()];
+            final String[] ageStrings = new String[jsonArray.length()];
             String[] imageStrings = new String[jsonArray.length()];
             int j =0;
             for (int i = 0 ;i<jsonArray.length();i++) {
@@ -82,6 +86,8 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
                     idStrings[j] = jsonObject.getString(columnChileStrings[0]);
                     nameChildStrings[j] = jsonObject.getString(columnChileStrings[2]);
                     imageStrings[j] = jsonObject.getString(columnChileStrings[4]);
+                    genderStrings[j] = jsonObject.getString(columnChileStrings[5]);
+                    ageStrings[j] = jsonObject.getString(columnChileStrings[3]);
                     j++;
                 }
 
@@ -100,7 +106,9 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
                     Intent intent = new Intent(ServiceActivity.this, DetailActivity.class);
                     intent.putExtra("Login", loginString);
                     intent.putExtra("tmpIndex", idStrings[position]);
-                    Log.d("2ApilV1", "Child id  ==> " +idStrings[position] );
+                    intent.putExtra("gender", genderStrings[position]);
+                    intent.putExtra("age", ageStrings[position]);
+                    Log.d("16AprilV1", "GEN  ==> " +genderStrings[position] );
                     startActivity(intent);
                     // ไม่ต้อง หยุด เพราะจะให้ย้อนกลับได้
                 }
@@ -133,6 +141,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         if (v==imageView) {
             Intent intent = new Intent(ServiceActivity.this,AddChildActivity.class);
             intent.putExtra("Login",loginString);
+
             startActivity(intent);
         }
 

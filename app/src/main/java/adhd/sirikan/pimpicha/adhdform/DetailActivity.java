@@ -21,6 +21,8 @@ import org.json.JSONObject;
 public class DetailActivity extends AppCompatActivity {
     private  String []  loginString;
     private  String idString;
+    private  String genderString;
+    private  String ageString;
     TextView userTextView,childNameTextView;
     private String tag = "16AprilV4";
 
@@ -246,6 +248,8 @@ public class DetailActivity extends AppCompatActivity {
                 Intent intent = new Intent(DetailActivity.this, TreeTestActivity.class);
                 intent.putExtra("Login", loginString);
                 intent.putExtra("tmpIndex", idString);
+                intent.putExtra("gender", genderString);
+                intent.putExtra("age", ageString);
                 startActivity(intent);
             }
         });
@@ -261,6 +265,9 @@ public class DetailActivity extends AppCompatActivity {
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex"); // childID
         loginString = getIntent().getStringArrayExtra("Login"); // loginString[0]
+        genderString = getIntent().getStringExtra("gender"); // loginString[5]
+        ageString = getIntent().getStringExtra("age"); // loginString[3]
+
     }
 
 

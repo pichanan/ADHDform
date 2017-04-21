@@ -27,7 +27,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
     String[] spinnerValue = {"-", "0", "1", "2", "3"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
     private  int risk1,risk2,risk3;
-    String idString, loginString[];
+    String idString, loginString[],genderString;
     TextView textView;
     Button button;
 
@@ -119,6 +119,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");
         loginString = getIntent().getStringArrayExtra("Login");
+        genderString = getIntent().getStringExtra("gender");
 
         for(int i = 0 ;i<loginString.length;i++) {
             Log.d("tag2", "loginString(" + i + ")==>" + loginString[i]);

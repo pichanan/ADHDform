@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //for textView
         if (v == textView) {
             startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+
         }
         //for Button
         if (v == button) {
