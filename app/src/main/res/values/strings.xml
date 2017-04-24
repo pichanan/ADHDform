@@ -91,6 +91,31 @@
     <string name="age">age:</string>
     <string name="title_activity_before_test">BeforeTestActivity</string>
     <string name="selectTest">กรุณาเลือกแบบประเมินที่่ต้องการทำ</string>
+    <string name="sdq1">1.ห่วงใยความรู้สึกคนอื่น</string>
+    <string name="sdq2">2.อยู่ไม่นิ่ง นั่งนานๆไม่ได้</string>
+    <string name="sdq3">3.มักจะบ่นว่าปวดศีรษะ ปวดท้อง ไม่สบาย</string>
+    <string name="sdq4">4.เต็มใจแบ่งปันสิ่งของให้เพื่อน(ขนม ของเล่น ดินสอ เป็นต้น)</string>
+    <string name="sdq5">5.มักจะอาละวาดหรือโมโหร้าย</string>
+    <string name="sdq6">6.ค่อนข้างแยกตัว ชอบเล่นคนเดียว</string>
+    <string name="sdq7">7.เชื่อฟัง มักจะทำตามที่ผู้ใหญ่ต้องการ</string>
+    <string name="sdq8">8.กังวลใจหลายเรื่อง ดูวิตกกังวลเสมอ</string>
+    <string name="sdq9">9.เป็นที่พึ่งได้เวลาคนอื่นเสียใจ</string>
+    <string name="sdq10">10.อยู่ไม่สุข วุ่นวายอย่างมาก</string>
+    <string name="sdq11">11.มีเพื่อนสนิท</string>
+    <string name="sdq12">12.มักมีเรื่องทะเลาะวิวาทกับเด็กคนอื่นหรือรังแกเด็กคนอื่น</string>
+    <string name="sdq13">13.ดูไม่มีความสุข ท้อแท้ ร้องไห้บ่อย</string>
+    <string name="sdq14">14.เป็นที่ชื่นชอบของเพื่อน</string>
+    <string name="sdq15">15.วอกแวกง่าย สมาธิสั้น</string>
+    <string name="sdq16">16.เครียด ไม่ยอมห่างเวลาอยู่ในสถานการณ์ที่ไม่คุ้น</string>
+    <string name="sdq17">17.ใจดีกับเด็กที่เล็กกว่า</string>
+    <string name="sdq18">18.ชอบโกหกหรือขี้โกง</string>
+    <string name="sdq19">19.ถูกเด้กคนอื่นล้อเลียนหรือรังแก</string>
+    <string name="sdq20">20.ชอบอาสาช่วยเหลือคนอื่น(พ่อ แม่ ครู เด็กคนอื่น)</string>
+    <string name="sdq21">21.คิดก่อนทำ</string>
+    <string name="sdq22">22.ขโทยของ ของที่บ้าน ที่โรงเรียนหรือที่อื่น</string>
+    <string name="sdq23">23.เข้ากับผู้ใหญ่ได้ดีกว่าเด็กวัยเดียวกัน</string>
+    <string name="sdq24">24.ขี้กลัว รู้สึกหวาดกลัวง่าย</string>
+    <string name="sdq25">25.ทำงานได้จนเสร็จ มีความตั้งใจในการทำงาน</string>
 
 
 </resources>

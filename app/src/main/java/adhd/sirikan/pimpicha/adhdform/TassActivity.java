@@ -14,7 +14,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 public class TassActivity extends AppCompatActivity implements View.OnClickListener {
-    String[] spinnerValue = {"-", "0", "1", "2","3"};
+    String[] spinnerValue = {"-", "ไม่เคยทำ", "นานๆทำที", "ทำค่อนข้างบ่อย","ทำบ่อยมาก"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
     Button button;
     private  int risk1,risk2,risk3,trisk1,trisk2,trisk3;
@@ -24,6 +24,10 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             ,spinThass9,spinThass10,spinThass11,spinThass12,spinThass13,spinThass14,spinThass15,spinThass16
             ,spinThass17,spinThass18,spinThass19,spinThass20,spinThass21,spinThass22,spinThass23,spinThass24
             ,spinThass25,spinThass26,spinThass27,spinThass28,spinThass29,spinThass30;
+
+    String tmpspn, tmpspn2, tmpspn3, tmpspn4, tmpspn5, tmpspn6, tmpspn7, tmpspn8, tmpspn9, tmpspn10, tmpspn11, tmpspn12, tmpspn13,
+            tmpspn14, tmpspn15, tmpspn16, tmpspn17, tmpspn18, tmpspn19, tmpspn20, tmpspn21, tmpspn22, tmpspn23, tmpspn24, tmpspn25,
+            tmpspn26, tmpspn27, tmpspn28, tmpspn29, tmpspn30;
     String idString,loginString[],genderString,ageString;
 
     private java.util.Calendar calendar;
@@ -34,16 +38,20 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_thass);
-            idString = getIntent().getStringExtra("tmpIndex");
-            loginString = getIntent().getStringArrayExtra("Login");
-            genderString = getIntent().getStringExtra("gender");
-            ageString = getIntent().getStringExtra("age");
-        Log.d(tag2, " t:" + idString + " L:" +loginString[3]+" g"+genderString+" a"+ageString);
-            findCurrentDate();
+            getValueFromIntent();
             initialSpinner();
+            findCurrentDate();
             initialView();
             button.setOnClickListener(TassActivity.this);
         }
+
+    private void getValueFromIntent() {
+        idString = getIntent().getStringExtra("tmpIndex");
+        loginString = getIntent().getStringArrayExtra("Login");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+    }
+
     private void findCurrentDate() {
         calendar = java.util.Calendar.getInstance();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -141,36 +149,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             //get value from edidtex
 
 
-           spn = spinThass1.getSelectedItem().toString();
-           spn2 = spinThass2.getSelectedItem().toString();
-            spn3 = spinThass3.getSelectedItem().toString();
-            spn4 = spinThass4.getSelectedItem().toString();
-            spn5 = spinThass5.getSelectedItem().toString();
-            spn6 = spinThass6.getSelectedItem().toString();
-            spn7 = spinThass7.getSelectedItem().toString();
-            spn8 = spinThass8.getSelectedItem().toString();
-            spn9 = spinThass9.getSelectedItem().toString();
-            spn10 = spinThass10.getSelectedItem().toString();
-            spn11 = spinThass11.getSelectedItem().toString();
-            spn12 = spinThass12.getSelectedItem().toString();
-            spn13 = spinThass13.getSelectedItem().toString();
-            spn14 = spinThass14.getSelectedItem().toString();
-            spn15 = spinThass15.getSelectedItem().toString();
-            spn16 = spinThass16.getSelectedItem().toString();
-            spn17 = spinThass17.getSelectedItem().toString();
-            spn18 = spinThass18.getSelectedItem().toString();
-            spn19 = spinThass19.getSelectedItem().toString();
-            spn20 = spinThass20.getSelectedItem().toString();
-            spn21 = spinThass21.getSelectedItem().toString();
-            spn22 = spinThass22.getSelectedItem().toString();
-            spn23 = spinThass23.getSelectedItem().toString();
-            spn24 = spinThass24.getSelectedItem().toString();
-            spn25 = spinThass25.getSelectedItem().toString();
-            spn26 = spinThass26.getSelectedItem().toString();
-            spn27 = spinThass27.getSelectedItem().toString();
-            spn28 = spinThass28.getSelectedItem().toString();
-            spn29 = spinThass29.getSelectedItem().toString();
-            spn30= spinThass30.getSelectedItem().toString();
+            getValueFromEdidtex();
 
 
             if (checkSpinner()) {
@@ -194,6 +173,399 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
+    }
+
+    private void getValueFromEdidtex() {
+        spn = spinThass1.getSelectedItem().toString();
+        tmpspn = spn;
+        if(spn.equals("-")){
+            spn = "-";
+        }else if(spn.equals("ไม่เคยทำ")){
+            spn = "0";
+        }else if(spn.equals("นานๆทำที")){
+            spn = "1";
+        }else if(spn.equals("ทำค่อนข้างบ่อย")){
+            spn = "2";
+        }else {
+            spn = "3";
+        }
+        spn2 = spinThass2.getSelectedItem().toString();
+        tmpspn2 = spn2;
+        if(spn2.equals("-")){
+            spn2 = "-";
+        }else if(spn2.equals("ไม่เคยทำ")){
+            spn2 = "0";
+        }else if(spn2.equals("นานๆทำที")){
+            spn2 = "1";
+        }else if(spn2.equals("ทำค่อนข้างบ่อย")){
+            spn2 = "2";
+        }else {
+            spn2 = "3";
+        }
+        spn3 = spinThass3.getSelectedItem().toString();
+        tmpspn3 = spn3;
+        if(spn3.equals("-")){
+            spn3 = "-";
+        }else if(spn3.equals("ไม่เคยทำ")){
+            spn3 = "0";
+        }else if(spn3.equals("นานๆทำที")){
+            spn3 = "1";
+        }else if(spn3.equals("ทำค่อนข้างบ่อย")){
+            spn3 = "2";
+        }else {
+            spn3 = "3";
+        }
+        spn4 = spinThass4.getSelectedItem().toString();
+        tmpspn4 = spn4;
+        if(spn4.equals("-")){
+            spn4 = "-";
+        }else if(spn4.equals("ไม่เคยทำ")){
+            spn4 = "0";
+        }else if(spn4.equals("นานๆทำที")){
+            spn4 = "1";
+        }else if(spn4.equals("ทำค่อนข้างบ่อย")){
+            spn4 = "2";
+        }else {
+            spn4 = "3";
+        }
+        spn5 = spinThass5.getSelectedItem().toString();
+        tmpspn5 = spn5;
+        if(spn5.equals("-")){
+            spn5 = "-";
+        }else if(spn5.equals("ไม่เคยทำ")){
+            spn5 = "0";
+        }else if(spn5.equals("นานๆทำที")){
+            spn5 = "1";
+        }else if(spn5.equals("ทำค่อนข้างบ่อย")){
+            spn5 = "2";
+        }else {
+            spn5 = "3";
+        }
+        spn6 = spinThass6.getSelectedItem().toString();
+        tmpspn6 = spn6;
+        if(spn6.equals("-")){
+            spn6 = "-";
+        }else if(spn6.equals("ไม่เคยทำ")){
+            spn6 = "0";
+        }else if(spn6.equals("นานๆทำที")){
+            spn6 = "1";
+        }else if(spn6.equals("ทำค่อนข้างบ่อย")){
+            spn6 = "2";
+        }else {
+            spn6 = "3";
+        }
+        spn7 = spinThass7.getSelectedItem().toString();
+        tmpspn7 = spn7;
+        if(spn7.equals("-")){
+            spn7 = "-";
+        }else if(spn7.equals("ไม่เคยทำ")){
+            spn7 = "0";
+        }else if(spn7.equals("นานๆทำที")){
+            spn7 = "1";
+        }else if(spn7.equals("ทำค่อนข้างบ่อย")){
+            spn7 = "2";
+        }else {
+            spn7 = "3";
+        }
+        spn8 = spinThass8.getSelectedItem().toString();
+        tmpspn8 = spn8;
+        if(spn8.equals("-")){
+            spn8 = "-";
+        }else if(spn8.equals("ไม่เคยทำ")){
+            spn8 = "0";
+        }else if(spn8.equals("นานๆทำที")){
+            spn8 = "1";
+        }else if(spn8.equals("ทำค่อนข้างบ่อย")){
+            spn8 = "2";
+        }else {
+            spn8 = "3";
+        }
+        spn9 = spinThass9.getSelectedItem().toString();
+        tmpspn9 = spn9;
+        if(spn9.equals("-")){
+            spn9 = "-";
+        }else if(spn9.equals("ไม่เคยทำ")){
+            spn9 = "0";
+        }else if(spn9.equals("นานๆทำที")){
+            spn9 = "1";
+        }else if(spn9.equals("ทำค่อนข้างบ่อย")){
+            spn9 = "2";
+        }else {
+            spn9 = "3";
+        }
+        spn10 = spinThass10.getSelectedItem().toString();
+        tmpspn10 = spn10;
+        if(spn10.equals("-")){
+            spn10 = "-";
+        }else if(spn10.equals("ไม่เคยทำ")){
+            spn10 = "0";
+        }else if(spn10.equals("นานๆทำที")){
+            spn10 = "1";
+        }else if(spn10.equals("ทำค่อนข้างบ่อย")){
+            spn10 = "2";
+        }else {
+            spn10 = "3";
+        }
+        spn11 = spinThass11.getSelectedItem().toString();
+        tmpspn11 = spn11;
+        if(spn11.equals("-")){
+            spn11 = "-";
+        }else if(spn11.equals("ไม่เคยทำ")){
+            spn11 = "0";
+        }else if(spn11.equals("นานๆทำที")){
+            spn11 = "1";
+        }else if(spn11.equals("ทำค่อนข้างบ่อย")){
+            spn11 = "2";
+        }else {
+            spn11 = "3";
+        }
+        spn12 = spinThass12.getSelectedItem().toString();
+        tmpspn12 = spn12;
+        if(spn12.equals("-")){
+            spn12 = "-";
+        }else if(spn12.equals("ไม่เคยทำ")){
+            spn12 = "0";
+        }else if(spn12.equals("นานๆทำที")){
+            spn12 = "1";
+        }else if(spn12.equals("ทำค่อนข้างบ่อย")){
+            spn12 = "2";
+        }else {
+            spn12 = "3";
+        }
+        spn13 = spinThass13.getSelectedItem().toString();
+        tmpspn13 = spn13;
+        if(spn13.equals("-")){
+            spn13 = "-";
+        }else if(spn13.equals("ไม่เคยทำ")){
+            spn13 = "0";
+        }else if(spn13.equals("นานๆทำที")){
+            spn13 = "1";
+        }else if(spn13.equals("ทำค่อนข้างบ่อย")){
+            spn13 = "2";
+        }else {
+            spn13 = "3";
+        }
+        spn14 = spinThass14.getSelectedItem().toString();
+        tmpspn14 = spn14;
+        if(spn14.equals("-")){
+            spn14 = "-";
+        }else if(spn14.equals("ไม่เคยทำ")){
+            spn14 = "0";
+        }else if(spn14.equals("นานๆทำที")){
+            spn14 = "1";
+        }else if(spn14.equals("ทำค่อนข้างบ่อย")){
+            spn14 = "2";
+        }else {
+            spn14 = "3";
+        }
+        spn15 = spinThass15.getSelectedItem().toString();
+        tmpspn15 = spn15;
+        if(spn15.equals("-")){
+            spn15 = "-";
+        }else if(spn15.equals("ไม่เคยทำ")){
+            spn15 = "0";
+        }else if(spn15.equals("นานๆทำที")){
+            spn15 = "1";
+        }else if(spn15.equals("ทำค่อนข้างบ่อย")){
+            spn15 = "2";
+        }else {
+            spn15 = "3";
+        }
+        spn16 = spinThass16.getSelectedItem().toString();
+        tmpspn16 = spn16;
+        if(spn16.equals("-")){
+            spn16 = "-";
+        }else if(spn16.equals("ไม่เคยทำ")){
+            spn16 = "0";
+        }else if(spn16.equals("นานๆทำที")){
+            spn16 = "1";
+        }else if(spn16.equals("ทำค่อนข้างบ่อย")){
+            spn16 = "2";
+        }else {
+            spn16 = "3";
+        }
+        spn17 = spinThass17.getSelectedItem().toString();
+        tmpspn17 = spn17;
+        if(spn17.equals("-")){
+            spn17 = "-";
+        }else if(spn17.equals("ไม่เคยทำ")){
+            spn17 = "0";
+        }else if(spn17.equals("นานๆทำที")){
+            spn17 = "1";
+        }else if(spn17.equals("ทำค่อนข้างบ่อย")){
+            spn17 = "2";
+        }else {
+            spn17 = "3";
+        }
+        spn18 = spinThass18.getSelectedItem().toString();
+        tmpspn18 = spn18;
+        if(spn18.equals("-")){
+            spn18 = "-";
+        }else if(spn18.equals("ไม่เคยทำ")){
+            spn18 = "0";
+        }else if(spn18.equals("นานๆทำที")){
+            spn18 = "1";
+        }else if(spn18.equals("ทำค่อนข้างบ่อย")){
+            spn18 = "2";
+        }else {
+            spn18 = "3";
+        }
+        spn19 = spinThass19.getSelectedItem().toString();
+        tmpspn19 = spn19;
+        if(spn19.equals("-")){
+            spn19 = "-";
+        }else if(spn19.equals("ไม่เคยทำ")){
+            spn19 = "0";
+        }else if(spn19.equals("นานๆทำที")){
+            spn19 = "1";
+        }else if(spn19.equals("ทำค่อนข้างบ่อย")){
+            spn19 = "2";
+        }else {
+            spn19 = "3";
+        }
+        spn20 = spinThass20.getSelectedItem().toString();
+        tmpspn20 = spn20;
+        if(spn20.equals("-")){
+            spn20= "-";
+        }else if(spn20.equals("ไม่เคยทำ")){
+            spn20 = "0";
+        }else if(spn20.equals("นานๆทำที")){
+            spn20 = "1";
+        }else if(spn20.equals("ทำค่อนข้างบ่อย")){
+            spn20 = "2";
+        }else {
+            spn20 = "3";
+        }
+        spn21 = spinThass21.getSelectedItem().toString();
+        tmpspn21 = spn21;
+        if(spn21.equals("-")){
+            spn21= "-";
+        }else if(spn21.equals("ไม่เคยทำ")){
+            spn21 = "0";
+        }else if(spn21.equals("นานๆทำที")){
+            spn21 = "1";
+        }else if(spn21.equals("ทำค่อนข้างบ่อย")){
+            spn21 = "2";
+        }else {
+            spn21 = "3";
+        }
+        spn22 = spinThass22.getSelectedItem().toString();
+        tmpspn22 = spn22;
+        if(spn22.equals("-")){
+            spn22= "-";
+        }else if(spn22.equals("ไม่เคยทำ")){
+            spn22 = "0";
+        }else if(spn22.equals("นานๆทำที")){
+            spn22 = "1";
+        }else if(spn22.equals("ทำค่อนข้างบ่อย")){
+            spn22 = "2";
+        }else {
+            spn22 = "3";
+        }
+        spn23 = spinThass23.getSelectedItem().toString();
+        tmpspn23 = spn23;
+        if(spn23.equals("-")){
+            spn23= "-";
+        }else if(spn23.equals("ไม่เคยทำ")){
+            spn23 = "0";
+        }else if(spn23.equals("นานๆทำที")){
+            spn23 = "1";
+        }else if(spn23.equals("ทำค่อนข้างบ่อย")){
+            spn23 = "2";
+        }else {
+            spn23 = "3";
+        }
+        spn24 = spinThass24.getSelectedItem().toString();
+        tmpspn24 = spn24;
+        if(spn24.equals("-")){
+            spn24= "-";
+        }else if(spn24.equals("ไม่เคยทำ")){
+            spn24 = "0";
+        }else if(spn24.equals("นานๆทำที")){
+            spn24 = "1";
+        }else if(spn24.equals("ทำค่อนข้างบ่อย")){
+            spn24 = "2";
+        }else {
+            spn24 = "3";
+        }
+        spn25 = spinThass25.getSelectedItem().toString();
+        tmpspn25 = spn25;
+        if(spn25.equals("-")){
+            spn25= "-";
+        }else if(spn25.equals("ไม่เคยทำ")){
+            spn25 = "0";
+        }else if(spn25.equals("นานๆทำที")){
+            spn25 = "1";
+        }else if(spn25.equals("ทำค่อนข้างบ่อย")){
+            spn25 = "2";
+        }else {
+            spn25 = "3";
+        }
+        spn26 = spinThass26.getSelectedItem().toString();
+        tmpspn26 = spn26;
+        if(spn26.equals("-")){
+            spn26= "-";
+        }else if(spn26.equals("ไม่เคยทำ")){
+            spn26 = "0";
+        }else if(spn26.equals("นานๆทำที")){
+            spn26 = "1";
+        }else if(spn26.equals("ทำค่อนข้างบ่อย")){
+            spn26 = "2";
+        }else {
+            spn26 = "3";
+        }
+        spn27 = spinThass27.getSelectedItem().toString();
+        tmpspn27 = spn27;
+        if(spn27.equals("-")){
+            spn27= "-";
+        }else if(spn27.equals("ไม่เคยทำ")){
+            spn27 = "0";
+        }else if(spn27.equals("นานๆทำที")){
+            spn27 = "1";
+        }else if(spn27.equals("ทำค่อนข้างบ่อย")){
+            spn27 = "2";
+        }else {
+            spn27 = "3";
+        }
+        spn28 = spinThass28.getSelectedItem().toString();
+        tmpspn28 = spn28;
+        if(spn28.equals("-")){
+            spn28= "-";
+        }else if(spn28.equals("ไม่เคยทำ")){
+            spn28 = "0";
+        }else if(spn28.equals("นานๆทำที")){
+            spn28 = "1";
+        }else if(spn28.equals("ทำค่อนข้างบ่อย")){
+            spn28 = "2";
+        }else {
+            spn28 = "3";
+        }
+        spn29 = spinThass29.getSelectedItem().toString();
+        tmpspn29 = spn29;
+        if(spn29.equals("-")){
+            spn29= "-";
+        }else if(spn29.equals("ไม่เคยทำ")){
+            spn29 = "0";
+        }else if(spn29.equals("นานๆทำที")){
+            spn29 = "1";
+        }else if(spn29.equals("ทำค่อนข้างบ่อย")){
+            spn29 = "2";
+        }else {
+            spn29 = "3";
+        }
+        spn30= spinThass30.getSelectedItem().toString();
+        tmpspn30 = spn30;
+        if(spn30.equals("-")){
+            spn30= "-";
+        }else if(spn30.equals("ไม่เคยทำ")){
+            spn30 = "0";
+        }else if(spn30.equals("นานๆทำที")){
+            spn30 = "1";
+        }else if(spn30.equals("ทำค่อนข้างบ่อย")){
+            spn30 = "2";
+        }else {
+            spn30 = "3";
+        }
     }
 
     private void calRisk(String genderString,String dotype ,String ageString) {
@@ -10526,7 +10898,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
                     spn27,spn28,spn29,spn30, loginString[0], idString,
                     Integer.toString(trisk1), Integer.toString(trisk2), Integer.toString(trisk3),
                     loginString[3], currentDateString, strURL);
-            Log.d(tag2, "e checkSpecial ==>" + currentDateString + " " +Integer.toString(risk1));
+
 
 
             if (Boolean.parseBoolean((postTass.get()))) {
@@ -10535,6 +10907,40 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("risk1", (int)trisk1);
+                intent.putExtra("risk2",(int) trisk2);
+                intent.putExtra("risk3",(int) trisk3);
+                intent.putExtra("ans1",tmpspn);
+                intent.putExtra("ans2",tmpspn2);
+                intent.putExtra("ans3",tmpspn3);
+                intent.putExtra("ans4",tmpspn4);
+                intent.putExtra("ans5",tmpspn5);
+                intent.putExtra("ans6",tmpspn6);
+                intent.putExtra("ans7",tmpspn7);
+                intent.putExtra("ans8",tmpspn8);
+                intent.putExtra("ans9",tmpspn9);
+                intent.putExtra("ans10",tmpspn10);
+                intent.putExtra("ans11",tmpspn11);
+                intent.putExtra("ans12",tmpspn12);
+                intent.putExtra("ans13",tmpspn13);
+                intent.putExtra("ans14",tmpspn14);
+                intent.putExtra("ans15",tmpspn15);
+                intent.putExtra("ans16",tmpspn16);
+                intent.putExtra("ans17",tmpspn17);
+                intent.putExtra("ans18",tmpspn18);
+                intent.putExtra("ans19",tmpspn19);
+                intent.putExtra("ans20",tmpspn20);
+                intent.putExtra("ans21",tmpspn21);
+                intent.putExtra("ans22",tmpspn22);
+                intent.putExtra("ans23",tmpspn23);
+                intent.putExtra("ans24",tmpspn24);
+                intent.putExtra("ans25",tmpspn25);
+                intent.putExtra("ans26",tmpspn26);
+                intent.putExtra("ans27",tmpspn27);
+                intent.putExtra("ans28",tmpspn28);
+                intent.putExtra("ans29",tmpspn29);
+                intent.putExtra("ans30",tmpspn30);
+                intent.putExtra("date",currentDateString);
                 startActivity(intent);
             }else{
                 Toast.makeText(TassActivity.this,"Cannot save user",Toast.LENGTH_SHORT).show();

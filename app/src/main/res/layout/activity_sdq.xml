@@ -23,7 +23,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1.ห่วงใยความรู้สึกคนอื่น"/>
+                    android:text="@string/sdq1"/>
                 <Spinner
                     android:id="@+id/spinSdq1"
                     android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2.อยู่ไม่นิ่ง นั่งนานๆไม่ได้"/>
+                    android:text="@string/sdq2"/>
                 <Spinner
                     android:id="@+id/spinSdq2"
                     android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="3.มักจะบ่นว่าปวดศีรษะ ปวดท้อง ไม่สบาย"/>
+                    android:text="@string/sdq3"/>
                 <Spinner
                     android:id="@+id/spinSdq3"
                     android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="4.เต็มใจแบ่งปันสิ่งของให้เพื่อน(ขนม ของเล่น ดินสอ เป็นต้น)"/>
+                    android:text="@string/sdq4"/>
                 <Spinner
                     android:id="@+id/spinSdq4"
                     android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="5.มักจะอาละวาดหรือโมโหร้าย "/>
+                    android:text="@string/sdq5"/>
                 <Spinner
                     android:id="@+id/spinSdq5"
                     android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="6.ค่อนข้างแยกตัว ชอบเล่นคนเดียว"/>
+                    android:text="@string/sdq6"/>
                 <Spinner
                     android:id="@+id/spinSdq6"
                     android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="7.เชื่อฟัง มักจะทำตามที่ผู้ใหญ่ต้องการ "/>
+                    android:text="@string/sdq7"/>
                 <Spinner
                     android:id="@+id/spinSdq7"
                     android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="8.กังวลใจหลายเรื่อง ดูวิตกกังวลเสมอ"/>
+                    android:text="@string/sdq8"/>
                 <Spinner
                     android:id="@+id/spinSdq8"
                     android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="9.เป็นที่พึ่งได้เวลาคนอื่นเสียใจ"/>
+                    android:text="@string/sdq9"/>
                 <Spinner
                     android:id="@+id/spinSdq9"
                     android:layout_width="match_parent"
@@ -104,7 +104,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="10.อยู่ไม่สุข วุ่นวายอย่างมาก "/>
+                    android:text="@string/sdq10"/>
                 <Spinner
                     android:id="@+id/spinSdq10"
                     android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="11.มีเพื่อนสนิท"/>
+                    android:text="@string/sdq11"/>
                 <Spinner
                     android:id="@+id/spinSdq11"
                     android:layout_width="match_parent"
@@ -122,7 +122,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="12.มักมีเรื่องทะเลาะวิวาทกับเด็กคนอื่นหรือรังแกเด็กคนอื่น"/>
+                    android:text="@string/sdq12"/>
                 <Spinner
                     android:id="@+id/spinSdq12"
                     android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="13.ดูไม่มีความสุข ท้อแท้ ร้องไห้บ่อย"/>
+                    android:text="@string/sdq13"/>
                 <Spinner
                     android:id="@+id/spinSdq13"
                     android:layout_width="match_parent"
@@ -140,7 +140,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="14.เป็นที่ชื่นชอบของเพื่อน"/>
+                    android:text="@string/sdq14"/>
                 <Spinner
                     android:id="@+id/spinSdq14"
                     android:layout_width="match_parent"
@@ -149,7 +149,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="15.วอกแวกง่าย สมาธิสั้น "/>
+                    android:text="@string/sdq15"/>
                 <Spinner
                     android:id="@+id/spinSdq15"
                     android:layout_width="match_parent"
@@ -158,7 +158,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="16.เครียด ไม่ยอมห่างเวลาอยู่ในสถานการณ์ที่ไม่คุ้น "/>
+                    android:text="@string/sdq16"/>
                 <Spinner
                     android:id="@+id/spinSdq16"
                     android:layout_width="match_parent"
@@ -167,7 +167,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="17.ใจดีกับเด็กที่เล็กกว่า"/>
+                    android:text="@string/sdq17"/>
                 <Spinner
                     android:id="@+id/spinSdq17"
                     android:layout_width="match_parent"
@@ -176,7 +176,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="18.ชอบโกหกหรือขี้โกง"/>
+                    android:text="@string/sdq18"/>
                 <Spinner
                     android:id="@+id/spinSdq18"
                     android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="19.ถูกเด้กคนอื่นล้อเลียนหรือรังแก"/>
+                    android:text="@string/sdq19"/>
                 <Spinner
                     android:id="@+id/spinSdq19"
                     android:layout_width="match_parent"
@@ -194,7 +194,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="20.ชอบอาสาช่วยเหลือคนอื่น(พ่อ แม่ ครู เด็กคนอื่น)"/>
+                    android:text="@string/sdq20"/>
                 <Spinner
                     android:id="@+id/spinSdq20"
                     android:layout_width="match_parent"
@@ -203,7 +203,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="21.คิดก่อนทำ"/>
+                    android:text="@string/sdq21"/>
                 <Spinner
                     android:id="@+id/spinSdq21"
                     android:layout_width="match_parent"
@@ -212,7 +212,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="22.ขโทยของ ของที่บ้าน ที่โรงเรียนหรือที่อื่น"/>
+                    android:text="@string/sdq22"/>
                 <Spinner
                     android:id="@+id/spinSdq22"
                     android:layout_width="match_parent"
@@ -221,7 +221,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="23.เข้ากับผู้ใหญ่ได้ดีกว่าเด็กวัยเดียวกัน "/>
+                    android:text="@string/sdq23"/>
                 <Spinner
                     android:id="@+id/spinSdq23"
                     android:layout_width="match_parent"
@@ -230,7 +230,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="24.ขี้กลัว รู้สึกหวาดกลัวง่าย"/>
+                    android:text="@string/sdq24"/>
                 <Spinner
                     android:id="@+id/spinSdq24"
                     android:layout_width="match_parent"
@@ -239,7 +239,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="25.ทำงานได้จนเสร็จ มีความตั้งใจในการทำงาน"/>
+                    android:text="@string/sdq25"/>
                 <Spinner
                     android:id="@+id/spinSdq25"
                     android:layout_width="match_parent"
