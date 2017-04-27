@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //explicit
     private EditText userEditText, passwordEditText;
     private TextView textView;
-    private Button button;
+    private Button button,btnPdf;
     private String userString,passString;
     private String[] loginStrings;
     private boolean aBoolean = true;
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void controller() {
         textView.setOnClickListener(MainActivity.this);
         button.setOnClickListener(MainActivity.this);
+        btnPdf.setOnClickListener(MainActivity.this);
     }
 
     private void initialWidget() {
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         passwordEditText = (EditText) findViewById(R.id.edtpassword);
         textView = (TextView) findViewById(R.id.txtNewRegister);
         button = (Button) findViewById(R.id.btnLogin);
+        btnPdf = (Button) findViewById(R.id.btnpdf);
     }
 
     @Override
@@ -80,6 +82,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
+        if (v == btnPdf) {
+            startActivity(new Intent(MainActivity.this, PDFActivity.class));
+
+        }
 
 
     }//onclick
