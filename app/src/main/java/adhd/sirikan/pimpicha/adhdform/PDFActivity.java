@@ -143,7 +143,6 @@ public class PDFActivity extends AppCompatActivity {
         document.close();
         previewPdf();
 
-
     }
 
     private void previewPdf() {
