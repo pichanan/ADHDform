@@ -1,11 +1,10 @@
 package adhd.sirikan.pimpicha.adhdform;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,17 +18,31 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.ColumnText;
 import com.itextpdf.text.pdf.PdfWriter;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class PDFActivity extends AppCompatActivity {
@@ -38,6 +51,7 @@ public class PDFActivity extends AppCompatActivity {
     private Button mCreateButton;
     private File pdfFile;
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
+    public static File fontFile = new File("fonts/thaisanslite_r1.ttf");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,16 +146,22 @@ public class PDFActivity extends AppCompatActivity {
             docsFolder.mkdir();
             Log.i(TAG, "Created a new directory for PDF");
         }
+        try {
+            pdfFile = new File(docsFolder.getAbsolutePath(), "test.pdf");
+            OutputStream output = new FileOutputStream(pdfFile);
+            Document document = new Document();
+            PdfWriter.getInstance(document, output);
+            BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            Font font = new Font(bf, 15);
+            document.open();
+            document.add(new Paragraph("พิมพ์ไทยไม่ได้ eiei 12.0", font));
 
-        pdfFile = new File(docsFolder.getAbsolutePath(),"HelloWorld.pdf");
-        OutputStream output = new FileOutputStream(pdfFile);
-        Document document = new Document();
-        PdfWriter.getInstance(document, output);
-        document.open();
-        document.add(new Paragraph(mContentEditText.getText().toString()));
+            document.close();
+            previewPdf();
+        } catch (Exception e) {
+        }
 
-        document.close();
-        previewPdf();
+
 
     }
 

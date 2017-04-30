@@ -43,6 +43,7 @@ public class MyConstant {
     private String passwordString = "Pimpluempj402";
     private int portAnInt = 21;
 
+
     public String getUrlGetTestWhereID() {
         return urlGetTestWhereID;
     }
