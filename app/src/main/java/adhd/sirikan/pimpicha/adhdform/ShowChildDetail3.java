@@ -1,23 +1,18 @@
 package adhd.sirikan.pimpicha.adhdform;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class ShowChildDetail extends AppCompatActivity {
-
+public class ShowChildDetail3 extends AppCompatActivity {
     private MyConstant myConstant;
     private String idString,urlPHPString;
     private String[] columnStrings,resultStrings;
     private String tag = "16AprilV5";
-    ImageView ImageViewPDF;
     String ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11,
             ch12, ch13, ch14, ch15, ch16, ch17, ch18, ch19, ch20,
             ch21, ch22, ch23, ch24, ch25, ch26;
@@ -29,54 +24,38 @@ public class ShowChildDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_child_detail);
-        ImageViewPDF = (ImageView) findViewById(R.id.showDetailPdf);
-        ImageViewPDF.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ShowChildDetail.this, PDFActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        //My setup
+        setContentView(R.layout.activity_show_child_detail3);
         mySetup();
-
-        //Query data From JSoN
         queryDataFromJSoN();
         findId();
-
-
-    }//main method
+    }
 
     private void findId() {
-        spn = (TextView) findViewById(R.id.hisSnap1);
-        spn2 = (TextView) findViewById(R.id.hisSnap2);
-        spn3 = (TextView) findViewById(R.id.hisSnap3);
-        spn4 = (TextView) findViewById(R.id.hisSnap4);
-        spn5 = (TextView) findViewById(R.id.hisSnap5);
-        spn6 = (TextView) findViewById(R.id.hisSnap6);
-        spn7= (TextView) findViewById(R.id.hisSnap7);
-        spn8 = (TextView) findViewById(R.id.hisSnap8);
-        spn9 = (TextView) findViewById(R.id.hisSnap9);
-        spn10 = (TextView) findViewById(R.id.hisSnap10);
-        spn11 = (TextView) findViewById(R.id.hisSnap11);
-        spn12 = (TextView) findViewById(R.id.hisSnap12);
-        spn13 = (TextView) findViewById(R.id.hisSnap13);
-        spn14 = (TextView) findViewById(R.id.hisSnap14);
-        spn15 = (TextView) findViewById(R.id.hisSnap15);
-        spn16 = (TextView) findViewById(R.id.hisSnap16);
-        spn17 = (TextView) findViewById(R.id.hisSnap17);
-        spn18 = (TextView) findViewById(R.id.hisSnap18);
-        spn19 = (TextView) findViewById(R.id.hisSnap19);
-        spn20 = (TextView) findViewById(R.id.hisSnap20);
-        spn21 = (TextView) findViewById(R.id.hisSnap21);
-        spn22 = (TextView) findViewById(R.id.hisSnap22);
-        spn23 = (TextView) findViewById(R.id.hisSnap23);
-        spn24 = (TextView) findViewById(R.id.hisSnap24);
-        spn25 = (TextView) findViewById(R.id.hisSnap25);
-        spn26 = (TextView) findViewById(R.id.hisSnap26);
+        spn = (TextView) findViewById(R.id.hissdq1);
+        spn2 = (TextView) findViewById(R.id.hissdq2);
+        spn3 = (TextView) findViewById(R.id.hissdq3);
+        spn4 = (TextView) findViewById(R.id.hissdq4);
+        spn5 = (TextView) findViewById(R.id.hissdq5);
+        spn6 = (TextView) findViewById(R.id.hissdq6);
+        spn7= (TextView) findViewById(R.id.hissdq7);
+        spn8 = (TextView) findViewById(R.id.hissdq8);
+        spn9 = (TextView) findViewById(R.id.hissdq9);
+        spn10 = (TextView) findViewById(R.id.hissdq10);
+        spn11 = (TextView) findViewById(R.id.hissdq11);
+        spn12 = (TextView) findViewById(R.id.hissdq12);
+        spn13 = (TextView) findViewById(R.id.hissdq13);
+        spn14 = (TextView) findViewById(R.id.hissdq14);
+        spn15 = (TextView) findViewById(R.id.hissdq15);
+        spn16 = (TextView) findViewById(R.id.hissdq16);
+        spn17 = (TextView) findViewById(R.id.hissdq17);
+        spn18 = (TextView) findViewById(R.id.hissdq18);
+        spn19 = (TextView) findViewById(R.id.hissdq19);
+        spn20 = (TextView) findViewById(R.id.hissdq20);
+        spn21 = (TextView) findViewById(R.id.hissdq21);
+        spn22 = (TextView) findViewById(R.id.hissdq22);
+        spn23 = (TextView) findViewById(R.id.hissdq23);
+        spn24 = (TextView) findViewById(R.id.hissdq24);
+        spn25 = (TextView) findViewById(R.id.hissdq25);
 
         spn.setText(ch1);
         spn2.setText(ch2);
@@ -103,15 +82,14 @@ public class ShowChildDetail extends AppCompatActivity {
         spn23.setText(ch23);
         spn24.setText(ch24);
         spn25.setText(ch25);
-        spn26.setText(ch26);
-    }
 
+    }
 
     private void queryDataFromJSoN() {
         try {
 
 
-            getDataWhere objGetDataWhere = new getDataWhere(ShowChildDetail.this);
+            getDataWhere objGetDataWhere = new getDataWhere(ShowChildDetail3.this);
             objGetDataWhere.execute("id", idString, urlPHPString);
 
             String strjSoN = objGetDataWhere.get();
@@ -148,7 +126,6 @@ public class ShowChildDetail extends AppCompatActivity {
             ch23 = resultStrings[23];
             ch24 = resultStrings[24];
             ch25 = resultStrings[25];
-            ch26 = resultStrings[26];
 
 
         } catch (Exception e) {
@@ -159,7 +136,7 @@ public class ShowChildDetail extends AppCompatActivity {
     private void mySetup() {
         myConstant = new MyConstant();
         idString = getIntent().getStringExtra("id");
-        columnStrings = myConstant.getColumnTest();
-        urlPHPString = myConstant.getUrlGetTestWhereID();
+        columnStrings = myConstant.getColumnTest3();
+        urlPHPString = myConstant.getUrlGetTestWhereID3();
     }
-}//main Class
+}

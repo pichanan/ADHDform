@@ -1,8 +1,11 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class riskSnapActivity extends AppCompatActivity {
@@ -12,12 +15,21 @@ public class riskSnapActivity extends AppCompatActivity {
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
     sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     int risk1Int,risk2Int,risk3Int ;
+    ImageView ImageViewPDF;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_risk_snap);
         textView = (TextView) findViewById(R.id.txtRiskSnapShowRisk);
         textView2 = (TextView) findViewById(R.id.txtRiskSnapDate);
+        ImageViewPDF = (ImageView) findViewById(R.id.showRiskSnapPdf);
+        ImageViewPDF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskSnapActivity.this, PDFActivity.class);
+            }
+        });
+
         getValueFromIntent();
         analyzeRisk();
         showText();

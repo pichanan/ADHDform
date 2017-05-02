@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TreeTestActivity extends AppCompatActivity {
@@ -24,9 +25,9 @@ public class TreeTestActivity extends AppCompatActivity {
         userTextView = (TextView) findViewById(R.id.treeUserName);
         userTextView.setText(loginString[1]);
 
-        Button btnSnap = (Button) findViewById(R.id.buttonSnap);
-        Button btnThass = (Button) findViewById(R.id.buttonThass);
-        Button btnSdq = (Button) findViewById(R.id.buttonSdq);
+        ImageView btnSnap = (ImageView) findViewById(R.id.buttonSnap);
+        ImageView btnThass = (ImageView) findViewById(R.id.buttonThass);
+        ImageView btnSdq = (ImageView) findViewById(R.id.buttonSdq);
        btnSnap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(TreeTestActivity.this, SnapActivity.class);

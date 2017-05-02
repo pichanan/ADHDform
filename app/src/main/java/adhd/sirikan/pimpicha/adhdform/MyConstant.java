@@ -27,6 +27,8 @@ public class MyConstant {
     private String urlGetChildWhereID3 = "http://adhdpj.com/app/getChildWhereID3.php";
 
     private String urlGetTestWhereID = "http://adhdpj.com/app/getTestWhereID.php";
+    private String urlGetTestWhereID2 = "http://adhdpj.com/app/getTestWhereID2.php";
+    private String urlGetTestWhereID3 = "http://adhdpj.com/app/getTestWhereID3.php";
 
 
     //ถ้าใส่ตารางเพิ่มเข้อมูลเด็กต้องมาใส่ตรงนี้ด้วย
@@ -35,7 +37,12 @@ public class MyConstant {
     private String[] columnTest = new String[]{"id", "ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8"
             , "ch9", "ch10", "ch11", "ch12", "ch13", "ch14", "ch15", "ch16", "ch17", "ch18", "ch19", "ch20", "ch21", "ch22"
             , "ch23", "ch24", "ch25", "ch26", "userID", "childID", "risk1", "risk2", "risk3", "doType", "Special", "CurrentDate"};
-
+    private String[] columnTest2 = new String[]{"id", "t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"
+            , "t9", "t10", "t11", "t12", "t13", "t14", "t15", "t16", "t17", "t18", "t19", "t20", "t21", "t22"
+            , "t23", "t24", "t25", "t26" , "t27", "t28","t29","t30", "tuserID", "tchildID", "risk1", "risk2", "risk3", "doType", "Special", "CurrentDate"};
+    private String[] columnTest3 = new String[]{"id", "ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8"
+            , "ch9", "ch10", "ch11", "ch12", "ch13", "ch14", "ch15", "ch16", "ch17", "ch18", "ch19", "ch20", "ch21", "ch22"
+            , "ch23", "ch24", "ch25", "userID", "childID", "risk1", "doType", "Special", "CurrentDate"};
 
     //for FTP
     private String hostString = "ftp.adhdpj.com";
@@ -48,8 +55,22 @@ public class MyConstant {
         return urlGetTestWhereID;
     }
 
+    public String getUrlGetTestWhereID2() {
+        return urlGetTestWhereID2;
+    }
+
+    public String getUrlGetTestWhereID3() {
+        return urlGetTestWhereID3;
+    }
+
     public String[] getColumnTest() {
         return columnTest;
+    }
+    public String[] getColumnTest2() {
+        return columnTest2;
+    }
+    public String[] getColumnTest3() {
+        return columnTest3;
     }
 
     public String getUrlGetChildWhereID() {

@@ -10,50 +10,62 @@
     <RelativeLayout
         android:id="@+id/relTop"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_layout"
+        android:layout_height="100dp"
         android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <ImageView
-            android:id="@+id/imvdotest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:id="@+id/imvDetail1"
+            android:layout_width="75dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:src="@drawable/do_test"
+            android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="31dp"
-            android:layout_marginRight="31dp"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:id="@+id/imvDetailPrevious"
+            android:layout_width="75dp"
+            android:layout_height="150dp"
+            android:src="@drawable/previous"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp" />
 
         <TextView
             android:id="@+id/detailUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/my_margin2"
+            android:layout_marginTop="13dp"
             android:text="test"
             android:textColor="#fbf9f9"
-            android:textSize="@dimen/h1" />
+            android:textSize="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/detailShowChild"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/detailUserName"
-            android:layout_centerHorizontal="true"
             android:text="test"
 
             android:textColor="#fbf9f9"
-            android:textSize="@dimen/h1" />
+            android:textSize="20dp"
+            android:layout_below="@+id/detailUserName"
+            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>
 
     <TabHost
         android:layout_below="@+id/relTop"
-        android:layout_above="@+id/btnDetail1"
+
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -122,13 +134,6 @@
             </FrameLayout>
         </LinearLayout>
     </TabHost>
-
-    <Button
-        android:layout_alignParentBottom="true"
-        android:id="@+id/btnDetail1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 
 
 </RelativeLayout>

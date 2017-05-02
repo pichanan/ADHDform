@@ -23,6 +23,7 @@ public class DetailActivity extends AppCompatActivity {
     private  String idString;
     private  String genderString;
     private  String ageString;
+
     TextView userTextView,childNameTextView;
     private String tag = "16AprilV4";
 
@@ -71,11 +72,14 @@ public class DetailActivity extends AppCompatActivity {
             final String[] idStrings = new String[jsonArray.length()];
 
 
+
             for (int i=0;i<jsonArray.length();i++){
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 showDateStrings[i] = jsonObject.getString("CurrentDate");
                 idStrings[i] = jsonObject.getString("id");
+
+
 
 
 
@@ -90,8 +94,10 @@ public class DetailActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Log.d(tag, "id =>" + idStrings[position]);
 
-                    Intent intent = new Intent(DetailActivity.this, ShowChildDetail.class);
+                    Intent intent = new Intent(DetailActivity.this, ShowChildDetail3.class);
                     intent.putExtra("id", idStrings[position]);
+
+
                     startActivity(intent);
 
                 }
@@ -145,7 +151,7 @@ public class DetailActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Log.d(tag, "id =>" + idStrings[position]);
 
-                    Intent intent = new Intent(DetailActivity.this, ShowChildDetail.class);
+                    Intent intent = new Intent(DetailActivity.this, ShowChildDetail2.class);
                     intent.putExtra("id", idStrings[position]);
                     startActivity(intent);
 
@@ -179,13 +185,15 @@ public class DetailActivity extends AppCompatActivity {
             JSONArray jsonArray = new JSONArray(strJSON);
             String[] showDateStrings = new String[jsonArray.length()];
             final String[] idStrings = new String[jsonArray.length()];
-
+            //final String[] snapCh1 = new String[jsonArray.length()];
 
             for (int i=0;i<jsonArray.length();i++){
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 showDateStrings[i] = jsonObject.getString("CurrentDate");
                 idStrings[i] = jsonObject.getString("id");
+                //snapCh1[i] = jsonObject.getString("ch1");
+
 
 
 
@@ -202,6 +210,7 @@ public class DetailActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(DetailActivity.this, ShowChildDetail.class);
                     intent.putExtra("id", idStrings[position]);
+                    //intent.putExtra("ch1", snapCh1[position]);
                     startActivity(intent);
 
                 }
@@ -241,7 +250,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
     private void buttonController() {
-        Button btnTreetest = (Button) findViewById(R.id.btnDetail1);
+        ImageView btnTreetest = (ImageView) findViewById(R.id.imvDetail1);
 
         btnTreetest.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

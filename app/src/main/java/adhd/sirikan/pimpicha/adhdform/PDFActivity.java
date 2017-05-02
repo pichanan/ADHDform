@@ -58,16 +58,10 @@ public class PDFActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf);
 
-        mContentEditText = (EditText) findViewById(R.id.edit_text_content);
         mCreateButton = (Button) findViewById(R.id.button_create);
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mContentEditText.getText().toString().isEmpty()){
-                    mContentEditText.setError("Body is empty");
-                    mContentEditText.requestFocus();
-                    return;
-                }
                 try {
                     createPdfWrapper();
                 } catch (FileNotFoundException e) {
@@ -154,7 +148,7 @@ public class PDFActivity extends AppCompatActivity {
             BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
             Font font = new Font(bf, 15);
             document.open();
-            document.add(new Paragraph("พิมพ์ไทยไม่ได้ eiei 12.0", font));
+            document.add(new Paragraph("พบันทึก PDF TEST", font));
 
             document.close();
             previewPdf();
