@@ -147,8 +147,8 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         //check  choose
         if (aBoolean) {
             //non choose
-            objMyAlert.myDialog(getResources().getString(R.string.title_nonChooseImage),
-                    getResources().getString(R.string.message_nonChooseImage));
+            /*objMyAlert.myDialog(getResources().getString(R.string.title_nonChooseImage),
+                    getResources().getString(R.string.message_nonChooseImage));*/
 
         } else if (nameChildString.equals("")||ageString.equals("")) {
             //have space

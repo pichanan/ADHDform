@@ -552,7 +552,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
 
     private boolean checkSpinner() {
 
-        if (spn.equals("-") || spn2.equals("-")||spn3.equals("-") ||
+        /*if (spn.equals("-") || spn2.equals("-")||spn3.equals("-") ||
                 spn4.equals("-")||spn5.equals("-") || spn6.equals("-")||
                 spn7.equals("-")||spn8.equals("-") || spn9.equals("-")||
                 spn10.equals("-") || spn11.equals("-")||spn12.equals("-") ||
@@ -567,8 +567,8 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
 
         } else {
             return false;
-        }
-
+        }*/
+        return false; // ลบด้วย
 
     }
 

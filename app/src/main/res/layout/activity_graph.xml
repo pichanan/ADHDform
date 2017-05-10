@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     tools:context=".GraphActivity">
 
-    <TextView
-        android:id="@+id/linetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bar Graph"
-        android:textSize="16dp"
-        android:layout_marginBottom="20dp"/>
-
-    <com.jjoe64.graphview.GraphView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.jjoe64.graphview.GraphView
         android:layout_margin="@dimen/fab_margin"
         android:layout_width="match_parent"
         android:layout_height="200dip"
         android:title="Graph Title"
         android:id="@+id/graph"
-        android:layout_below="@+id/linetext"/>
+        />
+
+
+         <com.jjoe64.graphview.GraphView
+             android:layout_margin="@dimen/fab_margin"
+             android:layout_width="match_parent"
+             android:layout_height="200dip"
+             android:title="Graph Title"
+             android:id="@+id/graph2"
+             />
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCorre"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCorre2"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

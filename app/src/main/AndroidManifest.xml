@@ -37,7 +37,9 @@
         <activity android:name=".riskSdqActivity" />
         <activity android:name=".PDFActivity" />
         <activity android:name=".ShowChildDetail2" />
-        <activity android:name=".ShowChildDetail3"></activity>
+        <activity android:name=".ShowChildDetail3" />
+        <activity android:name=".CorrelationActivity" />
+        <activity android:name=".Graph2Activity"></activity>
     </application>
 
 </manifest>

@@ -13,37 +13,29 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class GraphActivity extends AppCompatActivity { // SNAP
+public class Graph2Activity extends AppCompatActivity {
     double[] x,y,xr2,yr2;
     String tag = "15AprilV1",loginString[];
     int intMaxX1,intMaxX;
     TextView txtCorre,txtCorre2;
     private GraphView line_graph,line_graph2;
     private int[] colorLineInts = new int[]{Color.RED, Color.BLUE};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_graph);
-
+        setContentView(R.layout.activity_graph2);
         loginString = getIntent().getStringArrayExtra("Login");
         initialView();
-
-
         //risk1**************************************/
-        createLineGraphRed1("0","risk1",colorLineInts[0]);// snap risk1 teacher
-        createLineGraphBlue1("0","risk1",colorLineInts[1]);//thass risk1 teacher
-        //*risk2**************************************/
-        createLineGraphRed2("0","risk2",colorLineInts[0]);// snap risk2 teacher
-        createLineGraphBlue2("0","risk2",colorLineInts[1]);//thass risk2 teacher
+        createLineGraphRed1("1","risk1",colorLineInts[0]);// snap risk1 Parent
+        createLineGraphBlue1("1","risk1",colorLineInts[1]);//thass risk1 Parent
 
+        //*risk2**************************************/
+        createLineGraphRed2("1","risk2",colorLineInts[0]);// snap risk2 Parent
+        createLineGraphBlue2("1","risk2",colorLineInts[1]);//thass risk2 Parent
         calCorre1();
         calCorre2();
-
-       // createLineGraph("1","risk1",colorLineInts[1]);
-
-
-    }//main method
+    }
 
     private void calCorre2() {
         double r,nr=0,dr_1=0,dr_2=0,dr_3=0,dr=0;
@@ -116,7 +108,6 @@ public class GraphActivity extends AppCompatActivity { // SNAP
 
 
     }
-
     private void createLineGraphBlue2(String strDoType, String strColumn, int colorLineInt) {
         try{
 
@@ -124,7 +115,7 @@ public class GraphActivity extends AppCompatActivity { // SNAP
             MyConstant myConstant = new MyConstant();
             String urlPHP2 = myConstant.getUrlGetUrlThestWhere2();
 
-            getDataWhere objGetDataWhere = new getDataWhere(GraphActivity.this);
+            getDataWhere objGetDataWhere = new getDataWhere(Graph2Activity.this);
             objGetDataWhere.execute("doType", strDoType, urlPHP2);
             String strJSON = objGetDataWhere.get();
             Log.d(tag, "JSON2 ==>" + strJSON);
@@ -175,7 +166,7 @@ public class GraphActivity extends AppCompatActivity { // SNAP
             MyConstant myConstant = new MyConstant();
             String urlPHP = myConstant.getUrlGetUrlThestWhere();
 
-            getDataWhere objGetDataWhere = new getDataWhere(GraphActivity.this);
+            getDataWhere objGetDataWhere = new getDataWhere(Graph2Activity.this);
             objGetDataWhere.execute("doType", strDoType, urlPHP);
             String strJSON = objGetDataWhere.get();
             Log.d(tag, "JSON ==>" + strJSON);
@@ -218,7 +209,6 @@ public class GraphActivity extends AppCompatActivity { // SNAP
         }
 
     }//createLineGraphRed2
-
     private void createLineGraphBlue1(String strDoType, String strColumn, int colorLineInt) {
 
         try{
@@ -227,7 +217,7 @@ public class GraphActivity extends AppCompatActivity { // SNAP
             MyConstant myConstant = new MyConstant();
             String urlPHP2 = myConstant.getUrlGetUrlThestWhere2();
 
-            getDataWhere objGetDataWhere = new getDataWhere(GraphActivity.this);
+            getDataWhere objGetDataWhere = new getDataWhere(Graph2Activity.this);
             objGetDataWhere.execute("doType", strDoType, urlPHP2);
             String strJSON = objGetDataWhere.get();
             Log.d(tag, "JSON2 ==>" + strJSON);
@@ -272,15 +262,15 @@ public class GraphActivity extends AppCompatActivity { // SNAP
 
 
     private void createLineGraphRed1(String strDoType,
-                                 String strColumn,
-                                 int colorLineInt) {
+                                     String strColumn,
+                                     int colorLineInt) {
         try{
 
             String tag = "15AprilV1";
             MyConstant myConstant = new MyConstant();
             String urlPHP = myConstant.getUrlGetUrlThestWhere();
 
-            getDataWhere objGetDataWhere = new getDataWhere(GraphActivity.this);
+            getDataWhere objGetDataWhere = new getDataWhere(Graph2Activity.this);
             objGetDataWhere.execute("doType", strDoType, urlPHP);
             String strJSON = objGetDataWhere.get();
             Log.d(tag, "JSON ==>" + strJSON);
@@ -322,15 +312,10 @@ public class GraphActivity extends AppCompatActivity { // SNAP
             Log.d("15AprilV1", "e createLine ==>" + e.toString());
         }
     }//create line
-
     private void initialView() {
-        line_graph = (GraphView) findViewById(R.id.graph);
-        line_graph2 = (GraphView) findViewById(R.id.graph2);
-        txtCorre = (TextView) findViewById(R.id.txtCorre);
-        txtCorre2 = (TextView) findViewById(R.id.txtCorre2);
+        line_graph = (GraphView) findViewById(R.id.graphParent);
+        line_graph2 = (GraphView) findViewById(R.id.graphParent2);
+        txtCorre = (TextView) findViewById(R.id.txtCorreParent);
+        txtCorre2 = (TextView) findViewById(R.id.txtCorreParent2);
     }
-
-    // correlation FROM TESTTABLE AND TEST2TABLE
-
-
-}//main class
+}

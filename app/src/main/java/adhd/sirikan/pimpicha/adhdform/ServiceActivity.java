@@ -147,7 +147,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
 
         //for graph
         if (v==graphImageView) {
-            Intent intent = new Intent(ServiceActivity.this,GraphActivity.class);
+            Intent intent = new Intent(ServiceActivity.this,CorrelationActivity.class);
             intent.putExtra("Login",loginString);
             startActivity(intent);
         }

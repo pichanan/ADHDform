@@ -17,6 +17,7 @@ public class MyConstant {
     private String urlAddTass = "http://adhdpj.com/app/addThass.php";
     private String urlAddSdq = "http://adhdpj.com/app/addSdq.php";
     private String urlGetUrlThestWhere = "http://adhdpj.com/app/getTestWhere.php";
+    private String urlGetUrlThestWhere2 = "http://adhdpj.com/app/getTestWhere2.php";
 
     private String urlEditSpecial = "http://adhdpj.com/app/editSpecial.php";
     private String urlEditSpecial2 = "http://adhdpj.com/app/editSpecial2.php";
@@ -83,6 +84,9 @@ public class MyConstant {
 
     public String getUrlGetUrlThestWhere() {
         return urlGetUrlThestWhere;
+    }
+    public String getUrlGetUrlThestWhere2() {
+        return urlGetUrlThestWhere2;
     }
 
     public String[] getColumnChild() {
