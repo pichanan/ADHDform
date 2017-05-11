@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.itextpdf.text.Chunk;
@@ -27,6 +28,8 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.ColumnText;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.File;
@@ -43,6 +46,8 @@ import java.net.URLConnection;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PDFActivity extends AppCompatActivity {
@@ -52,13 +57,23 @@ public class PDFActivity extends AppCompatActivity {
     private File pdfFile;
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
     public static File fontFile = new File("fonts/thaisanslite_r1.ttf");
+    String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
+            sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
+    int risk1Int,risk2Int,risk3Int ;
+    String[] arrAns;
+    String[] question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf);
 
+
+        getValueFromIntent();
+        Log.d("PdfCreatorActivity", "intebt ==>" + sspn );
+
         mCreateButton = (Button) findViewById(R.id.button_create);
+
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +88,120 @@ public class PDFActivity extends AppCompatActivity {
         });
 
     }
+
+    public List<List<String>> getData() {
+        List<List<String>> data = new ArrayList<List<String>>();
+        String[] tableTitleList = {"คำถาม", "คำตอบ"," "," "," "};
+        data.add(Arrays.asList(tableTitleList));
+
+        for (int i = 0; i < tableTitleList.length; ) {
+            List<String> dataLine = new ArrayList<String>();
+            i++;
+            for (int j = 0; j < 26; j++) {
+                dataLine.add(question[j]);
+                dataLine.add(arrAns[j]);
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add(" ");
+            }
+            data.add(dataLine);
+        }
+        return data;
+    }
+
+
+    private void getValueFromIntent() {
+       /* Bundle extras = getIntent().getExtras();
+        risk1Int = extras.getInt("risk1");
+        risk2Int = extras.getInt("risk2");
+        risk3Int = extras.getInt("risk3");*/
+        sspn = getIntent().getStringExtra("sspn");
+        sspn2 = getIntent().getStringExtra("sspn2");
+        sspn3 = getIntent().getStringExtra("sspn3");
+        sspn4 = getIntent().getStringExtra("sspn4");
+        sspn5 = getIntent().getStringExtra("sspn5");
+        sspn6 = getIntent().getStringExtra("sspn6");
+        sspn7 = getIntent().getStringExtra("sspn7");
+        sspn8 = getIntent().getStringExtra("sspn8");
+        sspn9 = getIntent().getStringExtra("sspn9");
+        sspn10 = getIntent().getStringExtra("sspn10");
+        sspn11 = getIntent().getStringExtra("sspn11");
+        sspn12 = getIntent().getStringExtra("sspn12");
+        sspn13 = getIntent().getStringExtra("sspn13");
+        sspn14 = getIntent().getStringExtra("sspn14");
+        sspn15 = getIntent().getStringExtra("sspn15");
+        sspn16 = getIntent().getStringExtra("sspn16");
+        sspn17 = getIntent().getStringExtra("sspn17");
+        sspn18 = getIntent().getStringExtra("sspn18");
+        sspn19 = getIntent().getStringExtra("sspn19");
+        sspn20 = getIntent().getStringExtra("sspn20");
+        sspn21 = getIntent().getStringExtra("sspn21");
+        sspn22 = getIntent().getStringExtra("sspn22");
+        sspn23 = getIntent().getStringExtra("sspn23");
+        sspn24 = getIntent().getStringExtra("sspn24");
+        sspn25 = getIntent().getStringExtra("sspn25");
+        sspn26 = getIntent().getStringExtra("sspn26");
+        //date = getIntent().getStringExtra("date");
+        arrAns = new String[26];
+        arrAns[0] = sspn;
+        arrAns[1] = sspn2;
+        arrAns[2] = sspn3;
+        arrAns[3] = sspn4;
+        arrAns[4] = sspn5;
+        arrAns[5] = sspn6;
+        arrAns[6] = sspn7;
+        arrAns[7] = sspn8;
+        arrAns[8] = sspn9;
+        arrAns[9] = sspn10;
+        arrAns[10] = sspn11;
+        arrAns[11] = sspn12;
+        arrAns[12] = sspn13;
+        arrAns[13] = sspn14;
+        arrAns[14] = sspn15;
+        arrAns[15] = sspn16;
+        arrAns[16] = sspn17;
+        arrAns[17] = sspn18;
+        arrAns[18] = sspn19;
+        arrAns[19] = sspn20;
+        arrAns[20] = sspn21;
+        arrAns[21] = sspn22;
+        arrAns[22] = sspn23;
+        arrAns[23] = sspn24;
+        arrAns[24] = sspn25;
+        arrAns[25] = sspn26;
+        question = new String[26];
+
+        question[0] = "1. มักไม่ละเอียดรอบคอบหรือสะเพร่าในการทำงานต่าง ๆ เช่น การบ้าน";
+        question[1] = "2. ทำอะไรนาน ๆ ไม่ได้";
+        question[2]="3. ดูเหมือนไม่ค่อยฟังเวลามีคนพูดด้วย";
+        question[3]="4. มักทำการบ้านไม่เสร็จ หรือทำงานที่ได้รับมอบหมายไม่สำเร็จ";
+        question[4]="5. จัดระเบียบงานและกิจกรรมต่าง ๆ ไม่เป็น";
+        question[5]="6. มักหลีกเลี่ยงกิจกรรรมที่ต้องใช้ความอดทนในการทำให้สำเร็จ";
+        question[6]="7. ทำของหายบ่อย ๆ (เช่นของเล่น, สมุดจดงาน, เครื่องเขียน ฯลฯ";
+        question[7]="8. วอกแวกง่าย";
+        question[8]="9. ขี้ลืม";
+        question[9]="10. มือเท้ายุกยิก นั่งบิดไปบิดมา";
+        question[10]="11. นั่งไม่ติดที่ ชอบลุกจากที่นั่งในชั้นเรียนหรือจากที่ที่ควรจะนั่งเรียบร้อย";
+        question[11]="12. วิ่งหรือปีนป่ายมากเกินควรอย่างไม่รู้กาละเทศะ";
+        question[12]="13. เล่นหรือทำกิจกรรมเงียบ ๆ ไม่เป็น";
+        question[13]="14. พร้อมจะเคลื่อนไหวอยู่เสมอ เหมือน“ติดเครื่อง”อยู่ตลอดเวลา";
+        question[14]="15. พูดมาก";
+        question[15]="16. มักโพล่งคำตอบออกมาก่อนจะฟังคำถามจบ";
+        question[16]="17. ไม่ชอบรอคิว";
+        question[17]="18. ชอบสอดแทรกผู้อื่น(เช่นพูดแทรกขณะผู้ใหญ่กำลังสนทนากัน )";
+        question[18]="19. อารมณ์เสียง่าย";
+        question[19]="20. ชอบโต้เถียงกับผู้ใหญ";
+        question[20]="21. ไม่ยอมทำตามสิ่งที่ผู้ใหญ่สั่งหรือวางกฎเกณฑ์ไว้";
+        question[21]="22. จงใจก่อกวนผู้อื่น";
+        question[22]="23. มักตำหนิผู้อื่นในสิ่งที่ตนเองทำผิด";
+        question[23]="24. ขี้รำคาญ";
+        question[24]="25. โกรธขึ้งบึ้งตึงเป็นประจำ";
+        question[25]="26. เจ้าคิดเจ้าแค้น";
+
+
+
+    }
+
     private void createPdfWrapper() throws FileNotFoundException,DocumentException{
 
         int hasWriteStoragePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -141,14 +270,39 @@ public class PDFActivity extends AppCompatActivity {
             Log.i(TAG, "Created a new directory for PDF");
         }
         try {
-            pdfFile = new File(docsFolder.getAbsolutePath(), "test.pdf");
+            pdfFile = new File(docsFolder.getAbsolutePath(), sspn+".pdf");
             OutputStream output = new FileOutputStream(pdfFile);
             Document document = new Document();
             PdfWriter.getInstance(document, output);
+
+            document.open();
+
+            PdfPTable table = new PdfPTable(5);
+            table.setWidths(new int[]{3, 1,1,1,1});
+            table.setWidthPercentage(100);
+            List<List<String>> dataset = getData();
+            for (List<String> record : dataset) {
+                for (String field : record) {
+                    try {
+                        BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        Font font = new Font(bf, 15);
+
+                            table.addCell(new Phrase(field, font));
+
+
+
+                    } catch (Exception e) {
+
+                    }
+                    //table.addCell(new Phrase(field, FontFactory.getFont(FontFactory.HELVETICA, 8)));
+                    //table.addCell(cell);
+                   // table.addCell(field);
+               }
+            }
+            document.add(table);
             BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
             Font font = new Font(bf, 15);
-            document.open();
-            document.add(new Paragraph("พบันทึก PDF TEST", font));
+            document.add(new Paragraph(sspn, font));
 
             document.close();
             previewPdf();
@@ -158,6 +312,8 @@ public class PDFActivity extends AppCompatActivity {
 
 
     }
+
+
 
     private void previewPdf() {
 
@@ -176,4 +332,6 @@ public class PDFActivity extends AppCompatActivity {
             Toast.makeText(this,"Download a PDF Viewer to see the generated PDF",Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }

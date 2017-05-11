@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class riskSnapActivity extends AppCompatActivity {
+    private static String tag = "30MarchV1",tag2 = "16AprilV1";
     String idString, loginString[],genderString,ageString,risk1,risk2,risk3,answerArray[];
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
@@ -16,6 +18,7 @@ public class riskSnapActivity extends AppCompatActivity {
     sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     int risk1Int,risk2Int,risk3Int ;
     ImageView ImageViewPDF;
+    String a = "testerrrrrrr";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +29,17 @@ public class riskSnapActivity extends AppCompatActivity {
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(riskSnapActivity.this, PDFActivity.class);
+
+                startActivity(intent);
+
+
             }
+
+
+
+
         });
 
         getValueFromIntent();
@@ -38,8 +50,8 @@ public class riskSnapActivity extends AppCompatActivity {
 
 
 
-
     }
+
 
     private void showText() {
         spn = (TextView) findViewById(R.id.answeSnap1);
