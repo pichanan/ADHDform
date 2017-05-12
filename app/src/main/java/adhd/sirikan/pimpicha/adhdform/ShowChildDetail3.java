@@ -1,8 +1,11 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -10,6 +13,7 @@ import org.json.JSONObject;
 
 public class ShowChildDetail3 extends AppCompatActivity {
     private MyConstant myConstant;
+    ImageView ImageViewPDF;
     private String idString,urlPHPString;
     private String[] columnStrings,resultStrings;
     private String tag = "16AprilV5";
@@ -25,9 +29,55 @@ public class ShowChildDetail3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_child_detail3);
+        ImageViewPDF = (ImageView) findViewById(R.id.showDetailPdfSdq);
+        ImageViewPDF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                putIt();
+
+
+            }
+        });
+
         mySetup();
         queryDataFromJSoN();
         findId();
+    }
+
+    private void putIt() {
+        Intent intent = new Intent(ShowChildDetail3.this, PDF3Activity.class);
+        intent.putExtra("sspn", ch1);
+        intent.putExtra("sspn2", ch2);
+        intent.putExtra("sspn3", ch3);
+        intent.putExtra("sspn4", ch4);
+        intent.putExtra("sspn5", ch5);
+        intent.putExtra("sspn6", ch6);
+        intent.putExtra("sspn7", ch7);
+        intent.putExtra("sspn8", ch8);
+        intent.putExtra("sspn9", ch9);
+        intent.putExtra("sspn10", ch10);
+        intent.putExtra("sspn11", ch11);
+        intent.putExtra("sspn12", ch12);
+        intent.putExtra("sspn13", ch13);
+        intent.putExtra("sspn14", ch14);
+        intent.putExtra("sspn15", ch15);
+        intent.putExtra("sspn16", ch16);
+        intent.putExtra("sspn17", ch17);
+        intent.putExtra("sspn18", ch18);
+        intent.putExtra("sspn19", ch19);
+        intent.putExtra("sspn20", ch20);
+        intent.putExtra("sspn21", ch21);
+        intent.putExtra("sspn22", ch22);
+        intent.putExtra("sspn23", ch23);
+        intent.putExtra("sspn24", ch24);
+        intent.putExtra("sspn25", ch25);
+        /*intent.putExtra("risk1", risk1Int);
+        intent.putExtra("risk2", risk2Int);
+        intent.putExtra("risk3", risk3Int);
+        intent.putExtra("date", date);*/
+        startActivity(intent);
+
     }
 
     private void findId() {

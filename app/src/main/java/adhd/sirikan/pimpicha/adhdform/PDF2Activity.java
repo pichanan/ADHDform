@@ -4,64 +4,48 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-
-import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
-import com.itextpdf.text.FontFactory;
-import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.BaseFont;
-import com.itextpdf.text.pdf.ColumnText;
-import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.net.URI;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PDFActivity extends AppCompatActivity {
+public class PDF2Activity extends AppCompatActivity {
+
     private static final String TAG = "PdfCreatorActivity";
-    private EditText  mContentEditText;
+    private EditText mContentEditText;
     private Button mCreateButton;
     private File pdfFile;
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
     public static File fontFile = new File("fonts/thaisanslite_r1.ttf");
     public static final String IMG = "resources/images/checkmark.png";
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
-            sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
+            sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,sspn27,sspn28
+            ,sspn29,sspn30,date;
     int risk1Int,risk2Int,risk3Int ;
     String[] arrAns;
     String[] question;
@@ -69,13 +53,10 @@ public class PDFActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pdf);
-
+        setContentView(R.layout.activity_pdf2);
 
         getValueFromIntent();
-        Log.d("PdfCreatorActivity", "intebt ==>" + sspn );
-
-        mCreateButton = (Button) findViewById(R.id.button_create);
+        mCreateButton = (Button) findViewById(R.id.button_createThass);
 
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,46 +70,42 @@ public class PDFActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
-
-
-
     public List<List<String>> getData() {
         List<List<String>> data = new ArrayList<List<String>>();
         String[] tableTitleList = {"คำถาม", "คำตอบ"," "," "," "};
         data.add(Arrays.asList(tableTitleList));
 
 
-            List<String> dataLine = new ArrayList<String>();
-            for (int j = 0; j < 26; j++) {
-                dataLine.add(question[j]);
-                if(arrAns[j].equals("0")){
-                    dataLine.add("      /");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                }else if(arrAns[j].equals("1")){
-                    dataLine.add(" ");
-                    dataLine.add("      /");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                }else if(arrAns[j].equals("2")){
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add("      /");
-                    dataLine.add(" ");
-                }else if(arrAns[j].equals("3")){
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add("      /");
-                }
-
+        List<String> dataLine = new ArrayList<String>();
+        for (int j = 0; j < 30; j++) {
+            dataLine.add(question[j]);
+            if(arrAns[j].equals("0")){
+                dataLine.add("      /");
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add(" ");
+            }else if(arrAns[j].equals("1")){
+                dataLine.add(" ");
+                dataLine.add("      /");
+                dataLine.add(" ");
+                dataLine.add(" ");
+            }else if(arrAns[j].equals("2")){
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add("      /");
+                dataLine.add(" ");
+            }else if(arrAns[j].equals("3")){
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add("      /");
             }
 
-            data.add(dataLine);
-            Log.d("PdfCreatorActivity", "dataLine ==>" + tableTitleList.length );
+        }
+
+        data.add(dataLine);
+        Log.d("PdfCreatorActivity", "dataLine ==>" + tableTitleList.length );
 
         return data;
     }
@@ -165,8 +142,12 @@ public class PDFActivity extends AppCompatActivity {
         sspn24 = getIntent().getStringExtra("sspn24");
         sspn25 = getIntent().getStringExtra("sspn25");
         sspn26 = getIntent().getStringExtra("sspn26");
+        sspn27 = getIntent().getStringExtra("sspn27");
+        sspn28 = getIntent().getStringExtra("sspn28");
+        sspn29 = getIntent().getStringExtra("sspn29");
+        sspn30 = getIntent().getStringExtra("sspn30");
         //date = getIntent().getStringExtra("date");
-        arrAns = new String[26];
+        arrAns = new String[30];
         arrAns[0] = sspn;
         arrAns[1] = sspn2;
         arrAns[2] = sspn3;
@@ -193,34 +174,42 @@ public class PDFActivity extends AppCompatActivity {
         arrAns[23] = sspn24;
         arrAns[24] = sspn25;
         arrAns[25] = sspn26;
-        question = new String[26];
+        arrAns[26] = sspn27;
+        arrAns[27] = sspn28;
+        arrAns[28] = sspn29;
+        arrAns[29] = sspn30;
+        question = new String[30];
+        question[0] = "1. เดินไปเดินมาในเวลาเรียนโดยไม่ได้รับอนุญาติ";
+        question[1] = "2. พูดโพล่ง ขัดจังหวะในเวลาครูสอน";
+        question[2]="3. แหย่ ล้อเลียน แกล้งเด็กคนอื่น";
+        question[3]="4. อยู่ไม่นิ่ง มักหาอะไรทำหรือเล่นตลอดเวลา";
+        question[4]="5. ใจร้อน วู่วาม";
+        question[5]="6. มักมีเรื่องทะเลาะวิวาทกับเด็กอื่น";
+        question[6]="7. เล่นเสียงดัง";
+        question[7]="8. พูดมากจนน่ารำคาญ";
+        question[8]="9. อารมณ์เสีย หงุดหงิดง่าย";
+        question[9]="10. ทำอะไรโดยไม่คิดถึงผลที่จะตามมา";
+        question[10]="11. เล่นรุนแรง เล่นแผลงๆ หรือเสี่ยงอันตราย";
+        question[11]="12. ซน";
+        question[12]="13. รบกวนเพื่อนหรือครูในห้องเรียน";
+        question[13]="14. ไม่รู้จักการรอคอย";
+        question[14]="15. ส่งเสียงดังในห้องเรียน";
+        question[15]="16. ขาดความรับผิดชอบ";
+        question[16]="17. ไม่ตั้งใจเรียน";
+        question[17]="18. ทำงานช้า ทำงานไม่เสร็จในเวลาที่กำหนด";
+        question[18]="19. เหม่อ ใจลอย";
+        question[19]="20. ฟังอะไรประเดี๋ยวเดียวก็หมดความสนใจ";
+        question[20]="21. โอ้เอ้ใช้เวลานานกว่าจะเริ่มงานได้";
+        question[21]="22. ต้องเรียก หรือกระตุ้นเพื่อให้งานเสร็จ";
+        question[22]="23. วอกแวกง่าย";
+        question[23]="24. นำของที่จำเป็นต้องการเรียนมาไม่ครบ";
+        question[24]="25. ทำหนังสือ อุนกรณ์การเรียน หรือของใช้ส่วนตัวหาย";
+        question[25]="26. ทำงานไม่เรียบร้อย สะเพร่า ไม่รอบคอบ";
+        question[26]="27. ไม่จดจ่อกับงานที่กำลังทำ (ยกเว้นกำลังทำสิ่งที่ชอบ)";
+        question[27]="28. สมาธิสั้น(ยกเว้นเวลาดูทีวี เล่นเกมส์ หรือทำสิ่งที่ชอบ)";
+        question[28]="29. หลีกเลี่ยงการทำงานที่ต้องใช้ความคิด";
+        question[29]="30. ลืมส่งการบ้าน";
 
-        question[0] = "1. มักไม่ละเอียดรอบคอบหรือสะเพร่าในการทำงานต่าง ๆ เช่น การบ้าน";
-        question[1] = "2. ทำอะไรนาน ๆ ไม่ได้";
-        question[2]="3. ดูเหมือนไม่ค่อยฟังเวลามีคนพูดด้วย";
-        question[3]="4. มักทำการบ้านไม่เสร็จ หรือทำงานที่ได้รับมอบหมายไม่สำเร็จ";
-        question[4]="5. จัดระเบียบงานและกิจกรรมต่าง ๆ ไม่เป็น";
-        question[5]="6. มักหลีกเลี่ยงกิจกรรรมที่ต้องใช้ความอดทนในการทำให้สำเร็จ";
-        question[6]="7. ทำของหายบ่อย ๆ (เช่นของเล่น, สมุดจดงาน, เครื่องเขียน ฯลฯ";
-        question[7]="8. วอกแวกง่าย";
-        question[8]="9. ขี้ลืม";
-        question[9]="10. มือเท้ายุกยิก นั่งบิดไปบิดมา";
-        question[10]="11. นั่งไม่ติดที่ ชอบลุกจากที่นั่งในชั้นเรียนหรือจากที่ที่ควรจะนั่งเรียบร้อย";
-        question[11]="12. วิ่งหรือปีนป่ายมากเกินควรอย่างไม่รู้กาละเทศะ";
-        question[12]="13. เล่นหรือทำกิจกรรมเงียบ ๆ ไม่เป็น";
-        question[13]="14. พร้อมจะเคลื่อนไหวอยู่เสมอ เหมือน“ติดเครื่อง”อยู่ตลอดเวลา";
-        question[14]="15. พูดมาก";
-        question[15]="16. มักโพล่งคำตอบออกมาก่อนจะฟังคำถามจบ";
-        question[16]="17. ไม่ชอบรอคิว";
-        question[17]="18. ชอบสอดแทรกผู้อื่น(เช่นพูดแทรกขณะผู้ใหญ่กำลังสนทนากัน )";
-        question[18]="19. อารมณ์เสียง่าย";
-        question[19]="20. ชอบโต้เถียงกับผู้ใหญ";
-        question[20]="21. ไม่ยอมทำตามสิ่งที่ผู้ใหญ่สั่งหรือวางกฎเกณฑ์ไว้";
-        question[21]="22. จงใจก่อกวนผู้อื่น";
-        question[22]="23. มักตำหนิผู้อื่นในสิ่งที่ตนเองทำผิด";
-        question[23]="24. ขี้รำคาญ";
-        question[24]="25. โกรธขึ้งบึ้งตึงเป็นประจำ";
-        question[25]="26. เจ้าคิดเจ้าแค้น";
 
 
 
@@ -315,12 +304,7 @@ public class PDFActivity extends AppCompatActivity {
                         BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                         Font font = new Font(bf, 15);
 
-
-
-                       table.addCell(new Phrase(field, font));
-
-
-
+                        table.addCell(new Phrase(field, font));
 
 
 
@@ -331,8 +315,8 @@ public class PDFActivity extends AppCompatActivity {
                     }
                     //table.addCell(new Phrase(field, FontFactory.getFont(FontFactory.HELVETICA, 8)));
                     //table.addCell(cell);
-                   // table.addCell(field);
-               }
+                    // table.addCell(field);
+                }
             }
             document.add(table);
             BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
@@ -347,8 +331,6 @@ public class PDFActivity extends AppCompatActivity {
 
 
     }
-
-
 
     private void previewPdf() {
 

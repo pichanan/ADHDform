@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/btnRiskSnap">
+        android:layout_above="@+id/btnRiskThass">
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
             android:layout_width="wrap_content"
@@ -1077,7 +1077,7 @@
 
     </ScrollView>
     <Button
-        android:id="@+id/btnRiskSnap"
+        android:id="@+id/btnRiskThass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/save"

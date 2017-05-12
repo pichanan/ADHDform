@@ -4,57 +4,40 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-
-import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
-import com.itextpdf.text.FontFactory;
-import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.BaseFont;
-import com.itextpdf.text.pdf.ColumnText;
-import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.net.URI;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PDFActivity extends AppCompatActivity {
+public class PDF3Activity extends AppCompatActivity {
+
     private static final String TAG = "PdfCreatorActivity";
-    private EditText  mContentEditText;
+    private EditText mContentEditText;
     private Button mCreateButton;
     private File pdfFile;
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
@@ -69,13 +52,12 @@ public class PDFActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pdf);
-
+        setContentView(R.layout.activity_pdf3);
 
         getValueFromIntent();
         Log.d("PdfCreatorActivity", "intebt ==>" + sspn );
 
-        mCreateButton = (Button) findViewById(R.id.button_create);
+        mCreateButton = (Button) findViewById(R.id.button_createSdq);
 
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,50 +71,45 @@ public class PDFActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
-
-
-
     public List<List<String>> getData() {
         List<List<String>> data = new ArrayList<List<String>>();
         String[] tableTitleList = {"คำถาม", "คำตอบ"," "," "," "};
         data.add(Arrays.asList(tableTitleList));
 
 
-            List<String> dataLine = new ArrayList<String>();
-            for (int j = 0; j < 26; j++) {
-                dataLine.add(question[j]);
-                if(arrAns[j].equals("0")){
-                    dataLine.add("      /");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                }else if(arrAns[j].equals("1")){
-                    dataLine.add(" ");
-                    dataLine.add("      /");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                }else if(arrAns[j].equals("2")){
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add("      /");
-                    dataLine.add(" ");
-                }else if(arrAns[j].equals("3")){
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add(" ");
-                    dataLine.add("      /");
-                }
-
+        List<String> dataLine = new ArrayList<String>();
+        for (int j = 0; j < 25; j++) {
+            dataLine.add(question[j]);
+            if(arrAns[j].equals("0")){
+                dataLine.add("      /");
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add(" ");
+            }else if(arrAns[j].equals("1")){
+                dataLine.add(" ");
+                dataLine.add("      /");
+                dataLine.add(" ");
+                dataLine.add(" ");
+            }else if(arrAns[j].equals("2")){
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add("      /");
+                dataLine.add(" ");
+            }else if(arrAns[j].equals("3")){
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add("      /");
             }
 
-            data.add(dataLine);
-            Log.d("PdfCreatorActivity", "dataLine ==>" + tableTitleList.length );
+        }
+
+        data.add(dataLine);
+        Log.d("PdfCreatorActivity", "dataLine ==>" + tableTitleList.length );
 
         return data;
     }
-
 
     private void getValueFromIntent() {
        /* Bundle extras = getIntent().getExtras();
@@ -164,9 +141,8 @@ public class PDFActivity extends AppCompatActivity {
         sspn23 = getIntent().getStringExtra("sspn23");
         sspn24 = getIntent().getStringExtra("sspn24");
         sspn25 = getIntent().getStringExtra("sspn25");
-        sspn26 = getIntent().getStringExtra("sspn26");
         //date = getIntent().getStringExtra("date");
-        arrAns = new String[26];
+        arrAns = new String[25];
         arrAns[0] = sspn;
         arrAns[1] = sspn2;
         arrAns[2] = sspn3;
@@ -192,40 +168,37 @@ public class PDFActivity extends AppCompatActivity {
         arrAns[22] = sspn23;
         arrAns[23] = sspn24;
         arrAns[24] = sspn25;
-        arrAns[25] = sspn26;
-        question = new String[26];
 
-        question[0] = "1. มักไม่ละเอียดรอบคอบหรือสะเพร่าในการทำงานต่าง ๆ เช่น การบ้าน";
-        question[1] = "2. ทำอะไรนาน ๆ ไม่ได้";
-        question[2]="3. ดูเหมือนไม่ค่อยฟังเวลามีคนพูดด้วย";
-        question[3]="4. มักทำการบ้านไม่เสร็จ หรือทำงานที่ได้รับมอบหมายไม่สำเร็จ";
-        question[4]="5. จัดระเบียบงานและกิจกรรมต่าง ๆ ไม่เป็น";
-        question[5]="6. มักหลีกเลี่ยงกิจกรรรมที่ต้องใช้ความอดทนในการทำให้สำเร็จ";
-        question[6]="7. ทำของหายบ่อย ๆ (เช่นของเล่น, สมุดจดงาน, เครื่องเขียน ฯลฯ";
-        question[7]="8. วอกแวกง่าย";
-        question[8]="9. ขี้ลืม";
-        question[9]="10. มือเท้ายุกยิก นั่งบิดไปบิดมา";
-        question[10]="11. นั่งไม่ติดที่ ชอบลุกจากที่นั่งในชั้นเรียนหรือจากที่ที่ควรจะนั่งเรียบร้อย";
-        question[11]="12. วิ่งหรือปีนป่ายมากเกินควรอย่างไม่รู้กาละเทศะ";
-        question[12]="13. เล่นหรือทำกิจกรรมเงียบ ๆ ไม่เป็น";
-        question[13]="14. พร้อมจะเคลื่อนไหวอยู่เสมอ เหมือน“ติดเครื่อง”อยู่ตลอดเวลา";
-        question[14]="15. พูดมาก";
-        question[15]="16. มักโพล่งคำตอบออกมาก่อนจะฟังคำถามจบ";
-        question[16]="17. ไม่ชอบรอคิว";
+        question = new String[25];
+        question[0] = "1.ห่วงใยความรู้สึกคนอื่น";
+        question[1] = "2.อยู่ไม่นิ่ง นั่งนานๆไม่ได้";
+        question[2]="3.มักจะบ่นว่าปวดศีรษะ ปวดท้อง ไม่สบาย";
+        question[3]="4.เต็มใจแบ่งปันสิ่งของให้เพื่อน(ขนม ของเล่น ดินสอ เป็นต้น)";
+        question[4]="5.มักจะอาละวาดหรือโมโหร้าย";
+        question[5]="6.ค่อนข้างแยกตัว ชอบเล่นคนเดียว";
+        question[6]="7.เชื่อฟัง มักจะทำตามที่ผู้ใหญ่ต้องการ";
+        question[7]="8.กังวลใจหลายเรื่อง ดูวิตกกังวลเสมอ";
+        question[8]="9.เป็นที่พึ่งได้เวลาคนอื่นเสียใจ";
+        question[9]="10.อยู่ไม่สุข วุ่นวายอย่างมาก";
+        question[10]="11.มีเพื่อนสนิท";
+        question[11]="12.มักมีเรื่องทะเลาะวิวาทกับเด็กคนอื่นหรือรังแกเด็กคนอื่น";
+        question[12]="13.ดูไม่มีความสุข ท้อแท้ ร้องไห้บ่อย";
+        question[13]="14.เป็นที่ชื่นชอบของเพื่อน";
+        question[14]="15.วอกแวกง่าย สมาธิสั้น";
+        question[15]="16.เครียด ไม่ยอมห่างเวลาอยู่ในสถานการณ์ที่ไม่คุ้น";
+        question[16]="18.ชอบโกหกหรือขี้โกง";
         question[17]="18. ชอบสอดแทรกผู้อื่น(เช่นพูดแทรกขณะผู้ใหญ่กำลังสนทนากัน )";
-        question[18]="19. อารมณ์เสียง่าย";
-        question[19]="20. ชอบโต้เถียงกับผู้ใหญ";
-        question[20]="21. ไม่ยอมทำตามสิ่งที่ผู้ใหญ่สั่งหรือวางกฎเกณฑ์ไว้";
-        question[21]="22. จงใจก่อกวนผู้อื่น";
-        question[22]="23. มักตำหนิผู้อื่นในสิ่งที่ตนเองทำผิด";
-        question[23]="24. ขี้รำคาญ";
-        question[24]="25. โกรธขึ้งบึ้งตึงเป็นประจำ";
-        question[25]="26. เจ้าคิดเจ้าแค้น";
+        question[18]="19.ถูกเด้กคนอื่นล้อเลียนหรือรังแก";
+        question[19]="20.ชอบอาสาช่วยเหลือคนอื่น(พ่อ แม่ ครู เด็กคนอื่น)";
+        question[20]="21.คิดก่อนทำ";
+        question[21]="22.ขโทยของ ของที่บ้าน ที่โรงเรียนหรือที่อื่น";
+        question[22]="23.เข้ากับผู้ใหญ่ได้ดีกว่าเด็กวัยเดียวกัน";
+        question[23]="24.ขี้กลัว รู้สึกหวาดกลัวง่าย";
+        question[24]="25.ทำงานได้จนเสร็จ มีความตั้งใจในการทำงาน";
 
 
 
     }
-
     private void createPdfWrapper() throws FileNotFoundException,DocumentException{
 
         int hasWriteStoragePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -317,7 +290,7 @@ public class PDFActivity extends AppCompatActivity {
 
 
 
-                       table.addCell(new Phrase(field, font));
+                        table.addCell(new Phrase(field, font));
 
 
 
@@ -331,8 +304,8 @@ public class PDFActivity extends AppCompatActivity {
                     }
                     //table.addCell(new Phrase(field, FontFactory.getFont(FontFactory.HELVETICA, 8)));
                     //table.addCell(cell);
-                   // table.addCell(field);
-               }
+                    // table.addCell(field);
+                }
             }
             document.add(table);
             BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
@@ -367,6 +340,4 @@ public class PDFActivity extends AppCompatActivity {
             Toast.makeText(this,"Download a PDF Viewer to see the generated PDF",Toast.LENGTH_SHORT).show();
         }
     }
-
-
 }

@@ -39,7 +39,9 @@
         <activity android:name=".ShowChildDetail2" />
         <activity android:name=".ShowChildDetail3" />
         <activity android:name=".CorrelationActivity" />
-        <activity android:name=".Graph2Activity"></activity>
+        <activity android:name=".Graph2Activity" />
+        <activity android:name=".PDF2Activity" />
+        <activity android:name=".PDF3Activity"></activity>
     </application>
 
 </manifest>

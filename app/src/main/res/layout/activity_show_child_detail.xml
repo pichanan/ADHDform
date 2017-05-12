@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="adhd.sirikan.pimpicha.adhdform.ShowChildDetail3">
+    tools:context="adhd.sirikan.pimpicha.adhdform.ShowChildDetail">
     <RelativeLayout
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
@@ -52,12 +52,12 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/btnRiskSdq">
+        android:layout_alignParentStart="true">
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
             android:layout_width="wrap_content"
@@ -78,11 +78,9 @@
                 android:background="#000000"
 
                 >
-
                 <TextView
 
-                    android:id="@+id/textView6"
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
@@ -91,15 +89,54 @@
                     android:text=" คำถาม "
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
-
                 <TextView
-                    android:layout_width="70dp"
+
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="คำตอบ "
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+
+
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:id="@+id/textView7"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:id="@+id/textView8"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="3"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
@@ -111,28 +148,68 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
-                    android:layout_width="280dp"
+
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap1"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
 
                 <TextView
-                    android:id="@+id/hisSnap1"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap1Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hisSnap1Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap1Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap1Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -141,31 +218,69 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap2"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
 
                 <TextView
-                    android:id="@+id/hisSnap2"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap2Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap2Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap2Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap2Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+
 
 
             </TableRow>
@@ -174,31 +289,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap3"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap3"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap3Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap3Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap3Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap3Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -207,31 +358,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap4"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap4"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap4Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap4Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap4Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap4Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -240,31 +427,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap5"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap5"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap5Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap5Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap5Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap5Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -273,31 +496,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap6"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap6"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap6Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap6Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap6Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap6Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -306,31 +565,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap7"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap7"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap7Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap7Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap7Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap7Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -339,31 +634,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap8"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap8"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap8Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap8Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap8Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap8Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -372,31 +703,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap9"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap9"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap9Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap9Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap9Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap9Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -405,31 +772,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap10"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap10"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap10Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap10Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap10Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap10Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -438,31 +841,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap11"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap11"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap11Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap11Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap11Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap11Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -471,31 +910,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap12"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap12"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap12Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap12Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap12Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap12Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -504,31 +979,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap13"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap13"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap13Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap13Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap13Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap13Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -537,31 +1048,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap14"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap14"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap14Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap14Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap14Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap14Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -570,31 +1117,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap15"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap15"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap15Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap15Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap15Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap15Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -603,31 +1186,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap16"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap16"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap16Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap16Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap16Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap16Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -636,31 +1255,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap17"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap17"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap17Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap17Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap17Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap17Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -669,31 +1324,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap18"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap18"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap18Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap18Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap18Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap18Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -702,31 +1393,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap19"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap19"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap19Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap19Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap19Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap19Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -735,31 +1462,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap20"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap20"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap20Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap20Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap20Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap20Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -768,31 +1531,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap21"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap21"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap21Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap21Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap21Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap21Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -801,31 +1600,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap22"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap22"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap22Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap22Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap22Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap22Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -834,31 +1669,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap23"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap23"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap23Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap23Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap23Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap23Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -867,31 +1738,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap24"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap24"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap24Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap24Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap24Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap24Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -900,31 +1807,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/snap25"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/hisSnap25"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap25Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisSnap25Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap25Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap25Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -933,34 +1876,77 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:textSize="13dp"
+                    android:background="#FFFFFF"
+                    android:gravity="left"
+                    android:text="@string/snap26"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
+                <TextView
+                    android:id="@+id/hisSnap26Choice1"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
-                    android:gravity="left"
-                    android:text="@string/snap26"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/hisSnap26"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisSnap26Choice2"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap26Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisSnap26Choice4"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
             </TableRow>
+
+
+
+
+
+
+
 
 
 
@@ -968,16 +1954,7 @@
 
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/showDetailPre"
-        android:layout_width="60dp"
-        android:layout_height="130dp"
-        app:srcCompat="@drawable/previous"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_alignBottom="@+id/relativeLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
 
 </RelativeLayout>

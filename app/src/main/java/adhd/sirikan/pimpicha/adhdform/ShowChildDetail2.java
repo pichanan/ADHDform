@@ -1,8 +1,11 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -21,11 +24,23 @@ public class ShowChildDetail2 extends AppCompatActivity {
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26
             , spn27, spn28, spn29, spn30;
+    ImageView ImageViewPDF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_child_detail2);
+        ImageViewPDF = (ImageView) findViewById(R.id.showDetailThassPdf);
+        ImageViewPDF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                putIt();
+
+
+            }
+        });
+
         mySetup();
         queryDataFromJSoN();
         findId();
@@ -154,5 +169,44 @@ public class ShowChildDetail2 extends AppCompatActivity {
         idString = getIntent().getStringExtra("id");
         columnStrings = myConstant.getColumnTest2();
         urlPHPString = myConstant.getUrlGetTestWhereID2();
+    }
+    private void putIt() {
+        Intent intent = new Intent(ShowChildDetail2.this, PDF2Activity.class);
+        intent.putExtra("sspn", ch1);
+        intent.putExtra("sspn2", ch2);
+        intent.putExtra("sspn3", ch3);
+        intent.putExtra("sspn4", ch4);
+        intent.putExtra("sspn5", ch5);
+        intent.putExtra("sspn6", ch6);
+        intent.putExtra("sspn7", ch7);
+        intent.putExtra("sspn8", ch8);
+        intent.putExtra("sspn9", ch9);
+        intent.putExtra("sspn10", ch10);
+        intent.putExtra("sspn11", ch11);
+        intent.putExtra("sspn12", ch12);
+        intent.putExtra("sspn13", ch13);
+        intent.putExtra("sspn14", ch14);
+        intent.putExtra("sspn15", ch15);
+        intent.putExtra("sspn16", ch16);
+        intent.putExtra("sspn17", ch17);
+        intent.putExtra("sspn18", ch18);
+        intent.putExtra("sspn19", ch19);
+        intent.putExtra("sspn20", ch20);
+        intent.putExtra("sspn21", ch21);
+        intent.putExtra("sspn22", ch22);
+        intent.putExtra("sspn23", ch23);
+        intent.putExtra("sspn24", ch24);
+        intent.putExtra("sspn25", ch25);
+        intent.putExtra("sspn26", ch26);
+        intent.putExtra("sspn27", ch27);
+        intent.putExtra("sspn28", ch28);
+        intent.putExtra("sspn29", ch29);
+        intent.putExtra("sspn30", ch30);
+        /*intent.putExtra("risk1", risk1Int);
+        intent.putExtra("risk2", risk2Int);
+        intent.putExtra("risk3", risk3Int);
+        intent.putExtra("date", date);*/
+        startActivity(intent);
+
     }
 }
