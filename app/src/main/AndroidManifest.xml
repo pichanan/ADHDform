@@ -41,7 +41,10 @@
         <activity android:name=".CorrelationActivity" />
         <activity android:name=".Graph2Activity" />
         <activity android:name=".PDF2Activity" />
-        <activity android:name=".PDF3Activity"></activity>
+        <activity android:name=".PDF3Activity" />
+        <activity android:name=".DeleteActivity" />
+        <activity android:name=".AfterLoginActivity" />
+        <activity android:name=".DeleteDoneActivity"></activity>
     </application>
 
 </manifest>

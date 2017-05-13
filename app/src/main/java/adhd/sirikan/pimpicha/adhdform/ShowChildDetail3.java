@@ -81,57 +81,313 @@ public class ShowChildDetail3 extends AppCompatActivity {
     }
 
     private void findId() {
-        spn = (TextView) findViewById(R.id.hissdq1);
-        spn2 = (TextView) findViewById(R.id.hissdq2);
-        spn3 = (TextView) findViewById(R.id.hissdq3);
-        spn4 = (TextView) findViewById(R.id.hissdq4);
-        spn5 = (TextView) findViewById(R.id.hissdq5);
-        spn6 = (TextView) findViewById(R.id.hissdq6);
-        spn7= (TextView) findViewById(R.id.hissdq7);
-        spn8 = (TextView) findViewById(R.id.hissdq8);
-        spn9 = (TextView) findViewById(R.id.hissdq9);
-        spn10 = (TextView) findViewById(R.id.hissdq10);
-        spn11 = (TextView) findViewById(R.id.hissdq11);
-        spn12 = (TextView) findViewById(R.id.hissdq12);
-        spn13 = (TextView) findViewById(R.id.hissdq13);
-        spn14 = (TextView) findViewById(R.id.hissdq14);
-        spn15 = (TextView) findViewById(R.id.hissdq15);
-        spn16 = (TextView) findViewById(R.id.hissdq16);
-        spn17 = (TextView) findViewById(R.id.hissdq17);
-        spn18 = (TextView) findViewById(R.id.hissdq18);
-        spn19 = (TextView) findViewById(R.id.hissdq19);
-        spn20 = (TextView) findViewById(R.id.hissdq20);
-        spn21 = (TextView) findViewById(R.id.hissdq21);
-        spn22 = (TextView) findViewById(R.id.hissdq22);
-        spn23 = (TextView) findViewById(R.id.hissdq23);
-        spn24 = (TextView) findViewById(R.id.hissdq24);
-        spn25 = (TextView) findViewById(R.id.hissdq25);
 
-        spn.setText(ch1);
-        spn2.setText(ch2);
-        spn3.setText(ch3);
-        spn4.setText(ch4);
-        spn5.setText(ch5);
-        spn6.setText(ch6);
-        spn7.setText(ch7);
-        spn8.setText(ch8);
-        spn9.setText(ch9);
-        spn10.setText(ch10);
-        spn11.setText(ch11);
-        spn12.setText(ch12);
-        spn13.setText(ch13);
-        spn14.setText(ch14);
-        spn15.setText(ch15);
-        spn16.setText(ch16);
-        spn17.setText(ch17);
-        spn18.setText(ch18);
-        spn19.setText(ch19);
-        spn20.setText(ch20);
-        spn21.setText(ch21);
-        spn22.setText(ch22);
-        spn23.setText(ch23);
-        spn24.setText(ch24);
-        spn25.setText(ch25);
+            if(ch1.equals("0")){
+                ch1 = "0";
+                spn = (TextView) findViewById(R.id.hisSdq1Choice1);
+            }else if(ch1.equals("1")){
+                ch1 = "1";
+                spn = (TextView) findViewById(R.id.hisSdq1Choice2);
+            }else if(ch1.equals("2")){
+                ch1 = "2";
+                spn = (TextView) findViewById(R.id.hisSdq1Choice3);
+            }
+
+
+            if(ch2.equals("0")){
+                ch2 = "0";
+                spn2 = (TextView) findViewById(R.id.hisSdq2Choice1);
+            }else if(ch2.equals("1")){
+                ch2 = "1";
+                spn2 = (TextView) findViewById(R.id.hisSdq2Choice2);
+            }else if(ch2.equals("2")){
+                ch2 = "2";
+                spn2 = (TextView) findViewById(R.id.hisSdq2Choice3);
+            }
+
+            if(ch3.equals("0")){
+                ch3 = "0";
+                spn3 = (TextView) findViewById(R.id.hisSdq3Choice1);
+            }else if(ch3.equals("1")){
+                ch3 = "1";
+                spn3 = (TextView) findViewById(R.id.hisSdq3Choice2);
+            }else if(ch3.equals("2")){
+                ch3 = "2";
+                spn3 = (TextView) findViewById(R.id.hisSdq3Choice3);
+            }
+
+            if(ch4.equals("0")){
+                ch4 = "0";
+                spn4 = (TextView) findViewById(R.id.hisSdq4Choice1);
+            }else if(ch4.equals("1")){
+                ch4 = "1";
+                spn4 = (TextView) findViewById(R.id.hisSdq4Choice2);
+            }else if(ch4.equals("2")){
+                ch4 = "2";
+                spn4 = (TextView) findViewById(R.id.hisSdq4Choice3);
+            }
+
+            if(ch5.equals("0")){
+                ch5 = "0";
+                spn5 = (TextView) findViewById(R.id.hisSdq5Choice1);
+            }else if(ch5.equals("1")){
+                ch5 = "1";
+                spn5 = (TextView) findViewById(R.id.hisSdq5Choice2);
+            }else if(ch5.equals("2")){
+                ch5 = "2";
+                spn5 = (TextView) findViewById(R.id.hisSdq5Choice3);
+            }
+
+            if(ch6.equals("0")){
+                ch6 = "0";
+                spn6 = (TextView) findViewById(R.id.hisSdq6Choice1);
+            }else if(ch6.equals("1")){
+                ch6 = "1";
+                spn6 = (TextView) findViewById(R.id.hisSdq6Choice2);
+            }else if(ch6.equals("2")){
+                ch6 = "2";
+                spn6 = (TextView) findViewById(R.id.hisSdq6Choice3);
+            }
+
+            if(ch7.equals("0")){
+                ch7 = "0";
+                spn7 = (TextView) findViewById(R.id.hisSdq7Choice1);
+            }else if(ch7.equals("1")){
+                ch7 = "1";
+                spn7 = (TextView) findViewById(R.id.hisSdq7Choice2);
+            }else if(ch7.equals("2")){
+                ch7 = "2";
+                spn7 = (TextView) findViewById(R.id.hisSdq7Choice3);
+            }
+
+            if(ch8.equals("0")){
+                ch8 = "0";
+                spn8 = (TextView) findViewById(R.id.hisSdq8Choice1);
+            }else if(ch8.equals("1")){
+                ch8 = "1";
+                spn8 = (TextView) findViewById(R.id.hisSdq8Choice2);
+            }else if(ch8.equals("2")){
+                ch8 = "2";
+                spn8 = (TextView) findViewById(R.id.hisSdq8Choice3);
+            }
+
+            if(ch9.equals("0")){
+                ch9 = "0";
+                spn9 = (TextView) findViewById(R.id.hisSdq9Choice1);
+            }else if(ch9.equals("1")){
+                ch9 = "1";
+                spn9 = (TextView) findViewById(R.id.hisSdq9Choice2);
+            }else if(ch9.equals("2")){
+                ch9 = "2";
+                spn9 = (TextView) findViewById(R.id.hisSdq9Choice3);
+            }
+
+            if(ch10.equals("0")){
+                ch10 = "0";
+                spn10 = (TextView) findViewById(R.id.hisSdq10Choice1);
+            }else if(ch10.equals("1")){
+                ch10 = "1";
+                spn10 = (TextView) findViewById(R.id.hisSdq10Choice2);
+            }else if(ch10.equals("2")){
+                ch10 = "2";
+                spn10 = (TextView) findViewById(R.id.hisSdq10Choice3);
+            }
+
+            if(ch11.equals("0")){
+                ch11 = "0";
+                spn11 = (TextView) findViewById(R.id.hisSdq11Choice1);
+            }else if(ch11.equals("1")){
+                ch11 = "1";
+                spn11 = (TextView) findViewById(R.id.hisSdq11Choice2);
+            }else if(ch11.equals("2")){
+                ch11 = "2";
+                spn11 = (TextView) findViewById(R.id.hisSdq11Choice3);
+            }
+
+            if(ch12.equals("0")){
+                ch12 = "0";
+                spn12 = (TextView) findViewById(R.id.hisSdq12Choice1);
+            }else if(ch12.equals("1")){
+                ch12 = "1";
+                spn12 = (TextView) findViewById(R.id.hisSdq12Choice2);
+            }else if(ch12.equals("2")){
+                ch12 = "2";
+                spn12 = (TextView) findViewById(R.id.hisSdq12Choice3);
+            }
+
+            if(ch13.equals("0")){
+                ch13 = "0";
+                spn13 = (TextView) findViewById(R.id.hisSdq13Choice1);
+            }else if(ch13.equals("1")){
+                ch13 = "1";
+                spn13 = (TextView) findViewById(R.id.hisSdq13Choice2);
+            }else if(ch13.equals("2")){
+                ch13 = "2";
+                spn13 = (TextView) findViewById(R.id.hisSdq13Choice3);
+            }
+
+            if(ch14.equals("0")){
+                ch14 = "0";
+                spn14 = (TextView) findViewById(R.id.hisSdq14Choice1);
+            }else if(ch14.equals("1")){
+                ch14 = "1";
+                spn14 = (TextView) findViewById(R.id.hisSdq14Choice2);
+            }else if(ch14.equals("2")){
+                ch14 = "2";
+                spn14 = (TextView) findViewById(R.id.hisSdq14Choice3);
+            }
+
+            if(ch15.equals("0")){
+                ch15 = "0";
+                spn15 = (TextView) findViewById(R.id.hisSdq15Choice1);
+            }else if(ch15.equals("1")){
+                ch15 = "1";
+                spn15 = (TextView) findViewById(R.id.hisSdq15Choice2);
+            }else if(ch15.equals("2")){
+                ch15 = "2";
+                spn15 = (TextView) findViewById(R.id.hisSdq15Choice3);
+            }
+
+            if(ch16.equals("0")){
+                ch16 = "0";
+                spn16 = (TextView) findViewById(R.id.hisSdq16Choice1);
+            }else if(ch16.equals("1")){
+                ch16 = "1";
+                spn16 = (TextView) findViewById(R.id.hisSdq16Choice2);
+            }else if(ch16.equals("2")){
+                ch16 = "2";
+                spn16 = (TextView) findViewById(R.id.hisSdq16Choice3);
+            }
+
+            if(ch17.equals("0")){
+                ch17 = "0";
+                spn17 = (TextView) findViewById(R.id.hisSdq17Choice1);
+            }else if(ch17.equals("1")){
+                ch17 = "1";
+                spn17 = (TextView) findViewById(R.id.hisSdq17Choice2);
+            }else if(ch17.equals("2")){
+                ch17 = "2";
+                spn17 = (TextView) findViewById(R.id.hisSdq17Choice3);
+            }
+
+            if(ch18.equals("0")){
+                ch18 = "0";
+                spn18 = (TextView) findViewById(R.id.hisSdq18Choice1);
+            }else if(ch18.equals("1")){
+                ch18 = "1";
+                spn18 = (TextView) findViewById(R.id.hisSdq18Choice2);
+            }else if(ch18.equals("2")){
+                ch18 = "2";
+                spn18 = (TextView) findViewById(R.id.hisSdq18Choice3);
+            }
+
+            if(ch19.equals("0")){
+                ch19 = "0";
+                spn19 = (TextView) findViewById(R.id.hisSdq19Choice1);
+            }else if(ch19.equals("1")){
+                ch19 = "1";
+                spn19 = (TextView) findViewById(R.id.hisSdq19Choice2);
+            }else if(ch19.equals("2")){
+                ch19 = "2";
+                spn19 = (TextView) findViewById(R.id.hisSdq19Choice3);
+            }
+
+            if(ch20.equals("0")){
+                ch20 = "0";
+                spn20 = (TextView) findViewById(R.id.hisSdq20Choice1);
+            }else if(ch20.equals("1")){
+                ch20 = "1";
+                spn20 = (TextView) findViewById(R.id.hisSdq20Choice2);
+            }else if(ch20.equals("2")){
+                ch20 = "2";
+                spn20 = (TextView) findViewById(R.id.hisSdq20Choice3);
+            }
+
+            if(ch21.equals("0")){
+                ch21 = "0";
+                spn21 = (TextView) findViewById(R.id.hisSdq21Choice1);
+            }else if(ch21.equals("1")){
+                ch21 = "1";
+                spn21 = (TextView) findViewById(R.id.hisSdq21Choice2);
+            }else if(ch21.equals("2")){
+                ch21 = "2";
+                spn21 = (TextView) findViewById(R.id.hisSdq21Choice3);
+            }
+
+            if(ch22.equals("0")){
+                ch22 = "0";
+                spn22 = (TextView) findViewById(R.id.hisSdq22Choice1);
+            }else if(ch22.equals("1")){
+                ch22 = "1";
+                spn22 = (TextView) findViewById(R.id.hisSdq22Choice2);
+            }else if(ch22.equals("2")){
+                ch22 = "2";
+                spn22 = (TextView) findViewById(R.id.hisSdq22Choice3);
+            }
+
+            if(ch23.equals("0")){
+                ch23 = "0";
+                spn23 = (TextView) findViewById(R.id.hisSdq23Choice1);
+            }else if(ch23.equals("1")){
+                ch23 = "1";
+                spn23 = (TextView) findViewById(R.id.hisSdq23Choice2);
+            }else if(ch23.equals("2")){
+                ch23 = "2";
+                spn23 = (TextView) findViewById(R.id.hisSdq23Choice3);
+            }
+
+            if(ch24.equals("0")){
+                ch24 = "0";
+                spn24 = (TextView) findViewById(R.id.hisSdq24Choice1);
+            }else if(ch24.equals("1")){
+                ch24 = "1";
+                spn24 = (TextView) findViewById(R.id.hisSdq24Choice2);
+            }else if(ch24.equals("2")){
+                ch24 = "2";
+                spn24 = (TextView) findViewById(R.id.hisSdq24Choice3);
+            }
+
+            if(ch25.equals("0")){
+                ch25 = "0";
+                spn25 = (TextView) findViewById(R.id.hisSdq25Choice1);
+            }else if(ch25.equals("1")){
+                ch25 = "1";
+                spn25 = (TextView) findViewById(R.id.hisSdq25Choice2);
+            }else if(ch25.equals("2")){
+                ch25 = "2";
+                spn25 = (TextView) findViewById(R.id.hisSdq25Choice3);
+            }
+
+
+
+
+            spn.setText("/");
+            spn2.setText("/");
+            spn3.setText("/");
+            spn4.setText("/");
+            spn5.setText("/");
+            spn6.setText("/");
+            spn7.setText("/");
+            spn8.setText("/");
+            spn9.setText("/");
+            spn10.setText("/");
+            spn11.setText("/");
+            spn12.setText("/");
+            spn13.setText("/");
+            spn14.setText("/");
+            spn15.setText("/");
+            spn16.setText("/");
+            spn17.setText("/");
+            spn18.setText("/");
+            spn19.setText("/");
+            spn20.setText("/");
+            spn21.setText("/");
+            spn22.setText("/");
+            spn23.setText("/");
+            spn24.setText("/");
+            spn25.setText("/");
+
+
 
     }
 

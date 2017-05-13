@@ -96,7 +96,7 @@ public class PDFActivity extends AppCompatActivity {
 
     public List<List<String>> getData() {
         List<List<String>> data = new ArrayList<List<String>>();
-        String[] tableTitleList = {"คำถาม", "คำตอบ"," "," "," "};
+        String[] tableTitleList = {"คำถาม", "0","1","2","3"};
         data.add(Arrays.asList(tableTitleList));
 
 

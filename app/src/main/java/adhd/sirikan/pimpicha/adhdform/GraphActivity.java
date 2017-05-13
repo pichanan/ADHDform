@@ -30,17 +30,17 @@ public class GraphActivity extends AppCompatActivity { // SNAP
         initialView();
 
 
-        //risk1**************************************/
+        //risk1
         createLineGraphRed1("0","risk1",colorLineInts[0]);// snap risk1 teacher
         createLineGraphBlue1("0","risk1",colorLineInts[1]);//thass risk1 teacher
-        //*risk2**************************************/
+       //*risk2
         createLineGraphRed2("0","risk2",colorLineInts[0]);// snap risk2 teacher
         createLineGraphBlue2("0","risk2",colorLineInts[1]);//thass risk2 teacher
 
         calCorre1();
         calCorre2();
 
-       // createLineGraph("1","risk1",colorLineInts[1]);
+        // createLineGraph("1","risk1",colorLineInts[1]);
 
 
     }//main method
@@ -219,6 +219,8 @@ public class GraphActivity extends AppCompatActivity { // SNAP
 
     }//createLineGraphRed2
 
+
+
     private void createLineGraphBlue1(String strDoType, String strColumn, int colorLineInt) {
 
         try{
@@ -272,8 +274,8 @@ public class GraphActivity extends AppCompatActivity { // SNAP
 
 
     private void createLineGraphRed1(String strDoType,
-                                 String strColumn,
-                                 int colorLineInt) {
+                                     String strColumn,
+                                     int colorLineInt) {
         try{
 
             String tag = "15AprilV1";

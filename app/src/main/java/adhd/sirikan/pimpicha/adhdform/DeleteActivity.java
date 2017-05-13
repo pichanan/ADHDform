@@ -6,62 +6,38 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView userTextView,typeTextView;
-
-    private ListView listView;
+public class DeleteActivity extends AppCompatActivity {
+    ListView listView;
     private String[] loginString;
-    private  ImageView imageView , deleteImageView;
-
-    private String[] showTypeStrings = new String[]{"Teacher","Parent"};
     private String tag = "31MarchV2";
-
+    Button button;
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service);
-
-        InitialView();
-        //get value
+        setContentView(R.layout.activity_delete);
+        listView = (ListView) findViewById(R.id.livDeleteChild);
         getValue();
-
-        //show view
-        showView();
-        //Image controller
-        imageController();
-
-
-
-    }//main method
-
-    private void imageController() {
-        imageView.setOnClickListener(ServiceActivity.this);
-        deleteImageView.setOnClickListener(ServiceActivity.this);
     }
-
     private void getValue() {
         loginString = getIntent().getStringArrayExtra("Login");
     }
-
-   @Override
+    @Override
     protected void onPostResume() {//**************************************
         super.onPostResume();
         createListView();
     }
-
     private void createListView() {
 
 
         try {
-            GetAllData getAllData = new GetAllData(ServiceActivity.this);
+            GetAllData getAllData = new GetAllData(DeleteActivity.this);
             MyConstant myConstant = new MyConstant();
             getAllData.execute(myConstant.getUrlGetChild());
 
@@ -96,14 +72,13 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
 
             final String[] countChildString = new String[j];
             //Build ListView
-            ChildAdapter childAdapter = new ChildAdapter(ServiceActivity.this, imageStrings,
+            DeleteAdapter deleteAdapter = new DeleteAdapter(DeleteActivity.this, imageStrings,
                     nameChildStrings,countChildString);
-            listView.setAdapter(childAdapter);
-
+            listView.setAdapter(deleteAdapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent intent = new Intent(ServiceActivity.this, DetailActivity.class);
+                    Intent intent = new Intent(DeleteActivity.this, DetailActivity.class);
                     intent.putExtra("Login", loginString);
                     intent.putExtra("tmpIndex", idStrings[position]);
                     intent.putExtra("gender", genderStrings[position]);
@@ -112,7 +87,13 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
                     startActivity(intent);
                     // ไม่ต้อง หยุด เพราะจะให้ย้อนกลับได้
                 }
+
+
             });
+
+
+
+
 
 
         } catch (Exception e) {
@@ -120,37 +101,4 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         }
 
     }
-
-    private void showView() {
-        userTextView.setText(loginString[1]);
-        typeTextView.setText(showTypeStrings[Integer.parseInt(loginString[3])]); // chang 0 1 from  to int
-    }
-
-    private void InitialView() {
-        userTextView = (TextView) findViewById(R.id.txtUser);
-        typeTextView = (TextView) findViewById(R.id.txtType);
-        imageView = (ImageView) findViewById(R.id.imvChild);
-        deleteImageView = (ImageView) findViewById(R.id.imvDelete);
-        listView = (ListView) findViewById(R.id.livChild);
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        // for imageView
-        if (v==imageView) {
-            Intent intent = new Intent(ServiceActivity.this,AddChildActivity.class);
-            intent.putExtra("Login",loginString);
-
-            startActivity(intent);
-        }
-
-        //for graph
-        if (v==deleteImageView) {
-            Intent intent = new Intent(ServiceActivity.this,DeleteActivity.class);
-            intent.putExtra("Login",loginString);
-            startActivity(intent);
-        }
-
-    }
-}//main class
+}

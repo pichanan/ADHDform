@@ -54,19 +54,20 @@
 
 
     <ScrollView
-        android:layout_marginTop="100dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/scvHisThass"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/btnRiskSnap">
+        android:layout_alignParentStart="true">
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:stretchColumns="0,1,2"
             android:gravity="center"
-            android:layout_below="@+id/linearLayout2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
@@ -80,10 +81,9 @@
                 android:background="#000000"
 
                 >
-
                 <TextView
 
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
@@ -94,13 +94,54 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="70dp"
+
+                    android:id="@+id/textView6"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="คำตอบ "
+                    android:text="3"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+
+
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:id="@+id/textView7"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:id="@+id/textView8"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="0"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
@@ -112,28 +153,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
-                    android:layout_width="280dp"
+
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass1"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass1"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass1Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hisThass1Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass1Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass1Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -142,31 +222,68 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass2"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass2"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass2Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass2Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass2Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass2Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+
 
 
             </TableRow>
@@ -175,31 +292,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass3"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass3"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass3Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass3Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass3Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass3Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -208,31 +361,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass4"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass4"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass4Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass4Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass4Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass4Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -241,31 +430,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass5"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass5"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass5Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass5Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass5Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass5Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -274,31 +499,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass6"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass6"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass6Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass6Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass6Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass6Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -307,31 +568,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass7"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass7"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass7Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass7Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass7Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass7Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -340,31 +637,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass8"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass8"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass8Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass8Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass8Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass8Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -373,31 +706,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass9"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass9"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass9Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass9Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass9Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass9Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -406,31 +775,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass10"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass10"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass10Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass10Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass10Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass10Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -439,31 +844,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass11"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass11"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass11Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass11Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass11Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass11Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -472,31 +913,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass12"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass12"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass12Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass12Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass12Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass12Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -505,31 +982,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass13"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass13"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass13Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass13Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass13Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass13Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -538,31 +1051,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass14"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass14"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass14Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass14Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass14Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass14Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -571,31 +1120,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass15"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass15"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass15Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass15Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass15Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass15Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -604,31 +1189,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass16"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass16"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass16Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass16Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass16Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass16Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -637,31 +1258,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass17"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass17"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass17Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass17Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass17Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass17Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -670,31 +1327,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass18"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass18"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass18Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass18Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass18Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass18Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -703,31 +1396,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass19"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass19"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass19Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass19Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass19Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass19Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -736,31 +1465,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass20"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass20"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass20Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass20Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass20Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass20Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -769,31 +1534,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass21"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass21"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass21Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass21Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass21Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass21Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -802,31 +1603,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass22"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass22"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass22Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass22Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass22Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass22Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -835,31 +1672,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass23"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass23"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass23Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass23Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass23Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass23Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -868,31 +1741,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass24"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass24"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass24Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass24Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass24Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass24Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -901,31 +1810,67 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass25"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass25"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass25Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass25Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass25Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass25Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
@@ -934,160 +1879,346 @@
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
 
-
-                    android:layout_width="280dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass26"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass26"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass26Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/hisThass26Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass26Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass26Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
-                    android:layout_width="280dp"
+
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass27"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass27"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass27Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hisThass27Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass27Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass27Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
-                    android:layout_width="280dp"
+
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass28"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass28"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass28Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hisThass28Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass28Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass28Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
-                    android:layout_width="280dp"
+
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:textSize="13dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
                     android:text="@string/thass29"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
                 <TextView
-                    android:id="@+id/histhass29"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass29Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hisThass29Choice3"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass29Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass29Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#000000">
+                android:background="#000000"
 
+                >
                 <TextView
-                    android:layout_width="280dp"
+
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:textSize="13dp"
+                    android:background="#FFFFFF"
+                    android:gravity="left"
+                    android:text="@string/thass30"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    />
+                <TextView
+                    android:id="@+id/hisThass30Choice4"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
-                    android:gravity="left"
-                    android:text="@string/thass30"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/histhass30"
-                    android:layout_width="70dp"
+                    android:id="@+id/hisThass30Choice3"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_column="1"
+                    android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text=" Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass30Choice2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hisThass30Choice1"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
 
 
             </TableRow>
-
-
 
 
 

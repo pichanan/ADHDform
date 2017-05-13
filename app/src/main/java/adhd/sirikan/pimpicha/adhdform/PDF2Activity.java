@@ -73,7 +73,7 @@ public class PDF2Activity extends AppCompatActivity {
     }
     public List<List<String>> getData() {
         List<List<String>> data = new ArrayList<List<String>>();
-        String[] tableTitleList = {"คำถาม", "คำตอบ"," "," "," "};
+        String[] tableTitleList = {"คำถาม", "3","2","1","0"};
         data.add(Arrays.asList(tableTitleList));
 
 
@@ -81,25 +81,26 @@ public class PDF2Activity extends AppCompatActivity {
         for (int j = 0; j < 30; j++) {
             dataLine.add(question[j]);
             if(arrAns[j].equals("0")){
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add(" ");
                 dataLine.add("      /");
-                dataLine.add(" ");
-                dataLine.add(" ");
-                dataLine.add(" ");
             }else if(arrAns[j].equals("1")){
                 dataLine.add(" ");
-                dataLine.add("      /");
                 dataLine.add(" ");
+                dataLine.add("      /");
                 dataLine.add(" ");
             }else if(arrAns[j].equals("2")){
                 dataLine.add(" ");
-                dataLine.add(" ");
                 dataLine.add("      /");
+                dataLine.add(" ");
                 dataLine.add(" ");
             }else if(arrAns[j].equals("3")){
-                dataLine.add(" ");
-                dataLine.add(" ");
-                dataLine.add(" ");
                 dataLine.add("      /");
+                dataLine.add(" ");
+                dataLine.add(" ");
+                dataLine.add(" ");
+
             }
 
         }

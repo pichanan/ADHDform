@@ -1,7 +1,10 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class riskThassActivity extends AppCompatActivity {
@@ -12,6 +15,7 @@ public class riskThassActivity extends AppCompatActivity {
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26
             , sspn27, sspn28, sspn29, sspn30,date;
+    ImageView ImageViewPDF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,75 +24,525 @@ public class riskThassActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.txtRiskThassShowRisk);
         textView2 = (TextView) findViewById(R.id.txtRiskThassDate);
         getValueFromIntent();
-        analyzeRisk();
+        //analyzeRisk();
         showText();
+        ImageViewPDF = (ImageView) findViewById(R.id.pdfThass);
+        ImageViewPDF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                putIt();
+
+
+
+            }
+
+
+
+
+        });
+    }
+
+    private void putIt() {
+        Intent intent = new Intent(riskThassActivity.this, PDF2Activity.class);
+        intent.putExtra("sspn", sspn);
+        intent.putExtra("sspn2", sspn2);
+        intent.putExtra("sspn3", sspn3);
+        intent.putExtra("sspn4", sspn4);
+        intent.putExtra("sspn5", sspn5);
+        intent.putExtra("sspn6", sspn6);
+        intent.putExtra("sspn7", sspn7);
+        intent.putExtra("sspn8", sspn8);
+        intent.putExtra("sspn9", sspn9);
+        intent.putExtra("sspn10", sspn10);
+        intent.putExtra("sspn11", sspn11);
+        intent.putExtra("sspn12", sspn12);
+        intent.putExtra("sspn13", sspn13);
+        intent.putExtra("sspn14", sspn14);
+        intent.putExtra("sspn15", sspn15);
+        intent.putExtra("sspn16", sspn16);
+        intent.putExtra("sspn17", sspn17);
+        intent.putExtra("sspn18", sspn18);
+        intent.putExtra("sspn19", sspn19);
+        intent.putExtra("sspn20", sspn20);
+        intent.putExtra("sspn21", sspn21);
+        intent.putExtra("sspn22", sspn22);
+        intent.putExtra("sspn23", sspn23);
+        intent.putExtra("sspn24", sspn24);
+        intent.putExtra("sspn25", sspn25);
+        intent.putExtra("sspn26", sspn26);
+        intent.putExtra("sspn27", sspn27);
+        intent.putExtra("sspn28", sspn28);
+        intent.putExtra("sspn29", sspn29);
+        intent.putExtra("sspn30", sspn30);
+        /*intent.putExtra("risk1", risk1Int);
+        intent.putExtra("risk2", risk2Int);
+        intent.putExtra("risk3", risk3Int);
+        intent.putExtra("date", date);*/
+        startActivity(intent);
+
     }
 
 
     private void showText() {
-        spn = (TextView) findViewById(R.id.answethass1);
-        spn2 = (TextView) findViewById(R.id.answethass2);
-        spn3 = (TextView) findViewById(R.id.answethass3);
-        spn4 = (TextView) findViewById(R.id.answethass4);
-        spn5 = (TextView) findViewById(R.id.answethass5);
-        spn6 = (TextView) findViewById(R.id.answethass6);
-        spn7= (TextView) findViewById(R.id.answethass7);
-        spn8 = (TextView) findViewById(R.id.answethass8);
-        spn9 = (TextView) findViewById(R.id.answethass9);
-        spn10 = (TextView) findViewById(R.id.answethass10);
-        spn11 = (TextView) findViewById(R.id.answethass11);
-        spn12 = (TextView) findViewById(R.id.answethass12);
-        spn13 = (TextView) findViewById(R.id.answethass13);
-        spn14 = (TextView) findViewById(R.id.answethass14);
-        spn15 = (TextView) findViewById(R.id.answethass15);
-        spn16 = (TextView) findViewById(R.id.answethass16);
-        spn17 = (TextView) findViewById(R.id.answethass17);
-        spn18 = (TextView) findViewById(R.id.answethass18);
-        spn19 = (TextView) findViewById(R.id.answethass19);
-        spn20 = (TextView) findViewById(R.id.answethass20);
-        spn21 = (TextView) findViewById(R.id.answethass21);
-        spn22 = (TextView) findViewById(R.id.answethass22);
-        spn23 = (TextView) findViewById(R.id.answethass23);
-        spn24 = (TextView) findViewById(R.id.answethass24);
-        spn25 = (TextView) findViewById(R.id.answethass25);
-        spn26 = (TextView) findViewById(R.id.answethass26);
-        spn27 = (TextView) findViewById(R.id.answethass27);
-        spn28 = (TextView) findViewById(R.id.answethass28);
-        spn29 = (TextView) findViewById(R.id.answethass29);
-        spn30 = (TextView) findViewById(R.id.answethass30);
+        if(sspn.equals("ไม่เคยทำ")){
+            sspn = "0";
+            spn = (TextView) findViewById(R.id.thass1Choice1);
+        }else if(sspn.equals("นานๆทำที")){
+            sspn = "1";
+            spn = (TextView) findViewById(R.id.thass1Choice2);
+        }else if(sspn.equals("ทำค่อนข้างบ่อย")){
+            sspn = "2";
+            spn = (TextView) findViewById(R.id.thass1Choice3);
+        }else{
+            sspn = "3";
+            spn = (TextView) findViewById(R.id.thass1Choice4);
+        }
 
-        spn.setText(sspn);
-        spn2.setText(sspn2);
-        spn3.setText(sspn3);
-        spn4.setText(sspn4);
-        spn5.setText(sspn5);
-        spn6.setText(sspn6);
-        spn7.setText(sspn7);
-        spn8.setText(sspn8);
-        spn9.setText(sspn9);
-        spn10.setText(sspn10);
-        spn11.setText(sspn11);
-        spn12.setText(sspn12);
-        spn13.setText(sspn13);
-        spn14.setText(sspn14);
-        spn15.setText(sspn15);
-        spn16.setText(sspn16);
-        spn17.setText(sspn17);
-        spn18.setText(sspn18);
-        spn19.setText(sspn19);
-        spn20.setText(sspn20);
-        spn21.setText(sspn21);
-        spn22.setText(sspn22);
-        spn23.setText(sspn23);
-        spn24.setText(sspn24);
-        spn25.setText(sspn25);
-        spn26.setText(sspn26);
-        spn27.setText(sspn27);
-        spn28.setText(sspn28);
-        spn29.setText(sspn29);
-        spn30.setText(sspn30);
+
+        if(sspn2.equals("ไม่เคยทำ")){
+            sspn2 = "0";
+            spn2 = (TextView) findViewById(R.id.thass2Choice1);
+        }else if(sspn2.equals("นานๆทำที")){
+            sspn2 = "1";
+            spn2 = (TextView) findViewById(R.id.thass2Choice2);
+        }else if(sspn2.equals("ทำค่อนข้างบ่อย")){
+            sspn2 = "2";
+            spn2 = (TextView) findViewById(R.id.thass2Choice3);
+        }else{
+            sspn2 = "3";
+            spn2 = (TextView) findViewById(R.id.thass2Choice4);
+        }
+
+        if(sspn3.equals("ไม่เคยทำ")){
+            sspn3 = "0";
+            spn3 = (TextView) findViewById(R.id.thass3Choice1);
+        }else if(sspn3.equals("นานๆทำที")){
+            sspn3 = "1";
+            spn3 = (TextView) findViewById(R.id.thass3Choice2);
+        }else if(sspn3.equals("ทำค่อนข้างบ่อย")){
+            sspn3 = "2";
+            spn3 = (TextView) findViewById(R.id.thass3Choice3);
+        }else{
+            sspn3 = "3";
+            spn3 = (TextView) findViewById(R.id.thass3Choice4);
+        }
+
+        if(sspn4.equals("ไม่เคยทำ")){
+            sspn4 = "0";
+            spn4 = (TextView) findViewById(R.id.thass4Choice1);
+        }else if(sspn4.equals("นานๆทำที")){
+            sspn4 = "1";
+            spn4 = (TextView) findViewById(R.id.thass4Choice2);
+        }else if(sspn4.equals("ทำค่อนข้างบ่อย")){
+            sspn4 = "2";
+            spn4 = (TextView) findViewById(R.id.thass4Choice3);
+        }else{
+            sspn4 = "3";
+            spn4 = (TextView) findViewById(R.id.thass4Choice4);
+        }
+
+        if(sspn5.equals("ไม่เคยทำ")){
+            sspn5 = "0";
+            spn5 = (TextView) findViewById(R.id.thass5Choice1);
+        }else if(sspn5.equals("นานๆทำที")){
+            sspn5 = "1";
+            spn5 = (TextView) findViewById(R.id.thass5Choice2);
+        }else if(sspn5.equals("ทำค่อนข้างบ่อย")){
+            sspn5 = "2";
+            spn5 = (TextView) findViewById(R.id.thass5Choice3);
+        }else{
+            sspn5 = "3";
+            spn5 = (TextView) findViewById(R.id.thass5Choice4);
+        }
+
+        if(sspn6.equals("ไม่เคยทำ")){
+            sspn6 = "0";
+            spn6 = (TextView) findViewById(R.id.thass6Choice1);
+        }else if(sspn6.equals("นานๆทำที")){
+            sspn6 = "1";
+            spn6 = (TextView) findViewById(R.id.thass6Choice2);
+        }else if(sspn6.equals("ทำค่อนข้างบ่อย")){
+            sspn6 = "2";
+            spn6 = (TextView) findViewById(R.id.thass6Choice3);
+        }else{
+            sspn6 = "3";
+            spn6 = (TextView) findViewById(R.id.thass6Choice4);
+        }
+
+        if(sspn7.equals("ไม่เคยทำ")){
+            sspn7 = "0";
+            spn7 = (TextView) findViewById(R.id.thass7Choice1);
+        }else if(sspn7.equals("นานๆทำที")){
+            sspn7 = "1";
+            spn7 = (TextView) findViewById(R.id.thass7Choice2);
+        }else if(sspn7.equals("ทำค่อนข้างบ่อย")){
+            sspn7 = "2";
+            spn7 = (TextView) findViewById(R.id.thass7Choice3);
+        }else{
+            sspn7 = "3";
+            spn7 = (TextView) findViewById(R.id.thass7Choice4);
+        }
+
+        if(sspn8.equals("ไม่เคยทำ")){
+            sspn8 = "0";
+            spn8 = (TextView) findViewById(R.id.thass8Choice1);
+        }else if(sspn8.equals("นานๆทำที")){
+            sspn8 = "1";
+            spn8 = (TextView) findViewById(R.id.thass8Choice2);
+        }else if(sspn8.equals("ทำค่อนข้างบ่อย")){
+            sspn8 = "2";
+            spn8 = (TextView) findViewById(R.id.thass8Choice3);
+        }else{
+            sspn8 = "3";
+            spn8 = (TextView) findViewById(R.id.thass8Choice4);
+        }
+
+        if(sspn9.equals("ไม่เคยทำ")){
+            sspn9 = "0";
+            spn9 = (TextView) findViewById(R.id.thass9Choice1);
+        }else if(sspn9.equals("นานๆทำที")){
+            sspn9 = "1";
+            spn9 = (TextView) findViewById(R.id.thass9Choice2);
+        }else if(sspn9.equals("ทำค่อนข้างบ่อย")){
+            sspn9 = "2";
+            spn9 = (TextView) findViewById(R.id.thass9Choice3);
+        }else{
+            sspn9 = "3";
+            spn9 = (TextView) findViewById(R.id.thass9Choice4);
+        }
+
+        if(sspn10.equals("ไม่เคยทำ")){
+            sspn10 = "0";
+            spn10 = (TextView) findViewById(R.id.thass10Choice1);
+        }else if(sspn10.equals("นานๆทำที")){
+            sspn10 = "1";
+            spn10 = (TextView) findViewById(R.id.thass10Choice2);
+        }else if(sspn10.equals("ทำค่อนข้างบ่อย")){
+            sspn10 = "2";
+            spn10 = (TextView) findViewById(R.id.thass10Choice3);
+        }else{
+            sspn10 = "3";
+            spn10 = (TextView) findViewById(R.id.thass10Choice4);
+        }
+
+        if(sspn11.equals("ไม่เคยทำ")){
+            sspn11 = "0";
+            spn11 = (TextView) findViewById(R.id.thass11Choice1);
+        }else if(sspn11.equals("นานๆทำที")){
+            sspn11 = "1";
+            spn11 = (TextView) findViewById(R.id.thass11Choice2);
+        }else if(sspn11.equals("ทำค่อนข้างบ่อย")){
+            sspn11 = "2";
+            spn11 = (TextView) findViewById(R.id.thass11Choice3);
+        }else{
+            sspn11 = "3";
+            spn11 = (TextView) findViewById(R.id.thass11Choice4);
+        }
+
+        if(sspn12.equals("ไม่เคยทำ")){
+            sspn12 = "0";
+            spn12 = (TextView) findViewById(R.id.thass12Choice1);
+        }else if(sspn12.equals("นานๆทำที")){
+            sspn12 = "1";
+            spn12 = (TextView) findViewById(R.id.thass12Choice2);
+        }else if(sspn12.equals("ทำค่อนข้างบ่อย")){
+            sspn12 = "2";
+            spn12 = (TextView) findViewById(R.id.thass12Choice3);
+        }else{
+            sspn12 = "3";
+            spn12 = (TextView) findViewById(R.id.thass12Choice4);
+        }
+
+        if(sspn13.equals("ไม่เคยทำ")){
+            sspn13 = "0";
+            spn13 = (TextView) findViewById(R.id.thass13Choice1);
+        }else if(sspn13.equals("นานๆทำที")){
+            sspn13 = "1";
+            spn13 = (TextView) findViewById(R.id.thass13Choice2);
+        }else if(sspn13.equals("ทำค่อนข้างบ่อย")){
+            sspn13 = "2";
+            spn13 = (TextView) findViewById(R.id.thass13Choice3);
+        }else{
+            sspn13 = "3";
+            spn13 = (TextView) findViewById(R.id.thass13Choice4);
+        }
+
+        if(sspn14.equals("ไม่เคยทำ")){
+            sspn14 = "0";
+            spn14 = (TextView) findViewById(R.id.thass14Choice1);
+        }else if(sspn14.equals("นานๆทำที")){
+            sspn14 = "1";
+            spn14 = (TextView) findViewById(R.id.thass14Choice2);
+        }else if(sspn14.equals("ทำค่อนข้างบ่อย")){
+            sspn14 = "2";
+            spn14 = (TextView) findViewById(R.id.thass14Choice3);
+        }else{
+            sspn14 = "3";
+            spn14 = (TextView) findViewById(R.id.thass14Choice4);
+        }
+
+        if(sspn15.equals("ไม่เคยทำ")){
+            sspn15 = "0";
+            spn15 = (TextView) findViewById(R.id.thass15Choice1);
+        }else if(sspn15.equals("นานๆทำที")){
+            sspn15 = "1";
+            spn15 = (TextView) findViewById(R.id.thass15Choice2);
+        }else if(sspn15.equals("ทำค่อนข้างบ่อย")){
+            sspn15 = "2";
+            spn15 = (TextView) findViewById(R.id.thass15Choice3);
+        }else{
+            sspn15 = "3";
+            spn15 = (TextView) findViewById(R.id.thass15Choice4);
+        }
+
+        if(sspn16.equals("ไม่เคยทำ")){
+            sspn16 = "0";
+            spn16 = (TextView) findViewById(R.id.thass16Choice1);
+        }else if(sspn16.equals("นานๆทำที")){
+            sspn16 = "1";
+            spn16 = (TextView) findViewById(R.id.thass16Choice2);
+        }else if(sspn16.equals("ทำค่อนข้างบ่อย")){
+            sspn16 = "2";
+            spn16 = (TextView) findViewById(R.id.thass16Choice3);
+        }else{
+            sspn16 = "3";
+            spn16 = (TextView) findViewById(R.id.thass16Choice4);
+        }
+
+        if(sspn17.equals("ไม่เคยทำ")){
+            sspn17 = "0";
+            spn17 = (TextView) findViewById(R.id.thass17Choice1);
+        }else if(sspn17.equals("นานๆทำที")){
+            sspn17 = "1";
+            spn17 = (TextView) findViewById(R.id.thass17Choice2);
+        }else if(sspn17.equals("ทำค่อนข้างบ่อย")){
+            sspn17 = "2";
+            spn17 = (TextView) findViewById(R.id.thass17Choice3);
+        }else{
+            sspn17 = "3";
+            spn17 = (TextView) findViewById(R.id.thass17Choice4);
+        }
+
+        if(sspn18.equals("ไม่เคยทำ")){
+            sspn18 = "0";
+            spn18 = (TextView) findViewById(R.id.thass18Choice1);
+        }else if(sspn18.equals("นานๆทำที")){
+            sspn18 = "1";
+            spn18 = (TextView) findViewById(R.id.thass18Choice2);
+        }else if(sspn18.equals("ทำค่อนข้างบ่อย")){
+            sspn18 = "2";
+            spn18 = (TextView) findViewById(R.id.thass18Choice3);
+        }else{
+            sspn18 = "3";
+            spn18 = (TextView) findViewById(R.id.thass18Choice4);
+        }
+
+        if(sspn19.equals("ไม่เคยทำ")){
+            sspn19 = "0";
+            spn19 = (TextView) findViewById(R.id.thass19Choice1);
+        }else if(sspn19.equals("นานๆทำที")){
+            sspn19 = "1";
+            spn19 = (TextView) findViewById(R.id.thass19Choice2);
+        }else if(sspn19.equals("ทำค่อนข้างบ่อย")){
+            sspn19 = "2";
+            spn19 = (TextView) findViewById(R.id.thass19Choice3);
+        }else{
+            sspn19 = "3";
+            spn19 = (TextView) findViewById(R.id.thass19Choice4);
+        }
+
+        if(sspn20.equals("ไม่เคยทำ")){
+            sspn20 = "0";
+            spn20 = (TextView) findViewById(R.id.thass20Choice1);
+        }else if(sspn20.equals("นานๆทำที")){
+            sspn20 = "1";
+            spn20 = (TextView) findViewById(R.id.thass20Choice2);
+        }else if(sspn20.equals("ทำค่อนข้างบ่อย")){
+            sspn20 = "2";
+            spn20 = (TextView) findViewById(R.id.thass20Choice3);
+        }else{
+            sspn20 = "3";
+            spn20 = (TextView) findViewById(R.id.thass20Choice4);
+        }
+
+        if(sspn21.equals("ไม่เคยทำ")){
+            sspn21 = "0";
+            spn21 = (TextView) findViewById(R.id.thass21Choice1);
+        }else if(sspn21.equals("นานๆทำที")){
+            sspn21 = "1";
+            spn21 = (TextView) findViewById(R.id.thass21Choice2);
+        }else if(sspn21.equals("ทำค่อนข้างบ่อย")){
+            sspn21 = "2";
+            spn21 = (TextView) findViewById(R.id.thass21Choice3);
+        }else{
+            sspn21 = "3";
+            spn21 = (TextView) findViewById(R.id.thass21Choice4);
+        }
+
+        if(sspn22.equals("ไม่เคยทำ")){
+            sspn22 = "0";
+            spn22 = (TextView) findViewById(R.id.thass22Choice1);
+        }else if(sspn22.equals("นานๆทำที")){
+            sspn22 = "1";
+            spn22 = (TextView) findViewById(R.id.thass22Choice2);
+        }else if(sspn22.equals("ทำค่อนข้างบ่อย")){
+            sspn22 = "2";
+            spn22 = (TextView) findViewById(R.id.thass22Choice3);
+        }else{
+            sspn22 = "3";
+            spn22 = (TextView) findViewById(R.id.thass22Choice4);
+        }
+
+        if(sspn23.equals("ไม่เคยทำ")){
+            sspn23 = "0";
+            spn23 = (TextView) findViewById(R.id.thass23Choice1);
+        }else if(sspn23.equals("นานๆทำที")){
+            sspn23 = "1";
+            spn23 = (TextView) findViewById(R.id.thass23Choice2);
+        }else if(sspn23.equals("ทำค่อนข้างบ่อย")){
+            sspn23 = "2";
+            spn23 = (TextView) findViewById(R.id.thass23Choice3);
+        }else{
+            sspn23 = "3";
+            spn23 = (TextView) findViewById(R.id.thass23Choice4);
+        }
+
+        if(sspn24.equals("ไม่เคยทำ")){
+            sspn24 = "0";
+            spn24 = (TextView) findViewById(R.id.thass24Choice1);
+        }else if(sspn24.equals("นานๆทำที")){
+            sspn24 = "1";
+            spn24 = (TextView) findViewById(R.id.thass24Choice2);
+        }else if(sspn24.equals("ทำค่อนข้างบ่อย")){
+            sspn24 = "2";
+            spn24 = (TextView) findViewById(R.id.thass24Choice3);
+        }else{
+            sspn24 = "3";
+            spn24 = (TextView) findViewById(R.id.thass24Choice4);
+        }
+
+        if(sspn25.equals("ไม่เคยทำ")){
+            sspn25 = "0";
+            spn25 = (TextView) findViewById(R.id.thass25Choice1);
+        }else if(sspn25.equals("นานๆทำที")){
+            sspn25 = "1";
+            spn25 = (TextView) findViewById(R.id.thass25Choice2);
+        }else if(sspn25.equals("ทำค่อนข้างบ่อย")){
+            sspn25 = "2";
+            spn25 = (TextView) findViewById(R.id.thass25Choice3);
+        }else{
+            sspn25 = "3";
+            spn25 = (TextView) findViewById(R.id.thass25Choice4);
+        }
+
+        if(sspn26.equals("ไม่เคยทำ")){
+            sspn26 = "0";
+            spn26 = (TextView) findViewById(R.id.thass26Choice1);
+        }else if(sspn26.equals("นานๆทำที")){
+            sspn26 = "1";
+            spn26 = (TextView) findViewById(R.id.thass26Choice2);
+        }else if(sspn26.equals("ทำค่อนข้างบ่อย")){
+            sspn26 = "2";
+            spn26 = (TextView) findViewById(R.id.thass26Choice3);
+        }else{
+            sspn26 = "3";
+            spn26 = (TextView) findViewById(R.id.thass26Choice4);
+        }
+
+        if(sspn27.equals("ไม่เคยทำ")){
+            sspn27 = "0";
+            spn27 = (TextView) findViewById(R.id.thass27Choice1);
+        }else if(sspn27.equals("นานๆทำที")){
+            sspn27 = "1";
+            spn27 = (TextView) findViewById(R.id.thass27Choice2);
+        }else if(sspn27.equals("ทำค่อนข้างบ่อย")){
+            sspn27 = "2";
+            spn27 = (TextView) findViewById(R.id.thass27Choice3);
+        }else{
+            sspn27 = "3";
+            spn27 = (TextView) findViewById(R.id.thass27Choice4);
+        }
+
+        if(sspn28.equals("ไม่เคยทำ")){
+            sspn28 = "0";
+            spn28 = (TextView) findViewById(R.id.thass28Choice1);
+        }else if(sspn28.equals("นานๆทำที")){
+            sspn28 = "1";
+            spn28 = (TextView) findViewById(R.id.thass28Choice2);
+        }else if(sspn28.equals("ทำค่อนข้างบ่อย")){
+            sspn28 = "2";
+            spn28 = (TextView) findViewById(R.id.thass28Choice3);
+        }else{
+            sspn28 = "3";
+            spn28 = (TextView) findViewById(R.id.thass28Choice4);
+        }
+
+        if(sspn29.equals("ไม่เคยทำ")){
+            sspn29 = "0";
+            spn29 = (TextView) findViewById(R.id.thass29Choice1);
+        }else if(sspn29.equals("นานๆทำที")){
+            sspn29 = "1";
+            spn29 = (TextView) findViewById(R.id.thass29Choice2);
+        }else if(sspn29.equals("ทำค่อนข้างบ่อย")){
+            sspn29 = "2";
+            spn29 = (TextView) findViewById(R.id.thass29Choice3);
+        }else{
+            sspn29 = "3";
+            spn29 = (TextView) findViewById(R.id.thass29Choice4);
+        }
+
+        if(sspn30.equals("ไม่เคยทำ")){
+            sspn30 = "0";
+            spn30 = (TextView) findViewById(R.id.thass30Choice1);
+        }else if(sspn30.equals("นานๆทำที")){
+            sspn30 = "1";
+            spn30 = (TextView) findViewById(R.id.thass30Choice2);
+        }else if(sspn30.equals("ทำค่อนข้างบ่อย")){
+            sspn30 = "2";
+            spn30 = (TextView) findViewById(R.id.thass30Choice3);
+        }else{
+            sspn30 = "3";
+            spn30 = (TextView) findViewById(R.id.thass30Choice4);
+        }
+
+        spn.setText("/");
+        spn2.setText("/");
+        spn3.setText("/");
+        spn4.setText("/");
+        spn5.setText("/");
+        spn6.setText("/");
+        spn7.setText("/");
+        spn8.setText("/");
+        spn9.setText("/");
+        spn10.setText("/");
+        spn11.setText("/");
+        spn12.setText("/");
+        spn13.setText("/");
+        spn14.setText("/");
+        spn15.setText("/");
+        spn16.setText("/");
+        spn17.setText("/");
+        spn18.setText("/");
+        spn19.setText("/");
+        spn20.setText("/");
+        spn21.setText("/");
+        spn22.setText("/");
+        spn23.setText("/");
+        spn24.setText("/");
+        spn25.setText("/");
+        spn26.setText("/");
+        spn23.setText("/");
+        spn24.setText("/");
+        spn25.setText("/");
+        spn26.setText("/");
+        spn27.setText("/");
+        spn28.setText("/");
+        spn29.setText("/");
+        spn30.setText("/");
     }
-    private void analyzeRisk() {
+    /*private void analyzeRisk() {
         if(risk1Int>=51&&risk1Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
             textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
 
@@ -168,7 +622,7 @@ public class riskThassActivity extends AppCompatActivity {
 
 
         textView2.setText(date);
-    }
+    }*/
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");

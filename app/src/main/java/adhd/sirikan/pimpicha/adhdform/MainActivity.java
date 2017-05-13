@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }else{
                 //pass fail
-                Intent intent = new Intent(MainActivity.this,ServiceActivity.class);
+                Intent intent = new Intent(MainActivity.this,AfterLoginActivity.class);
                 intent.putExtra("Login", loginStrings);
                 startActivity(intent);
                 finish(); // protect back login

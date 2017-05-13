@@ -74,7 +74,7 @@ public class PDF3Activity extends AppCompatActivity {
     }
     public List<List<String>> getData() {
         List<List<String>> data = new ArrayList<List<String>>();
-        String[] tableTitleList = {"คำถาม", "คำตอบ"," "," "," "};
+        String[] tableTitleList = {"คำถาม", "0","1","2"};
         data.add(Arrays.asList(tableTitleList));
 
 
@@ -85,22 +85,17 @@ public class PDF3Activity extends AppCompatActivity {
                 dataLine.add("      /");
                 dataLine.add(" ");
                 dataLine.add(" ");
-                dataLine.add(" ");
+
             }else if(arrAns[j].equals("1")){
                 dataLine.add(" ");
                 dataLine.add("      /");
                 dataLine.add(" ");
-                dataLine.add(" ");
+
             }else if(arrAns[j].equals("2")){
                 dataLine.add(" ");
                 dataLine.add(" ");
                 dataLine.add("      /");
-                dataLine.add(" ");
-            }else if(arrAns[j].equals("3")){
-                dataLine.add(" ");
-                dataLine.add(" ");
-                dataLine.add(" ");
-                dataLine.add("      /");
+
             }
 
         }
@@ -276,8 +271,8 @@ public class PDF3Activity extends AppCompatActivity {
 
 
 
-            PdfPTable table = new PdfPTable(5);
-            table.setWidths(new int[]{3, 1,1,1,1});
+            PdfPTable table = new PdfPTable(4);
+            table.setWidths(new int[]{3, 1,1,1});
             table.setWidthPercentage(100);
 
 
