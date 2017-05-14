@@ -44,15 +44,52 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:background="@drawable/bg1"
                     android:id="@+id/tabAfter1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:orientation="vertical">
-                    <Button
-                        android:id="@+id/tesDetail"
+                    <LinearLayout
+
+                        android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp" />
+                        android:layout_height="160dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:src="@drawable/txtbox1"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/nurse"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Button
+                                android:id="@+id/tesDetail"
+                                android:text="ทำแบบประเมินเด็กสมาธิสั้น"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="40dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
 
 
                 </LinearLayout>
@@ -65,10 +102,12 @@
                     android:orientation="vertical">
 
                     <Button
+                        android:text="ความเสี่ยงด้านอาการซนวู่วาม"
                         android:id="@+id/graphDetail"
                         android:layout_width="match_parent"
                         android:layout_height="50dp" />
                     <Button
+                        android:text="ความเสี่ยงด้านอาการขาดสมาธิ"
                         android:id="@+id/graphDetail2"
                         android:layout_width="match_parent"
                         android:layout_height="50dp" />

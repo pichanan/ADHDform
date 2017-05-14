@@ -35,7 +35,6 @@
         android:layout_height="wrap_content"
         android:stretchColumns="0,1,2"
         android:gravity="center"
-        android:layout_below="@+id/linearLayout2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 

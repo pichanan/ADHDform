@@ -1,6 +1,8 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +20,13 @@ public class DeleteActivity extends AppCompatActivity {
     private String[] loginString;
     private String tag = "31MarchV2";
     Button button;
+    int tmpPosition;
+    String tmpIdStrings ;
+    String tmpNameChildStrings ;
+    String tmpUserString ;
+    String tmpGenderStrings ;
+     String tmpAgeStrings ;
+    String tmpNameChild;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,13 +87,15 @@ public class DeleteActivity extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent intent = new Intent(DeleteActivity.this, DetailActivity.class);
-                    intent.putExtra("Login", loginString);
-                    intent.putExtra("tmpIndex", idStrings[position]);
-                    intent.putExtra("gender", genderStrings[position]);
-                    intent.putExtra("age", ageStrings[position]);
-                    Log.d("16AprilV1", "GEN  ==> " +genderStrings[position] );
-                    startActivity(intent);
+                   //ALERT
+
+                    tmpPosition = position;
+                    tmpIdStrings = idStrings[tmpPosition];
+                    tmpGenderStrings = idStrings[tmpPosition];
+                    tmpAgeStrings = ageStrings[tmpPosition];
+                    tmpNameChild = nameChildStrings[position];
+                    alertMessage();
+
                     // ไม่ต้อง หยุด เพราะจะให้ย้อนกลับได้
                 }
 
@@ -100,5 +111,33 @@ public class DeleteActivity extends AppCompatActivity {
             Log.d(tag, "e createListView ==>" + e.toString());
         }
 
+    }
+
+    public void alertMessage() {
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) { case DialogInterface.BUTTON_POSITIVE:
+                    // Yes button clicked
+                    Intent intent = new Intent(DeleteActivity.this, DeleteDoneActivity.class);
+                    intent.putExtra("Login", loginString);
+                    intent.putExtra("tmpIndex", tmpIdStrings);
+                    intent.putExtra("gender", tmpGenderStrings);
+                    intent.putExtra("age", tmpAgeStrings);
+                    startActivity(intent);
+
+                    break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        // No button clicked
+                        // do nothing
+                        Toast.makeText(DeleteActivity.this, "No Clicked",
+                                Toast.LENGTH_LONG).show();
+                        break;
+                }
+            }
+        };
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("คุณกำลังจะลบ " + tmpNameChild +" ใช่หรือไม่")
+                .setPositiveButton("ตกลง", dialogClickListener)
+                .setNegativeButton("ไม่", dialogClickListener).show();
     }
 }

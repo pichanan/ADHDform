@@ -31,6 +31,8 @@ public class MyConstant {
     private String urlGetTestWhereID2 = "http://adhdpj.com/app/getTestWhereID2.php";
     private String urlGetTestWhereID3 = "http://adhdpj.com/app/getTestWhereID3.php";
 
+    private String urlGetDeleteChild = "http://adhdpj.com/app/deleteChild.php";
+
 
     //ถ้าใส่ตารางเพิ่มเข้อมูลเด็กต้องมาใส่ตรงนี้ด้วย
     private String[] columnUser = new String[]{"id", "User", "Password", "Type"};
@@ -51,6 +53,10 @@ public class MyConstant {
     private String passwordString = "Pimpluempj402";
     private int portAnInt = 21;
 
+
+    public String getUrlGetDeleteChild() {
+        return urlGetDeleteChild;
+    }
 
     public String getUrlGetTestWhereID() {
         return urlGetTestWhereID;

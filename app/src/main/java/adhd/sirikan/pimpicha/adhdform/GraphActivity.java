@@ -32,10 +32,10 @@ public class GraphActivity extends AppCompatActivity { // SNAP
 
         //risk1
         createLineGraphRed1("0","risk1",colorLineInts[0]);// snap risk1 teacher
-        createLineGraphBlue1("0","risk1",colorLineInts[1]);//thass risk1 teacher
+        createLineGraphBlue1("0","risk2",colorLineInts[1]);//thass risk1 teacher
        //*risk2
         createLineGraphRed2("0","risk2",colorLineInts[0]);// snap risk2 teacher
-        createLineGraphBlue2("0","risk2",colorLineInts[1]);//thass risk2 teacher
+        createLineGraphBlue2("0","risk1",colorLineInts[1]);//thass risk2 teacher
 
         calCorre1();
         calCorre2();
