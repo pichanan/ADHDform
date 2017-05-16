@@ -95,5 +95,17 @@
         android:text="@string/headApp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/compare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="44dp"
+        android:text="Button" />
+
 
 </RelativeLayout>

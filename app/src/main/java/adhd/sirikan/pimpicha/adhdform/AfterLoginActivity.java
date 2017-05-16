@@ -54,22 +54,22 @@ public class AfterLoginActivity extends AppCompatActivity {
         host.setup();
 
         //Tab 1
-        TabHost.TabSpec spec = host.newTabSpec("Tab One");
+        TabHost.TabSpec spec = host.newTabSpec("สมาธิสั้นคืออะไร?");
         spec.setContent(R.id.tabAfter1);
-        spec.setIndicator("Tab One");
+        spec.setIndicator("สมาธิสั้นคืออะไร?");
         host.addTab(spec);
 
         //Tab 2
-        spec = host.newTabSpec("Tab Two");
+        spec = host.newTabSpec("สถิติผลการทำแบบทดสอบ");
         spec.setContent(R.id.tabAfter2);
-        spec.setIndicator("Tab Two");
+        spec.setIndicator("สถิติผลการทำแบบทดสอบ");
 
         host.addTab(spec);
 
         //Tab 3
-        spec = host.newTabSpec("Tab Three");
+        spec = host.newTabSpec("แบบทดสอบสมาธิสั้นในเด็ก");
         spec.setContent(R.id.tabAfter3);
-        spec.setIndicator("Tab Three");
+        spec.setIndicator("แบบทดสอบสมาธิสั้นในเด็ก");
         host.addTab(spec);
     }
 

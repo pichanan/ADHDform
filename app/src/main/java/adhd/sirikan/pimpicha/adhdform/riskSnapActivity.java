@@ -89,280 +89,369 @@ public class riskSnapActivity extends AppCompatActivity {
 
 
     private void showText() {
-        if(sspn.equals("ไม่จริง")){
-            sspn = "0";
-            spn = (TextView) findViewById(R.id.sdq1Choice1);
-        }else if(sspn.equals("จริงบางครั้ง")){
-            sspn = "1";
-            spn = (TextView) findViewById(R.id.sdq1Choice2);
-        }else if(sspn.equals("จริง")){
-            sspn = "2";
-            spn = (TextView) findViewById(R.id.sdq1Choice3);
+        if(sspn.equals("ไม่เลย")){
+            sspn = "ไม่เลย";
+            spn = (TextView) findViewById(R.id.snap1Choice1);
+        }else if(sspn.equals("เล็กน้อย")){
+            sspn = "เล็กน้อย";
+            spn = (TextView) findViewById(R.id.snap1Choice2);
+        }else if(sspn.equals("ค่อนข้างมาก")){
+            sspn = "ค่อนข้างมาก";
+            spn = (TextView) findViewById(R.id.snap1Choice3);
+        }else{
+            sspn = "มาก";
+            spn = (TextView) findViewById(R.id.snap1Choice4);
         }
 
 
-        if(sspn2.equals("ไม่จริง")){
-            sspn2 = "0";
-            spn2 = (TextView) findViewById(R.id.sdq2Choice1);
-        }else if(sspn2.equals("จริงบางครั้ง")){
-            sspn2 = "1";
-            spn2 = (TextView) findViewById(R.id.sdq2Choice2);
-        }else if(sspn2.equals("จริง")){
-            sspn2 = "2";
-            spn2 = (TextView) findViewById(R.id.sdq2Choice3);
+        if(sspn2.equals("ไม่เลย")){
+            sspn2 = "ไม่เลย";
+            spn2 = (TextView) findViewById(R.id.snap2Choice1);
+        }else if(sspn2.equals("เล็กน้อย")){
+            sspn2 = "เล็กน้อย";
+            spn2 = (TextView) findViewById(R.id.snap2Choice2);
+        }else if(sspn2.equals("ค่อนข้างมาก")){
+            sspn2 = "ค่อนข้างมาก";
+            spn2 = (TextView) findViewById(R.id.snap2Choice3);
+        }else{
+            sspn2 = "มาก";
+            spn2 = (TextView) findViewById(R.id.snap2Choice4);
         }
 
-        if(sspn3.equals("ไม่จริง")){
-            sspn3 = "0";
-            spn3 = (TextView) findViewById(R.id.sdq3Choice1);
-        }else if(sspn3.equals("จริงบางครั้ง")){
-            sspn3 = "1";
-            spn3 = (TextView) findViewById(R.id.sdq3Choice2);
-        }else if(sspn3.equals("จริง")){
-            sspn3 = "2";
-            spn3 = (TextView) findViewById(R.id.sdq3Choice3);
+        if(sspn3.equals("ไม่เลย")){
+            sspn3 = "ไม่เลย";
+            spn3 = (TextView) findViewById(R.id.snap3Choice1);
+        }else if(sspn3.equals("เล็กน้อย")){
+            sspn3 = "เล็กน้อย";
+            spn3 = (TextView) findViewById(R.id.snap3Choice2);
+        }else if(sspn3.equals("ค่อนข้างมาก")){
+            sspn3 = "ค่อนข้างมาก";
+            spn3 = (TextView) findViewById(R.id.snap3Choice3);
+        }else{
+            sspn3 = "มาก";
+            spn3 = (TextView) findViewById(R.id.snap3Choice4);
         }
 
-        if(sspn4.equals("ไม่จริง")){
-            sspn4 = "0";
-            spn4 = (TextView) findViewById(R.id.sdq4Choice1);
-        }else if(sspn4.equals("จริงบางครั้ง")){
-            sspn4 = "1";
-            spn4 = (TextView) findViewById(R.id.sdq4Choice2);
-        }else if(sspn4.equals("จริง")){
-            sspn4 = "2";
-            spn4 = (TextView) findViewById(R.id.sdq4Choice3);
+        if(sspn4.equals("ไม่เลย")){
+            sspn4 = "ไม่เลย";
+            spn4 = (TextView) findViewById(R.id.snap4Choice1);
+        }else if(sspn4.equals("เล็กน้อย")){
+            sspn4 = "เล็กน้อย";
+            spn4 = (TextView) findViewById(R.id.snap4Choice2);
+        }else if(sspn4.equals("ค่อนข้างมาก")){
+            sspn4 = "ค่อนข้างมาก";
+            spn4 = (TextView) findViewById(R.id.snap4Choice3);
+        }else{
+            sspn4 = "มาก";
+            spn4 = (TextView) findViewById(R.id.snap4Choice4);
         }
 
-        if(sspn5.equals("ไม่จริง")){
-            sspn5 = "0";
-            spn5 = (TextView) findViewById(R.id.sdq5Choice1);
-        }else if(sspn5.equals("จริงบางครั้ง")){
-            sspn5 = "1";
-            spn5 = (TextView) findViewById(R.id.sdq5Choice2);
-        }else if(sspn5.equals("จริง")){
-            sspn5 = "2";
-            spn5 = (TextView) findViewById(R.id.sdq5Choice3);
+        if(sspn5.equals("ไม่เลย")){
+            sspn5 = "ไม่เลย";
+            spn5 = (TextView) findViewById(R.id.snap5Choice1);
+        }else if(sspn5.equals("เล็กน้อย")){
+            sspn5 = "เล็กน้อย";
+            spn5 = (TextView) findViewById(R.id.snap5Choice2);
+        }else if(sspn5.equals("ค่อนข้างมาก")){
+            sspn5 = "ค่อนข้างมาก";
+            spn5 = (TextView) findViewById(R.id.snap5Choice3);
+        }else{
+            sspn5 = "มาก";
+            spn5 = (TextView) findViewById(R.id.snap5Choice4);
         }
 
-        if(sspn6.equals("ไม่จริง")){
-            sspn6 = "0";
-            spn6 = (TextView) findViewById(R.id.sdq6Choice1);
-        }else if(sspn6.equals("จริงบางครั้ง")){
-            sspn6 = "1";
-            spn6 = (TextView) findViewById(R.id.sdq6Choice2);
-        }else if(sspn6.equals("จริง")){
-            sspn6 = "2";
-            spn6 = (TextView) findViewById(R.id.sdq6Choice3);
+        if(sspn6.equals("ไม่เลย")){
+            sspn6 = "ไม่เลย";
+            spn6 = (TextView) findViewById(R.id.snap6Choice1);
+        }else if(sspn6.equals("เล็กน้อย")){
+            sspn6 = "เล็กน้อย";
+            spn6 = (TextView) findViewById(R.id.snap6Choice2);
+        }else if(sspn6.equals("ค่อนข้างมาก")){
+            sspn6 = "ค่อนข้างมาก";
+            spn6 = (TextView) findViewById(R.id.snap6Choice3);
+        }else{
+            sspn6 = "มาก";
+            spn6 = (TextView) findViewById(R.id.snap6Choice4);
         }
 
-        if(sspn7.equals("ไม่จริง")){
-            sspn7 = "0";
-            spn7 = (TextView) findViewById(R.id.sdq7Choice1);
-        }else if(sspn7.equals("จริงบางครั้ง")){
-            sspn7 = "1";
-            spn7 = (TextView) findViewById(R.id.sdq7Choice2);
-        }else if(sspn7.equals("จริง")){
-            sspn7 = "2";
-            spn7 = (TextView) findViewById(R.id.sdq7Choice3);
+        if(sspn7.equals("ไม่เลย")){
+            sspn7 = "ไม่เลย";
+            spn7 = (TextView) findViewById(R.id.snap7Choice1);
+        }else if(sspn7.equals("เล็กน้อย")){
+            sspn7 = "เล็กน้อย";
+            spn7 = (TextView) findViewById(R.id.snap7Choice2);
+        }else if(sspn7.equals("ค่อนข้างมาก")){
+            sspn7 = "ค่อนข้างมาก";
+            spn7 = (TextView) findViewById(R.id.snap7Choice3);
+        }else{
+            sspn7 = "มาก";
+            spn7 = (TextView) findViewById(R.id.snap7Choice4);
         }
 
-        if(sspn8.equals("ไม่จริง")){
-            sspn8 = "0";
-            spn8 = (TextView) findViewById(R.id.sdq8Choice1);
-        }else if(sspn8.equals("จริงบางครั้ง")){
-            sspn8 = "1";
-            spn8 = (TextView) findViewById(R.id.sdq8Choice2);
-        }else if(sspn8.equals("จริง")){
-            sspn8 = "2";
-            spn8 = (TextView) findViewById(R.id.sdq8Choice3);
+        if(sspn8.equals("ไม่เลย")){
+            sspn8 = "ไม่เลย";
+            spn8 = (TextView) findViewById(R.id.snap8Choice1);
+        }else if(sspn8.equals("เล็กน้อย")){
+            sspn8 = "เล็กน้อย";
+            spn8 = (TextView) findViewById(R.id.snap8Choice2);
+        }else if(sspn8.equals("ค่อนข้างมาก")){
+            sspn8 = "ค่อนข้างมาก";
+            spn8 = (TextView) findViewById(R.id.snap8Choice3);
+        }else{
+            sspn8 = "มาก";
+            spn8 = (TextView) findViewById(R.id.snap8Choice4);
         }
 
-        if(sspn9.equals("ไม่จริง")){
-            sspn9 = "0";
-            spn9 = (TextView) findViewById(R.id.sdq9Choice1);
-        }else if(sspn9.equals("จริงบางครั้ง")){
-            sspn9 = "1";
-            spn9 = (TextView) findViewById(R.id.sdq9Choice2);
-        }else if(sspn9.equals("จริง")){
-            sspn9 = "2";
-            spn9 = (TextView) findViewById(R.id.sdq9Choice3);
+        if(sspn9.equals("ไม่เลย")){
+            sspn9 = "ไม่เลย";
+            spn9 = (TextView) findViewById(R.id.snap9Choice1);
+        }else if(sspn9.equals("เล็กน้อย")){
+            sspn9 = "เล็กน้อย";
+            spn9 = (TextView) findViewById(R.id.snap9Choice2);
+        }else if(sspn9.equals("ค่อนข้างมาก")){
+            sspn9 = "ค่อนข้างมาก";
+            spn9 = (TextView) findViewById(R.id.snap9Choice3);
+        }else{
+            sspn9 = "มาก";
+            spn9 = (TextView) findViewById(R.id.snap9Choice4);
         }
 
-        if(sspn10.equals("ไม่จริง")){
-            sspn10 = "0";
-            spn10 = (TextView) findViewById(R.id.sdq10Choice1);
-        }else if(sspn10.equals("จริงบางครั้ง")){
-            sspn10 = "1";
-            spn10 = (TextView) findViewById(R.id.sdq10Choice2);
-        }else if(sspn10.equals("จริง")){
-            sspn10 = "2";
-            spn10 = (TextView) findViewById(R.id.sdq10Choice3);
+        if(sspn10.equals("ไม่เลย")){
+            sspn10 = "ไม่เลย";
+            spn10 = (TextView) findViewById(R.id.snap10Choice1);
+        }else if(sspn10.equals("เล็กน้อย")){
+            sspn10 = "เล็กน้อย";
+            spn10 = (TextView) findViewById(R.id.snap10Choice2);
+        }else if(sspn10.equals("ค่อนข้างมาก")){
+            sspn10 = "ค่อนข้างมาก";
+            spn10 = (TextView) findViewById(R.id.snap10Choice3);
+        }else{
+            sspn10 = "มาก";
+            spn10 = (TextView) findViewById(R.id.snap10Choice4);
         }
 
-        if(sspn11.equals("ไม่จริง")){
-            sspn11 = "0";
-            spn11 = (TextView) findViewById(R.id.sdq11Choice1);
-        }else if(sspn11.equals("จริงบางครั้ง")){
-            sspn11 = "1";
-            spn11 = (TextView) findViewById(R.id.sdq11Choice2);
-        }else if(sspn11.equals("จริง")){
-            sspn11 = "2";
-            spn11 = (TextView) findViewById(R.id.sdq11Choice3);
+        if(sspn11.equals("ไม่เลย")){
+            sspn11 = "ไม่เลย";
+            spn11 = (TextView) findViewById(R.id.snap11Choice1);
+        }else if(sspn11.equals("เล็กน้อย")){
+            sspn11 = "เล็กน้อย";
+            spn11 = (TextView) findViewById(R.id.snap11Choice2);
+        }else if(sspn11.equals("ค่อนข้างมาก")){
+            sspn11 = "ค่อนข้างมาก";
+            spn11 = (TextView) findViewById(R.id.snap11Choice3);
+        }else{
+            sspn11 = "มาก";
+            spn11 = (TextView) findViewById(R.id.snap11Choice4);
         }
 
-        if(sspn12.equals("ไม่จริง")){
-            sspn12 = "0";
-            spn12 = (TextView) findViewById(R.id.sdq12Choice1);
-        }else if(sspn12.equals("จริงบางครั้ง")){
-            sspn12 = "1";
-            spn12 = (TextView) findViewById(R.id.sdq12Choice2);
-        }else if(sspn12.equals("จริง")){
-            sspn12 = "2";
-            spn12 = (TextView) findViewById(R.id.sdq12Choice3);
+        if(sspn2.equals("ไม่เลย")){
+            sspn12 = "ไม่เลย";
+            spn12 = (TextView) findViewById(R.id.snap12Choice1);
+        }else if(sspn2.equals("เล็กน้อย")){
+            sspn12 = "เล็กน้อย";
+            spn12 = (TextView) findViewById(R.id.snap12Choice2);
+        }else if(sspn2.equals("ค่อนข้างมาก")){
+            sspn12 = "ค่อนข้างมาก";
+            spn12 = (TextView) findViewById(R.id.snap12Choice3);
+        }else{
+            sspn12 = "มาก";
+            spn12 = (TextView) findViewById(R.id.snap12Choice4);
         }
 
-        if(sspn13.equals("ไม่จริง")){
-            sspn13 = "0";
-            spn13 = (TextView) findViewById(R.id.sdq13Choice1);
-        }else if(sspn13.equals("จริงบางครั้ง")){
-            sspn13 = "1";
-            spn13 = (TextView) findViewById(R.id.sdq13Choice2);
-        }else if(sspn13.equals("จริง")){
-            sspn13 = "2";
-            spn13 = (TextView) findViewById(R.id.sdq13Choice3);
+        if(sspn3.equals("ไม่เลย")){
+            sspn13 = "ไม่เลย";
+            spn13 = (TextView) findViewById(R.id.snap13Choice1);
+        }else if(sspn3.equals("เล็กน้อย")){
+            sspn13 = "เล็กน้อย";
+            spn13 = (TextView) findViewById(R.id.snap13Choice2);
+        }else if(sspn3.equals("ค่อนข้างมาก")){
+            sspn13 = "ค่อนข้างมาก";
+            spn13 = (TextView) findViewById(R.id.snap13Choice3);
+        }else{
+            sspn13 = "มาก";
+            spn13 = (TextView) findViewById(R.id.snap13Choice4);
         }
 
-        if(sspn14.equals("ไม่จริง")){
-            sspn14 = "0";
-            spn14 = (TextView) findViewById(R.id.sdq14Choice1);
-        }else if(sspn14.equals("จริงบางครั้ง")){
-            sspn14 = "1";
-            spn14 = (TextView) findViewById(R.id.sdq14Choice2);
-        }else if(sspn14.equals("จริง")){
-            sspn14 = "2";
-            spn14 = (TextView) findViewById(R.id.sdq14Choice3);
+        if(sspn4.equals("ไม่เลย")){
+            sspn14 = "ไม่เลย";
+            spn14 = (TextView) findViewById(R.id.snap14Choice1);
+        }else if(sspn4.equals("เล็กน้อย")){
+            sspn14 = "เล็กน้อย";
+            spn14 = (TextView) findViewById(R.id.snap14Choice2);
+        }else if(sspn4.equals("ค่อนข้างมาก")){
+            sspn14 = "ค่อนข้างมาก";
+            spn14 = (TextView) findViewById(R.id.snap14Choice3);
+        }else{
+            sspn14 = "มาก";
+            spn14 = (TextView) findViewById(R.id.snap14Choice4);
         }
 
-        if(sspn15.equals("ไม่จริง")){
-            sspn15 = "0";
-            spn15 = (TextView) findViewById(R.id.sdq15Choice1);
-        }else if(sspn15.equals("จริงบางครั้ง")){
-            sspn15 = "1";
-            spn15 = (TextView) findViewById(R.id.sdq15Choice2);
-        }else if(sspn15.equals("จริง")){
-            sspn15 = "2";
-            spn15 = (TextView) findViewById(R.id.sdq15Choice3);
+        if(sspn5.equals("ไม่เลย")){
+            sspn15 = "ไม่เลย";
+            spn15 = (TextView) findViewById(R.id.snap15Choice1);
+        }else if(sspn5.equals("เล็กน้อย")){
+            sspn15 = "เล็กน้อย";
+            spn15 = (TextView) findViewById(R.id.snap15Choice2);
+        }else if(sspn5.equals("ค่อนข้างมาก")){
+            sspn15 = "ค่อนข้างมาก";
+            spn15 = (TextView) findViewById(R.id.snap15Choice3);
+        }else{
+            sspn15 = "มาก";
+            spn15 = (TextView) findViewById(R.id.snap15Choice4);
         }
 
-        if(sspn16.equals("ไม่จริง")){
-            sspn16 = "0";
-            spn16 = (TextView) findViewById(R.id.sdq16Choice1);
-        }else if(sspn16.equals("จริงบางครั้ง")){
-            sspn16 = "1";
-            spn16 = (TextView) findViewById(R.id.sdq16Choice2);
-        }else if(sspn16.equals("จริง")){
-            sspn16 = "2";
-            spn16 = (TextView) findViewById(R.id.sdq16Choice3);
+        if(sspn6.equals("ไม่เลย")){
+            sspn16 = "ไม่เลย";
+            spn16 = (TextView) findViewById(R.id.snap16Choice1);
+        }else if(sspn6.equals("เล็กน้อย")){
+            sspn16 = "เล็กน้อย";
+            spn16 = (TextView) findViewById(R.id.snap16Choice2);
+        }else if(sspn6.equals("ค่อนข้างมาก")){
+            sspn16 = "ค่อนข้างมาก";
+            spn16 = (TextView) findViewById(R.id.snap16Choice3);
+        }else{
+            sspn16 = "มาก";
+            spn16 = (TextView) findViewById(R.id.snap16Choice4);
         }
 
-        if(sspn17.equals("ไม่จริง")){
-            sspn17 = "0";
-            spn17 = (TextView) findViewById(R.id.sdq17Choice1);
-        }else if(sspn17.equals("จริงบางครั้ง")){
-            sspn17 = "1";
-            spn17 = (TextView) findViewById(R.id.sdq17Choice2);
-        }else if(sspn17.equals("จริง")){
-            sspn17 = "2";
-            spn17 = (TextView) findViewById(R.id.sdq17Choice3);
+        if(sspn7.equals("ไม่เลย")){
+            sspn17 = "ไม่เลย";
+            spn17 = (TextView) findViewById(R.id.snap17Choice1);
+        }else if(sspn7.equals("เล็กน้อย")){
+            sspn17 = "เล็กน้อย";
+            spn17 = (TextView) findViewById(R.id.snap17Choice2);
+        }else if(sspn7.equals("ค่อนข้างมาก")){
+            sspn17 = "ค่อนข้างมาก";
+            spn17 = (TextView) findViewById(R.id.snap17Choice3);
+        }else{
+            sspn17 = "มาก";
+            spn17 = (TextView) findViewById(R.id.snap17Choice4);
         }
 
-        if(sspn18.equals("ไม่จริง")){
-            sspn18 = "0";
-            spn18 = (TextView) findViewById(R.id.sdq18Choice1);
-        }else if(sspn18.equals("จริงบางครั้ง")){
-            sspn18 = "1";
-            spn18 = (TextView) findViewById(R.id.sdq18Choice2);
-        }else if(sspn18.equals("จริง")){
-            sspn18 = "2";
-            spn18 = (TextView) findViewById(R.id.sdq18Choice3);
+        if(sspn8.equals("ไม่เลย")){
+            sspn18 = "ไม่เลย";
+            spn18 = (TextView) findViewById(R.id.snap18Choice1);
+        }else if(sspn8.equals("เล็กน้อย")){
+            sspn18 = "เล็กน้อย";
+            spn18 = (TextView) findViewById(R.id.snap18Choice2);
+        }else if(sspn8.equals("ค่อนข้างมาก")){
+            sspn18 = "ค่อนข้างมาก";
+            spn18 = (TextView) findViewById(R.id.snap18Choice3);
+        }else{
+            sspn18 = "มาก";
+            spn18 = (TextView) findViewById(R.id.snap18Choice4);
         }
 
-        if(sspn19.equals("ไม่จริง")){
-            sspn19 = "0";
-            spn19 = (TextView) findViewById(R.id.sdq19Choice1);
-        }else if(sspn19.equals("จริงบางครั้ง")){
-            sspn19 = "1";
-            spn19 = (TextView) findViewById(R.id.sdq19Choice2);
-        }else if(sspn19.equals("จริง")){
-            sspn19 = "2";
-            spn19 = (TextView) findViewById(R.id.sdq19Choice3);
+        if(sspn9.equals("ไม่เลย")){
+            sspn19 = "ไม่เลย";
+            spn19 = (TextView) findViewById(R.id.snap19Choice1);
+        }else if(sspn9.equals("เล็กน้อย")){
+            sspn19 = "เล็กน้อย";
+            spn19 = (TextView) findViewById(R.id.snap19Choice2);
+        }else if(sspn9.equals("ค่อนข้างมาก")){
+            sspn19 = "ค่อนข้างมาก";
+            spn19 = (TextView) findViewById(R.id.snap19Choice3);
+        }else{
+            sspn19 = "มาก";
+            spn19 = (TextView) findViewById(R.id.snap19Choice4);
         }
 
-        if(sspn20.equals("ไม่จริง")){
-            sspn20 = "0";
-            spn20 = (TextView) findViewById(R.id.sdq20Choice1);
-        }else if(sspn20.equals("จริงบางครั้ง")){
-            sspn20 = "1";
-            spn20 = (TextView) findViewById(R.id.sdq20Choice2);
-        }else if(sspn20.equals("จริง")){
-            sspn20 = "2";
-            spn20 = (TextView) findViewById(R.id.sdq20Choice3);
+        if(sspn20.equals("ไม่เลย")){
+            sspn20 = "ไม่เลย";
+            spn20 = (TextView) findViewById(R.id.snap20Choice1);
+        }else if(sspn20.equals("เล็กน้อย")){
+            sspn20 = "เล็กน้อย";
+            spn20 = (TextView) findViewById(R.id.snap20Choice2);
+        }else if(sspn20.equals("ค่อนข้างมาก")){
+            sspn20 = "ค่อนข้างมาก";
+            spn20 = (TextView) findViewById(R.id.snap20Choice3);
+        }else{
+            sspn20 = "มาก";
+            spn20 = (TextView) findViewById(R.id.snap20Choice4);
         }
 
-        if(sspn21.equals("ไม่จริง")){
-            sspn21 = "0";
-            spn21 = (TextView) findViewById(R.id.sdq21Choice1);
-        }else if(sspn21.equals("จริงบางครั้ง")){
-            sspn21 = "1";
-            spn21 = (TextView) findViewById(R.id.sdq21Choice2);
-        }else if(sspn21.equals("จริง")){
-            sspn21 = "2";
-            spn21 = (TextView) findViewById(R.id.sdq21Choice3);
+        if(sspn21.equals("ไม่เลย")){
+            sspn21 = "ไม่เลย";
+            spn21 = (TextView) findViewById(R.id.snap21Choice1);
+        }else if(sspn21.equals("เล็กน้อย")){
+            sspn21 = "เล็กน้อย";
+            spn21 = (TextView) findViewById(R.id.snap21Choice2);
+        }else if(sspn21.equals("ค่อนข้างมาก")){
+            sspn21 = "ค่อนข้างมาก";
+            spn21 = (TextView) findViewById(R.id.snap21Choice3);
+        }else{
+            sspn21 = "มาก";
+            spn21 = (TextView) findViewById(R.id.snap21Choice4);
         }
 
-        if(sspn22.equals("ไม่จริง")){
-            sspn22 = "0";
-            spn22 = (TextView) findViewById(R.id.sdq22Choice1);
-        }else if(sspn22.equals("จริงบางครั้ง")){
-            sspn22 = "1";
-            spn22 = (TextView) findViewById(R.id.sdq22Choice2);
-        }else if(sspn22.equals("จริง")){
-            sspn22 = "2";
-            spn22 = (TextView) findViewById(R.id.sdq22Choice3);
+        if(sspn22.equals("ไม่เลย")){
+            sspn22 = "ไม่เลย";
+            spn22 = (TextView) findViewById(R.id.snap22Choice1);
+        }else if(sspn22.equals("เล็กน้อย")){
+            sspn22 = "เล็กน้อย";
+            spn22 = (TextView) findViewById(R.id.snap22Choice2);
+        }else if(sspn22.equals("ค่อนข้างมาก")){
+            sspn22 = "ค่อนข้างมาก";
+            spn22 = (TextView) findViewById(R.id.snap22Choice3);
+        }else{
+            sspn22 = "มาก";
+            spn22 = (TextView) findViewById(R.id.snap22Choice4);
         }
 
-        if(sspn23.equals("ไม่จริง")){
-            sspn23 = "0";
-            spn23 = (TextView) findViewById(R.id.sdq23Choice1);
-        }else if(sspn23.equals("จริงบางครั้ง")){
-            sspn23 = "1";
-            spn23 = (TextView) findViewById(R.id.sdq23Choice2);
-        }else if(sspn23.equals("จริง")){
-            sspn23 = "2";
-            spn23 = (TextView) findViewById(R.id.sdq23Choice3);
+        if(sspn23.equals("ไม่เลย")){
+            sspn23 = "ไม่เลย";
+            spn23 = (TextView) findViewById(R.id.snap23Choice1);
+        }else if(sspn23.equals("เล็กน้อย")){
+            sspn23 = "เล็กน้อย";
+            spn23 = (TextView) findViewById(R.id.snap23Choice2);
+        }else if(sspn23.equals("ค่อนข้างมาก")){
+            sspn23 = "ค่อนข้างมาก";
+            spn23 = (TextView) findViewById(R.id.snap23Choice3);
+        }else{
+            sspn23 = "มาก";
+            spn23 = (TextView) findViewById(R.id.snap23Choice4);
         }
 
-        if(sspn24.equals("ไม่จริง")){
-            sspn24 = "0";
-            spn24 = (TextView) findViewById(R.id.sdq24Choice1);
-        }else if(sspn24.equals("จริงบางครั้ง")){
-            sspn24 = "1";
-            spn24 = (TextView) findViewById(R.id.sdq24Choice2);
-        }else if(sspn24.equals("จริง")){
-            sspn24 = "2";
-            spn24 = (TextView) findViewById(R.id.sdq24Choice3);
+        if(sspn24.equals("ไม่เลย")){
+            sspn24 = "ไม่เลย";
+            spn24 = (TextView) findViewById(R.id.snap24Choice1);
+        }else if(sspn24.equals("เล็กน้อย")){
+            sspn24 = "เล็กน้อย";
+            spn24 = (TextView) findViewById(R.id.snap24Choice2);
+        }else if(sspn24.equals("ค่อนข้างมาก")){
+            sspn24 = "ค่อนข้างมาก";
+            spn24 = (TextView) findViewById(R.id.snap24Choice3);
+        }else{
+            sspn24 = "มาก";
+            spn24 = (TextView) findViewById(R.id.snap24Choice4);
         }
 
-        if(sspn25.equals("ไม่จริง")){
-            sspn25 = "0";
-            spn25 = (TextView) findViewById(R.id.sdq25Choice1);
-        }else if(sspn25.equals("จริงบางครั้ง")){
-            sspn25 = "1";
-            spn25 = (TextView) findViewById(R.id.sdq25Choice2);
-        }else if(sspn25.equals("จริง")){
-            sspn25 = "2";
-            spn25 = (TextView) findViewById(R.id.sdq25Choice3);
+        if(sspn25.equals("ไม่เลย")){
+            sspn25 = "ไม่เลย";
+            spn25 = (TextView) findViewById(R.id.snap25Choice1);
+        }else if(sspn25.equals("เล็กน้อย")){
+            sspn25 = "เล็กน้อย";
+            spn25 = (TextView) findViewById(R.id.snap25Choice2);
+        }else if(sspn25.equals("ค่อนข้างมาก")){
+            sspn25 = "ค่อนข้างมาก";
+            spn25 = (TextView) findViewById(R.id.snap25Choice3);
+        }else{
+            sspn25 = "มาก";
+            spn25 = (TextView) findViewById(R.id.snap25Choice4);
+        }
+
+        if(sspn26.equals("ไม่เลย")){
+            sspn26 = "ไม่เลย";
+            spn26 = (TextView) findViewById(R.id.snap26Choice1);
+        }else if(sspn26.equals("เล็กน้อย")){
+            sspn26 = "เล็กน้อย";
+            spn26 = (TextView) findViewById(R.id.snap26Choice2);
+        }else if(sspn26.equals("ค่อนข้างมาก")){
+            sspn26 = "ค่อนข้างมาก";
+            spn26 = (TextView) findViewById(R.id.snap26Choice3);
+        }else{
+            sspn26 = "มาก";
+            spn26 = (TextView) findViewById(R.id.snap26Choice4);
         }
 
 
@@ -393,6 +482,7 @@ public class riskSnapActivity extends AppCompatActivity {
         spn23.setText("/");
         spn24.setText("/");
         spn25.setText("/");
+        spn26.setText("/");
 
     }
 
@@ -402,79 +492,43 @@ public class riskSnapActivity extends AppCompatActivity {
         if(loginString[3]=="1"){//ผปค
             if(risk1Int>16){//1
                 textView.setText("มีความเสี่ยงด้านสมาธิ");
-
-
             }else if(risk2Int>13){//2
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-
-
             }else if(risk3Int>15){//3
                 textView.setText("มีความเสี่ยงด้านดื้อ ต่อต้าน");
-
-
             }else if(risk1Int>16&&risk2Int>13){ // 1-2
                 textView.setText("มีความเสี่ยงด้านสมาธิ และ ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-
             }else if(risk1Int>16&&risk3Int>15){//1-3
                 textView.setText("มีความเสี่ยงด้านสมาธิ และด้านดื้อ ต่อต้าน");
-
             }else if(risk2Int>13&&risk3Int>15){//2-3
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-
             }else if(risk1Int>16&&risk2Int>13&&risk3Int>15){//1 -2 -3
                 textView.setText("มีความเสี่ยงด้านสมาธิ , ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-
-
             }else{ // less all
                 textView.setText("ไม่มีความเสี่ยง");
-
             }
-
             // ครู
         }else{
-
             if(risk1Int>23){//1
                 textView.setText("มีความเสี่ยงด้านสมาธิ");
-
-
-
             }else if(risk2Int>16){//2
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-
-
-
             }else if(risk3Int>11){//3
                 textView.setText("มีความเสี่ยงด้านดื้อ ต่อต้าน");
-
-
-
             }else if(risk1Int>23&&risk2Int>16){ // 1-2
                 textView.setText("มีความเสี่ยงด้านสมาธิ และ ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-
-
             }else if(risk1Int>23&&risk3Int>11){//1-3
                 textView.setText("มีความเสี่ยงด้านสมาธิ และด้านดื้อ ต่อต้าน");
-
-
             }else if(risk2Int>16&&risk3Int>11){//2-3
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-
-
             }else if(risk1Int>23&&risk2Int>16&&risk3Int>11){//1 -2 -3
                 textView.setText("มีความเสี่ยงด้านสมาธิ , ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-
             }else{ // less all
                 textView.setText("ไม่มีความเสี่ยง");
                 textView.setTextColor(Color.parseColor("#B71C1C"));
-
             }
-
         }
-
         textView2.setText(date);
-
-
-
     }*/
 
     private void getValueFromIntent() {

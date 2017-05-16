@@ -44,8 +44,38 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:background="@drawable/bg1"
                     android:id="@+id/tabAfter1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tabAfter2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <Button
+                        android:text="ความเสี่ยงด้านอาการซนวู่วาม"
+                        android:id="@+id/graphDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+                    <Button
+                        android:text="ความเสี่ยงด้านอาการขาดสมาธิ"
+                        android:id="@+id/graphDetail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabAfter3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -55,10 +85,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="160dp">
 
-                       <ImageView
-                           android:layout_width="match_parent"
-                           android:layout_height="match_parent"
-                           android:src="@drawable/txtbox1"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/txtbox1"/>
 
 
 
@@ -94,37 +124,7 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/tabAfter2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
 
-                    android:orientation="vertical">
-
-                    <Button
-                        android:text="ความเสี่ยงด้านอาการซนวู่วาม"
-                        android:id="@+id/graphDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp" />
-                    <Button
-                        android:text="ความเสี่ยงด้านอาการขาดสมาธิ"
-                        android:id="@+id/graphDetail2"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp" />
-
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tabAfter3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:orientation="vertical">
-
-
-                </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>

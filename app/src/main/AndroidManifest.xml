@@ -44,7 +44,8 @@
         <activity android:name=".PDF3Activity" />
         <activity android:name=".DeleteActivity" />
         <activity android:name=".AfterLoginActivity" />
-        <activity android:name=".DeleteDoneActivity"></activity>
+        <activity android:name=".DeleteDoneActivity" />
+        <activity android:name=".CompareActivity"></activity>
     </application>
 
 </manifest>
