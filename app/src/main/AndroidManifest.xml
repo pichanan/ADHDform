@@ -45,7 +45,8 @@
         <activity android:name=".DeleteActivity" />
         <activity android:name=".AfterLoginActivity" />
         <activity android:name=".DeleteDoneActivity" />
-        <activity android:name=".CompareActivity"></activity>
+        <activity android:name=".CompareActivity" />
+        <activity android:name=".GraphCompareActivity"></activity>
     </application>
 
 </manifest>

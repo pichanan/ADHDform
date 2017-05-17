@@ -119,10 +119,13 @@
     <string name="headApp">แอปพลิเคชันประเมินความเสี่ยงสมาธิสั้นเบื้อต้นในเด็ก อายุ 6 - 18 ปี สำหรับครูปละผู้ปกครอง</string>
 
 
-         <string name="hello_world">Hello world!</string>
-        <string name="menu_settings">Settings</string>
-        <string name="title_activity_main">AChartEngineBarChart</string>
-        <string name="str_btn_chart">Income vs Expense Bar Chart</string>
+    <string name="hello_world">Hello world!</string>
+        
+    <string name="menu_settings">Settings</string>
+        
+    <string name="title_activity_main">AChartEngineBarChart</string>
+        
+    <string name="str_btn_chart">Income vs Expense Bar Chart</string>
 
 
 </resources>

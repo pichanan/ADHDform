@@ -598,9 +598,9 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
-                intent.putExtra("risk1", (int)risk1);
-                intent.putExtra("risk2",(int) risk2);
-                intent.putExtra("risk3",(int) risk3);
+                intent.putExtra("risk1", risk1);
+                intent.putExtra("risk2",risk2);
+                intent.putExtra("risk3",risk3);
                 intent.putExtra("ans1",tmpspn);
                 intent.putExtra("ans2",tmpspn2);
                 intent.putExtra("ans3",tmpspn3);
@@ -628,7 +628,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("ans25",tmpspn25);
                 intent.putExtra("ans26",tmpspn26);
                 intent.putExtra("date",currentDateString);
-
+                Log.d(tag, "Put from snap ==>" + risk1 + " " + risk2 + " " + risk3);
                 startActivity(intent);
 
             } else {

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class riskSnapActivity extends AppCompatActivity {
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     int risk1Int,risk2Int,risk3Int ;
     ImageView ImageViewPDF;
+    Button button;
     String a = "testerrrrrrr";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,25 @@ public class riskSnapActivity extends AppCompatActivity {
         // analyzeRisk();
         showText();
         ImageViewPDF = (ImageView) findViewById(R.id.showRiskSnapPdf);
+        button = (Button) findViewById(R.id.btnCompare);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskSnapActivity.this, CompareActivity.class);
+                intent.putExtra("risk1", risk1Int);
+                intent.putExtra("risk2", risk2Int);
+                intent.putExtra("risk3", risk3Int);
+                intent.putExtra("date", date);
+                intent.putExtra("idString", idString);
+                intent.putExtra("loginString", loginString);
+                intent.putExtra("genderString", genderString);
+                intent.putExtra("ageString", ageString);
+                Log.d(tag, "Put from Risksnap ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
+
+
+                startActivity(intent);
+            }
+        });
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

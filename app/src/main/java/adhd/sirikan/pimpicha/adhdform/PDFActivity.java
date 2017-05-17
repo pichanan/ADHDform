@@ -103,22 +103,22 @@ public class PDFActivity extends AppCompatActivity {
             List<String> dataLine = new ArrayList<String>();
             for (int j = 0; j < 26; j++) {
                 dataLine.add(question[j]);
-                if(arrAns[j].equals("0")){
+                if(arrAns[j].equals("ไม่เลย")){
                     dataLine.add("      /");
                     dataLine.add(" ");
                     dataLine.add(" ");
                     dataLine.add(" ");
-                }else if(arrAns[j].equals("1")){
+                }else if(arrAns[j].equals("เล็กน้อย")){
                     dataLine.add(" ");
                     dataLine.add("      /");
                     dataLine.add(" ");
                     dataLine.add(" ");
-                }else if(arrAns[j].equals("2")){
+                }else if(arrAns[j].equals("ค่อนข้างมาก")){
                     dataLine.add(" ");
                     dataLine.add(" ");
                     dataLine.add("      /");
                     dataLine.add(" ");
-                }else if(arrAns[j].equals("3")){
+                }else if(arrAns[j].equals("มาก")){
                     dataLine.add(" ");
                     dataLine.add(" ");
                     dataLine.add(" ");
