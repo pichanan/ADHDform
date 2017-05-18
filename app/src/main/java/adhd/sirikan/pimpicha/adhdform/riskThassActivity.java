@@ -3,7 +3,9 @@ package adhd.sirikan.pimpicha.adhdform;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +18,8 @@ public class riskThassActivity extends AppCompatActivity {
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26
             , sspn27, sspn28, sspn29, sspn30,date;
     ImageView ImageViewPDF;
+    Button button;
+    String tag = "ThassIntent";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,7 @@ public class riskThassActivity extends AppCompatActivity {
         setContentView(R.layout.activity_risk_thass);
         textView = (TextView) findViewById(R.id.txtRiskThassShowRisk);
         textView2 = (TextView) findViewById(R.id.txtRiskThassDate);
+        button = (Button) findViewById(R.id.btnCompareThass);
         getValueFromIntent();
         //analyzeRisk();
         showText();
@@ -41,6 +46,24 @@ public class riskThassActivity extends AppCompatActivity {
 
 
 
+        });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskThassActivity.this, Compare2Activity.class);
+                intent.putExtra("risk1", risk1Int);
+                intent.putExtra("risk2", risk2Int);
+                intent.putExtra("risk3", risk3Int);
+                intent.putExtra("date", date);
+                intent.putExtra("idString", idString);
+                intent.putExtra("loginString", loginString);
+                intent.putExtra("genderString", genderString);
+                intent.putExtra("ageString", ageString);
+                Log.d(tag, "Put from Risksnap ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
+
+
+                startActivity(intent);
+            }
         });
     }
 

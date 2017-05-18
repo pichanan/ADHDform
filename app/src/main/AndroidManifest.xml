@@ -46,7 +46,11 @@
         <activity android:name=".AfterLoginActivity" />
         <activity android:name=".DeleteDoneActivity" />
         <activity android:name=".CompareActivity" />
-        <activity android:name=".GraphCompareActivity"></activity>
+        <activity android:name=".GraphCompareActivity" />
+        <activity android:name=".Compare2Activity" />
+        <activity android:name=".GraphCompare2Activity" />
+        <activity android:name=".Compare3Activity" />
+        <activity android:name=".GraphCompare3Activity"></activity>
     </application>
 
 </manifest>

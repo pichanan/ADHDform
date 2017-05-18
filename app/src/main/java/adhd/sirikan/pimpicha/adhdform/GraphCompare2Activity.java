@@ -9,18 +9,18 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 
-public class GraphCompareActivity extends AppCompatActivity {
-    int risk1Int,risk2Int,risk3Int,cpRisk1,cpRisk2, cpRisk3;
+public class GraphCompare2Activity extends AppCompatActivity {
+    int risk1Int,risk2Int,risk3Int,cpRisk1,cpRisk2,cpRisk3;
     String idString, loginString[], genderString, ageString,date;
-    String tag = "18_5";
+    String tag = "ThassIntent";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_graph_compare);
+        setContentView(R.layout.activity_graph_compare2);
         getValueFromIntent();
         Log.d(tag, "select ==>" + date +" " +  cpRisk1 +" " + cpRisk2 +" " + cpRisk3+" " + risk1Int+
                 " " + risk2Int+" " + risk3Int);
-        GraphView graph = (GraphView) findViewById(R.id.compareGraph);
+        GraphView graph = (GraphView) findViewById(R.id.compareGraphThass);
         BarGraphSeries<DataPoint> barGraphSeries;
 
         barGraphSeries = new BarGraphSeries<DataPoint>(new DataPoint[]{
@@ -52,8 +52,12 @@ public class GraphCompareActivity extends AppCompatActivity {
         });
         barGraphSeries.setColor(Color.BLUE);
         graph.addSeries(barGraphSeries);
-    }
 
+
+
+
+
+    }
     private void getValueFromIntent() {
         Bundle extras = getIntent().getExtras();
         idString = getIntent().getStringExtra("idString");
@@ -67,7 +71,7 @@ public class GraphCompareActivity extends AppCompatActivity {
         cpRisk2 = extras.getInt("cpRisk2");
         cpRisk3 = extras.getInt("cpRisk3");
         date = getIntent().getStringExtra("date");
-        Log.d(tag, "Put from Thass ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
+        Log.d(tag, "Put from snap ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
 
     }
 }

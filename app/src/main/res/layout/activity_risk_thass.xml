@@ -40,6 +40,13 @@
             android:layout_height="wrap_content"
             android:src="@drawable/pdf"
             android:id="@+id/pdfThass"/>
+
+        <Button
+            android:id="@+id/btnCompareThass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
     </LinearLayout>
     <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"

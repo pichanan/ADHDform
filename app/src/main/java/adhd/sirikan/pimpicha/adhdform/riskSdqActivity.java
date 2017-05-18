@@ -4,18 +4,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class riskSdqActivity extends AppCompatActivity {
     int riskInt;
+    String tag = "graphSDQ";
     String idString, loginString[],genderString, ageString;
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25;
     String testText = "jjjjjj",sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     ImageView ImageViewPDF;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,23 @@ public class riskSdqActivity extends AppCompatActivity {
 
 
 
+        });
+        button = (Button) findViewById(R.id.btnCompareSdq);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskSdqActivity.this, Compare3Activity.class);
+                intent.putExtra("risk1Int", riskInt);
+                intent.putExtra("date", date);
+                intent.putExtra("idString", idString);
+                intent.putExtra("loginString", loginString);
+                intent.putExtra("genderString", genderString);
+                intent.putExtra("ageString", ageString);
+                Log.d(tag, "Put from Risksnap ==>" + riskInt);
+
+
+                startActivity(intent);
+            }
         });
         showText();
     }
