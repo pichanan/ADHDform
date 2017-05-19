@@ -1,6 +1,7 @@
 package adhd.sirikan.pimpicha.adhdform;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -99,7 +100,6 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
             ChildAdapter childAdapter = new ChildAdapter(ServiceActivity.this, imageStrings,
                     nameChildStrings,countChildString);
             listView.setAdapter(childAdapter);
-
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

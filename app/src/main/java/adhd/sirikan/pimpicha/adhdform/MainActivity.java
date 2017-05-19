@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void controller() {
         textView.setOnClickListener(MainActivity.this);
         button.setOnClickListener(MainActivity.this);
-        btnCompare.setOnClickListener(MainActivity.this);
+
 
     }
 
@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         passwordEditText = (EditText) findViewById(R.id.edtpassword);
         textView = (TextView) findViewById(R.id.txtNewRegister);
         button = (Button) findViewById(R.id.btnLogin);
-        btnCompare = (Button) findViewById(R.id.compare);
     }
 
     @Override
@@ -82,10 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 checkAuthen();
             }
         }
-        if (v == btnCompare ) {
-            startActivity(new Intent(MainActivity.this, CompareActivity.class));
 
-        }
 
 
 

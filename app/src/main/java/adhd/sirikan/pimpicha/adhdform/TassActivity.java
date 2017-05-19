@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
@@ -32,6 +33,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
     private java.util.Calendar calendar;
     private String currentDateString;
+    TextView choice1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,8 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             initialSpinner();
             findCurrentDate();
             initialView();
-            button.setOnClickListener(TassActivity.this);
+
+
         }
 
     private void getValueFromIntent() {
