@@ -23,12 +23,12 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ServiceActivity" />
         <activity android:name=".AddChildActivity" />
-        <activity android:name=".SnapActivity" />
-        <activity android:name=".TassActivity" />
+        <activity android:name=".SnapActivity"  android:noHistory="true" />
+        <activity android:name=".TassActivity" android:noHistory="true" />
+        <activity android:name=".SdqActivity" android:noHistory="true" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".BeforeTestActivity" />
         <activity android:name=".TreeTestActivity" />
-        <activity android:name=".SdqActivity" />
         <activity android:name=".GraphActivity" />
         <activity android:name=".ShowTwoTable" />
         <activity android:name=".ShowChildDetail" />
@@ -51,6 +51,7 @@
         <activity android:name=".GraphCompare2Activity" />
         <activity android:name=".Compare3Activity" />
         <activity android:name=".GraphCompare3Activity"></activity>
+
     </application>
 
 </manifest>

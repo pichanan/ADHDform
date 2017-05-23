@@ -23,6 +23,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
 
     private String[] showTypeStrings = new String[]{"Teacher","Parent"};
     private String tag = "31MarchV2";
+    boolean check1 = true;
 
     @Override
 
@@ -55,6 +56,8 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     protected void onPostResume() {//**************************************
         super.onPostResume();
         createListView();
+
+
     }
 
     private void createListView() {
@@ -89,10 +92,18 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
                     genderStrings[j] = jsonObject.getString(columnChileStrings[5]);
                     ageStrings[j] = jsonObject.getString(columnChileStrings[3]);
                     j++;
+                    check1 = false;
                 }
 
 
+
             }
+            if (check1 == true) {
+                myAlert objMyAlert = new myAlert(ServiceActivity.this);
+                objMyAlert.myDialog("ไม่พบเด็ก",
+                        "กรุณาเพิ่มเด็กเพื่อทำแบบประเมิน");
+            }
+
 
             final String[] countChildString = new String[j];
             //Build ListView
@@ -108,6 +119,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
                     intent.putExtra("tmpIndex", idStrings[position]);
                     intent.putExtra("gender", genderStrings[position]);
                     intent.putExtra("age", ageStrings[position]);
+                    intent.putExtra("name", nameChildStrings[position]);
                     Log.d("16AprilV1", "GEN  ==> " +genderStrings[position] );
                     startActivity(intent);
                     // ไม่ต้อง หยุด เพราะจะให้ย้อนกลับได้
@@ -118,6 +130,9 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         } catch (Exception e) {
             Log.d(tag, "e createListView ==>" + e.toString());
         }
+
+
+
 
     }
 

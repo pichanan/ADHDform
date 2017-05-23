@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class riskSnapActivity extends AppCompatActivity {
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
-    String idString, loginString[],genderString,ageString,risk1,risk2,risk3,answerArray[];
+    String idString, loginString[],genderString,ageString,risk1,risk2,risk3,nameString;
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
@@ -21,6 +21,7 @@ public class riskSnapActivity extends AppCompatActivity {
     Button ImageViewPDF;
     Button button;
     String a = "testerrrrrrr";
+    String r1="",r2="",r3="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,7 @@ public class riskSnapActivity extends AppCompatActivity {
                 intent.putExtra("loginString", loginString);
                 intent.putExtra("genderString", genderString);
                 intent.putExtra("ageString", ageString);
+                intent.putExtra("name", nameString);
                 Log.d(tag, "Put from Risksnap ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
 
 
@@ -101,11 +103,17 @@ public class riskSnapActivity extends AppCompatActivity {
         intent.putExtra("sspn24", sspn24);
         intent.putExtra("sspn25", sspn25);
         intent.putExtra("sspn26", sspn26);
-        /*intent.putExtra("risk1", risk1Int);
+        intent.putExtra("risk1", risk1Int);
         intent.putExtra("risk2", risk2Int);
         intent.putExtra("risk3", risk3Int);
-        intent.putExtra("date", date);*/
+        intent.putExtra("date", date);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
+        intent.putExtra("Login", loginString);
+
         startActivity(intent);
+        Log.d("23_5_60", "GENDER RISK ==>" + genderString + ageString);
 
     }
 
@@ -266,13 +274,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn11 = (TextView) findViewById(R.id.snap11Choice4);
         }
 
-        if(sspn2.equals("ไม่เลย")){
+        if(sspn12.equals("ไม่เลย")){
             sspn12 = "ไม่เลย";
             spn12 = (TextView) findViewById(R.id.snap12Choice1);
-        }else if(sspn2.equals("เล็กน้อย")){
+        }else if(sspn12.equals("เล็กน้อย")){
             sspn12 = "เล็กน้อย";
             spn12 = (TextView) findViewById(R.id.snap12Choice2);
-        }else if(sspn2.equals("ค่อนข้างมาก")){
+        }else if(sspn12.equals("ค่อนข้างมาก")){
             sspn12 = "ค่อนข้างมาก";
             spn12 = (TextView) findViewById(R.id.snap12Choice3);
         }else{
@@ -280,13 +288,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn12 = (TextView) findViewById(R.id.snap12Choice4);
         }
 
-        if(sspn3.equals("ไม่เลย")){
+        if(sspn13.equals("ไม่เลย")){
             sspn13 = "ไม่เลย";
             spn13 = (TextView) findViewById(R.id.snap13Choice1);
-        }else if(sspn3.equals("เล็กน้อย")){
+        }else if(sspn13.equals("เล็กน้อย")){
             sspn13 = "เล็กน้อย";
             spn13 = (TextView) findViewById(R.id.snap13Choice2);
-        }else if(sspn3.equals("ค่อนข้างมาก")){
+        }else if(sspn13.equals("ค่อนข้างมาก")){
             sspn13 = "ค่อนข้างมาก";
             spn13 = (TextView) findViewById(R.id.snap13Choice3);
         }else{
@@ -294,13 +302,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn13 = (TextView) findViewById(R.id.snap13Choice4);
         }
 
-        if(sspn4.equals("ไม่เลย")){
+        if(sspn14.equals("ไม่เลย")){
             sspn14 = "ไม่เลย";
             spn14 = (TextView) findViewById(R.id.snap14Choice1);
-        }else if(sspn4.equals("เล็กน้อย")){
+        }else if(sspn14.equals("เล็กน้อย")){
             sspn14 = "เล็กน้อย";
             spn14 = (TextView) findViewById(R.id.snap14Choice2);
-        }else if(sspn4.equals("ค่อนข้างมาก")){
+        }else if(sspn14.equals("ค่อนข้างมาก")){
             sspn14 = "ค่อนข้างมาก";
             spn14 = (TextView) findViewById(R.id.snap14Choice3);
         }else{
@@ -308,13 +316,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn14 = (TextView) findViewById(R.id.snap14Choice4);
         }
 
-        if(sspn5.equals("ไม่เลย")){
+        if(sspn15.equals("ไม่เลย")){
             sspn15 = "ไม่เลย";
             spn15 = (TextView) findViewById(R.id.snap15Choice1);
-        }else if(sspn5.equals("เล็กน้อย")){
+        }else if(sspn15.equals("เล็กน้อย")){
             sspn15 = "เล็กน้อย";
             spn15 = (TextView) findViewById(R.id.snap15Choice2);
-        }else if(sspn5.equals("ค่อนข้างมาก")){
+        }else if(sspn15.equals("ค่อนข้างมาก")){
             sspn15 = "ค่อนข้างมาก";
             spn15 = (TextView) findViewById(R.id.snap15Choice3);
         }else{
@@ -322,13 +330,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn15 = (TextView) findViewById(R.id.snap15Choice4);
         }
 
-        if(sspn6.equals("ไม่เลย")){
+        if(sspn16.equals("ไม่เลย")){
             sspn16 = "ไม่เลย";
             spn16 = (TextView) findViewById(R.id.snap16Choice1);
-        }else if(sspn6.equals("เล็กน้อย")){
+        }else if(sspn16.equals("เล็กน้อย")){
             sspn16 = "เล็กน้อย";
             spn16 = (TextView) findViewById(R.id.snap16Choice2);
-        }else if(sspn6.equals("ค่อนข้างมาก")){
+        }else if(sspn16.equals("ค่อนข้างมาก")){
             sspn16 = "ค่อนข้างมาก";
             spn16 = (TextView) findViewById(R.id.snap16Choice3);
         }else{
@@ -336,13 +344,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn16 = (TextView) findViewById(R.id.snap16Choice4);
         }
 
-        if(sspn7.equals("ไม่เลย")){
+        if(sspn17.equals("ไม่เลย")){
             sspn17 = "ไม่เลย";
             spn17 = (TextView) findViewById(R.id.snap17Choice1);
-        }else if(sspn7.equals("เล็กน้อย")){
+        }else if(sspn17.equals("เล็กน้อย")){
             sspn17 = "เล็กน้อย";
             spn17 = (TextView) findViewById(R.id.snap17Choice2);
-        }else if(sspn7.equals("ค่อนข้างมาก")){
+        }else if(sspn17.equals("ค่อนข้างมาก")){
             sspn17 = "ค่อนข้างมาก";
             spn17 = (TextView) findViewById(R.id.snap17Choice3);
         }else{
@@ -350,13 +358,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn17 = (TextView) findViewById(R.id.snap17Choice4);
         }
 
-        if(sspn8.equals("ไม่เลย")){
+        if(sspn18.equals("ไม่เลย")){
             sspn18 = "ไม่เลย";
             spn18 = (TextView) findViewById(R.id.snap18Choice1);
-        }else if(sspn8.equals("เล็กน้อย")){
+        }else if(sspn18.equals("เล็กน้อย")){
             sspn18 = "เล็กน้อย";
             spn18 = (TextView) findViewById(R.id.snap18Choice2);
-        }else if(sspn8.equals("ค่อนข้างมาก")){
+        }else if(sspn18.equals("ค่อนข้างมาก")){
             sspn18 = "ค่อนข้างมาก";
             spn18 = (TextView) findViewById(R.id.snap18Choice3);
         }else{
@@ -364,13 +372,13 @@ public class riskSnapActivity extends AppCompatActivity {
             spn18 = (TextView) findViewById(R.id.snap18Choice4);
         }
 
-        if(sspn9.equals("ไม่เลย")){
+        if(sspn19.equals("ไม่เลย")){
             sspn19 = "ไม่เลย";
             spn19 = (TextView) findViewById(R.id.snap19Choice1);
-        }else if(sspn9.equals("เล็กน้อย")){
+        }else if(sspn19.equals("เล็กน้อย")){
             sspn19 = "เล็กน้อย";
             spn19 = (TextView) findViewById(R.id.snap19Choice2);
-        }else if(sspn9.equals("ค่อนข้างมาก")){
+        }else if(sspn19.equals("ค่อนข้างมาก")){
             sspn19 = "ค่อนข้างมาก";
             spn19 = (TextView) findViewById(R.id.snap19Choice3);
         }else{
@@ -511,44 +519,44 @@ public class riskSnapActivity extends AppCompatActivity {
 
 
    private void analyzeRisk() {
-        if(loginString[3]=="1"){//ผปค
-            if(risk1Int>16&&risk2Int<=13&&risk3Int<=15){//1
-                textView.setText("มีความเสี่ยงด้านสมาธิ");
-            }else if(risk2Int>13&&risk1Int<=16&&risk3Int<=15){//2
-                textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk3Int>15&&risk2Int<=13&&risk1Int<=16){//3
-                textView.setText("มีความเสี่ยงด้านดื้อ ต่อต้าน");
-            }else if(risk1Int>16&&risk2Int>13&&risk3Int<=15){ // 1-2
-                textView.setText("มีความเสี่ยงด้านสมาธิ และ ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk1Int>16&&risk3Int>15&&risk2Int<=13){//1-3
-                textView.setText("มีความเสี่ยงด้านสมาธิ และด้านดื้อ ต่อต้าน");
-            }else if(risk2Int>13&&risk3Int>15&&risk1Int<=16){//2-3
-                textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-            }else if(risk1Int>16&&risk2Int>13&&risk3Int>15){//1 -2 -3
-                textView.setText("มีความเสี่ยงด้านสมาธิ , ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-            }else{ // less all
+        if(loginString[3].equals("1")){//ผปค
+
+            if(risk1Int>16){
+                r1 = "มีความเสี่ยงด้านสมาธิ";
+            }
+            if (risk2Int>13){
+                r2="มีความเสี่ยงด้านสมาธิ";
+            }
+            if(risk3Int>15){
+                r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+            }
+
+            if (r1 == "" && r2 == "" && r3 == "") {
                 textView.setText("ไม่มีความเสี่ยง");
+                textView.setTextColor(Color.parseColor("#1bb730"));
+            } else{
+                textView.setText(r1+" "+r2+" " +r3);
             }
             // ครู
         }else{
-            if(risk1Int>23&&risk2Int<=16&&risk3Int<=11){//1
-                textView.setText("มีความเสี่ยงด้านสมาธิ");
-            }else if(risk2Int>16&&risk3Int<=11&&risk1Int<=23){//2
-                textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk3Int>11&&risk1Int<=23&&risk2Int<=16){//3
-                textView.setText("มีความเสี่ยงด้านดื้อ ต่อต้าน");
-            }else if(risk1Int>23&&risk2Int>16&&risk1Int<=23){ // 1-2
-                textView.setText("มีความเสี่ยงด้านสมาธิ และ ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk1Int>23&&risk3Int>11&&risk2Int<=16){//1-3
-                textView.setText("มีความเสี่ยงด้านสมาธิ และด้านดื้อ ต่อต้าน");
-            }else if(risk2Int>16&&risk3Int>11&&risk1Int<=23){//2-3
-                textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-            }else if(risk1Int>23&&risk2Int>16&&risk3Int>11){//1 -2 -3
-                textView.setText("มีความเสี่ยงด้านสมาธิ , ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
-            }else{ // less all
-                textView.setText("ไม่มีความเสี่ยง");
-                textView.setTextColor(Color.parseColor("#B71C1C"));
+            if(risk1Int>23){
+                r1 = "มีความเสี่ยงด้านสมาธิ";
             }
+            if (risk2Int>16){
+                r2="มีความเสี่ยงด้านสมาธิ";
+            }
+            if(risk3Int>11){
+                r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+            }
+
+            if (r1 == "" && r2 == "" && r3 == "") {
+                textView.setText("ไม่มีความเสี่ยง");
+                textView.setTextColor(Color.parseColor("#1bb730"));
+            } else{
+                textView.setText(r1+" "+r2+" " +r3);
+            }
+
+
         }
 
     }
@@ -558,6 +566,7 @@ public class riskSnapActivity extends AppCompatActivity {
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
         Bundle extras = getIntent().getExtras();
         risk1Int = extras.getInt("risk1");
         risk2Int = extras.getInt("risk2");

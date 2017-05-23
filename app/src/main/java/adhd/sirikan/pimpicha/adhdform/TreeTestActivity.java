@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class TreeTestActivity extends AppCompatActivity {
     private  String []  loginString;
-    private  String idString,genderString,ageString;
+    private  String idString,genderString,ageString,nameString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class TreeTestActivity extends AppCompatActivity {
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
 
         Button btnSnap = (Button) findViewById(R.id.buttonSnap);
         Button btnThass = (Button) findViewById(R.id.buttonThass);
@@ -33,6 +34,7 @@ public class TreeTestActivity extends AppCompatActivity {
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 startActivity(intent);
             }
         });
@@ -43,6 +45,7 @@ public class TreeTestActivity extends AppCompatActivity {
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 startActivity(intent);
             }
         });
@@ -53,6 +56,7 @@ public class TreeTestActivity extends AppCompatActivity {
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 startActivity(intent);
             }
         });

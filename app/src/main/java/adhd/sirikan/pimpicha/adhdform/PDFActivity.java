@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
@@ -23,6 +24,7 @@ import android.widget.Toast;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
@@ -55,7 +57,7 @@ import java.util.List;
 public class PDFActivity extends AppCompatActivity {
     private static final String TAG = "PdfCreatorActivity";
     private EditText  mContentEditText;
-    private Button mCreateButton;
+    private Button mCreateButton,nobtn;
     private File pdfFile;
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
     public static File fontFile = new File("fonts/thaisanslite_r1.ttf");
@@ -65,6 +67,9 @@ public class PDFActivity extends AppCompatActivity {
     int risk1Int,risk2Int,risk3Int ;
     String[] arrAns;
     String[] question;
+    String genderString,ageString, nameString,loginString[];
+    String r1="",r2="",r3="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +81,7 @@ public class PDFActivity extends AppCompatActivity {
         Log.d("PdfCreatorActivity", "intebt ==>" + sspn );
 
         mCreateButton = (Button) findViewById(R.id.button_create);
+        nobtn = (Button) findViewById(R.id.button_notcreate);
 
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +93,14 @@ public class PDFActivity extends AppCompatActivity {
                 } catch (DocumentException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+        nobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PDFActivity.this, ServiceActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
             }
         });
 
@@ -135,10 +149,10 @@ public class PDFActivity extends AppCompatActivity {
 
 
     private void getValueFromIntent() {
-       /* Bundle extras = getIntent().getExtras();
+       Bundle extras = getIntent().getExtras();
         risk1Int = extras.getInt("risk1");
         risk2Int = extras.getInt("risk2");
-        risk3Int = extras.getInt("risk3");*/
+        risk3Int = extras.getInt("risk3");
         sspn = getIntent().getStringExtra("sspn");
         sspn2 = getIntent().getStringExtra("sspn2");
         sspn3 = getIntent().getStringExtra("sspn3");
@@ -165,7 +179,12 @@ public class PDFActivity extends AppCompatActivity {
         sspn24 = getIntent().getStringExtra("sspn24");
         sspn25 = getIntent().getStringExtra("sspn25");
         sspn26 = getIntent().getStringExtra("sspn26");
-        //date = getIntent().getStringExtra("date");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
+        date = getIntent().getStringExtra("date");
+        loginString = getIntent().getStringArrayExtra("Login");
+        Log.d("23_5_60", "GENDER PDF==>" + genderString + ageString);
         arrAns = new String[26];
         arrAns[0] = sspn;
         arrAns[1] = sspn2;
@@ -294,17 +313,22 @@ public class PDFActivity extends AppCompatActivity {
             Log.i(TAG, "Created a new directory for PDF");
         }
         try {
-            pdfFile = new File(docsFolder.getAbsolutePath(), sspn+".pdf");
+            pdfFile = new File(docsFolder.getAbsolutePath(), nameString+"_"+date+".pdf");
             OutputStream output = new FileOutputStream(pdfFile);
             Document document = new Document();
             PdfWriter.getInstance(document, output);
 
             document.open();
 
+            BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            Font font = new Font(bf, 15);
 
 
+            document.add(new Paragraph("ชื่อ =>"+nameString+","+"\tอายุ =>"+ageString+ " ปี,"+"\tเพศ =>"+genderString+",\tวันที่ทำแบบประเมิน ==>"+date, font));
+
+            document.add(new Paragraph(" ", font));
             PdfPTable table = new PdfPTable(5);
-            table.setWidths(new int[]{3, 1,1,1,1});
+            table.setWidths(new int[]{5,1 ,1,1,1});
             table.setWidthPercentage(100);
 
 
@@ -312,8 +336,7 @@ public class PDFActivity extends AppCompatActivity {
             for (List<String> record : dataset) {
                 for (String field : record) {
                     try {
-                        BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-                        Font font = new Font(bf, 15);
+
 
 
 
@@ -335,9 +358,51 @@ public class PDFActivity extends AppCompatActivity {
                }
             }
             document.add(table);
-            BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-            Font font = new Font(bf, 15);
-            document.add(new Paragraph(sspn, font));
+
+            document.add(new Paragraph("คะแนนด้านอาการขาดสมาธิ : "+String.valueOf(risk1Int), font));
+            document.add(new Paragraph("คะแนนด้านอาการอยู่ไม่นิ่ง/หุ่นหันพลันแล่น : "+String.valueOf(risk2Int), font));
+            document.add(new Paragraph("คะแนนด้านอาการดื้อต่อต้าน : "+String.valueOf(risk3Int), font));
+            if(loginString[3].equals("1")){//ผปค
+
+                if (r1 == "" && r2 == "" && r3 == "") {
+                    document.add(new Paragraph("ไม่มีความเสี่ยง", font));
+                }else {
+                    if(risk1Int>16){
+                        r1 = "มีความเสี่ยงด้านสมาธิ";
+                    }
+                    if (risk2Int>13){
+                        r2="มีความเสี่ยงด้านสมาธิ";
+                    }
+                    if(risk3Int>15){
+                        r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+                    }
+
+                    document.add(new Paragraph(r1+" "+r2+" " +r3, font));
+                }
+
+
+                // ครู
+            }else {
+                if (r1 == "" && r2 == "" && r3 == "") {
+                    document.add(new Paragraph("ไม่มีความเสี่ยง", font));
+                }else {
+                    if(risk1Int>23){
+                        r1 = "มีความเสี่ยงด้านสมาธิ";
+                    }
+                    if (risk2Int>16){
+                        r2="มีความเสี่ยงด้านสมาธิ";
+                    }
+                    if(risk3Int>11){
+                        r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+                    }
+                    document.add(new Paragraph(r1+" "+r2+" " +r3, font));
+                }
+
+
+            }
+
+
+
 
             document.close();
             previewPdf();

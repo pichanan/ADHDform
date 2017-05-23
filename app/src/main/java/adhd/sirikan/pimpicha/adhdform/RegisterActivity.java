@@ -12,6 +12,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
     // explicit
     private EditText userEditText, passEditText;
@@ -20,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private Button button;
     private String userString, passwordString, typeString;
     private static String tag = "30MarchV1";
+    boolean aBoolean;
 
 
     @Override
@@ -83,7 +87,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         getResources().getString(R.string.message_noncheck));
 
             } else {// checked
-                uploadValueToServer();
+                checkAuthen();
+
 
 
 
@@ -116,6 +121,41 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         } catch (Exception e) {
             Log.d(tag, "e upload ==>" + e.toString());
+        }
+    }
+
+    private void checkAuthen() {
+        try {
+
+            MyConstant myConstant = new MyConstant();
+            String strURL = myConstant.getUrlGetUser();
+            String[] columnStrings = myConstant.getColumnUser();
+            myAlert objMyAlert = new myAlert(RegisterActivity.this);
+
+            GetAllData getAllData = new GetAllData(RegisterActivity.this);
+            getAllData.execute(strURL);
+            String strJSON = getAllData.get();
+            Log.d("30MarchV2", "JSoN ==> " + strJSON);
+
+            JSONArray jsonArray = new JSONArray(strJSON);
+            for (int i=0;i<jsonArray.length();i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                if (userString.equals(jsonObject.getString(columnStrings[1]))) { // แนวนอน
+
+                    aBoolean = false;
+                }   // if
+            }   //for
+
+            if (aBoolean==false) {
+                //User False
+                objMyAlert.myDialog("ไม่สามารถใช้ชื่อนี้",
+                        "คุณไม่สามารถใช้ชื่อนี้ เนื่องจากมีผู้ใช้ชื่อนี้แล้ว");
+            }else{
+                uploadValueToServer();
+            }
+
+        } catch (Exception e) {
+            Log.d("30MarchV2", "e checkAuthen ==> " + e.toString());
         }
     }
 }//main class

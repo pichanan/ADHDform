@@ -15,47 +15,51 @@
         android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
+
         <LinearLayout
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="30dp">
+            android:layout_height="39dp"
+            android:gravity="center">
+
             <TextView
-                android:textColor="#D50000"
-                android:textSize="15dp"
+                android:id="@+id/snapRisk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/snapRisk"/>
+                android:textColor="#D50000"
+                android:textSize="13dp" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:gravity="center"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
             <Button
-                android:text="บันทึกเป็น PDF"
-                android:background="@drawable/button"
+                android:id="@+id/showRiskSnapPdf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/pdf"
-                android:id="@+id/showRiskSnapPdf"/>
-            <Button
                 android:background="@drawable/button"
+                android:src="@drawable/pdf"
+                android:text="บันทึกเป็น PDF" />
+
+            <Button
                 android:id="@+id/btnCompare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="เปรียบเทียบ" />
         </LinearLayout>
 
 
-
-
     </LinearLayout>
     <ScrollView
+        android:id="@+id/tableSnap"
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

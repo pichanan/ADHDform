@@ -36,7 +36,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
     String[] spinnerValue = {"-", "ไม่เลย", "เล็กน้อย", "ค่อนข้างมาก", "มาก"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
     private  int risk1,risk2,risk3;
-    String idString, loginString[],genderString,ageString;
+    String idString, loginString[],genderString,ageString,nameString;
     TextView textView;
 
 
@@ -74,6 +74,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
 
         for(int i = 0 ;i<loginString.length;i++) {
             Log.d("tag2", "loginString(" + i + ")==>" + loginString[i]);
@@ -598,6 +599,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 intent.putExtra("risk1", risk1);
                 intent.putExtra("risk2",risk2);
                 intent.putExtra("risk3",risk3);
@@ -628,7 +630,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("ans25",tmpspn25);
                 intent.putExtra("ans26",tmpspn26);
                 intent.putExtra("date",currentDateString);
-                Log.d(tag, "Put from snap ==>" + risk1 + " " + risk2 + " " + risk3);
+                Log.d("23_5_60", "GENDER ==>" + genderString + ageString);
                 startActivity(intent);
 
             } else {

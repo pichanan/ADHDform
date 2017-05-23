@@ -14,14 +14,15 @@ import org.json.JSONObject;
 public class ShowChildDetail extends AppCompatActivity {
 
     private MyConstant myConstant;
-    private String idString,urlPHPString;
+    private String urlPHPString;
     private String[] columnStrings,resultStrings;
     private String tag = "16AprilV5";
     ImageView ImageViewPDF;
     String ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11,
             ch12, ch13, ch14, ch15, ch16, ch17, ch18, ch19, ch20,
             ch21, ch22, ch23, ch24, ch25, ch26;
-    String risk1, risk2, risk3;
+
+    String idString, loginString[],genderString,ageString,risk1,risk2,risk3,nameString;
 
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
@@ -423,7 +424,10 @@ public class ShowChildDetail extends AppCompatActivity {
        }
 
 
-        spn.setText("/");
+
+
+
+       spn.setText("/");
         spn2.setText("/");
         spn3.setText("/");
         spn4.setText("/");
@@ -496,7 +500,10 @@ public class ShowChildDetail extends AppCompatActivity {
             ch24 = resultStrings[24];
             ch25 = resultStrings[25];
             ch26 = resultStrings[26];
-
+            risk1 = resultStrings[29];
+            risk2 = resultStrings[30];
+            risk3 = resultStrings[31];
+            date = resultStrings[34];
 
         } catch (Exception e) {
             Log.d(tag, "e query ==>" + e.toString());
@@ -506,42 +513,50 @@ public class ShowChildDetail extends AppCompatActivity {
     private void mySetup() {
         myConstant = new MyConstant();
         idString = getIntent().getStringExtra("id");
+        loginString = getIntent().getStringArrayExtra("Login");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
         columnStrings = myConstant.getColumnTest();
         urlPHPString = myConstant.getUrlGetTestWhereID();
     }
 
     private void putIt() {
         Intent intent = new Intent(ShowChildDetail.this, PDFActivity.class);
-        intent.putExtra("sspn", ch1);
-        intent.putExtra("sspn2", ch2);
-        intent.putExtra("sspn3", ch3);
-        intent.putExtra("sspn4", ch4);
-        intent.putExtra("sspn5", ch5);
-        intent.putExtra("sspn6", ch6);
-        intent.putExtra("sspn7", ch7);
-        intent.putExtra("sspn8", ch8);
-        intent.putExtra("sspn9", ch9);
-        intent.putExtra("sspn10", ch10);
-        intent.putExtra("sspn11", ch11);
-        intent.putExtra("sspn12", ch12);
-        intent.putExtra("sspn13", ch13);
-        intent.putExtra("sspn14", ch14);
-        intent.putExtra("sspn15", ch15);
-        intent.putExtra("sspn16", ch16);
-        intent.putExtra("sspn17", ch17);
-        intent.putExtra("sspn18", ch18);
-        intent.putExtra("sspn19", ch19);
-        intent.putExtra("sspn20", ch20);
-        intent.putExtra("sspn21", ch21);
-        intent.putExtra("sspn22", ch22);
-        intent.putExtra("sspn23", ch23);
-        intent.putExtra("sspn24", ch24);
-        intent.putExtra("sspn25", ch25);
-        intent.putExtra("sspn26", ch26);
-        /*intent.putExtra("risk1", risk1Int);
-        intent.putExtra("risk2", risk2Int);
-        intent.putExtra("risk3", risk3Int);
-        intent.putExtra("date", date);*/
+        intent.putExtra("sspn", sspn);
+        intent.putExtra("sspn2", sspn2);
+        intent.putExtra("sspn3", sspn3);
+        intent.putExtra("sspn4", sspn4);
+        intent.putExtra("sspn5", sspn5);
+        intent.putExtra("sspn6", sspn6);
+        intent.putExtra("sspn7", sspn7);
+        intent.putExtra("sspn8", sspn8);
+        intent.putExtra("sspn9", sspn9);
+        intent.putExtra("sspn10", sspn10);
+        intent.putExtra("sspn11", sspn11);
+        intent.putExtra("sspn12", sspn12);
+        intent.putExtra("sspn13", sspn13);
+        intent.putExtra("sspn14", sspn14);
+        intent.putExtra("sspn15", sspn15);
+        intent.putExtra("sspn16", sspn16);
+        intent.putExtra("sspn17", sspn17);
+        intent.putExtra("sspn18", sspn18);
+        intent.putExtra("sspn19", sspn19);
+        intent.putExtra("sspn20", sspn20);
+        intent.putExtra("sspn21", sspn21);
+        intent.putExtra("sspn22", sspn22);
+        intent.putExtra("sspn23", sspn23);
+        intent.putExtra("sspn24", sspn24);
+        intent.putExtra("sspn25", sspn25);
+        intent.putExtra("sspn26", sspn26);
+        intent.putExtra("risk1", Integer.parseInt(risk1));
+        intent.putExtra("risk2", Integer.parseInt(risk2));
+        intent.putExtra("risk3", Integer.parseInt(risk3));
+        intent.putExtra("date", date);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
+        intent.putExtra("Login", loginString);
         startActivity(intent);
 
     }

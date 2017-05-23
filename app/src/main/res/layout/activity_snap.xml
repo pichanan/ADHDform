@@ -34,11 +34,11 @@
             android:layout_width="match_parent"
             android:layout_height="414dp"
             android:layout_marginBottom="@dimen/my_margin"
-            android:layout_weight="0.51">
+            android:layout_weight="0.63">
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="458dp">
+                android:layout_height="match_parent">
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_marginRight="10sp"
@@ -584,7 +584,7 @@
 
 
     <Button
-
+    android:background="@drawable/button"
         android:id="@+id/snap4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

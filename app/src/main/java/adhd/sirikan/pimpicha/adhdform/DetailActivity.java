@@ -23,6 +23,7 @@ public class DetailActivity extends AppCompatActivity {
     private  String idString;
     private  String genderString;
     private  String ageString;
+    private  String nameString;
     private  boolean check1=true,check2=true, check3=true;
     private int cnt1=0,cnt2=0, cnt3=0;
     TextView userTextView,childNameTextView;
@@ -228,6 +229,12 @@ public class DetailActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(DetailActivity.this, ShowChildDetail.class);
                     intent.putExtra("id", idStrings[position]);
+                    intent.putExtra("Login", loginString);
+                    intent.putExtra("tmpIndex", idString);
+                    intent.putExtra("gender", genderString);
+                    intent.putExtra("age", ageString);
+                    intent.putExtra("name", nameString);
+
                     //intent.putExtra("ch1", snapCh1[position]);
                     startActivity(intent);
 
@@ -277,6 +284,7 @@ public class DetailActivity extends AppCompatActivity {
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 startActivity(intent);
             }
         });
@@ -285,10 +293,11 @@ public class DetailActivity extends AppCompatActivity {
 
 
     private void getValueFromIntent() {
-        idString = getIntent().getStringExtra("tmpIndex"); // childID
-        loginString = getIntent().getStringArrayExtra("Login"); // loginString[0]
-        genderString = getIntent().getStringExtra("gender"); // loginString[5]
-        ageString = getIntent().getStringExtra("age"); // loginString[3]
+        idString = getIntent().getStringExtra("tmpIndex");
+        loginString = getIntent().getStringArrayExtra("Login");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
 
     }
 
