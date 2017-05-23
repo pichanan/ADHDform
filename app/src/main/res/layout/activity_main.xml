@@ -20,8 +20,9 @@
 
             <TextView
                 android:id="@+id/textAppname"
-                android:layout_width="match_parent"
+                android:layout_width="254dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_marginTop="39dp"
                 android:gravity="center"
                 android:text="@string/headApp"
@@ -29,6 +30,7 @@
 
 
             <LinearLayout
+
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,9 +55,10 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:src="@mipmap/ic_user"
+                        android:id="@+id/imageView"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_user" />
 
                     <EditText
                         android:textColor="@color/colorPrimaryDark"
@@ -88,7 +91,7 @@
                     android:textSize="@dimen/h2"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/new_register"
-
+                    android:textColor="@color/colorPrimaryDark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtNewRegister"
@@ -97,13 +100,14 @@
             </LinearLayout>
 
             <Button
+                android:layout_marginTop="50dp"
                 android:id="@+id/btnLogin"
                 android:layout_width="241dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:background="@drawable/button"
                 android:text="@string/login"
-                android:textColor="@color/colorPrimaryDark" />
+               />
 
 
         </LinearLayout>

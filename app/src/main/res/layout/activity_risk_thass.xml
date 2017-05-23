@@ -151,18 +151,20 @@
             android:background="#000000"
 
             >
+
             <TextView
 
+                android:id="@+id/riskq1"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:textSize="13dp"
                 android:background="#FFFFFF"
                 android:gravity="left"
                 android:text="@string/thass1"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                />
+                android:textSize="13dp" />
+
             <TextView
                 android:id="@+id/thass1Choice4"
                 android:layout_width="25dp"
@@ -221,7 +223,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq2"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -291,7 +293,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq3"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -360,7 +362,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq4"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -429,7 +431,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq5"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -498,7 +500,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq6"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -566,18 +568,19 @@
             android:background="#000000"
 
             >
-            <TextView
 
+            <TextView
+                android:id="@+id/riskq7"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:textSize="13dp"
                 android:background="#FFFFFF"
                 android:gravity="left"
                 android:text="@string/thass7"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                />
+                android:textSize="13dp" />
+
             <TextView
                 android:id="@+id/thass7Choice4"
                 android:layout_width="25dp"
@@ -636,7 +639,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq8"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -704,18 +707,20 @@
             android:background="#000000"
 
             >
+
             <TextView
 
+                android:id="@+id/riskq9"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:textSize="13dp"
                 android:background="#FFFFFF"
                 android:gravity="left"
                 android:text="@string/thass9"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                />
+                android:textSize="13dp" />
+
             <TextView
                 android:id="@+id/thass9Choice4"
                 android:layout_width="25dp"
@@ -774,7 +779,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq10"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -843,7 +848,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq11"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -912,7 +917,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq12"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -981,7 +986,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq13"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1050,7 +1055,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq14"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1119,7 +1124,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq15"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1188,7 +1193,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq16"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1257,7 +1262,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq17"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1326,7 +1331,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq18"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1395,7 +1400,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq19"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1464,7 +1469,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq20"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1533,7 +1538,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq21"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1602,7 +1607,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq22"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1671,7 +1676,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq23"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1739,18 +1744,19 @@
             android:background="#000000"
 
             >
-            <TextView
 
+            <TextView
+                android:id="@+id/riskq24"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_margin="1dp"
-                android:textSize="13dp"
                 android:background="#FFFFFF"
                 android:gravity="left"
                 android:text="@string/thass24"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                />
+                android:textSize="13dp" />
+
             <TextView
                 android:id="@+id/thass24Choice4"
                 android:layout_width="25dp"
@@ -1809,7 +1815,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq25"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1878,7 +1884,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq26"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -1947,7 +1953,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq27"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -2016,7 +2022,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq28"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -2085,7 +2091,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq29"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -2154,7 +2160,7 @@
 
             >
             <TextView
-
+                android:id="@+id/riskq30"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"

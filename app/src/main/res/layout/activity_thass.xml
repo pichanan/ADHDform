@@ -15,12 +15,7 @@
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginLeft="6dp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="แบบประเมิน THASS มีทั้งหมด30 ข้อ  ถูกพัฒนาโดย รศ.นพ.ชาญวิทย์ พรนภดล"/>
+
         <TextView
             android:textStyle="bold"
             android:layout_gravity="center"
@@ -51,7 +46,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
                         android:layout_width="match_parent"
-                        android:id="@+id/thass1"
+                        android:id="@+id/qthass1"
                         android:layout_height="wrap_content"
                         android:text="@string/thass1" />
 
@@ -68,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass2"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -88,6 +84,7 @@
                     android:layout_height="68dp"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass3"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -108,6 +105,7 @@
                     android:layout_height="68dp"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass4"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -127,13 +125,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
+
                     <TextView
-                        android:textSize="15dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="3dp"
+                        android:id="@+id/qthass5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/thass5"/>
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/thass5"
+                        android:textSize="15dp" />
+
                     <Spinner
                         android:id="@+id/spinThass5"
                         android:layout_width="match_parent"
@@ -149,7 +150,7 @@
                     android:layout_weight="0.00">
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/qthass6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -171,6 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass7"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -191,6 +193,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass8"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -211,6 +214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass9"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -231,6 +235,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass10"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -251,6 +256,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass11"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -271,6 +277,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass12"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -291,6 +298,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass13"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -311,6 +319,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass14"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -331,6 +340,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass15"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -351,6 +361,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass16"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -371,6 +382,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass17"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -391,6 +403,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass18"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -410,13 +423,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
+
                     <TextView
-                        android:textSize="15dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="3dp"
+                        android:id="@+id/qthass19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/thass19"/>
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/thass19"
+                        android:textSize="15dp" />
+
                     <Spinner
                         android:id="@+id/spinThass19"
                         android:layout_width="match_parent"
@@ -431,6 +447,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass20"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -451,6 +468,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass21"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -471,6 +489,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass22"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -491,6 +510,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass23"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -504,6 +524,7 @@
                         />
                 </LinearLayout>
                 <LinearLayout
+
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
@@ -511,6 +532,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass24"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -524,6 +546,7 @@
                         />
                 </LinearLayout>
                 <LinearLayout
+
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
@@ -531,6 +554,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass25"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -551,6 +575,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
+                        android:id="@+id/qthass26"
                         android:textSize="15dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
@@ -571,6 +596,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.00">
                 <TextView
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/qthass27"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/thass27"/>
@@ -588,6 +617,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.00">
                 <TextView
+                    android:id="@+id/qthass28"
                     android:textSize="15dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
@@ -608,6 +638,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.00">
                 <TextView
+                    android:id="@+id/qthass29"
                     android:textSize="15dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
@@ -628,6 +659,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.00">
                 <TextView
+                    android:id="@+id/qthass30"
                     android:textSize="15dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"

@@ -17,9 +17,15 @@ public class riskThassActivity extends AppCompatActivity {
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26
             , sspn27, sspn28, sspn29, sspn30,date;
+    String strq1, strq2, strq3, strq4, strq5, strq6, strq7, strq8, strq9, strq10, strq11, strq12, strq13,
+            strq14, strq15, strq16, strq17, strq18, strq19, strq20, strq21, strq22, strq23, strq24, strq25,
+            strq26, strq27, strq28, strq29, strq30;
     ImageView ImageViewPDF;
     Button button;
     String tag = "ThassIntent";
+    TextView t, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
+            t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25,
+            t26, t27, t28, t29, t30;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +105,36 @@ public class riskThassActivity extends AppCompatActivity {
         intent.putExtra("sspn28", sspn28);
         intent.putExtra("sspn29", sspn29);
         intent.putExtra("sspn30", sspn30);
+        intent.putExtra("strq1",strq1);
+        intent.putExtra("strq2",strq2);
+        intent.putExtra("strq3",strq3);
+        intent.putExtra("strq4",strq4);
+        intent.putExtra("strq5",strq5);
+        intent.putExtra("strq6",strq6);
+        intent.putExtra("strq7",strq7);
+        intent.putExtra("strq8",strq8);
+        intent.putExtra("strq9",strq9);
+        intent.putExtra("strq10",strq10);
+        intent.putExtra("strq11",strq11);
+        intent.putExtra("strq12",strq12);
+        intent.putExtra("strq13",strq13);
+        intent.putExtra("strq14",strq14);
+        intent.putExtra("strq15",strq15);
+        intent.putExtra("strq16",strq16);
+        intent.putExtra("strq17",strq17);
+        intent.putExtra("strq18",strq18);
+        intent.putExtra("strq19",strq19);
+        intent.putExtra("strq20",strq20);
+        intent.putExtra("strq21",strq21);
+        intent.putExtra("strq22",strq22);
+        intent.putExtra("strq23",strq23);
+        intent.putExtra("strq24",strq24);
+        intent.putExtra("strq25",strq25);
+        intent.putExtra("strq26",strq26);
+        intent.putExtra("strq27",strq27);
+        intent.putExtra("strq28",strq28);
+        intent.putExtra("strq29",strq29);
+        intent.putExtra("strq30",strq30);
         /*intent.putExtra("risk1", risk1Int);
         intent.putExtra("risk2", risk2Int);
         intent.putExtra("risk3", risk3Int);
@@ -564,6 +600,66 @@ public class riskThassActivity extends AppCompatActivity {
         spn28.setText("/");
         spn29.setText("/");
         spn30.setText("/");
+        t = (TextView) findViewById(R.id.riskq1);
+        t2 = (TextView) findViewById(R.id.riskq2);
+        t3 = (TextView) findViewById(R.id.riskq3);
+        t4 = (TextView) findViewById(R.id.riskq4);
+        t5 = (TextView) findViewById(R.id.riskq5);
+        t6 = (TextView) findViewById(R.id.riskq6);
+        t7 = (TextView) findViewById(R.id.riskq7);
+        t8 = (TextView) findViewById(R.id.riskq8);
+        t9 = (TextView) findViewById(R.id.riskq9);
+        t10 = (TextView) findViewById(R.id.riskq10);
+        t11 = (TextView) findViewById(R.id.riskq11);
+        t12 = (TextView) findViewById(R.id.riskq12);
+        t13 = (TextView) findViewById(R.id.riskq13);
+        t14 = (TextView) findViewById(R.id.riskq14);
+        t15 = (TextView) findViewById(R.id.riskq15);
+        t16 = (TextView) findViewById(R.id.riskq16);
+        t17 = (TextView) findViewById(R.id.riskq17);
+        t18 = (TextView) findViewById(R.id.riskq18);
+        t19 = (TextView) findViewById(R.id.riskq19);
+        t20 = (TextView) findViewById(R.id.riskq20);
+        t21 = (TextView) findViewById(R.id.riskq21);
+        t22 = (TextView) findViewById(R.id.riskq22);
+        t23 = (TextView) findViewById(R.id.riskq23);
+        t24 = (TextView) findViewById(R.id.riskq24);
+        t25 = (TextView) findViewById(R.id.riskq25);
+        t26 = (TextView) findViewById(R.id.riskq26);
+        t27 = (TextView) findViewById(R.id.riskq27);
+        t28 = (TextView) findViewById(R.id.riskq28);
+        t29 = (TextView) findViewById(R.id.riskq29);
+        t30 = (TextView) findViewById(R.id.riskq30);
+        t.setText(strq1);
+        t2.setText(strq2);
+        t3.setText(strq3);
+        t4.setText(strq4);
+        t5.setText(strq5);
+        t6.setText(strq6);
+        t7.setText(strq7);
+        t8.setText(strq8);
+        t9.setText(strq9);
+        t10.setText(strq10);
+        t11.setText(strq11);
+        t12.setText(strq12);
+        t13.setText(strq13);
+        t14.setText(strq14);
+        t15.setText(strq15);
+        t16.setText(strq16);
+        t17.setText(strq17);
+        t18.setText(strq18);
+        t19.setText(strq19);
+        t20.setText(strq20);
+        t21.setText(strq21);
+        t22.setText(strq22);
+        t23.setText(strq23);
+        t24.setText(strq24);
+        t25.setText(strq25);
+        t26.setText(strq26);
+        t27.setText(strq27);
+        t28.setText(strq28);
+        t29.setText(strq29);
+        t30.setText(strq30);
     }
     /*private void analyzeRisk() {
         if(risk1Int>=51&&risk1Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
@@ -686,6 +782,36 @@ public class riskThassActivity extends AppCompatActivity {
         sspn28 = getIntent().getStringExtra("ans28");
         sspn29 = getIntent().getStringExtra("ans29");
         sspn30 = getIntent().getStringExtra("ans30");
+        strq1 = getIntent().getStringExtra("strq1");
+        strq2 = getIntent().getStringExtra("strq2");
+        strq3 = getIntent().getStringExtra("strq3");
+        strq4 = getIntent().getStringExtra("strq4");
+        strq5 = getIntent().getStringExtra("strq5");
+        strq6 = getIntent().getStringExtra("strq6");
+        strq7 = getIntent().getStringExtra("strq7");
+        strq8 = getIntent().getStringExtra("strq8");
+        strq9 = getIntent().getStringExtra("strq9");
+        strq10 = getIntent().getStringExtra("strq10");
+        strq11 = getIntent().getStringExtra("strq11");
+        strq12 = getIntent().getStringExtra("strq12");
+        strq13 = getIntent().getStringExtra("strq13");
+        strq14 = getIntent().getStringExtra("strq14");
+        strq15 = getIntent().getStringExtra("strq15");
+        strq16 = getIntent().getStringExtra("strq16");
+        strq17 = getIntent().getStringExtra("strq17");
+        strq18 = getIntent().getStringExtra("strq18");
+        strq19 = getIntent().getStringExtra("strq19");
+        strq20 = getIntent().getStringExtra("strq20");
+        strq21 = getIntent().getStringExtra("strq21");
+        strq22 = getIntent().getStringExtra("strq22");
+        strq23 = getIntent().getStringExtra("strq23");
+        strq24 = getIntent().getStringExtra("strq24");
+        strq25 = getIntent().getStringExtra("strq25");
+        strq26 = getIntent().getStringExtra("strq26");
+        strq27 = getIntent().getStringExtra("strq27");
+        strq28 = getIntent().getStringExtra("strq28");
+        strq29 = getIntent().getStringExtra("strq29");
+        strq30 = getIntent().getStringExtra("strq30");
         date = getIntent().getStringExtra("date");
 
 

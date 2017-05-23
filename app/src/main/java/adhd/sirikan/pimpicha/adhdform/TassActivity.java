@@ -30,6 +30,13 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             tmpspn14, tmpspn15, tmpspn16, tmpspn17, tmpspn18, tmpspn19, tmpspn20, tmpspn21, tmpspn22, tmpspn23, tmpspn24, tmpspn25,
             tmpspn26, tmpspn27, tmpspn28, tmpspn29, tmpspn30;
     String idString,loginString[],genderString,ageString;
+    TextView t, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
+            t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25,
+            t26, t27, t28, t29, t30;
+    String strq1, strq2, strq3, strq4, strq5, strq6, strq7, strq8, strq9, strq10, strq11, strq12, strq13,
+            strq14, strq15, strq16, strq17, strq18, strq19, strq20, strq21, strq22, strq23, strq24, strq25,
+            strq26, strq27, strq28, strq29, strq30;
+    int txtDotype, txtChildAge;
 
     private java.util.Calendar calendar;
     private String currentDateString;
@@ -38,21 +45,219 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_thass);
-            getValueFromIntent();
-            initialSpinner();
-            findCurrentDate();
-            initialView();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_thass);
+        getValueFromIntent();
+        setTextView();
+        initialSpinner();
+        findCurrentDate();
+        initialView();
+        button.setOnClickListener(TassActivity.this);
+
+
+    }
+    private void setTextView() {
+        t = (TextView) findViewById(R.id.qthass1);
+        t2 = (TextView) findViewById(R.id.qthass2);
+        t3 = (TextView) findViewById(R.id.qthass3);
+        t4 = (TextView) findViewById(R.id.qthass4);
+        t5 = (TextView) findViewById(R.id.qthass5);
+        t6 = (TextView) findViewById(R.id.qthass6);
+        t7 = (TextView) findViewById(R.id.qthass7);
+        t8 = (TextView) findViewById(R.id.qthass8);
+        t9 = (TextView) findViewById(R.id.qthass9);
+        t10 = (TextView) findViewById(R.id.qthass10);
+        t11 = (TextView) findViewById(R.id.qthass11);
+        t12 = (TextView) findViewById(R.id.qthass12);
+        t13 = (TextView) findViewById(R.id.qthass13);
+        t14 = (TextView) findViewById(R.id.qthass14);
+        t15 = (TextView) findViewById(R.id.qthass15);
+        t16 = (TextView) findViewById(R.id.qthass16);
+        t17 = (TextView) findViewById(R.id.qthass17);
+        t18 = (TextView) findViewById(R.id.qthass18);
+        t19 = (TextView) findViewById(R.id.qthass19);
+        t20 = (TextView) findViewById(R.id.qthass20);
+        t21 = (TextView) findViewById(R.id.qthass21);
+        t22 = (TextView) findViewById(R.id.qthass22);
+        t23 = (TextView) findViewById(R.id.qthass23);
+        t24 = (TextView) findViewById(R.id.qthass24);
+        t25 = (TextView) findViewById(R.id.qthass25);
+        t26 = (TextView) findViewById(R.id.qthass26);
+        t27 = (TextView) findViewById(R.id.qthass27);
+        t28 = (TextView) findViewById(R.id.qthass28);
+        t29 = (TextView) findViewById(R.id.qthass29);
+        t30 = (TextView) findViewById(R.id.qthass30);
+
+        //ครู เด็ก 6-12 ปี
+        if(txtDotype==0&&txtChildAge>=6&&txtChildAge<=12){
+            strq1 = "1. เดินไปเดินมาในเวลาเรียนโดยไม่ได้รับอนุญาติ";
+            strq2 = "2. พูดโพล่ง ขัดจังหวะในเวลาครูสอน";
+            strq3 = "3. แหย่ ล้อเลียน แกล้งเด็กคนอื่น";
+            strq4 = "4. อยู่ไม่นิ่ง มักหาอะไรทำหรือเล้นตลอดเวลา";
+            strq5 = "5. ใจร้อน วู่วาม";
+            strq6 = "6. มักมีเรื่องทะเลาะวิวาทกับเด็กอื่น";
+            strq7 = "7. เล่นเสียงดัง";
+            strq8 = "8. พูดมากจนน่ารำคาญ";
+            strq9 = "9. อารมณ์เสีย หงุดหงิดง่าย";
+            strq10 = "10. ทำอะไรโดยไม่คิดถึงผลที่จะตามมา";
+            strq11 = "11. เล่นรุนแรง เล่นแผลงๆ หรือเสี่ยงอันตราย";
+            strq12 = "12. ซน";
+            strq13 = "13. รบกวนเพื่อนหรือครูในห้องเรียน";
+            strq14 = "14. ไม่รู้จักการรอคอย";
+            strq15 = "15. ส่งเสียงดังในห้องเรียน";
+            strq16 = "16. ขาดความรับผิดชอบ";
+            strq17 = "17. ไม่ตั้งใจเรียน";
+            strq18 = "18. ทำงานช้า ทำงานำม่เสร็จตามเวลาที่กำหนด";
+            strq19 = "19. เหม่อ ใจลอย";
+            strq20 = "20. ฟังอะไรประเดี๋ยวเดียว ก็หมดความสนใจ";
+            strq21 = "21. โอเอ้ ใช้เวลานานกว่าจะเริ่มทำงานได้";
+            strq22 = "22. ต้องเรียก หรือกระตุ้นเพื่อให้งานเสร็จ";
+            strq23 = "23. วอกแวกง่าย";
+            strq24 = "24. นำของที่จำเป้นต่อการเรียนมาไม่ครบ";
+            strq25 = "25. ทำหนังสือ อุปกรณ์การเรียน  หรือของใช้ส่วนตัวหาย";
+            strq26 = "26. ทำงานไม่เรียบร้อย สะเพร่า ไม่รอบคอบ";
+            strq27 = "27. ไม่จดจ่อกับงานที่กำลังทำ (ยกเว้นกำลังทำสิ่งที่ชอบ)";
+            strq28 = "28. สมาธิไม่ต่อเนื่อง หรือช่วงความจำสั้น";
+            strq29 = "29. หลีกเลี่ยงการทำงานที่ต้องใช้ความคิด";
+            strq30 = "30. ลืมส่งการบ้าน";
+        }else if(txtDotype==0&&txtChildAge>=13&&txtChildAge<=18){
+            strq1 = "1. โตแล้วยังเล่นเหมือนเด็ก";
+            strq2 = "2. พูดโพล่ง ขัดจังหวะในเวลาครูสอน";
+            strq3 = "3. แหย่ ล้อเลียน ยั่วโมโห แกล้งเพื่อน";
+            strq4 = "4. อยู่ไม่นิ่ง มักหาอะไรทำหรือเล้นตลอดเวลา";
+            strq5 = "5. ใจร้อน วู่วาม";
+            strq6 = "6. มักมีเรื่องทะเลาะวิวาทกับผู้อื่น";
+            strq7 = "7. นิสัยและพฤติกรรมเด็กกว่าวัย";
+            strq8 = "8. พูดมากจนน่ารำคาญ";
+            strq9 = "9. อารมณ์เสีย หงุดหงิดง่าย";
+            strq10 = "10. ทำอะไรโดยไม่คิดถึงผลที่จะตามมา";
+            strq11 = "11. เล่นรุนแรง เล่นแผลงๆ หรือเสี่ยงอันตราย";
+            strq12 = "12. แซว ต่อลักต่อเถียงครู";
+            strq13 = "13. ก่อกวนเพื่อนหรือครูในห้องเรียน";
+            strq14 = "14. รอคอยอะไรนานๆ ไม่ได้";
+            strq15 = "15. ส่งเสียงดังในเวลาเรียน";
+            strq16 = "16. ขาดความรับผิดชอบ";
+            strq17 = "17. ไม่สนใจเรียน";
+            strq18 = "18. ทำงานช้า ทำงานำม่เสร็จตามเวลาที่กำหนด";
+            strq19 = "19. เหม่อ ใจลอย";
+            strq20 = "20. ทำงานสะเพร่า ไม่รอบคอบ";
+            strq21 = "21. ชอบหมกงานจนทำให้มีงานค้าง";
+            strq22 = "22. โอเอ้ ใช้เวลานานกว่าจะเริ่มทำงานได้";
+            strq23 = "23. วอกแวกง่าย";
+            strq24 = "24. ทำงานไม่เรียบร้อย ไม่เป็นระเบียบ";
+            strq25 = "25. นำของที่จำเป้นต่อการเรียนมาไม่ครบ";
+            strq26 = "26. ลืมส่งงาน หรือส่งไม่ตรงเวลา";
+            strq27 = "27. ใช้เวลานานกว่าจะเริ่มทำงานได้";
+            strq28 = "28. สมาธิไม่ต่อเนื่อง หรือช่วงความจำสั้น";
+            strq29 = "29. ไม่ทบทวนบทเรียน";
+            strq30 = "30. หลีกเลี่ยงการทำงานที่ต้องใช้ความคิด";
+        }else if(txtDotype==1&&txtChildAge>=6&&txtChildAge<=12){ // ผปก
+            strq1 = "1. ซน อยู่ไม่นิ่ง";
+            strq2 = "2. พูดแทรก ขัดจังหวะ";
+            strq3 = "3. แหย่ ล้อเลียน แกล้งเด็กคนอื่น";
+            strq4 = "4. อยู่ไม่สุข ชอบรื้อ ชอบค้น";
+            strq5 = "5. ใจร้อน วู่วาม";
+            strq6 = "6. มักมีเรื่องทะเลาะวิวาทกับผู้อื่น";
+            strq7 = "7. เล่นเสียงดัง";
+            strq8 = "8. พูดมากจนน่ารำคาญ";
+            strq9 = "9. อารมณ์เสีย หงุดหงิดง่าย";
+            strq10 = "10. ทำอะไรโดยไม่คิดถึงผลที่จะตามมา";
+            strq11 = "11. เล่นรุนแรง เล่นแผลงๆ หรือเสี่ยงอันตราย";
+            strq12 = "12. เจ็บตัวจากการเล่นหรือทำกิจกรรมต่างๆ";
+            strq13 = "13. เป็นตัวป่วน หรือรบกวนคนในบ้าน";
+            strq14 = "14. รอคอยอะไรนานๆ ไม่ได้";
+            strq15 = "15. ชอบเถียง เอะอะ โวยวาย";
+            strq16 = "16. ขาดความรับผิดชอบ";
+            strq17 = "17. สนใจแต่เรื่องเล่น มากกว่าการเรียน";
+            strq18 = "18. อิดออด ต่อรอง ลีลาเยอะเวลาบอกให้ทำอะไร";
+            strq19 = "19. เหม๋อ ใจลอย";
+            strq20 = "20. ลืมจดการบ้าน หรือจดไม่ครบ";
+            strq21 = "21. โอเอ้ ใช้เวลานานกว่าจะเริ่มทำงานได้";
+            strq22 = "22. ต้องกระตุ้น  หรือนั่งคุมเวลาทำการบ้าน";
+            strq23 = "23. แวอกแวกง่าย";
+            strq24 = "24. ชักช้า อืดอาด";
+            strq25 = "25. ทำของหาย หรือลืมว่าวางไว้ที่ไหน";
+            strq26 = "26. ทำงานไม่เรียบร้อย สะเพร่า ไม่รอบคอบ";
+            strq27 = "27. ไม่จดจ่อกับงานที่กำลังทำ (ยกเว้นกำลังทำสิ่งที่ชอบ)";
+            strq28 = "28. สมาธิสั้น (ยกเว้นเวลาดูทีวี เล่นเกม หรือทำสิ่งที่ชอบ)";
+            strq29 = "29. หลีกเลี่ยงการทำงานที่ต้องใช้ความคิด";
+            strq30 = "30. ลืมส่งการบ้าน";
+        }else if(txtDotype==1&&txtChildAge>=13&&txtChildAge<=18){
+            strq1 = "1. แหย่ รบกวน ยั่วโมโหคนในบ้าน ";
+            strq2 = "2. ขัดจังหวะเวลาคนอื่นพูด หรือทำอะไรอยู่";
+            strq3 = "3. ชอบเถียง เอะอะ โวยวาย";
+            strq4 = "4. อยู่ไม่นิ่ง มักหาอะไรทำหรือเล่นตลอดเวลา";
+            strq5 = "5. ใจร้อน วู่วาม โมโหง่าย";
+            strq6 = "6. มักมีเรื่องทะเลาะวิวิทกับเพื่อน หรือพี่น้อง";
+            strq7 = "7. นิสัยพฤติกรรมเด็กกว่าวัย";
+            strq8 = "8. พูดมากจนน่ารำคาญ";
+            strq9 = "9. อารมณ์เสีย หงุดหงิดง่าย";
+            strq10 = "10. ทำอะไรโดยไม่คิดถึงผลที่จะตามมา";
+            strq11 = "11. เล่นรุนแรง เล่นแผลงๆ หรือเสี่ยงอันตราย";
+            strq12 = "12. เจ็บตัวจากการเล่นหรือทำกิจกรรมต่างๆ";
+            strq13 = "13. สร้างปัญหาให้ตนเองหรือคนในบ้าน";
+            strq14 = "14. รอคอยอะไรนานๆ ไม่ได้";
+            strq15 = "15. ตอนเด็กๆ ซนมาก";
+            strq16 = "16. ขาดความรับผิดชอบ";
+            strq17 = "17. ไม่สนใจการเรียน";
+            strq18 = "18. อิดออด ต่อรอง ลีลาเยอะเวลาบอกให้ทำอะไร";
+            strq19 = "19. เหม๋อ ใจลอย";
+            strq20 = "20. ขี้ลืม";
+            strq21 = "21. ไม่สนใจทำการบ้าน";
+            strq22 = "22. โอเอ้ อืดอาด ไม่สนใจเวลา";
+            strq23 = "23. วอกแวกง่าย";
+            strq24 = "24. ขาดระเบียบวินัย";
+            strq25 = "25. ทำของหาย หรือลืมว่าวางไว้ที่ไหน";
+            strq26 = "26. ทำงานอะไรไม่ค่อยเสร็จ มีงานค้างหหลายชิ้น";
+            strq27 = "27. เบื่อง่าย (ยกเว้นเวลาดูทีวี เล่นเกม หรือทำสิ่งที่ชอบ)";
+            strq28 = "28. สมาธิสั้น (ยกเว้นเวลาดูทีวี เล่นเกม หรือทำสิ่งที่ชอบ)";
+            strq29 = "29. ไม่ชอบอ่านหนังสือ หรือทบทวนบทเรียน";
+            strq30 = "30. แหย่ ล้อเลียน แกล้งเด็กคนอื่น";
 
 
         }
+        t.setText(strq1);
+        t2.setText(strq2);
+        t3.setText(strq3);
+        t4.setText(strq4);
+        t5.setText(strq5);
+        t6.setText(strq6);
+        t7.setText(strq7);
+        t8.setText(strq8);
+        t9.setText(strq9);
+        t10.setText(strq10);
+        t11.setText(strq11);
+        t12.setText(strq12);
+        t13.setText(strq13);
+        t14.setText(strq14);
+        t15.setText(strq15);
+        t16.setText(strq16);
+        t17.setText(strq17);
+        t18.setText(strq18);
+        t19.setText(strq19);
+        t20.setText(strq20);
+        t21.setText(strq21);
+        t22.setText(strq22);
+        t23.setText(strq23);
+        t24.setText(strq24);
+        t25.setText(strq25);
+        t26.setText(strq26);
+        t27.setText(strq27);
+        t28.setText(strq28);
+        t29.setText(strq29);
+        t30.setText(strq30);
+
+
+    }
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        txtDotype = Integer.parseInt(loginString[3]);
+        txtChildAge = Integer.parseInt(ageString);
+        Log.d("22_5_60", "txtChildAge " + txtChildAge + "txtDotype"+ txtDotype);
     }
 
     private void findCurrentDate() {
@@ -63,8 +268,8 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initialSpinner() {
-      spinThass1 = (Spinner) findViewById(R.id.spinThass1);
-       spinThass2 = (Spinner) findViewById(R.id.spinThass2);
+        spinThass1 = (Spinner) findViewById(R.id.spinThass1);
+        spinThass2 = (Spinner) findViewById(R.id.spinThass2);
         spinThass3 = (Spinner) findViewById(R.id.spinThass3);
         spinThass4 = (Spinner) findViewById(R.id.spinThass4);
         spinThass5 = (Spinner) findViewById(R.id.spinThass5);
@@ -162,6 +367,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
                         getResources().getString(R.string.message_havespece));
             } else {
                 // check special
+
                 checkSpecial(idString, loginString[3]);
                 calRisk(genderString,loginString[3],ageString); // คำนวนความเสี่ยง
                 uploadValueToServer();
@@ -590,29 +796,29 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
         risk3 = risk1 + risk2;
         trisk3 = risk3;
         if(gender==0){ // ผู้ชาย
-             if(type==1){ //ผู้ปกครอง   เด็กู้ชาย    ******************* ตารางหน้า 64
-                 if(age>=6&&age<9){
-                     boyParent6To8();
-                 }else if(age>=9&&age<=11){
-                     boyParent9To11();
-                 }else if(age>=12&&age<=14){
-                     boyParent12To14();
-                 }else if(age>=15&&age<=18){
-                     boyParent15To18();
-                 }
+            if(type==1){ //ผู้ปกครอง   เด็กู้ชาย    ******************* ตารางหน้า 64
+                if(age>=6&&age<9){
+                    boyParent6To8();
+                }else if(age>=9&&age<=11){
+                    boyParent9To11();
+                }else if(age>=12&&age<=14){
+                    boyParent12To14();
+                }else if(age>=15&&age<=18){
+                    boyParent15To18();
+                }
 
-             }else{//ครู เด็กชาย ******************* ตารางหน้า 68
-                 if(age>=6&&age<9){
-                     boyTeacher6To8();
-                 }else if(age>=9&&age<=11){
-                     boyTeacher9To11();
-                 }else if(age>=12&&age<=14){
-                     boyTeacher12To14();
-                 }else if(age>=15&&age<=18){
-                     boyTeacher15To18();
-                 }
+            }else{//ครู เด็กชาย ******************* ตารางหน้า 68
+                if(age>=6&&age<9){
+                    boyTeacher6To8();
+                }else if(age>=9&&age<=11){
+                    boyTeacher9To11();
+                }else if(age>=12&&age<=14){
+                    boyTeacher12To14();
+                }else if(age>=15&&age<=18){
+                    boyTeacher15To18();
+                }
 
-             }
+            }
 
 
 
@@ -5764,7 +5970,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
 
-    }
+        }
     }
 
 
@@ -10388,7 +10594,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             case 45:
                 trisk1 = 78;
                 break;
-               }
+        }
 
         /**************************************************/
         switch (trisk2) { // ด้าน 2 ชาย ผู้ปกครอง
@@ -10943,6 +11149,36 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("ans28",tmpspn28);
                 intent.putExtra("ans29",tmpspn29);
                 intent.putExtra("ans30",tmpspn30);
+                intent.putExtra("strq1",strq1);
+                intent.putExtra("strq2",strq2);
+                intent.putExtra("strq3",strq3);
+                intent.putExtra("strq4",strq4);
+                intent.putExtra("strq5",strq5);
+                intent.putExtra("strq6",strq6);
+                intent.putExtra("strq7",strq7);
+                intent.putExtra("strq8",strq8);
+                intent.putExtra("strq9",strq9);
+                intent.putExtra("strq10",strq10);
+                intent.putExtra("strq11",strq11);
+                intent.putExtra("strq12",strq12);
+                intent.putExtra("strq13",strq13);
+                intent.putExtra("strq14",strq14);
+                intent.putExtra("strq15",strq15);
+                intent.putExtra("strq16",strq16);
+                intent.putExtra("strq17",strq17);
+                intent.putExtra("strq18",strq18);
+                intent.putExtra("strq19",strq19);
+                intent.putExtra("strq20",strq20);
+                intent.putExtra("strq21",strq21);
+                intent.putExtra("strq22",strq22);
+                intent.putExtra("strq23",strq23);
+                intent.putExtra("strq24",strq24);
+                intent.putExtra("strq25",strq25);
+                intent.putExtra("strq26",strq26);
+                intent.putExtra("strq27",strq27);
+                intent.putExtra("strq28",strq28);
+                intent.putExtra("strq29",strq29);
+                intent.putExtra("strq30",strq30);
                 intent.putExtra("date",currentDateString);
                 startActivity(intent);
             }else{
@@ -10977,4 +11213,3 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 }
-

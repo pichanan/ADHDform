@@ -8,64 +8,27 @@
     >
 
     <RelativeLayout
+        android:gravity="center"
         android:id="@+id/relTop"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:background="@color/colorPrimaryDark"
+        >
 
-        <ImageView
-            android:id="@+id/imvDetail1"
-            android:layout_width="75dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:src="@drawable/do_test"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#fbf9f9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ประวัติการทำแบบประเมินทั้ง 3 แบบประเมิน"/>
 
-        <ImageView
-            android:id="@+id/imvDetailPrevious"
-            android:layout_width="75dp"
-            android:layout_height="150dp"
-            android:src="@drawable/previous"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="26dp"
-            android:layout_marginStart="26dp" />
-
-        <TextView
-            android:id="@+id/detailUserName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:text="test"
-            android:textColor="#fbf9f9"
-            android:textSize="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:id="@+id/detailShowChild"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="test"
-
-            android:textColor="#fbf9f9"
-            android:textSize="20dp"
-            android:layout_below="@+id/detailUserName"
-            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>
 
     <TabHost
         android:layout_below="@+id/relTop"
-
+        android:layout_above="@+id/layoutStartDoTest"
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -77,11 +40,13 @@
             android:orientation="vertical">
 
             <TabWidget
+                android:background="@color/colorPrimary"
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></TabWidget>
 
             <FrameLayout
+
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -90,7 +55,6 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:orientation="vertical">
 
                     <ListView
@@ -99,6 +63,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         />
+
+
 
                 </LinearLayout>
 
@@ -132,8 +98,30 @@
                         />
                 </LinearLayout>
             </FrameLayout>
+
         </LinearLayout>
     </TabHost>
+
+    <LinearLayout
+        android:id="@+id/layoutStartDoTest"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/imvDetail1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button"
+            android:text="เริ่มทำแบบประเมิน" />
+
+
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>

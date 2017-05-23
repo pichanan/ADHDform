@@ -34,28 +34,9 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="14dp"
             android:layout_marginRight="14dp"
-             />
+            />
 
-        <TextView
-            android:id="@+id/txtUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="13dp"
-            android:text="test"
-            android:textColor="#fbf9f9"
-            android:textSize="40dp" />
 
-        <TextView
-            android:id="@+id/txtType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtUser"
-            android:layout_centerHorizontal="true"
-            android:text="test"
-            android:textColor="#fbf9f9"
-            android:textSize="20dp" />
 
 
     </RelativeLayout>
@@ -70,6 +51,5 @@
 
 
 </LinearLayout>
-
 
 

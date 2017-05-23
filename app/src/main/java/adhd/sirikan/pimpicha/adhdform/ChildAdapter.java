@@ -47,7 +47,6 @@ public class ChildAdapter extends BaseAdapter {// for Listview / bestadap วน
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         // สร้าง layout เสมือน    คลาสนึงสร้างแล้วมาลงอีกคลาส
         View view1 = layoutInflater.inflate(R.layout.child_listview, parent, false);
-        view1.setBackgroundResource(R.drawable.lvbg2);
         //Initial view
         imageView = (ImageView) view1.findViewById(R.id.imvIcon);
         textView = (TextView) view1.findViewById(R.id.txtChild);

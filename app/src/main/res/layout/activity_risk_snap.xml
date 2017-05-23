@@ -5,17 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="adhd.sirikan.pimpicha.adhdform.riskSnapActivity">
-    <RelativeLayout
-
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pdf"
-            android:id="@+id/showRiskSnapPdf"/>
+        android:layout_height="25dp">
 
-    </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:textColor="#D50000"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/snapRisk"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:text="บันทึกเป็น PDF"
+                android:background="@drawable/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdf"
+                android:id="@+id/showRiskSnapPdf"/>
+            <Button
+                android:background="@drawable/button"
+                android:id="@+id/btnCompare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="เปรียบเทียบ" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
     <ScrollView
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
@@ -1918,17 +1957,7 @@
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/btnCompare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="105dp"
-        android:layout_marginRight="105dp"
-        android:layout_marginTop="15dp"
-        android:text="compare" />
+
 
 
 </RelativeLayout>

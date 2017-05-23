@@ -23,10 +23,10 @@ public class DetailActivity extends AppCompatActivity {
     private  String idString;
     private  String genderString;
     private  String ageString;
-
+    private  boolean check1=true,check2=true, check3=true;
+    private int cnt1=0,cnt2=0, cnt3=0;
     TextView userTextView,childNameTextView;
     private String tag = "16AprilV4";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,18 +35,30 @@ public class DetailActivity extends AppCompatActivity {
         //get value from Intent
         getValueFromIntent();
 
-        //Initial View and show
-        initialViewAndShow();
 
         // Button Controller
         buttonController();
-        createTabHost();
+
 
         // Create ListView Table1
         createListViewTable1();
         createListViewTable2();
         createListViewTable3();
-
+       /* if (check1 == 0 && check2 == 0 && check3 == 0) {
+            myAlert objMyAlert = new myAlert(DetailActivity.this);
+            objMyAlert.myDialog("ไม่พบประวัติการทำแบบประเมิน",
+                    "คุณยังไม่เคยทำแบบประเมินใดในเด็กคนนี้ กรุณากดปุ่มเริ่มทำแบบประเมินค่ะ");
+            check1 = 1;
+            check2 = 1;
+            check3 = 1;
+        }*/
+        Log.d("23_5_60", "CHECK BOOL ==>" + check1+" " );
+        if (check1 == true&&check2==true&&check3==true) {
+            myAlert objMyAlert = new myAlert(DetailActivity.this);
+            objMyAlert.myDialog("ไม่พบประวัติการทำแบบประเมิน",
+                    "คุณยังไม่เคยทำแบบประเมินใดในเด็กคนนี้ กรุณากดปุ่มเริ่มทำแบบประเมินค่ะ");
+        }
+        createTabHost();
 
 
     }// main method
@@ -66,10 +78,10 @@ public class DetailActivity extends AppCompatActivity {
 
             String strJSON = getTestwhereChildAndUser3.get();
 
-
             JSONArray jsonArray = new JSONArray(strJSON);
             String[] showDateStrings = new String[jsonArray.length()];
             final String[] idStrings = new String[jsonArray.length()];
+            cnt3 = jsonArray.length();
 
 
 
@@ -78,12 +90,12 @@ public class DetailActivity extends AppCompatActivity {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 showDateStrings[i] = jsonObject.getString("CurrentDate");
                 idStrings[i] = jsonObject.getString("id");
-
-
+                check3 = false;
 
 
 
             } // for
+
             // Create ListView
             ListView listView = (ListView) findViewById(R.id.liveTable3);
             ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(DetailActivity.this,
@@ -102,6 +114,7 @@ public class DetailActivity extends AppCompatActivity {
 
                 }
             });
+
 
 
 
@@ -131,13 +144,13 @@ public class DetailActivity extends AppCompatActivity {
             String[] showDateStrings = new String[jsonArray.length()];
             final String[] idStrings = new String[jsonArray.length()];
 
-
+            cnt2 = jsonArray.length();
             for (int i=0;i<jsonArray.length();i++){
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 showDateStrings[i] = jsonObject.getString("CurrentDate");
                 idStrings[i] = jsonObject.getString("id");
-
+                check2 = false;
 
 
             } // for
@@ -153,6 +166,8 @@ public class DetailActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(DetailActivity.this, ShowChildDetail2.class);
                     intent.putExtra("id", idStrings[position]);
+                    intent.putExtra("loginString", loginString);
+                    intent.putExtra("ageString", ageString);
                     startActivity(intent);
 
                 }
@@ -186,13 +201,16 @@ public class DetailActivity extends AppCompatActivity {
             String[] showDateStrings = new String[jsonArray.length()];
             final String[] idStrings = new String[jsonArray.length()];
             //final String[] snapCh1 = new String[jsonArray.length()];
-
+            Log.d("23_5_60", "CHECK JS ==>" + jsonArray.length());
+            cnt1 = jsonArray.length();
             for (int i=0;i<jsonArray.length();i++){
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 showDateStrings[i] = jsonObject.getString("CurrentDate");
                 idStrings[i] = jsonObject.getString("id");
                 //snapCh1[i] = jsonObject.getString("ch1");
+                check1 = false;
+
 
 
 
@@ -229,28 +247,28 @@ public class DetailActivity extends AppCompatActivity {
         host.setup();
 
         //Tab 1
-        TabHost.TabSpec spec = host.newTabSpec("Tab One");
+        TabHost.TabSpec spec = host.newTabSpec("SNAP-IV"+"("+cnt1+")");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("Tab One");
+        spec.setIndicator("SNAP-IV"+"("+cnt1+")");
         host.addTab(spec);
 
         //Tab 2
-        spec = host.newTabSpec("Tab Two");
+        spec = host.newTabSpec("THASS"+"("+cnt2+")");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Tab Two");
+        spec.setIndicator("THASS"+"("+cnt2+")");
 
         host.addTab(spec);
 
         //Tab 3
-        spec = host.newTabSpec("Tab Three");
+        spec = host.newTabSpec("SDQ"+"("+cnt3+")");
         spec.setContent(R.id.tab3);
-        spec.setIndicator("Tab Three");
+        spec.setIndicator("SDQ"+"("+cnt3+")");
         host.addTab(spec);
     }
 
 
     private void buttonController() {
-        ImageView btnTreetest = (ImageView) findViewById(R.id.imvDetail1);
+       Button btnTreetest = (Button) findViewById(R.id.imvDetail1);
 
         btnTreetest.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -264,12 +282,7 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
-    private void initialViewAndShow() {
-        childNameTextView = (TextView) findViewById(R.id.detailShowChild);
-        childNameTextView.setText(idString);
-        userTextView = (TextView) findViewById(R.id.detailUserName);
-        userTextView.setText(loginString[1]);
-    }
+
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex"); // childID

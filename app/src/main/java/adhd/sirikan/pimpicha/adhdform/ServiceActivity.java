@@ -35,7 +35,6 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         getValue();
 
         //show view
-        showView();
         //Image controller
         imageController();
 
@@ -52,7 +51,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         loginString = getIntent().getStringArrayExtra("Login");
     }
 
-   @Override
+    @Override
     protected void onPostResume() {//**************************************
         super.onPostResume();
         createListView();
@@ -97,6 +96,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
 
             final String[] countChildString = new String[j];
             //Build ListView
+
             ChildAdapter childAdapter = new ChildAdapter(ServiceActivity.this, imageStrings,
                     nameChildStrings,countChildString);
             listView.setAdapter(childAdapter);
@@ -121,14 +121,9 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
-    private void showView() {
-        userTextView.setText(loginString[1]);
-        typeTextView.setText(showTypeStrings[Integer.parseInt(loginString[3])]); // chang 0 1 from  to int
-    }
+
 
     private void InitialView() {
-        userTextView = (TextView) findViewById(R.id.txtUser);
-        typeTextView = (TextView) findViewById(R.id.txtType);
         imageView = (ImageView) findViewById(R.id.imvChild);
         deleteImageView = (ImageView) findViewById(R.id.imvDelete);
         listView = (ListView) findViewById(R.id.livChild);

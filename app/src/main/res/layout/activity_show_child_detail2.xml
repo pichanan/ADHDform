@@ -57,9 +57,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
 
         android:id="@+id/scvHisThass"
-        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -157,7 +157,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt1"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -226,7 +226,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt2"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -296,7 +296,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt3"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -365,7 +365,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt4"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -434,7 +434,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt5"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -503,7 +503,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt6"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -572,7 +572,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt7"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -641,7 +641,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt8"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -710,7 +710,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt9"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -779,7 +779,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt10"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -848,7 +848,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt11"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -917,7 +917,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt12"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -986,7 +986,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt13"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1055,7 +1055,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt14"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1124,7 +1124,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt15"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1193,7 +1193,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt16"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1262,7 +1262,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt17"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1331,7 +1331,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt18"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1400,7 +1400,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt19"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1469,7 +1469,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt20"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1538,7 +1538,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt21"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1607,7 +1607,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt22"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1676,7 +1676,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt23"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1745,7 +1745,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt24"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1814,7 +1814,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt25"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1883,7 +1883,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt26"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -1952,7 +1952,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt27"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -2021,7 +2021,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt28"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -2090,7 +2090,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt29"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -2159,7 +2159,7 @@
 
                 >
                 <TextView
-
+                    android:id="@+id/idqt30"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"

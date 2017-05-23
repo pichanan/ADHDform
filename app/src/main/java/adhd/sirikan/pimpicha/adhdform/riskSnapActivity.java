@@ -18,7 +18,7 @@ public class riskSnapActivity extends AppCompatActivity {
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     int risk1Int,risk2Int,risk3Int ;
-    ImageView ImageViewPDF;
+    Button ImageViewPDF;
     Button button;
     String a = "testerrrrrrr";
     @Override
@@ -28,10 +28,11 @@ public class riskSnapActivity extends AppCompatActivity {
 
 
         getValueFromIntent();
-        // analyzeRisk();
         showText();
-        ImageViewPDF = (ImageView) findViewById(R.id.showRiskSnapPdf);
+        textView = (TextView) findViewById(R.id.snapRisk);
+        ImageViewPDF = (Button) findViewById(R.id.showRiskSnapPdf);
         button = (Button) findViewById(R.id.btnCompare);
+        analyzeRisk();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -509,19 +510,19 @@ public class riskSnapActivity extends AppCompatActivity {
 
 
 
-   /* private void analyzeRisk() {
+   private void analyzeRisk() {
         if(loginString[3]=="1"){//ผปค
-            if(risk1Int>16){//1
+            if(risk1Int>16&&risk2Int<=13&&risk3Int<=15){//1
                 textView.setText("มีความเสี่ยงด้านสมาธิ");
-            }else if(risk2Int>13){//2
+            }else if(risk2Int>13&&risk1Int<=16&&risk3Int<=15){//2
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk3Int>15){//3
+            }else if(risk3Int>15&&risk2Int<=13&&risk1Int<=16){//3
                 textView.setText("มีความเสี่ยงด้านดื้อ ต่อต้าน");
-            }else if(risk1Int>16&&risk2Int>13){ // 1-2
+            }else if(risk1Int>16&&risk2Int>13&&risk3Int<=15){ // 1-2
                 textView.setText("มีความเสี่ยงด้านสมาธิ และ ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk1Int>16&&risk3Int>15){//1-3
+            }else if(risk1Int>16&&risk3Int>15&&risk2Int<=13){//1-3
                 textView.setText("มีความเสี่ยงด้านสมาธิ และด้านดื้อ ต่อต้าน");
-            }else if(risk2Int>13&&risk3Int>15){//2-3
+            }else if(risk2Int>13&&risk3Int>15&&risk1Int<=16){//2-3
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
             }else if(risk1Int>16&&risk2Int>13&&risk3Int>15){//1 -2 -3
                 textView.setText("มีความเสี่ยงด้านสมาธิ , ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
@@ -530,17 +531,17 @@ public class riskSnapActivity extends AppCompatActivity {
             }
             // ครู
         }else{
-            if(risk1Int>23){//1
+            if(risk1Int>23&&risk2Int<=16&&risk3Int<=11){//1
                 textView.setText("มีความเสี่ยงด้านสมาธิ");
-            }else if(risk2Int>16){//2
+            }else if(risk2Int>16&&risk3Int<=11&&risk1Int<=23){//2
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk3Int>11){//3
+            }else if(risk3Int>11&&risk1Int<=23&&risk2Int<=16){//3
                 textView.setText("มีความเสี่ยงด้านดื้อ ต่อต้าน");
-            }else if(risk1Int>23&&risk2Int>16){ // 1-2
+            }else if(risk1Int>23&&risk2Int>16&&risk1Int<=23){ // 1-2
                 textView.setText("มีความเสี่ยงด้านสมาธิ และ ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น");
-            }else if(risk1Int>23&&risk3Int>11){//1-3
+            }else if(risk1Int>23&&risk3Int>11&&risk2Int<=16){//1-3
                 textView.setText("มีความเสี่ยงด้านสมาธิ และด้านดื้อ ต่อต้าน");
-            }else if(risk2Int>16&&risk3Int>11){//2-3
+            }else if(risk2Int>16&&risk3Int>11&&risk1Int<=23){//2-3
                 textView.setText("มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
             }else if(risk1Int>23&&risk2Int>16&&risk3Int>11){//1 -2 -3
                 textView.setText("มีความเสี่ยงด้านสมาธิ , ด้านซน อยู่ไม่นิ่ง หุ่นหันพลันแล่น และ ด้านดื้อ ต่อต้าน");
@@ -549,8 +550,8 @@ public class riskSnapActivity extends AppCompatActivity {
                 textView.setTextColor(Color.parseColor("#B71C1C"));
             }
         }
-        textView2.setText(date);
-    }*/
+
+    }
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");

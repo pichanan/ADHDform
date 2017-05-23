@@ -185,7 +185,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
                         + Integer.parseInt(spn24) + Integer.parseInt(spn25) + Integer.parseInt(spn26);
 
                 uploadValueToServer();
-
+                Log.d("23_5_60", "RISK ==>" + risk1+" "+risk2+" "+risk3);
 
             }
 

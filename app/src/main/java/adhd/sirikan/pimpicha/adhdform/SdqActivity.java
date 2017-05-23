@@ -128,8 +128,9 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
         ageString = getIntent().getStringExtra("age");
 
         for(int i = 0 ;i<loginString.length;i++) {
-            Log.d("tag2", "loginString(" + i + ")==>" + loginString[i]);
+            Log.d("22_5_60", "loginString(" + i + ")==>" + loginString[i]);
         }
+
     }
 
 

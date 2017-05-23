@@ -59,6 +59,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         spec.setIndicator("สมาธิสั้นคืออะไร?");
         host.addTab(spec);
 
+
         //Tab 2
         spec = host.newTabSpec("แบบทดสอบสมาธิสั้นในเด็ก");
         spec.setContent(R.id.tabAfter2);
@@ -71,6 +72,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         spec.setIndicator("สถิติผลการทำแบบทดสอบ");
 
         host.addTab(spec);
+
     }
 
 

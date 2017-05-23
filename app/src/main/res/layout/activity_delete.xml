@@ -10,14 +10,16 @@
 
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/relativeLayout2">
 
         <TextView
+            android:textSize="20dp"
+            android:textColor="#B71C1C"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="กรุณาเลือกเด็ก1คนที่ท่านต้องการลบ"/>
+            android:text="กรุณาเลือกเด็กคนที่ท่านต้องการลบ"/>
 
 
     </RelativeLayout>

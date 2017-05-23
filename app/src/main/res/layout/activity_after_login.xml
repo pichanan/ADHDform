@@ -7,19 +7,28 @@
     tools:context="adhd.sirikan.pimpicha.adhdform.AfterLoginActivity">
 
 
-    <RelativeLayout
+    <LinearLayout
+        android:gravity="center"
         android:id="@+id/topAfterLogin"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="254dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/headappname"
+            >
+
+        </ImageView>
 
 
-
-
-    </RelativeLayout>
+    </LinearLayout>
 
     <TabHost
         android:layout_below="@+id/topAfterLogin"
@@ -35,6 +44,7 @@
                 android:orientation="vertical">
 
                 <TabWidget
+                    android:background="@color/colorPrimary"
                     android:id="@android:id/tabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></TabWidget>
@@ -80,14 +90,17 @@
                                 android:text="\t\t\tสุดท้ายคือ อาการหุนหันพลันแล่น เด็กมักตอบสนองต่อสิ่งเร้าทันที ไม่คิดไตร่ตรองดูก่อน มักมีอาการใจร้อน ทำอะไรโดยไม่คิด หงุดหงิดง่าย ชอบพูดแทรก ตอบคำถามทั้งที่ยังถามไม่จบ"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
+
                             <TextView
-                                android:text="\t\t\tอาการเหล่านี้ทำให้เด็กมีปัญหาในการทำกิจกรรมต่างๆทั้งที่บ้าน และที่โรงเรียนซึ่งแตกต่างจากเด็กในวัยเดียวกัน อาจส่งผลต่อการเรียนรู้ หรือพฤติกรรมที่ไม่เหมาะสม อาจถูกตำหนิ หรือลงโทษ ทำให้สูญเสียความมั่นใจในตัวเอง คิดว่าตัวเองไม่สามารถทำอะไรได้เหมือนคนอื่น แต่หากได้รับการรักษาดูแลอย่างทันเวลาและถูกต้อง เด็กเหล่านี้ก็จะเติบโตเป็นผู้ใหญ่ ที่สามารถใช้ชีวิตได้โดยปกติสุขเหมือนคนทั่วไปได้"
+                                android:id="@+id/textView10"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="\t\t\tอาการเหล่านี้ทำให้เด็กมีปัญหาในการทำกิจกรรมต่างๆทั้งที่บ้าน และที่โรงเรียนซึ่งแตกต่างจากเด็กในวัยเดียวกัน อาจส่งผลต่อการเรียนรู้ หรือพฤติกรรมที่ไม่เหมาะสม อาจถูกตำหนิ หรือลงโทษ ทำให้สูญเสียความมั่นใจในตัวเอง คิดว่าตัวเองไม่สามารถทำอะไรได้เหมือนคนอื่น แต่หากได้รับการรักษาดูแลอย่างทันเวลาและถูกต้อง เด็กเหล่านี้ก็จะเติบโตเป็นผู้ใหญ่ ที่สามารถใช้ชีวิตได้โดยปกติสุขเหมือนคนทั่วไปได้" />
 
                         </LinearLayout>
 
                         <LinearLayout
+                            android:layout_marginTop="30dp"
                             android:id="@+id/tabAfter2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -121,7 +134,7 @@
                                         android:layout_height="wrap_content"
                                         android:background="@drawable/button"
                                         android:layout_width="wrap_content"
-                                        android:text="ทำแบบประเมินเด็กสมาธิสั้น" />
+                                        android:text="   ทำแบบประเมินเด็ก   " />
 
 
                                 </LinearLayout>

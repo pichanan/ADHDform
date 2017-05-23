@@ -6,53 +6,10 @@
     android:layout_height="match_parent"
     tools:context="adhd.sirikan.pimpicha.adhdform.ShowTwoTable">
 
-    <LinearLayout
-        android:id="@+id/tabAfter2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="164dp"
-                android:layout_height="391dp"
-                android:src="@drawable/nurse" />
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/txtbox2" />
-
-                <Button
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/graphDetail"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/button"
-                    android:text="ความเสี่ยงด้านอาการซนวู่วาม" />
-
-                <Button
-                    android:id="@+id/graphDetail2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/button"
-                    android:text="ความเสี่ยงด้านอาการขาดสมาธิ" />
-            </LinearLayout>
-        </LinearLayout>
 
 
 
 
-    </LinearLayout>
 
 
 
