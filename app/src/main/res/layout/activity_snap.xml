@@ -48,7 +48,7 @@
                     <LinearLayout
                         android:background="@drawable/lvbg2"
                         android:orientation="vertical"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="15dp"
@@ -68,7 +68,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -88,7 +88,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -108,7 +108,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
 
@@ -131,7 +131,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -151,7 +151,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
 
@@ -194,7 +194,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -214,7 +214,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -234,7 +234,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -254,7 +254,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -274,7 +274,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -294,7 +294,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -314,7 +314,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -334,7 +334,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -354,7 +354,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -374,7 +374,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -394,7 +394,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -414,7 +414,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -434,7 +434,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -454,7 +454,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -474,7 +474,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -494,7 +494,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -514,7 +514,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -534,7 +534,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView
@@ -554,7 +554,7 @@
                     android:layout_marginTop="3dp"
                     android:background="@drawable/lvbg2"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00">
                     <TextView

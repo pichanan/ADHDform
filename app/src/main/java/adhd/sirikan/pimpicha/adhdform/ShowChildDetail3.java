@@ -1,10 +1,12 @@
 package adhd.sirikan.pimpicha.adhdform;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +15,7 @@ import org.json.JSONObject;
 
 public class ShowChildDetail3 extends AppCompatActivity {
     private MyConstant myConstant;
-    ImageView ImageViewPDF;
+    Button ImageViewPDF,button2;
     private String urlPHPString;
     private String[] columnStrings,resultStrings;
     private String tag = "16AprilV5";
@@ -30,7 +32,9 @@ public class ShowChildDetail3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_child_detail3);
-        ImageViewPDF = (ImageView) findViewById(R.id.showDetailPdfSdq);
+        textView = (TextView) findViewById(R.id.hisSdqShowRisk);
+        button2 = (Button) findViewById(R.id.rechisSdq);
+        ImageViewPDF = (Button) findViewById(R.id.showDetailPdfSdq);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,13 +44,18 @@ public class ShowChildDetail3 extends AppCompatActivity {
 
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ShowChildDetail3.this, RecommendActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
+
 
         mySetup();
         queryDataFromJSoN();
-        findId();
-    }
-
-    private void putIt() {
         if(Integer.parseInt(risk1)>=0&&Integer.parseInt(risk1)<=5){//1
             allRisk = "ปกติ";
 
@@ -56,6 +65,17 @@ public class ShowChildDetail3 extends AppCompatActivity {
         }else  if(Integer.parseInt(risk1)>=7&&Integer.parseInt(risk1)<=10){
             allRisk = "มีปัญหา";
         }
+        if(allRisk.equals("ปกติ")){
+            textView.setText(allRisk);
+            textView.setTextColor(Color.parseColor("#1bb730"));
+        }else{
+            textView.setText(allRisk);
+        }
+        findId();
+    }
+
+    private void putIt() {
+
         Intent intent = new Intent(ShowChildDetail3.this, PDF3Activity.class);
         intent.putExtra("sspn", ch1);
         intent.putExtra("sspn2", ch2);

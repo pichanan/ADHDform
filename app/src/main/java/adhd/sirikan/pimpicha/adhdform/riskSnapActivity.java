@@ -19,7 +19,7 @@ public class riskSnapActivity extends AppCompatActivity {
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     int risk1Int,risk2Int,risk3Int ;
     Button ImageViewPDF;
-    Button button;
+    Button button2,button;
     String a = "testerrrrrrr";
     String r1="",r2="",r3="";
     @Override
@@ -33,6 +33,7 @@ public class riskSnapActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.snapRisk);
         ImageViewPDF = (Button) findViewById(R.id.showRiskSnapPdf);
         button = (Button) findViewById(R.id.btnCompare);
+        button2 = (Button) findViewById(R.id.btnRegcmSnap);
         analyzeRisk();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +68,14 @@ public class riskSnapActivity extends AppCompatActivity {
 
 
 
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskSnapActivity.this, RecommendActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
         });
 
 
@@ -525,7 +534,7 @@ public class riskSnapActivity extends AppCompatActivity {
                 r1 = "มีความเสี่ยงด้านสมาธิ";
             }
             if (risk2Int>13){
-                r2="มีความเสี่ยงด้านสมาธิ";
+                r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
             }
             if(risk3Int>15){
                 r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
@@ -543,7 +552,7 @@ public class riskSnapActivity extends AppCompatActivity {
                 r1 = "มีความเสี่ยงด้านสมาธิ";
             }
             if (risk2Int>16){
-                r2="มีความเสี่ยงด้านสมาธิ";
+                r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
             }
             if(risk3Int>11){
                 r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";

@@ -1,9 +1,12 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -19,8 +22,8 @@ public class GraphActivity extends AppCompatActivity { // SNAP
     int intMaxX1,intMaxX;
     TextView txtCorre,txtCorre2;
     private GraphView line_graph,line_graph2;
-    private int[] colorLineInts = new int[]{Color.RED, Color.BLUE};
-
+    private int[] colorLineInts = new int[]{Color.GREEN, Color.BLUE};
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,15 @@ public class GraphActivity extends AppCompatActivity { // SNAP
 
         loginString = getIntent().getStringArrayExtra("Login");
         initialView();
-
+        button = (Button) findViewById(R.id.graphBack);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GraphActivity.this,AfterLoginActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
 
         //risk1
         createLineGraphRed1("0","risk1",colorLineInts[0]);// snap risk1 teacher
@@ -77,7 +88,20 @@ public class GraphActivity extends AppCompatActivity { // SNAP
         String s = String.format("%.2f",r);
         r = Double.parseDouble(s);
 
-        txtCorre2.setText(s);
+        if(r>=0.9&&r<=1.0){
+            txtCorre2.setText("ด้านอาการซนวู่วาม ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับตสูงมาก");
+        }else if(r>=0.7&&r<=0.9){
+            txtCorre2.setText("ด้านอาการซนวู่วาม ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับสูง");
+        }else if(r>=0.5&&r<=0.7){
+            txtCorre2.setText("ด้านอาการซนวู่วาม ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับปานกลาง");
+        }else if(r>=0.3&&r<=0.5){
+            txtCorre2.setText("ด้านอาการซนวู่วาม ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับต่ำ");
+        }else if(r>=0.0&&r<=0.3){
+            txtCorre2.setText("ด้านอาการซนวู่วาม ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับต่ำมาก");
+        }else{
+            txtCorre2.setText("ด้านอาการซนวู่วาม ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันแบบตรงข้ามกัน");
+
+        }
     }
 
     private void calCorre1() {
@@ -112,8 +136,21 @@ public class GraphActivity extends AppCompatActivity { // SNAP
         String s = String.format("%.2f",r);
         r = Double.parseDouble(s);
 
-        txtCorre.setText(s);
 
+        if(r>=0.9&&r<=1.0){
+            txtCorre.setText("ด้านอาการขาดสมาธิ ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับตสูงมาก");
+        }else if(r>=0.7&&r<=0.9){
+            txtCorre.setText("ด้านอาการขาดสมาธิ ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับสูง");
+        }else if(r>=0.5&&r<=0.7){
+            txtCorre.setText("ด้านอาการขาดสมาธิ ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับปานกลาง");
+        }else if(r>=0.3&&r<=0.5){
+            txtCorre.setText("ด้านอาการขาดสมาธิ ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับต่ำ");
+        }else if(r>=0.0&&r<=0.3){
+            txtCorre.setText("ด้านอาการขาดสมาธิ ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันในระดับต่ำมาก");
+        }else{
+            txtCorre.setText("ด้านอาการขาดสมาธิ ค่าที่หาได้คือ:"+s+" หมายความว่า มีความสัมพันธ์กันแบบตรงข้ามกัน");
+
+        }
 
     }
 

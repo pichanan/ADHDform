@@ -177,14 +177,14 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="50dp"
                                         android:background="@drawable/button"
-                                        android:text="ความเสี่ยงด้านอาการซนวู่วาม" />
+                                        android:text="ครู" />
 
                                     <Button
                                         android:id="@+id/graphDetail2"
                                         android:layout_width="match_parent"
                                         android:layout_height="50dp"
                                         android:background="@drawable/button"
-                                        android:text="ความเสี่ยงด้านอาการขาดสมาธิ" />
+                                        android:text="ผู้ปกครอง" />
                                 </LinearLayout>
                             </LinearLayout>
 

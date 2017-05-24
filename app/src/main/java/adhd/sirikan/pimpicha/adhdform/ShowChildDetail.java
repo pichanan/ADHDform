@@ -1,12 +1,16 @@
 package adhd.sirikan.pimpicha.adhdform;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.itextpdf.text.Paragraph;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -17,7 +21,7 @@ public class ShowChildDetail extends AppCompatActivity {
     private String urlPHPString;
     private String[] columnStrings,resultStrings;
     private String tag = "16AprilV5";
-    ImageView ImageViewPDF;
+    Button ImageViewPDF,button2;
     String ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11,
             ch12, ch13, ch14, ch15, ch16, ch17, ch18, ch19, ch20,
             ch21, ch22, ch23, ch24, ch25, ch26;
@@ -29,6 +33,8 @@ public class ShowChildDetail extends AppCompatActivity {
 
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
+    String r1="",r2="",r3="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +49,9 @@ public class ShowChildDetail extends AppCompatActivity {
         mySetup();
         queryDataFromJSoN();
         findId();
-        ImageViewPDF = (ImageView) findViewById(R.id.showDetailPdf);
+        textView = (TextView) findViewById(R.id.hisSnapRisk);
+        ImageViewPDF = (Button) findViewById(R.id.showDetailPdf);
+        button2 = (Button) findViewById(R.id.btnRegcmHisSnap);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +61,15 @@ public class ShowChildDetail extends AppCompatActivity {
 
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ShowChildDetail.this, RecommendActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
+        analyzeRisk();
 
 
     }//main method
@@ -505,6 +522,11 @@ public class ShowChildDetail extends AppCompatActivity {
             risk3 = resultStrings[31];
             date = resultStrings[34];
 
+
+
+
+
+
         } catch (Exception e) {
             Log.d(tag, "e query ==>" + e.toString());
         }
@@ -560,4 +582,48 @@ public class ShowChildDetail extends AppCompatActivity {
         startActivity(intent);
 
     }
+    private void analyzeRisk() {
+        if(loginString[3].equals("1")){//ผปค
+
+            if(Integer.parseInt(risk1)>16){
+                r1 = "มีความเสี่ยงด้านสมาธิ";
+            }
+            if (Integer.parseInt(risk2)>13){
+                r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
+            }
+            if(Integer.parseInt(risk3)>15){
+                r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+            }
+
+            if (r1 == "" && r2 == "" && r3 == "") {
+                textView.setText("ไม่มีความเสี่ยง");
+                textView.setTextColor(Color.parseColor("#1bb730"));
+            } else{
+                textView.setText(r1+" "+r2+" " +r3);
+            }
+            // ครู
+        }else{
+            if(Integer.parseInt(risk1)>23){
+                r1 = "มีความเสี่ยงด้านสมาธิ";
+            }
+            if (Integer.parseInt(risk2)>16){
+                r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
+            }
+            if(Integer.parseInt(risk3)>11){
+                r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+            }
+
+            if (r1 == "" && r2 == "" && r3 == "") {
+                textView.setText("ไม่มีความเสี่ยง");
+                textView.setTextColor(Color.parseColor("#1bb730"));
+            } else{
+                textView.setText(r1+" "+r2+" " +r3);
+            }
+
+
+        }
+
+    }
+
+
 }//main Class

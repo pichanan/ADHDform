@@ -19,7 +19,7 @@ public class riskSdqActivity extends AppCompatActivity {
     String testText = "jjjjjj",sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     Button ImageViewPDF;
-    Button button;
+    Button button,button2;
     String allRisk = "";
 
     @Override
@@ -32,6 +32,7 @@ public class riskSdqActivity extends AppCompatActivity {
         analyzeRisk();
         //analyzeRisk();
         ImageViewPDF = (Button) findViewById(R.id.pdfSdq);
+        button2 = (Button) findViewById(R.id.recSdq);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +62,14 @@ public class riskSdqActivity extends AppCompatActivity {
                 Log.d(tag, "Put from Risksnap ==>" + riskInt);
 
 
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskSdqActivity.this, RecommendActivity.class);
+                intent.putExtra("Login", loginString);
                 startActivity(intent);
             }
         });

@@ -1,9 +1,12 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -19,12 +22,22 @@ public class Graph2Activity extends AppCompatActivity {
     int intMaxX1,intMaxX;
     TextView txtCorre,txtCorre2;
     private GraphView line_graph,line_graph2;
-    private int[] colorLineInts = new int[]{Color.RED, Color.BLUE};
+    Button button;
+    private int[] colorLineInts = new int[]{Color.GREEN, Color.BLUE};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph2);
         loginString = getIntent().getStringArrayExtra("Login");
+        button = (Button) findViewById(R.id.graph2Back);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Graph2Activity.this,AfterLoginActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
         initialView();
         //risk1**************************************/
         createLineGraphRed1("1","risk1",colorLineInts[0]);// snap risk1 Parent

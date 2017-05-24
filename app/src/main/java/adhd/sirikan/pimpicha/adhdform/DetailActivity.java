@@ -64,6 +64,7 @@ public class DetailActivity extends AppCompatActivity {
 
     }// main method
 
+
     private void createListViewTable3() {
         try {
 

@@ -50,6 +50,12 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button"
                 android:text="เปรียบเทียบ" />
+            <Button
+                android:id="@+id/recSdq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="คำแนะนำ" />
         </LinearLayout>
 
 

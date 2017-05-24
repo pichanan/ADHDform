@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,7 +26,7 @@ public class ShowChildDetail2 extends AppCompatActivity {
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26
             , spn27, spn28, spn29, spn30;
-    ImageView ImageViewPDF;
+    Button ImageViewPDF,button2;
     TextView t, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
             t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25,
             t26, t27, t28, t29, t30;
@@ -40,7 +41,9 @@ public class ShowChildDetail2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_child_detail2);
-        ImageViewPDF = (ImageView) findViewById(R.id.showDetailThassPdf);
+        ImageViewPDF = (Button) findViewById(R.id.showDetailThassPdf);
+        button2 = (Button) findViewById(R.id.rechisThass);
+        textView = (TextView) findViewById(R.id.thassRiskhis);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,11 +53,20 @@ public class ShowChildDetail2 extends AppCompatActivity {
 
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ShowChildDetail2.this, RecommendActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
 
         mySetup();
         queryDataFromJSoN();
         findId();
         analyzeRisk();
+
     }
 
     private void findId() {
@@ -858,38 +870,45 @@ public class ShowChildDetail2 extends AppCompatActivity {
     private void analyzeRisk() {
 
         if(risk1Int>=51&&risk1Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
-            txtRisk1 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
+            txtRisk1 = "=> อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม (ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ)";
 
         }else if(risk1Int>=61&&risk1Int<=70){
-            txtRisk1 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+            txtRisk1 = "=> เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม (ควรให้การช่วยเหลือเบื้องต้นและติดตามผล)";
         }else if(risk1Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
-            txtRisk1 = "มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+            txtRisk1 = "=> มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม สูง (ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง)";
         }else{
-            txtRisk1 = "ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
+            txtRisk1 = "=> ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
         }
 
         if(risk2Int>=51&&risk2Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
-            txtRisk2 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการขาดสมาธิ ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
+            txtRisk2 = "=> อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการขาดสมาธิ (ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ)";
 
         }else if(risk2Int>=61&&risk2Int<=70){
-            txtRisk2 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+            txtRisk2 = "=> เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ (ควรให้การช่วยเหลือเบื้องต้นและติดตามผล)";
         }else if(risk2Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
-            txtRisk2 = "มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+            txtRisk2 = "=> มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ สูง (ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง)";
         }else{
-            txtRisk2 = "ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
+            txtRisk2 = "=> ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
         }
 
 
         if(risk3Int>=51&&risk3Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
-            txtRisk3 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยโดยรวม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
+            txtRisk3 = "=> อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยโดยรวม (ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ)";
 
         }else if(risk3Int>=61&&risk3Int<=70){
-            txtRisk3 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+            txtRisk3 = "=> เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม (ควรให้การช่วยเหลือเบื้องต้นและติดตามผล)";
         }else if(risk3Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
-            txtRisk3 = "มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+            txtRisk3 = "=> มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม สูง (ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง)";
         }
 
-        allrisk = txtRisk3+"\n"+txtRisk1 +"\n"+ txtRisk2  ;
+        if (txtRisk3.equals("") && txtRisk2.equals("") && txtRisk3.equals("")) {
+
+            textView.setText("อยู่ในเกณฑ์ปกติ");
+        }else{
+            allrisk = txtRisk3+"\n"+txtRisk1 +"\n"+ txtRisk2  ;
+            textView.setText(allrisk);
+        }
+
 
 
     }

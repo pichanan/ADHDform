@@ -9,40 +9,108 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <com.jjoe64.graphview.GraphView
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_width="match_parent"
-        android:layout_height="200dip"
-        android:title="Graph Title"
-        android:id="@+id/graph"
-        />
-
-
-         <com.jjoe64.graphview.GraphView
-             android:layout_margin="@dimen/fab_margin"
-             android:layout_width="match_parent"
-             android:layout_height="200dip"
-             android:title="Graph Title"
-             android:id="@+id/graph2"
-             />
-
-            <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtCorre"/>
-            <TextView
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtCorre2"/>
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="ย้อนกลับ"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button"
+                    android:id="@+id/graphBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+         <LinearLayout
+             android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="คำอธิบายกราฟ:"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\t\t\t\tเส้นสีเขียวคือแบบประเมิน SNAP-IV , เส้นสีเน้ำเงินคือแบบประเมิน THASS โดยดึงข้อมูลมาจากผู้ใช้ทีเป็นครูที่ทำแบบประเมินเด็กคนเดียวครบทั้ง 2แบบประเมิน"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\t\t\t\tข้อมูลทั้งหมดถูกนำมาหาความสัมพันธ์ว่า หากผู้ใช้ทำแบบประเมินทั้ง2แบบประเมินคือ SNAP-IV และ THASS ผลการประเมินที่ได้จะเป็นไปในทิศทางเดียวกันหรือไม่"/>
+                <TextView
+                    android:text="\t\t\t\tผลการหาความสัมพันธ์ (Correlation)คือ:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtCorre"/>
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtCorre2"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="คำอธิบายกราฟ:"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="\t\t\t\tเส้นสีเขียวคือแบบประเมิน SNAP-IV , เส้นสีเน้ำเงินคือแบบประเมิน THASS โดยดึงข้อมูลมาจากผู้ใช้ทีเป็นครูที่ทำแบบประเมินเด็กคนเดียวครบทั้ง 2แบบประเมิน"/>
+            </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15dp"
+                android:text="ความเสี่ยงด้านอาการซนวู่วาม"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.jjoe64.graphview.GraphView
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:title="Graph Title"
+                android:id="@+id/graph"
+                />
+
+
+            <TextView
+                android:textSize="15dp"
+                android:text="ความเสี่ยงด้านอาการขาดสมาธิ"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.jjoe64.graphview.GraphView
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:title="Graph Title"
+                android:id="@+id/graph2"
+                />
+
+
+            </LinearLayout>
 
 
 
         </LinearLayout>
+
     </ScrollView>
 
 </RelativeLayout>
