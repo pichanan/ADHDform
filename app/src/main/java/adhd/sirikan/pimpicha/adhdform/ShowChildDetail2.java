@@ -14,13 +14,13 @@ import org.json.JSONObject;
 public class ShowChildDetail2 extends AppCompatActivity {
     private MyConstant myConstant;
     private String urlPHPString;
-    String idString, loginString[],genderString, ageString;
+    String idString, loginString[],genderString, ageString,nameString;
     private String[] columnStrings,resultStrings;
     private String tag = "16AprilV5";
     String ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11,
             ch12, ch13, ch14, ch15, ch16, ch17, ch18, ch19, ch20,
             ch21, ch22, ch23, ch24, ch25, ch26,ch27,ch28,ch29,ch30;
-    String risk1, risk2, risk3;
+    String risk1, risk2, risk3,date;
 
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26
@@ -33,6 +33,8 @@ public class ShowChildDetail2 extends AppCompatActivity {
             strq14, strq15, strq16, strq17, strq18, strq19, strq20, strq21, strq22, strq23, strq24, strq25,
             strq26, strq27, strq28, strq29, strq30;
     int txtDotype, txtChildAge;
+    int risk1Int,risk2Int,risk3Int;
+    String txtRisk1="",txtRisk2="", txtRisk3 = "",allrisk="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class ShowChildDetail2 extends AppCompatActivity {
         mySetup();
         queryDataFromJSoN();
         findId();
+        analyzeRisk();
     }
 
     private void findId() {
@@ -750,6 +753,13 @@ public class ShowChildDetail2 extends AppCompatActivity {
             ch28 = resultStrings[28];
             ch29 = resultStrings[29];
             ch30 = resultStrings[30];
+            risk1 = resultStrings[33];
+            risk2 = resultStrings[34];
+            risk3 = resultStrings[35];
+            date = resultStrings[38];
+            risk1Int = Integer.parseInt(risk1);
+            risk2Int = Integer.parseInt(risk2);
+            risk3Int = Integer.parseInt(risk3);
             Log.d(tag, "30 ("  + ") ==>" + resultStrings[30]);
 
 
@@ -761,12 +771,14 @@ public class ShowChildDetail2 extends AppCompatActivity {
     private void mySetup() {
         myConstant = new MyConstant();
         idString = getIntent().getStringExtra("id");
-        loginString = getIntent().getStringArrayExtra("loginString");
-        ageString = getIntent().getStringExtra("ageString");
+        loginString = getIntent().getStringArrayExtra("Login");
+        ageString = getIntent().getStringExtra("age");
+        genderString = getIntent().getStringExtra("gender");
         columnStrings = myConstant.getColumnTest2();
         urlPHPString = myConstant.getUrlGetTestWhereID2();
         txtDotype = Integer.parseInt(loginString[3]);
         txtChildAge= Integer.parseInt(ageString);
+        nameString = getIntent().getStringExtra("name");
     }
     private void putIt() {
         Intent intent = new Intent(ShowChildDetail2.this, PDF2Activity.class);
@@ -830,11 +842,55 @@ public class ShowChildDetail2 extends AppCompatActivity {
         intent.putExtra("strq28",strq28);
         intent.putExtra("strq29",strq29);
         intent.putExtra("strq30",strq30);
-        /*intent.putExtra("risk1", risk1Int);
-        intent.putExtra("risk2", risk2Int);
-        intent.putExtra("risk3", risk3Int);
-        intent.putExtra("date", date);*/
+        intent.putExtra("risk1", Integer.parseInt(risk1));
+        intent.putExtra("risk2", Integer.parseInt(risk2));
+        intent.putExtra("risk3", Integer.parseInt(risk3));
+        intent.putExtra("date", date);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
+        intent.putExtra("Login", loginString);
+        intent.putExtra("allrisk", allrisk);
         startActivity(intent);
+
+    }
+
+    private void analyzeRisk() {
+
+        if(risk1Int>=51&&risk1Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
+            txtRisk1 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
+
+        }else if(risk1Int>=61&&risk1Int<=70){
+            txtRisk1 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+        }else if(risk1Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
+            txtRisk1 = "มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+        }else{
+            txtRisk1 = "ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
+        }
+
+        if(risk2Int>=51&&risk2Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
+            txtRisk2 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการขาดสมาธิ ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
+
+        }else if(risk2Int>=61&&risk2Int<=70){
+            txtRisk2 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+        }else if(risk2Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
+            txtRisk2 = "มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+        }else{
+            txtRisk2 = "ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
+        }
+
+
+        if(risk3Int>=51&&risk3Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
+            txtRisk3 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยโดยรวม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
+
+        }else if(risk3Int>=61&&risk3Int<=70){
+            txtRisk3 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+        }else if(risk3Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
+            txtRisk3 = "มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+        }
+
+        allrisk = txtRisk3+"\n"+txtRisk1 +"\n"+ txtRisk2  ;
+
 
     }
 }

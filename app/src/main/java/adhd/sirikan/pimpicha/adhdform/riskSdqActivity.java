@@ -13,23 +13,25 @@ import android.widget.TextView;
 public class riskSdqActivity extends AppCompatActivity {
     int riskInt;
     String tag = "graphSDQ";
-    String idString, loginString[],genderString, ageString;
+    String idString, loginString[],genderString, ageString,nameString;
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25;
     String testText = "jjjjjj",sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
-    ImageView ImageViewPDF;
+    Button ImageViewPDF;
     Button button;
+    String allRisk = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_risk_sdq);
-        //textView = (TextView) findViewById(R.id.txtRiskSdqShowRisk);
+        textView = (TextView) findViewById(R.id.txtRiskSdqShowRisk);
         //textView2 = (TextView) findViewById(R.id.txtRiskSdqDate);
         getValueFromIntent();
+        analyzeRisk();
         //analyzeRisk();
-        ImageViewPDF = (ImageView) findViewById(R.id.pdfSdq);
+        ImageViewPDF = (Button) findViewById(R.id.pdfSdq);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,10 +94,14 @@ public class riskSdqActivity extends AppCompatActivity {
         intent.putExtra("sspn23", sspn23);
         intent.putExtra("sspn24", sspn24);
         intent.putExtra("sspn25", sspn25);
-        /*intent.putExtra("risk1", risk1Int);
-        intent.putExtra("risk2", risk2Int);
-        intent.putExtra("risk3", risk3Int);
-        intent.putExtra("date", date);*/
+        intent.putExtra("Login", loginString);
+        intent.putExtra("tmpIndex", idString);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
+        intent.putExtra("risk",riskInt);
+        intent.putExtra("date", date);
+        intent.putExtra("allRisk", allRisk);
         startActivity(intent);
 
     }
@@ -408,30 +414,27 @@ public class riskSdqActivity extends AppCompatActivity {
     }
 
 
-    /*private void analyzeRisk() {
+    private void analyzeRisk() {
 
             if(riskInt>=0&&riskInt<=5){//1
-                textView.setText("ปกติ");
-
+                allRisk = "ปกติ";
 
             }else if(riskInt==6){
-                textView.setText("เสี่ยง");
+                allRisk = "เสี่ยง";
+
             }else  if(riskInt>=7&&riskInt<=10){
-                textView.setText("มีปัญหา");
+                allRisk = "มีปัญหา";
             }
+        textView.setText(allRisk);
 
-
-        textView2.setText(date);
-
-
-
-    }*/
+    }
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
         Bundle extras = getIntent().getExtras();
         riskInt = extras.getInt("risk");
         sspn = getIntent().getStringExtra("ans1");

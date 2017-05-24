@@ -48,6 +48,7 @@ public class PDF3Activity extends AppCompatActivity {
     int risk1Int,risk2Int,risk3Int ;
     String[] arrAns;
     String[] question;
+    String genderString,ageString, nameString,loginString[],allrisk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,10 +108,8 @@ public class PDF3Activity extends AppCompatActivity {
     }
 
     private void getValueFromIntent() {
-       /* Bundle extras = getIntent().getExtras();
-        risk1Int = extras.getInt("risk1");
-        risk2Int = extras.getInt("risk2");
-        risk3Int = extras.getInt("risk3");*/
+        Bundle extras = getIntent().getExtras();
+        risk1Int = extras.getInt("risk");
         sspn = getIntent().getStringExtra("sspn");
         sspn2 = getIntent().getStringExtra("sspn2");
         sspn3 = getIntent().getStringExtra("sspn3");
@@ -136,7 +135,12 @@ public class PDF3Activity extends AppCompatActivity {
         sspn23 = getIntent().getStringExtra("sspn23");
         sspn24 = getIntent().getStringExtra("sspn24");
         sspn25 = getIntent().getStringExtra("sspn25");
-        //date = getIntent().getStringExtra("date");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
+        date = getIntent().getStringExtra("date");
+        allrisk = getIntent().getStringExtra("allrisk");
+        loginString = getIntent().getStringArrayExtra("Login");
         arrAns = new String[25];
         arrAns[0] = sspn;
         arrAns[1] = sspn2;
@@ -268,11 +272,16 @@ public class PDF3Activity extends AppCompatActivity {
             PdfWriter.getInstance(document, output);
 
             document.open();
+            BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            Font font = new Font(bf, 15);
+
+
+            document.add(new Paragraph("ชื่อ =>"+nameString+","+"\tอายุ =>"+ageString+ " ปี,"+"\tเพศ =>"+genderString+",\tวันที่ทำแบบประเมิน ==>"+date, font));
 
 
 
             PdfPTable table = new PdfPTable(4);
-            table.setWidths(new int[]{3, 1,1,1});
+            table.setWidths(new int[]{5, 1,1,1});
             table.setWidthPercentage(100);
 
 
@@ -280,8 +289,7 @@ public class PDF3Activity extends AppCompatActivity {
             for (List<String> record : dataset) {
                 for (String field : record) {
                     try {
-                        BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-                        Font font = new Font(bf, 15);
+
 
 
 
@@ -303,9 +311,9 @@ public class PDF3Activity extends AppCompatActivity {
                 }
             }
             document.add(table);
-            BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-            Font font = new Font(bf, 15);
-            document.add(new Paragraph(sspn, font));
+            document.add(new Paragraph("คะแนนที่ได้ของอาการสมาธิสั้น : "+String.valueOf(risk1Int), font));
+            document.add(new Paragraph("ผลการประเมินเบื้องติน : " + allrisk, font));
+
 
             document.close();
             previewPdf();

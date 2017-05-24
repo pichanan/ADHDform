@@ -29,7 +29,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     String tmpspn, tmpspn2, tmpspn3, tmpspn4, tmpspn5, tmpspn6, tmpspn7, tmpspn8, tmpspn9, tmpspn10, tmpspn11, tmpspn12, tmpspn13,
             tmpspn14, tmpspn15, tmpspn16, tmpspn17, tmpspn18, tmpspn19, tmpspn20, tmpspn21, tmpspn22, tmpspn23, tmpspn24, tmpspn25,
             tmpspn26, tmpspn27, tmpspn28, tmpspn29, tmpspn30;
-    String idString,loginString[],genderString,ageString;
+    String idString,loginString[],genderString,ageString,nameString;
     TextView t, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
             t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25,
             t26, t27, t28, t29, t30;
@@ -255,6 +255,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
         txtDotype = Integer.parseInt(loginString[3]);
         txtChildAge = Integer.parseInt(ageString);
         Log.d("22_5_60", "txtChildAge " + txtChildAge + "txtDotype"+ txtDotype);
@@ -11116,6 +11117,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 intent.putExtra("risk1", (int)trisk1);
                 intent.putExtra("risk2",(int) trisk2);
                 intent.putExtra("risk3",(int) trisk3);
@@ -11192,7 +11194,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
     private boolean checkSpinner() {
 
-       /*if (spn.equals("-") || spn2.equals("-")||spn3.equals("-") ||
+       if (spn.equals("-") || spn2.equals("-")||spn3.equals("-") ||
                 spn4.equals("-")||spn5.equals("-") || spn6.equals("-")||
                 spn7.equals("-")||spn8.equals("-") || spn9.equals("-")||
                 spn10.equals("-") || spn11.equals("-")||spn12.equals("-") ||
@@ -11208,8 +11210,8 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
         } else {
             return false;
-        }*/
-        return false;
+        }
+
 
     }
 }

@@ -7,53 +7,57 @@
     tools:context="adhd.sirikan.pimpicha.adhdform.riskThassActivity">
     <LinearLayout
 
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-        <TextView
-            android:layout_marginTop="10dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center">
 
-            android:id="@+id/txtRiskThassShowRisk"
-            android:layout_width="50dp"
+            <TextView
+                android:id="@+id/thassRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D50000"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold"/>
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/txtRiskThassDate"
+            <Button
+                android:id="@+id/pdfThass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:src="@drawable/pdf"
+                android:text="บันทึกเป็น PDF" />
 
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:text="TextView"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnCompareThass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="เปรียบเทียบ" />
+        </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pdf"
-            android:id="@+id/pdfThass"/>
-
-        <Button
-            android:id="@+id/btnCompareThass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
     </LinearLayout>
     <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:id="@+id/scvthass"
-    android:layout_marginTop="80dp"
+    android:layout_marginTop="130dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentLeft="true"

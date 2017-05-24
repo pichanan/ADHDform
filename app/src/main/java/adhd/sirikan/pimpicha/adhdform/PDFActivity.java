@@ -364,9 +364,7 @@ public class PDFActivity extends AppCompatActivity {
             document.add(new Paragraph("คะแนนด้านอาการดื้อต่อต้าน : "+String.valueOf(risk3Int), font));
             if(loginString[3].equals("1")){//ผปค
 
-                if (r1 == "" && r2 == "" && r3 == "") {
-                    document.add(new Paragraph("ไม่มีความเสี่ยง", font));
-                }else {
+
                     if(risk1Int>16){
                         r1 = "มีความเสี่ยงด้านสมาธิ";
                     }
@@ -377,15 +375,16 @@ public class PDFActivity extends AppCompatActivity {
                         r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
                     }
 
+                    if (r1 == "" && r2 == "" && r3 == "") {
+                    document.add(new Paragraph("ไม่มีความเสี่ยง", font));
+                    }else {
+
                     document.add(new Paragraph(r1+" "+r2+" " +r3, font));
-                }
+                    }
 
 
                 // ครู
             }else {
-                if (r1 == "" && r2 == "" && r3 == "") {
-                    document.add(new Paragraph("ไม่มีความเสี่ยง", font));
-                }else {
                     if(risk1Int>23){
                         r1 = "มีความเสี่ยงด้านสมาธิ";
                     }
@@ -395,6 +394,11 @@ public class PDFActivity extends AppCompatActivity {
                     if(risk3Int>11){
                         r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
                     }
+
+                if (r1 == "" && r2 == "" && r3 == "") {
+                    document.add(new Paragraph("ไม่มีความเสี่ยง", font));
+                }else {
+
                     document.add(new Paragraph(r1+" "+r2+" " +r3, font));
                 }
 

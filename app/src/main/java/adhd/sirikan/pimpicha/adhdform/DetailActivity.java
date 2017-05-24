@@ -109,6 +109,11 @@ public class DetailActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(DetailActivity.this, ShowChildDetail3.class);
                     intent.putExtra("id", idStrings[position]);
+                    intent.putExtra("Login", loginString);
+                    intent.putExtra("tmpIndex", idString);
+                    intent.putExtra("gender", genderString);
+                    intent.putExtra("age", ageString);
+                    intent.putExtra("name", nameString);
 
 
                     startActivity(intent);
@@ -167,8 +172,11 @@ public class DetailActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(DetailActivity.this, ShowChildDetail2.class);
                     intent.putExtra("id", idStrings[position]);
-                    intent.putExtra("loginString", loginString);
-                    intent.putExtra("ageString", ageString);
+                    intent.putExtra("Login", loginString);
+                    intent.putExtra("tmpIndex", idString);
+                    intent.putExtra("gender", genderString);
+                    intent.putExtra("age", ageString);
+                    intent.putExtra("name", nameString);
                     startActivity(intent);
 
                 }

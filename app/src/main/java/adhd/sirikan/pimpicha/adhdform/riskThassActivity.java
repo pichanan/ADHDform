@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class riskThassActivity extends AppCompatActivity {
-    TextView textView, textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
+    TextView  textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26, spn27, spn28, spn29, spn30;
-    String idString, loginString[],genderString, ageString;
+    String idString, loginString[],genderString, ageString,nameString;
     int risk1Int,risk2Int,risk3Int ;
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26
@@ -20,24 +20,26 @@ public class riskThassActivity extends AppCompatActivity {
     String strq1, strq2, strq3, strq4, strq5, strq6, strq7, strq8, strq9, strq10, strq11, strq12, strq13,
             strq14, strq15, strq16, strq17, strq18, strq19, strq20, strq21, strq22, strq23, strq24, strq25,
             strq26, strq27, strq28, strq29, strq30;
-    ImageView ImageViewPDF;
-    Button button;
+
+    Button button,ImageViewPDF;
     String tag = "ThassIntent";
     TextView t, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
             t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25,
             t26, t27, t28, t29, t30;
+    TextView textView;
+    String txtRisk1="",txtRisk2="", txtRisk3="",allrisk="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_risk_thass);
-        textView = (TextView) findViewById(R.id.txtRiskThassShowRisk);
-        textView2 = (TextView) findViewById(R.id.txtRiskThassDate);
+        textView = (TextView) findViewById(R.id.thassRisk);
         button = (Button) findViewById(R.id.btnCompareThass);
         getValueFromIntent();
         //analyzeRisk();
         showText();
-        ImageViewPDF = (ImageView) findViewById(R.id.pdfThass);
+        analyzeRisk();
+        ImageViewPDF = (Button) findViewById(R.id.pdfThass);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +55,8 @@ public class riskThassActivity extends AppCompatActivity {
 
 
         });
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,10 +139,15 @@ public class riskThassActivity extends AppCompatActivity {
         intent.putExtra("strq28",strq28);
         intent.putExtra("strq29",strq29);
         intent.putExtra("strq30",strq30);
-        /*intent.putExtra("risk1", risk1Int);
+        intent.putExtra("risk1", risk1Int);
         intent.putExtra("risk2", risk2Int);
         intent.putExtra("risk3", risk3Int);
-        intent.putExtra("date", date);*/
+        intent.putExtra("date", date);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
+        intent.putExtra("Login", loginString);
+        intent.putExtra("allrisk", allrisk);
         startActivity(intent);
 
     }
@@ -661,93 +670,57 @@ public class riskThassActivity extends AppCompatActivity {
         t29.setText(strq29);
         t30.setText(strq30);
     }
-    /*private void analyzeRisk() {
+    private void analyzeRisk() {
+
         if(risk1Int>=51&&risk1Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
-            textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
+            txtRisk1 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
 
-        }else if(risk2Int>=51&&risk2Int<=60){//2
-            textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการขาดสมาธิ ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
+        }else if(risk1Int>=61&&risk1Int<=70){
+            txtRisk1 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+        }else if(risk1Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
+            txtRisk1 = "มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+        }else{
+            txtRisk1 = "ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
+        }
 
+        if(risk2Int>=51&&risk2Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
+            txtRisk2 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการขาดสมาธิ ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
 
-        }else if(risk3Int>=51&&risk3Int<=60){//3
-            textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นโดยรวมเล็กน้อย ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
-
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk2Int>=51&&risk2Int>=60){ // 1-2
-            textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม และ อาการขาดสมาธิ ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk3Int>=51&&risk3Int>=60){//1-3
-            textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม และ อาการสมาธิสั้นโดยรวม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
-
-        }else if(risk2Int>=51&&risk2Int<=60&&risk3Int>=51&&risk3Int>=60){//2-3
-            textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการขาดสมาธ และ อาการสมาธิสั้นโดยรวม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk2Int>=51&&risk2Int<=60&&risk3Int>=51&&risk3Int<=60) {//1 -2 -3
-            textView.setText("อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยด้าน อาการซนวู่วาม  อาการขาดสมาธิ และ อาการสมาธิสั้นโดยรวม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ");
-
-
-        }else if(risk1Int>=61&&risk1Int<=70){//1 เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรให้การช่วยเหลือเบื้องต้นและติดตามผล
-            textView.setText("เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล");
-
-        }else if(risk2Int>=51&&risk2Int<=60){//2
-            textView.setText("เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ ควรให้การช่วยเหลือเบื้องต้นและติดตามผล");
-
-
-        }else if(risk3Int>=51&&risk3Int<=60){//3
-            textView.setText("เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล");
-
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk2Int>=51&&risk2Int>=60){ // 1-2
-            textView.setText("เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม และ อาการขาดสมาธิ ควรให้การช่วยเหลือเบื้องต้นและติดตามผล");
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk3Int>=51&&risk3Int>=60){//1-3
-            textView.setText("เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม และ อาการสมาธิสั้นโดยรวม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล");
-
-        }else if(risk2Int>=51&&risk2Int<=60&&risk3Int>=51&&risk3Int>=60){//2-3
-            textView.setText("เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธ และ อาการสมาธิสั้นโดยรวม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล");
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk2Int>=51&&risk2Int<=60&&risk3Int>=51&&risk3Int<=60){//1 -2 -3
-            textView.setText("เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม  อาการขาดสมาธิ และ อาการสมาธิสั้นโดยรวม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล");
-
-
-        }else if(risk1Int>=61&&risk1Int<=70){//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
-            textView.setText("มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
-
-        }else if(risk2Int>=51&&risk2Int<=60){//2
-            textView.setText("มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
-
-
-        }else if(risk3Int>=51&&risk3Int<=60){//3
-            textView.setText("มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้านโดยรวมเสูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
-
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk2Int>=51&&risk2Int>=60){ // 1-2
-            textView.setText("มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม และ อาการขาดสมาธิ สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk3Int>=51&&risk3Int>=60){//1-3
-            textView.setText("มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม และ อาการสมาธิสั้นโดยรวม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
-
-        }else if(risk2Int>=51&&risk2Int<=60&&risk3Int>=51&&risk3Int>=60){//2-3
-            textView.setText("มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ และ อาการสมาธิสั้นโดยรวม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
-
-        }else if(risk1Int>=51&&risk1Int<=60&&risk2Int>=51&&risk2Int<=60&&risk3Int>=51&&risk3Int<=60){//1 -2 -3
-            textView.setText("มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม  อาการขาดสมาธิ และ อาการสมาธิสั้นโดยรวม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
-
-
-        } else{ // less all
-            textView.setText("อยู่ในเกณฑ์ปกติ");
-
+        }else if(risk2Int>=61&&risk2Int<=70){
+            txtRisk2 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+        }else if(risk2Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
+            txtRisk2 = "มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน อาการขาดสมาธิ สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+        }else{
+            txtRisk2 = "ไม่มีความเสี่ยงต่อการเป็นโรคสมาธิสั้นด้าน อาการซนวู่วาม";
         }
 
 
-        textView2.setText(date);
-    }*/
+        if(risk3Int>=51&&risk3Int<=60){//1 ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ
+            txtRisk3 = "อาจมีความเสี่ยงต่อการเป็นโรคสมาธิสั้นเล็กน้อยโดยรวม ควรเฝ้าระวัง ติดตาม ทำแบบคัดกรองซ้ำ";
+
+        }else if(risk3Int>=61&&risk3Int<=70){
+            txtRisk3 = "เริ่มมีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม ควรให้การช่วยเหลือเบื้องต้นและติดตามผล";
+        }else if(risk3Int>=71) {//1 มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นด้าน      ... ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง
+            txtRisk3 = "มีความเสี่ยงต่องการเป็นโรคสมาธิสั้นโดยรวม สูง ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง";
+        }
+
+        allrisk = txtRisk3+"\n"+txtRisk1 +"\n"+ txtRisk2  ;
+
+        if(txtRisk1==""&&txtRisk2==""&&txtRisk3==""){
+            textView.setText("อยู่ในเกณฑ์ปกติ");
+
+        }else{
+            textView.setText(allrisk);
+        }
+
+    }
 
     private void getValueFromIntent() {
         idString = getIntent().getStringExtra("tmpIndex");
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
         Bundle extras = getIntent().getExtras();
         risk1Int = extras.getInt("risk1");
         risk2Int = extras.getInt("risk2");

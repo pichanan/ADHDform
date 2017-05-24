@@ -14,16 +14,17 @@ import org.json.JSONObject;
 public class ShowChildDetail3 extends AppCompatActivity {
     private MyConstant myConstant;
     ImageView ImageViewPDF;
-    private String idString,urlPHPString;
+    private String urlPHPString;
     private String[] columnStrings,resultStrings;
     private String tag = "16AprilV5";
     String ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11,
             ch12, ch13, ch14, ch15, ch16, ch17, ch18, ch19, ch20,
             ch21, ch22, ch23, ch24, ch25, ch26;
-    String risk1, risk2, risk3;
+
 
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
+    String idString, loginString[],genderString,ageString,risk1,risk2,risk3,nameString,date,allRisk="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,15 @@ public class ShowChildDetail3 extends AppCompatActivity {
     }
 
     private void putIt() {
+        if(Integer.parseInt(risk1)>=0&&Integer.parseInt(risk1)<=5){//1
+            allRisk = "ปกติ";
+
+        }else if(Integer.parseInt(risk1)==6){
+            allRisk = "เสี่ยง";
+
+        }else  if(Integer.parseInt(risk1)>=7&&Integer.parseInt(risk1)<=10){
+            allRisk = "มีปัญหา";
+        }
         Intent intent = new Intent(ShowChildDetail3.this, PDF3Activity.class);
         intent.putExtra("sspn", ch1);
         intent.putExtra("sspn2", ch2);
@@ -72,10 +82,13 @@ public class ShowChildDetail3 extends AppCompatActivity {
         intent.putExtra("sspn23", ch23);
         intent.putExtra("sspn24", ch24);
         intent.putExtra("sspn25", ch25);
-        /*intent.putExtra("risk1", risk1Int);
-        intent.putExtra("risk2", risk2Int);
-        intent.putExtra("risk3", risk3Int);
-        intent.putExtra("date", date);*/
+        intent.putExtra("risk", Integer.parseInt(risk1));
+        intent.putExtra("date", date);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
+        intent.putExtra("Login", loginString);
+        intent.putExtra("allrisk", allRisk);
         startActivity(intent);
 
     }
@@ -432,7 +445,8 @@ public class ShowChildDetail3 extends AppCompatActivity {
             ch23 = resultStrings[23];
             ch24 = resultStrings[24];
             ch25 = resultStrings[25];
-
+            risk1 = resultStrings[28];
+            date = resultStrings[31];
 
         } catch (Exception e) {
             Log.d(tag, "e query ==>" + e.toString());
@@ -442,6 +456,10 @@ public class ShowChildDetail3 extends AppCompatActivity {
     private void mySetup() {
         myConstant = new MyConstant();
         idString = getIntent().getStringExtra("id");
+        loginString = getIntent().getStringArrayExtra("Login");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
         columnStrings = myConstant.getColumnTest3();
         urlPHPString = myConstant.getUrlGetTestWhereID3();
     }

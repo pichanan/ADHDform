@@ -32,7 +32,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
     String[] spinnerValue = {"-", "ไม่จริง", "จริงบางครั้ง", "จริง"};
     private static String tag = "30MarchV1",tag2 = "16AprilV1";
     private int risk;
-    String idString, loginString[],genderString,ageString;
+    String idString, loginString[],genderString,ageString,nameString;
     TextView textView;
     Button button;
 
@@ -126,6 +126,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
 
         for(int i = 0 ;i<loginString.length;i++) {
             Log.d("22_5_60", "loginString(" + i + ")==>" + loginString[i]);
@@ -465,6 +466,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
                 intent.putExtra("tmpIndex", idString);
                 intent.putExtra("gender", genderString);
                 intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 intent.putExtra("risk",(int) risk);
                 intent.putExtra("ans1",tmpspn);
                 intent.putExtra("ans2",tmpspn2);
