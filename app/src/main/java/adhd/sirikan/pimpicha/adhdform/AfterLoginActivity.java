@@ -30,6 +30,7 @@ public class AfterLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AfterLoginActivity.this,GraphActivity.class);
+                intent.putExtra("Login", loginString);
                 startActivity(intent);
             }
         });
@@ -38,6 +39,7 @@ public class AfterLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AfterLoginActivity.this,Graph2Activity.class);
+                intent.putExtra("Login", loginString);
                 startActivity(intent);
             }
         });
