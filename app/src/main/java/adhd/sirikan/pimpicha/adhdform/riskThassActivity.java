@@ -75,8 +75,9 @@ public class riskThassActivity extends AppCompatActivity {
                 intent.putExtra("date", date);
                 intent.putExtra("idString", idString);
                 intent.putExtra("loginString", loginString);
-                intent.putExtra("genderString", genderString);
-                intent.putExtra("ageString", ageString);
+                intent.putExtra("gender", genderString);
+                intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
                 Log.d(tag, "Put from Risksnap ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
 
 

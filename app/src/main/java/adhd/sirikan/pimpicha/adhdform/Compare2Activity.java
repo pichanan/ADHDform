@@ -12,19 +12,30 @@ import android.widget.ListView;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 public class Compare2Activity extends AppCompatActivity {
     int risk1Int,risk2Int,risk3Int;
     int cpRisk1, cpRisk2, cpRisk3;
-    String idString,loginString[],genderString, ageString,date;
+    String idString,loginString[],genderString, ageString,date,nameString,dateToday;
     String tag = "ThassIntent";
     String urlPHPString;
     String[] columnStrings, resultStrings;
+    private java.util.Calendar calendar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare2);
         getValueFromIntent();
+        findCurrentDate();
         createListViewThass();
+    }
+    private void findCurrentDate() {
+        calendar = java.util.Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        dateToday = dateFormat.format(calendar.getTime());
+
     }
 
 
@@ -118,8 +129,9 @@ public class Compare2Activity extends AppCompatActivity {
         risk3Int = extras.getInt("risk3");
         idString = getIntent().getStringExtra("idString");
         loginString = getIntent().getStringArrayExtra("loginString");
-        genderString = getIntent().getStringExtra("genderString");
-        ageString = getIntent().getStringExtra("ageString");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+       nameString = getIntent().getStringExtra("name");
         Log.d(tag, "Put from compare ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
     }
 
@@ -129,6 +141,7 @@ public class Compare2Activity extends AppCompatActivity {
         intent.putExtra("tmpIndex", idString);
         intent.putExtra("gender", genderString);
         intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
         intent.putExtra("risk1Int", risk1Int);
         intent.putExtra("risk2Int", risk2Int);
         intent.putExtra("risk3Int", risk3Int);
@@ -136,6 +149,7 @@ public class Compare2Activity extends AppCompatActivity {
         intent.putExtra("cpRisk2", cpRisk2);
         intent.putExtra("cpRisk3",cpRisk3);
         intent.putExtra("date",date);
+        intent.putExtra("dateToday",dateToday);
         startActivity(intent);
 
     }

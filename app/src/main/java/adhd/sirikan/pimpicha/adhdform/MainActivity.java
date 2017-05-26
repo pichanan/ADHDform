@@ -1,7 +1,9 @@
 package adhd.sirikan.pimpicha.adhdform;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +13,11 @@ import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //explicit
@@ -48,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button.setOnClickListener(MainActivity.this);
 
 
+
+
     }
 
     private void initialWidget() {
@@ -67,20 +76,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //for Button
         if (v == button) {
             // get value from Edit text
-            userString= userEditText.getText().toString().trim();
+            userString = userEditText.getText().toString().trim();
             passString = passwordEditText.getText().toString().trim();
             // check spece
-            if (userString.equals("")|| passString.equals("")) {
+            if (userString.equals("") || passString.equals("")) {
                 //have space
                 myAlert myAlert = new myAlert(MainActivity.this);
                 String s = getResources().getString(R.string.title_havespace);
                 String s1 = getResources().getString(R.string.message_havespece);
-                myAlert.myDialog(s,s1);
+                myAlert.myDialog(s, s1);
             } else {
                 //no space
                 checkAuthen();
             }
         }
+
 
 
 
@@ -134,4 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("30MarchV2", "e checkAuthen ==> " + e.toString());
         }
     }
+
+
+
 }//main class

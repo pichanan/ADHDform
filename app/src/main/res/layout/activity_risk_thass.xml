@@ -25,7 +25,7 @@
                 android:id="@+id/thassRisk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#D50000"
+                android:textColor="#FF9800"
                 android:textSize="13dp" />
 
         </LinearLayout>

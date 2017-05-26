@@ -5,11 +5,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="adhd.sirikan.pimpicha.adhdform.GraphCompareActivity">
-    <com.jjoe64.graphview.GraphView
-        android:layout_margin="@dimen/fab_margin"
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <LinearLayout
+
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="200dip"
-        android:title="Graph Title"
-        android:id="@+id/compareGraph"
-        />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+            <Button
+                android:id="@+id/backfromcompare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/button"
+                android:text="ย้อนกลับ" />
+            <TextView
+                android:text="THASS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/takeScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/button"
+                android:text="Save Pic" />
+
+        </LinearLayout>
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:title="Graph Title"
+            android:id="@+id/compareGraph"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtDateToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/yel"
+                android:layout_marginLeft="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                />
+            <TextView
+                android:text="สีเหลืองแท่งแรกคือความเสี่ยงด้านสมาธิของแบบประเมินที่ทำในวันนี้ \nสีเหลืองแท่งที่2คือความเสี่ยงด้านสมาธิของแบบประเมินที่ทำในอีตที่เลือกมาเปรียบเทียบ"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/green"
+                android:layout_marginLeft="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                />
+            <TextView
+                android:text="สีเขียวแท่งแรกคือความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น ของแบบประเมินที่ทำในวันนี้ \nสีเขียวแท่งที่2คือความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น ของแบบประเมินที่ทำในอีตที่เลือกมาเปรียบเทียบ"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/blue"
+                android:layout_marginLeft="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                />
+            <TextView
+                android:text="สีน้ำเงินแท่งแรกคือความเสี่ยงด้านดื้อต่อต้านของแบบประเมินที่ทำในวันนี้ \nสีน้ำเงินแท่งที่2คือความเสี่ยงด้านดื้อต่อต้านของแบบประเมินที่ทำในอีตที่เลือกมาเปรียบเทียบ"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>

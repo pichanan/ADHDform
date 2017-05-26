@@ -20,10 +20,14 @@ public class DeleteDoneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delete_done);
+        //setContentView(R.layout.activity_delete_done);
         getValueFromIntent();
         mySetup();
         deleteChild();
+        Intent intent = new Intent(DeleteDoneActivity.this,ServiceActivity.class);
+        intent.putExtra("Login", loginString);
+        startActivity(intent);
+
     }
 
     private void mySetup() {

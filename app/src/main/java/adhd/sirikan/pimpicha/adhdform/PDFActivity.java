@@ -408,6 +408,8 @@ public class PDFActivity extends AppCompatActivity {
 
 
 
+
+
             document.close();
             previewPdf();
         } catch (Exception e) {
@@ -436,6 +438,7 @@ public class PDFActivity extends AppCompatActivity {
             Toast.makeText(this,"Download a PDF Viewer to see the generated PDF",Toast.LENGTH_SHORT).show();
         }
     }
+
 
 
 }

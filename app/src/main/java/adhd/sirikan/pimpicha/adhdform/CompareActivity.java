@@ -24,20 +24,31 @@ import com.jjoe64.graphview.series.DataPoint;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 public class CompareActivity extends AppCompatActivity {
     int risk1Int, risk2Int, risk3Int;
     int cpRisk1, cpRisk2, cpRisk3;
-    String idString, loginString[], genderString, ageString, risk1, risk2, risk3,date;
+    String cpdate,dateToday;
+    String idString, loginString[], genderString, ageString, risk1, risk2, risk3,date,nameString;
     private static String tag = "30MarchV1", tag2 = "16AprilV1";
     String urlPHPString;
     String[] columnStrings, resultStrings;
-
+    private java.util.Calendar calendar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare);
         getValueFromIntent();
+        findCurrentDate();
         createListViewSnap();
+
+    }
+    private void findCurrentDate() {
+        calendar = java.util.Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        dateToday = dateFormat.format(calendar.getTime());
 
     }
 
@@ -48,8 +59,9 @@ public class CompareActivity extends AppCompatActivity {
         risk3Int = extras.getInt("risk3");
         idString = getIntent().getStringExtra("idString");
         loginString = getIntent().getStringArrayExtra("loginString");
-        genderString = getIntent().getStringExtra("genderString");
-        ageString = getIntent().getStringExtra("ageString");
+        genderString = getIntent().getStringExtra("gender");
+        ageString = getIntent().getStringExtra("age");
+        nameString = getIntent().getStringExtra("name");
         Log.d(tag, "Put from compare ==>" + risk1Int + " " + risk2Int + " " + risk3Int);
     }
 
@@ -112,10 +124,10 @@ public class CompareActivity extends AppCompatActivity {
                             Log.d(tag, "18 Result String(" + i + ") ==>" + resultStrings[i]);
                         }
 
-                        cpRisk1 = Integer.parseInt(resultStrings[29]);
-                        cpRisk2 = Integer.parseInt(resultStrings[30]);
-                        cpRisk3 = Integer.parseInt(resultStrings[31]);
-                        date = resultStrings[34];
+                        cpRisk1 = Integer.parseInt(resultStrings[33]);
+                        cpRisk2 = Integer.parseInt(resultStrings[34]);
+                        cpRisk3 = Integer.parseInt(resultStrings[35]);
+                        cpdate = resultStrings[38];
 
                         putIntent();
 
@@ -142,13 +154,15 @@ public class CompareActivity extends AppCompatActivity {
         intent.putExtra("tmpIndex", idString);
         intent.putExtra("gender", genderString);
         intent.putExtra("age", ageString);
+        intent.putExtra("name", nameString);
         intent.putExtra("risk1Int", risk1Int);
         intent.putExtra("risk2Int", risk2Int);
         intent.putExtra("risk3Int", risk3Int);
         intent.putExtra("cpRisk1", cpRisk1);
         intent.putExtra("cpRisk2", cpRisk2);
         intent.putExtra("cpRisk3",cpRisk3);
-        intent.putExtra("date",date);
+        intent.putExtra("cpdate",cpdate);
+        intent.putExtra("dateToday",dateToday);
         startActivity(intent);
 
     }

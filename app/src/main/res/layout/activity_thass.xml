@@ -5,12 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="adhd.sirikan.pimpicha.adhdform.TassActivity">
-    <LinearLayout
 
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
     <LinearLayout
         android:orientation="vertical"
         android:background="@color/colorPrimary"
@@ -24,13 +19,18 @@
             android:layout_height="wrap_content"
             android:text="กรุณาตอบให้คบ 30 ข้อ"/>
     </LinearLayout>
-    <LinearLayout
+    <Button
 
+        android:background="@drawable/button"
+        android:id="@+id/thass3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/my_margin">
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_alignParentBottom="true" />
 
         <ScrollView
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_above="@id/thass3"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
@@ -682,18 +682,8 @@
             </LinearLayout>
 
         </ScrollView>
-    </LinearLayout>
-    </LinearLayout>
-    <Button
-        android:background="@drawable/button"
-        android:id="@+id/thass3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="Button" />
+
 
 
 </RelativeLayout>

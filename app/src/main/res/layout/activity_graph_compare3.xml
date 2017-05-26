@@ -5,12 +5,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="adhd.sirikan.pimpicha.adhdform.GraphCompare3Activity">
-    <com.jjoe64.graphview.GraphView
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_width="match_parent"
-        android:layout_height="200dip"
-        android:title="Graph Title"
-        android:id="@+id/compareGraphSdq"
-        />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+                <Button
+                    android:id="@+id/backfromcompare3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button"
+                    android:text="ย้อนกลับ" />
+                <TextView
+                    android:text="SDQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/takeScreen3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button"
+                    android:text="Save Pic" />
+
+            </LinearLayout>
+
+            <com.jjoe64.graphview.GraphView
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:title="Graph Title"
+                android:id="@+id/compareGraphSdq"
+                />
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtDateToday3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/blue"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    />
+                <TextView
+                    android:text="สีน้ำเงินแท่งแรกคือความเสี่ยงสมาธิสั้นโดยรวมของแบบประเมินที่ทำในวันนี้ \nสีน้ำเงินแท่งที่2คือความเสี่ยงด้านสมาธิสั้นโดยรวมของแบบประเมินที่ทำในอีตที่เลือกมาเปรียบเทียบ"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

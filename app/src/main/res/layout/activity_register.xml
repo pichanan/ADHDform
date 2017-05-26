@@ -4,15 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="adhd.sirikan.pimpicha.adhdform.RegisterActivity">
 
-
     <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="85dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/my_margin"
         android:layout_marginRight="@dimen/my_margin"
         android:layout_marginTop="@dimen/my_margin"
+        android:layout_marginBottom="@dimen/my_margin"
         android:orientation="vertical">
 
 
@@ -98,9 +107,11 @@
 
 
     </LinearLayout>
+    </LinearLayout>
 
 
     <Button
+        android:background="@drawable/button"
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
