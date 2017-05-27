@@ -72,9 +72,11 @@ public class riskSnapActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(riskSnapActivity.this, RecommendActivity.class);
+                myAlert objMyAlert = new myAlert(riskSnapActivity.this);
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","หากเด็กมีความเสี่ยงในด้านใด แสดงว่าคะแนนที่ท่านประเมินเด็ก มีค่ามากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ ");
+                /*Intent intent = new Intent(riskSnapActivity.this, RecommendActivity.class);
                 intent.putExtra("Login", loginString);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
 

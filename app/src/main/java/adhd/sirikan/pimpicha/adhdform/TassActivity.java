@@ -856,6 +856,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void girlTeacher15To18() {
+        Log.d("28_5_60", "Moniter 15To18 ==> " + genderString +" "+ loginString[3] +" "+ageString);
         switch (trisk1) { // ด้าน 1 หญิง ครู
             case 0:
                 trisk1 = 40;
@@ -1495,6 +1496,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void girlTeacher12To14(){
+        Log.d("28_5_60", "Moniter 12To14 ==> " + genderString +" "+ loginString[3] +" "+ageString);
         switch (trisk1) { // ด้าน 1 หญิง ครู
             case 0:
                 trisk1 = 40;
@@ -2135,6 +2137,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void girlTeacher9To11() {
+        Log.d("28_5_60", "Moniter 9To11 ==> " + genderString +" "+ loginString[3] +" "+ageString);
         switch (trisk1) { // ด้าน 1 หญิง ครู
             case 0:
                 trisk1 = 40;
@@ -2775,6 +2778,8 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void girlTeacher6To8() {
+        Log.d("28_5_60", "Moniter 6To8 ==> " + genderString +" "+ loginString[3] +" "+ageString);
+
         switch (trisk1) { // ด้าน 1 หญิง ครู
             case 0:
                 trisk1 = 39;

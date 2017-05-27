@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class TreeTestActivity extends AppCompatActivity {
     private  String []  loginString;
     private  String idString,genderString,ageString,nameString;
+    int age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class TreeTestActivity extends AppCompatActivity {
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
         nameString = getIntent().getStringExtra("name");
-
+        age = Integer.parseInt(ageString);
         Button btnSnap = (Button) findViewById(R.id.buttonSnap);
         Button btnThass = (Button) findViewById(R.id.buttonThass);
         Button btnSdq = (Button) findViewById(R.id.buttonSdq);
@@ -51,13 +52,19 @@ public class TreeTestActivity extends AppCompatActivity {
         });
         btnSdq.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(TreeTestActivity.this, SdqActivity.class);
-                intent.putExtra("Login", loginString);
-                intent.putExtra("tmpIndex", idString);
-                intent.putExtra("gender", genderString);
-                intent.putExtra("age", ageString);
-                intent.putExtra("name", nameString);
-                startActivity(intent);
+                if (age > 16) {
+                    myAlert objMyAlert = new myAlert(TreeTestActivity.this);
+                    objMyAlert.myDialog("อายุเกิน:","แบบประเมินนี้ใช้ประเมินเด็กอายุไม่เกิน 16 ปีค่ะ");
+                }else{
+                    Intent intent = new Intent(TreeTestActivity.this, SdqActivity.class);
+                    intent.putExtra("Login", loginString);
+                    intent.putExtra("tmpIndex", idString);
+                    intent.putExtra("gender", genderString);
+                    intent.putExtra("age", ageString);
+                    intent.putExtra("name", nameString);
+                    startActivity(intent);
+                }
+
             }
         });
 

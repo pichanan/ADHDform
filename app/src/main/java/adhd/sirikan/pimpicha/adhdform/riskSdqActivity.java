@@ -69,9 +69,12 @@ public class riskSdqActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(riskSdqActivity.this, RecommendActivity.class);
+                myAlert objMyAlert = new myAlert(riskSdqActivity.this);
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น ");
+
+               /* Intent intent = new Intent(riskSdqActivity.this, RecommendActivity.class);
                 intent.putExtra("Login", loginString);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
         showText();

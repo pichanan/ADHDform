@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private Button button;
     private String userString, passwordString, typeString;
     private static String tag = "30MarchV1";
-    boolean aBoolean;
+    boolean aBoolean=true;
 
 
     @Override
@@ -143,16 +143,21 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 if (userString.equals(jsonObject.getString(columnStrings[1]))) { // แนวนอน
 
                     aBoolean = false;
+                    Log.d("27_5_60", "User ==>" + userString + jsonObject.getString(columnStrings[1]));
                 }   // if
+                Log.d("27_5_60", "User ==>" + userString + jsonObject.getString(columnStrings[1]));
             }   //for
 
             if (aBoolean==false) {
                 //User False
                 objMyAlert.myDialog("ไม่สามารถใช้ชื่อนี้",
                         "คุณไม่สามารถใช้ชื่อนี้ เนื่องจากมีผู้ใช้ชื่อนี้แล้ว");
+
             }else{
                 uploadValueToServer();
+
             }
+
 
         } catch (Exception e) {
             Log.d("30MarchV2", "e checkAuthen ==> " + e.toString());

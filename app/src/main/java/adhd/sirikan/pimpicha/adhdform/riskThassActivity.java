@@ -33,6 +33,7 @@ public class riskThassActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_risk_thass);
+
         textView = (TextView) findViewById(R.id.thassRisk);
         button = (Button) findViewById(R.id.btnCompareThass);
         getValueFromIntent();
@@ -60,9 +61,14 @@ public class riskThassActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(riskThassActivity.this, RecommendActivity.class);
+                myAlert objMyAlert = new myAlert(riskThassActivity.this);
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","เกณฑ์การประเมินความเสี่ยงแบ่งเป็นช่วงได้คือ เกณฑ์ปกติ , อาจมีความเสี่ยง , เริ่มมีความเสี่ยง และมีความเสี่ยงสูง \n" +
+                        "หากประเมินได้ในเกณฑ์ปกติ คำแนะนำคือ ไม่ต้องทำอะไรต่อ \n" +
+                        "หากประเมินได้ อาจมีความเสี่ยง คำแนะนำคือ เฝ้าระวัง ติดตาม หรือทำแบบคัดกรองซ้ำ\n" +
+                        "หากประเมินได้ เริ่มมีความเสี่ยง  คำแนะนำคือ เควรให้การช่วยเหลือเบื้องต้น และติดตามผลฝ้าระวัง ติดตาม หรือทำแบบคัดกรองซ้ำ\n");
+                /*Intent intent = new Intent(riskThassActivity.this, RecommendActivity.class);
                 intent.putExtra("Login", loginString);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
         button.setOnClickListener(new View.OnClickListener() {

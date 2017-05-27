@@ -57,7 +57,9 @@
         <activity android:name=".GraphCompare2Activity" />
         <activity android:name=".Compare3Activity" />
         <activity android:name=".GraphCompare3Activity" />
-        <activity android:name=".RecommendActivity"></activity>
+        <activity android:name=".RecommendActivity" />
+        <activity android:name=".Recommend2Activity" />
+        <activity android:name=".Recommend3Activity"></activity>
     </application>
 
 </manifest>

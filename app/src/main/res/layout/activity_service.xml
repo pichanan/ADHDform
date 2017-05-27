@@ -11,61 +11,80 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorPrimary">
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:gravity="center"
-                android:text="กรุณาเลือกเด็กที่ต้องการประเมิน\nหรือดูประวัติการทำแบบประเมิน"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-        </LinearLayout>
-        <LinearLayout
+        android:layout_height="69dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:weightSum="1">
-
             <ImageView
-                android:id="@+id/imvDelete"
-                android:layout_width="75dp"
-                android:layout_height="50dp"
-                android:src="@drawable/delete"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-            <ImageView
-                android:paddingLeft="10dp"
-                android:src="@drawable/add_childs"
-                android:id="@+id/imvChild"
-                android:layout_width="60dp"
+                android:paddingTop="10px"
+                android:paddingLeft="10px"
+                android:layout_width="51dp"
                 android:layout_height="match_parent"
+
+                android:layout_weight="0.07"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_weight="0.11" />
-        </LinearLayout>
+                android:src="@drawable/back"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:text="กรุณาเลือกเด็กที่ต้องการประเมิน\nหรือดูประวัติการทำแบบประเมิน"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
 
 
     </LinearLayout>
 
 
-    <ListView
 
-        android:id="@+id/livChild"
+        <ListView
+            android:id="@+id/livChild"
+            android:layout_width="match_parent"
+            android:layout_height="439dp"
+            android:layout_weight="0.96">
+
+        </ListView>
+
+    <RelativeLayout
+        android:id="@+id/belowlvchild"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
 
+        <ImageView
+            android:id="@+id/imvDelete"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imvChild"
+            android:layout_alignParentTop="true"
+            android:layout_weight="0.07"
+            android:background="@drawable/delete001"
+            android:paddingLeft="10px"
+            android:paddingTop="10px" />
 
+        <ImageView
+
+            android:id="@+id/imvChild"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0.04"
+            android:background="@drawable/add"
+            android:paddingLeft="50dp"
+            android:paddingTop="10px" />
+    </RelativeLayout>
 
 
 
 </LinearLayout>
-
-
