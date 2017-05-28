@@ -181,7 +181,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
             spn2 = "-";
         }else if(spn2.equals("ไม่จริง")){
             spn2 = "0";
-        }else if(spn.equals("จริงบางครั้ง")){
+        }else if(spn2.equals("จริงบางครั้ง")){
             spn2 = "1";
         }else {
             spn2 = "2";

@@ -85,7 +85,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:textSize="15dp"
-                android:text="ความเสี่ยงด้านอาการซนวู่วาม"
+                android:text="ความเสี่ยงด้านอาการขาดสมาธิ"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -101,7 +101,7 @@
 
             <TextView
                 android:textSize="15dp"
-                android:text="ความเสี่ยงด้านอาการขาดสมาธิ"
+                android:text="ความเสี่ยงด้านอาการซน/วู่วาม"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

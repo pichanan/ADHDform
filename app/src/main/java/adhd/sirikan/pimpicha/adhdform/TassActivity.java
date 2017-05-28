@@ -10461,6 +10461,8 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void boyParent6To8() {
+        Log.d("28_5_60", "Moniter 6To8 ==> " + genderString +" "+ loginString[3] +" "+ageString);
+
         switch (trisk1) { // ด้าน 1 ชาย ผู้ปกครอง
             case 0:
                 trisk1 = 30;
