@@ -69,6 +69,7 @@ public class PDFActivity extends AppCompatActivity {
     String[] question;
     String genderString,ageString, nameString,loginString[];
     String r1="",r2="",r3="";
+    String gen, type,doname;
 
 
     @Override
@@ -110,7 +111,7 @@ public class PDFActivity extends AppCompatActivity {
 
     public List<List<String>> getData() {
         List<List<String>> data = new ArrayList<List<String>>();
-        String[] tableTitleList = {"คำถาม", "0","1","2","3"};
+        String[] tableTitleList = {"คำถาม", "ไม่เลย","เล็กน้อย","ค่อนข้างมาก","มาก"};
         data.add(Arrays.asList(tableTitleList));
 
 
@@ -322,10 +323,22 @@ public class PDFActivity extends AppCompatActivity {
 
             BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
             Font font = new Font(bf, 15);
+            if(genderString.equals("0")){
+                gen = "ผู้ชาย";
 
+            }else if(genderString.equals("1")){
+                gen = "ผู้หญิง";
 
-            document.add(new Paragraph("ชื่อ =>"+nameString+","+"\tอายุ =>"+ageString+ " ปี,"+"\tเพศ =>"+genderString+",\tวันที่ทำแบบประเมิน ==>"+date, font));
+            }
+            if(loginString[3].equals("0")){
+                type = "ครู";
 
+            }else if(loginString[3].equals("1")){
+                type = "ผู้ปกครอง";
+
+            }
+
+            document.add(new Paragraph("ชื่อเด็ก:     "+nameString+"     อายุ: "+ageString+ " ปี"+"     เพศ: "+gen+"\nวันที่ทำแบบประเมิน: "+date+"     ผู้ทำแบบประเมินชื่อ: "+loginString[1]+"     ผู้ทำแบบประเมินชเกี่ยวข้องเป็น: "+type, font));
             document.add(new Paragraph(" ", font));
             PdfPTable table = new PdfPTable(5);
             table.setWidths(new int[]{5,1 ,1,1,1});
@@ -369,7 +382,7 @@ public class PDFActivity extends AppCompatActivity {
                         r1 = "มีความเสี่ยงด้านสมาธิ";
                     }
                     if (risk2Int>13){
-                        r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
+                        r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง/หุนหันพลันแล่น";
                     }
                     if(risk3Int>15){
                         r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
@@ -389,7 +402,7 @@ public class PDFActivity extends AppCompatActivity {
                         r1 = "มีความเสี่ยงด้านสมาธิ";
                     }
                     if (risk2Int>16){
-                        r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
+                        r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง/หุนหันพลันแล่น";
                     }
                     if(risk3Int>11){
                         r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";

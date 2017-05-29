@@ -16,14 +16,16 @@ import com.squareup.picasso.Picasso;
 
 public class ChildAdapter extends BaseAdapter {// for Listview / bestadap วนวาง
     private Context context;
-    private String[] iconStrings , childStrings,cnt;
-    private TextView textView;
+    private String[] iconStrings , childStrings,cnt,genderStrings,ageStrings;
+    private TextView textView,textView2,textView3;
     private ImageView imageView;
 
-    public ChildAdapter(Context context, String[] iconStrings, String[] childStrings,String[] cnt) {
+    public ChildAdapter(Context context, String[] iconStrings, String[] childStrings, String[] genderStrings, String[] ageStrings,String[] cnt) {
         this.context = context;
         this.iconStrings = iconStrings;
         this.childStrings = childStrings;
+        this.ageStrings = ageStrings;
+        this.genderStrings = genderStrings;
         this.cnt=cnt;
     }
 
@@ -50,8 +52,16 @@ public class ChildAdapter extends BaseAdapter {// for Listview / bestadap วน
         //Initial view
         imageView = (ImageView) view1.findViewById(R.id.imvIcon);
         textView = (TextView) view1.findViewById(R.id.txtChild);
-
+        textView2 = (TextView) view1.findViewById(R.id.txtgenChild);
+        textView3 = (TextView) view1.findViewById(R.id.txtageChild);
         textView.setText(childStrings[position]);
+        if(genderStrings[position].equals("0")){
+            textView2.setText("เพศ ชาย");
+        }else if(genderStrings[position].equals("1")){
+            textView2.setText("เพศ หญิง");
+        }
+
+        textView3.setText("อายุ " + ageStrings[position]+" ปี");
         Picasso.with(context).load(iconStrings[position]).into(imageView);
 
         return view1;

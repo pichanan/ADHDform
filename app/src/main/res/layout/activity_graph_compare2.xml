@@ -19,21 +19,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark">
+                android:background="@color/colorPrimaryDark"
+                android:weightSum="1">
 
                 <Button
                     android:id="@+id/backfromcompare2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="47dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:background="@drawable/button"
-                    android:text="ย้อนกลับ" />
+                    android:background="@drawable/back"
+                    android:layout_weight="0.05" />
+
                 <TextView
-                    android:text="THASS"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/textView14"
+                    android:textSize="20dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.61"
+                    android:text="THASS" />
+
                 <Button
                     android:id="@+id/takeScreen2"
                     android:layout_width="wrap_content"

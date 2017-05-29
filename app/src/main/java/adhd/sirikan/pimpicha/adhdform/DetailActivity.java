@@ -284,8 +284,15 @@ public class DetailActivity extends AppCompatActivity {
 
 
     private void buttonController() {
-       Button btnTreetest = (Button) findViewById(R.id.imvDetail1);
-
+       Button btnTreetest = (Button) findViewById(R.id.imvDetailTreeTest);
+        ImageView btBack = (ImageView) findViewById(R.id.backfromDetail);
+        btBack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, ServiceActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
         btnTreetest.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(DetailActivity.this, TreeTestActivity.class);

@@ -1,12 +1,15 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,10 +22,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //explicit
     private EditText userEditText, passwordEditText;
-    private TextView textView;
+    private TextView textView,textAppname;
     private Button button,btnCompare;
     private String userString,passString;
     private String[] loginStrings;
@@ -63,7 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         userEditText = (EditText) findViewById(R.id.edtUser);
         passwordEditText = (EditText) findViewById(R.id.edtpassword);
         textView = (TextView) findViewById(R.id.txtNewRegister);
+        textAppname = (TextView) findViewById(R.id.textAppname);
         button = (Button) findViewById(R.id.btnLogin);
+
     }
 
     @Override
@@ -82,8 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (userString.equals("") || passString.equals("")) {
                 //have space
                 myAlert myAlert = new myAlert(MainActivity.this);
-                String s = getResources().getString(R.string.title_havespace);
-                String s1 = getResources().getString(R.string.message_havespece);
+                String s = "พบช่องว่าง";
+                String s1 = "กรุณากรอกข้อมูลให้ครบ";
                 myAlert.myDialog(s, s1);
             } else {
                 //no space
@@ -126,11 +133,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if (aBoolean) {
                 //User False
-                objMyAlert.myDialog(getResources().getString(R.string.title_userfalse),
-                        getResources().getString(R.string.message_userfalse));
+                objMyAlert.myDialog("ไม่พบผู้ใช้",
+                        "ไม่มีผู้ใช้ชื่อนี้อยู่ในระบบ");
             }else if(!(passString.equals(loginStrings[2]))){ //if pw false
-                objMyAlert.myDialog(getResources().getString(R.string.title_passwordfalse),
-                        getResources().getString(R.string.message_passwordfalse));
+                objMyAlert.myDialog("รหัสผ่านไม่ถูกต้อง",
+                        "รหัสผ่านนี้ไม่ถูกต้อง กรุณาใส่รหัสผ่านใหม่อีกครั้ง");
 
             }else{
                 //pass fail
@@ -144,6 +151,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("30MarchV2", "e checkAuthen ==> " + e.toString());
         }
     }
+
+
 
 
 

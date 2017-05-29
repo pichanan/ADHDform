@@ -78,13 +78,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             if (userString.equals("") || passwordString.equals("")) {
                 //have space
                 myAlert objMyAlert = new myAlert(RegisterActivity.this);
-                objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
-                        getResources().getString(R.string.message_havespece));
+                objMyAlert.myDialog("ข้อมูลไม่ครบ",
+                        "กรุณากรอกข้อมูลให้ครบทุกช่อง");
             } else if (!(teacherRadioButton.isChecked() || parentRadioButton.isChecked())) {
                 //non check
                 myAlert objMyAlert = new myAlert(RegisterActivity.this);
-                objMyAlert.myDialog(getResources().getString(R.string.title_nonset),
-                        getResources().getString(R.string.message_noncheck));
+                objMyAlert.myDialog("ข้อมูลไม่ครบ",
+                        "กรุณาเลือกประเภทผู้ใช้");
 
             } else {// checked
                 checkAuthen();

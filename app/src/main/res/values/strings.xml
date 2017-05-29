@@ -2,10 +2,10 @@
     <string name="app_name">ADHD form</string>
     <string name="user">User :</string>
     <string name="password">Password</string>
-    <string name="new_register">new Register?</string>
-    <string name="login">Login</string>
+    <string name="new_register">ลงทะเบียนผู้ใช้?</string>
+    <string name="login">ลงชื่อเข้าใช้</string>
     <string name="name">name :</string>
-    <string name="save">Save</string>
+    <string name="save">บันทึกและดูผล</string>
     <string name="gender">Gender</string>
     <string name="male">Male</string>
     <string name="femaale">Femaale</string>
@@ -116,7 +116,7 @@
     <string name="sdq23">23.เข้ากับผู้ใหญ่ได้ดีกว่าเด็กวัยเดียวกัน</string>
     <string name="sdq24">24.ขี้กลัว รู้สึกหวาดกลัวง่าย</string>
     <string name="sdq25">25.ทำงานได้จนเสร็จ มีความตั้งใจในการทำงาน</string>
-    <string name="headApp">แอปพลิเคชันประเมินความเสี่ยงสมาธิสั้นเบื้องต้นในเด็ก อายุ 6 - 18 ปี สำหรับครูและผู้ปกครอง</string>
+    <string name="headApp">แอปพลิเคชันประเมินความเสี่ยงสมาธิสั้น เบื้องต้นในเด็กอายุ6-18ปี สำหรับครูและผู้ปกครอง</string>
 
 
     <string name="hello_world">Hello world!</string>
@@ -126,9 +126,9 @@
     <string name="title_activity_main">AChartEngineBarChart</string>
         
     <string name="str_btn_chart">Income vs Expense Bar Chart</string>
-    <string name="StrSnap">ผศ.นพ.ณัทธร พิทยรัตน์เสถียร ได้แปลแบบสอบถาม SNAP-IV เป็นฉบับภาษาไทยใช้ประเมินอาการขาดสมาธิ หรือ inattention ,อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น หรือ hyperactivity/impulsivity และ ยังสามารถประเมินอาการดื้อต่อต้านหรือoppositional defiantได้อีกดเวย</string>
-    <string name="strThass">ถูกพัฒนาโดย รศ.นพ.ชาญวิทย์ พรนภดล โดยจะใช้คำถามในแต่ละช่วงวัยที่แตกต่างกัน เนื่องจากแบบประเมินนี้ตระหนักว่าอาการสมาธิสั้นสามารถเปลี่ยนแปลงตามช่วงวัย นอกจากนี้ แบบประเมิน THASS ยังครอบคลุมอาการซน-อยู่ไม่นิ่ง(hyperactivity) อาการหุนหันพลันแล่น(impulsivity) และอาการขาดสมาธิ(inattention)</string>
-    <string name="strSdq">แบบประเมินนี้ ถูกแปลเป็นภาษาไทยโดยกรมสุขภาพจิต ชื่อแบบ “ประเมินจุดแข็งและจุดอ่อน” โดยประเมิน 5ด้าน คือ (1)ปัญหาด้านอารมณ์, (2)ปัญหาความสัมพันธ์กับเพื่อ , (3)ปัญหาพฤติกรรมอยู่ไม่นิ่ง/สมาธิสั้น , (4)ปัญหาพฤติกรรมเกเร/ความประพฤติ และ(5)ความสามารถทางสังคม โดยแอปพลิเคชันนี้จะประเมินผลแค่ด้านปัญหาพฤติกรรมอยู่ไม่นิ่ง/สมาธิสั้น เท่านั้น</string>
+    <string name="StrSnap">ผศ.นพ.ณัทธร พิทยรัตน์เสถียร ได้แปลแบบสอบถาม SNAP-IV เป็นฉบับภาษาไทยใช้ประเมินอาการขาดสมาธิ หรือ inattention ,อาการอยู่ไม่นิ่ง/หุนหันพลันแล่น หรือ hyperactivity/impulsivity และ ยังสามารถประเมินอาการดื้อต่อต้านหรือoppositional defiantได้อีกด้วย</string>
+    <string name="strThass">ถูกพัฒนาโดย รศ.นพ.ชาญวิทย์ พรนภดลโดยจะใช้คำถามในแต่ละช่วงวัยที่แตกต่างกันเนื่องจากแบบประเมินนี้ตระหนักว่าอาการสมาธิสั้นสามารถเปลี่ยนแปลงตามช่วงวัย นอกจากนี้แบบประเมินTHASSยังครอบคลุมอาการซน-อยู่ไม่นิ่ง(hyperactivity),อาการหุนหันพลันแล่น(impulsivity)และอาการขาดสมาธิ(inattention)</string>
+    <string name="strSdq">แบบประเมินนี้ถูกแปลเป็นภาษาไทยโดยกรมสุขภาพจิต ชื่อแบบ“ประเมินจุดแข็งและจุดอ่อน”โดยประเมิน 5ด้าน คือ (1)ปัญหาด้านอารมณ์,(2)ปัญหาความสัมพันธ์กับเพื่อ,(3)ปัญหาพฤติกรรมอยู่ไม่นิ่ง/สมาธิสั้น,(4)ปัญหาพฤติกรรมเกเร/ความประพฤติ และ(5)ความสามารถทางสังคม แอปพลิเคชันนี้จะประเมินผลแค่ด้านปัญหาพฤติกรรมอยู่ไม่นิ่ง/สมาธิสั้น เท่านั้น</string>
 
 
 </resources>

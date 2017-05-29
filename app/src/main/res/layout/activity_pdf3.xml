@@ -4,30 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context="adhd.sirikan.pimpicha.adhdform.PDF3Activity">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="#C8E6C9"
+            android:padding="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
 
-    <Button
-        android:id="@+id/button_createSdq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+            >
+            <TextView
 
-        android:layout_alignParentTop="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="57dp"
-        android:layout_marginRight="57dp"
-        android:layout_marginTop="126dp"
-        android:text="Create PDF" />
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="คุณต้องการบันทึกไฟล์ออกไปเป็นไฟล์ .PDF หรือไม่"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:background="@drawable/button"
+                android:id="@+id/button_createSdq"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="   บันทึกเป็นไฟล์ PDF   "
 
-    <Button
-        android:id="@+id/button_notcreateSdq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button_create"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="51dp"
-        android:layout_marginStart="51dp"
-        android:text="NO" />
+                />
+            <Button
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/button_notcreateSdq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ไม่บันทึก" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </LinearLayout>

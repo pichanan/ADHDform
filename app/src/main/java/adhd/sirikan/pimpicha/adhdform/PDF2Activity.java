@@ -38,7 +38,7 @@ public class PDF2Activity extends AppCompatActivity {
 
     private static final String TAG = "PdfCreatorActivity";
     private EditText mContentEditText;
-    private Button mCreateButton;
+    private Button mCreateButton,nobtn;
     private File pdfFile;
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
     public static File fontFile = new File("fonts/thaisanslite_r1.ttf");
@@ -53,6 +53,7 @@ public class PDF2Activity extends AppCompatActivity {
     String[] arrAns;
     String[] question;
     String genderString,ageString, nameString,loginString[],allrisk;
+    String gen, type,doname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,9 @@ public class PDF2Activity extends AppCompatActivity {
 
         getValueFromIntent();
         mCreateButton = (Button) findViewById(R.id.button_createThass);
+
+        mCreateButton = (Button) findViewById(R.id.button_createThass);
+        nobtn = (Button) findViewById(R.id.button_notcreateThass);
 
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,10 +78,18 @@ public class PDF2Activity extends AppCompatActivity {
                 }
             }
         });
+        nobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PDF2Activity.this, ServiceActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
     }
     public List<List<String>> getData() {
         List<List<String>> data = new ArrayList<List<String>>();
-        String[] tableTitleList = {"คำถาม", "3","2","1","0"};
+        String[] tableTitleList = {"คำถาม", "ทำบ่อยมาก","ทำค่อนข้างบ่อย","นานๆทำที","ไม่เคยทำ"};
         data.add(Arrays.asList(tableTitleList));
 
 
@@ -323,7 +335,7 @@ public class PDF2Activity extends AppCompatActivity {
             Log.i(TAG, "Created a new directory for PDF");
         }
         try {
-            pdfFile = new File(docsFolder.getAbsolutePath(), sspn+".pdf");
+            pdfFile = new File(docsFolder.getAbsolutePath(), nameString+"_"+date+".pdf");
             OutputStream output = new FileOutputStream(pdfFile);
             Document document = new Document();
             PdfWriter.getInstance(document, output);
@@ -331,10 +343,22 @@ public class PDF2Activity extends AppCompatActivity {
             document.open();
             BaseFont bf = BaseFont.createFont(fontFile.getAbsolutePath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
             Font font = new Font(bf, 15);
+            if(genderString.equals("0")){
+                gen = "ผู้ชาย";
 
+            }else if(genderString.equals("1")){
+                gen = "ผู้หญิง";
 
-            document.add(new Paragraph("ชื่อ =>"+nameString+","+"\tอายุ =>"+ageString+ " ปี,"+"\tเพศ =>"+genderString+",\tวันที่ทำแบบประเมิน ==>"+date, font));
+            }
+            if(loginString[3].equals("0")){
+                type = "ครู";
 
+            }else if(loginString[3].equals("1")){
+                type = "ผู้ปกครอง";
+
+            }
+
+            document.add(new Paragraph("ชื่อเด็ก:     "+nameString+"     อายุ: "+ageString+ " ปี"+"     เพศ: "+gen+"\nวันที่ทำแบบประเมิน: "+date+"     ผู้ทำแบบประเมินชื่อ: "+loginString[1]+"     ผู้ทำแบบประเมินชเกี่ยวข้องเป็น: "+type, font));
 
 
             PdfPTable table = new PdfPTable(5);

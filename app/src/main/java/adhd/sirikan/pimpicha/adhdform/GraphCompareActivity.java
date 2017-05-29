@@ -25,6 +25,7 @@ public class GraphCompareActivity extends AppCompatActivity {
     String tag = "18_5";
     Button button;
     TextView t1, t2;
+    String gen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +38,12 @@ public class GraphCompareActivity extends AppCompatActivity {
         BarGraphSeries<DataPoint> barGraphSeries;
         button = (Button) findViewById(R.id.takeScreen);
         t1 = (TextView) findViewById(R.id.txtDateToday);
-
-        t1.setText("ชื่อ :"+nameString+" , "+"เพศ :"+genderString+" , อายุ:"+ageString+"ปี\n"+"วันที่ปัจจุบัน :"+dateToday+"\n"+"วันที่ในอดีต :"+date);
+        if(genderString.equals("0")){
+            gen="ผู้ชาย";
+        }else if(genderString.equals("1")){
+            gen = "ผู้หญิง";
+        }
+        t1.setText("ชื่อ :"+nameString+" , "+"เพศ :"+gen+" , อายุ:"+ageString+"ปี\n"+"วันที่ปัจจุบัน :"+dateToday+"\n"+"วันที่ในอดีต :"+date);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

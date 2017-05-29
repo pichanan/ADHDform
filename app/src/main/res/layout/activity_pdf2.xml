@@ -4,31 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context="adhd.sirikan.pimpicha.adhdform.PDF2Activity">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="#C8E6C9"
+            android:padding="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
 
-    <Button
-        android:id="@+id/button_createThass"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:text="Create PDF"
+            >
+            <TextView
 
-        android:layout_marginTop="126dp"
-        android:layout_marginRight="57dp"
-        android:layout_marginEnd="57dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="คุณต้องการบันทึกไฟล์ออกไปเป็นไฟล์ .PDF หรือไม่"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:background="@drawable/button"
+                android:id="@+id/button_createThass"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="   บันทึกเป็นไฟล์ PDF   "
 
-    <Button
-        android:id="@+id/button_notcreateThass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NO"
-        android:layout_alignBaseline="@+id/button_createThass"
-        android:layout_alignBottom="@+id/button_createThass"
-        android:layout_toLeftOf="@+id/button_createThass"
-        android:layout_toStartOf="@+id/button_createThass"
-        android:layout_marginRight="52dp"
-        android:layout_marginEnd="52dp" />
+                />
+            <Button
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/button_notcreateThass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ไม่บันทึก" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

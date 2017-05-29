@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -38,6 +39,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
     private  int risk1,risk2,risk3;
     String idString, loginString[],genderString,ageString,nameString;
     TextView textView;
+    ImageView imageView;
 
 
 
@@ -65,6 +67,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
 
         //btn controller
         button.setOnClickListener(SnapActivity.this);
+        imageView.setOnClickListener(SnapActivity.this);
 
 
     }//main method
@@ -154,6 +157,7 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
     private void initialView() {
 
         button = (Button) findViewById(R.id.snap4);
+        imageView = (ImageView) findViewById(R.id.backfromSnap);
 
 
     }
@@ -191,6 +195,16 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             }
 
 
+        }
+
+        if (v == imageView) {
+            Intent intent = new Intent(SnapActivity.this, TreeTestActivity.class);
+            intent.putExtra("Login", loginString);
+            intent.putExtra("tmpIndex", idString);
+            intent.putExtra("gender", genderString);
+            intent.putExtra("age", ageString);
+            intent.putExtra("name", nameString);
+            startActivity(intent);
         }
     }
 

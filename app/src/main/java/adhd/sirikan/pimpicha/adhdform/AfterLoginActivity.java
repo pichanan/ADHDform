@@ -1,14 +1,17 @@
 package adhd.sirikan.pimpicha.adhdform;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 public class AfterLoginActivity extends AppCompatActivity {
     Button button,button2,button3;
+    TextView txtAfter1,txtAfter2,txtAfter3,txtAfter4,txtAfter5, txtAfter6;
     private String[] loginString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +19,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_after_login);
         getValue();
         createTabHost();
+
         button = (Button) findViewById(R.id.tesDetail);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +49,8 @@ public class AfterLoginActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     private void getValue() {
         loginString = getIntent().getStringArrayExtra("Login");

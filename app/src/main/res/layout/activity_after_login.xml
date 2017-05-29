@@ -68,31 +68,35 @@
                             >
 
                             <TextView
-
+                                android:id="@+id/txtAfter1"
                                 android:text="\t\t\tโรคสมาธิสั้นเป็นภาวะบกพร่องของสมองที่พบมากในเด็ก มีอาการสำคัญดังนี้\n"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content">
 
                             </TextView>
                             <TextView
+                                android:id="@+id/txtAfter2"
                                 android:text="อาการขาดสมาธิ(inattention) \nอาการซนไม่อยู่นิ่ง(hyperactivity) \nอาการหุนหันพลันแล่น(impulsivity)\n"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                             <TextView
+                                android:id="@+id/txtAfter3"
                                 android:text="\t\t\tโดยอาการขาดสมาธินั้น เด็กจะไม่สามารถจดจ่อกับกิจกรรมต่างๆได้ยาวนาน มีความวอกแวก เช่น เมื่อกำลังสนใจกับเหตุการณ์หนึ่งอยู่ หากมีอีกเหตุการณ์หนึ่งเข้ามาแทรก เด็กจะเปลี่ยนความสนใจในทันที"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                             <TextView
+                                android:id="@+id/txtAfter4"
                                 android:text="\t\t\tส่วนอาการซนไม่อยู่นิ่งนั้น เด็กจะไม่สามารถอยู่นิ่ง และมักเคลื่อนไหวอยู่ตลอดเวลา ชอบกระโดดโลดเต้น และปีนป่าย ชอบแกล้งเพื่อน ชอบพูดแทรก ชอบเล่นโลดโผด ทำให้มักเกิดอุบัติเหตุบ่อยครั้ง เนื่องจากไม่ระวัง "
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                             <TextView
+                                android:id="@+id/txtAfter5"
                                 android:text="\t\t\tสุดท้ายคือ อาการหุนหันพลันแล่น เด็กมักตอบสนองต่อสิ่งเร้าทันที ไม่คิดไตร่ตรองดูก่อน มักมีอาการใจร้อน ทำอะไรโดยไม่คิด หงุดหงิดง่าย ชอบพูดแทรก ตอบคำถามทั้งที่ยังถามไม่จบ"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
                             <TextView
-                                android:id="@+id/textView10"
+                                android:id="@+id/txtAfter6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="\t\t\tอาการเหล่านี้ทำให้เด็กมีปัญหาในการทำกิจกรรมต่างๆทั้งที่บ้าน และที่โรงเรียนซึ่งแตกต่างจากเด็กในวัยเดียวกัน อาจส่งผลต่อการเรียนรู้ หรือพฤติกรรมที่ไม่เหมาะสม อาจถูกตำหนิ หรือลงโทษ ทำให้สูญเสียความมั่นใจในตัวเอง คิดว่าตัวเองไม่สามารถทำอะไรได้เหมือนคนอื่น แต่หากได้รับการรักษาดูแลอย่างทันเวลาและถูกต้อง เด็กเหล่านี้ก็จะเติบโตเป็นผู้ใหญ่ ที่สามารถใช้ชีวิตได้โดยปกติสุขเหมือนคนทั่วไปได้" />
@@ -131,7 +135,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
                                         android:background="@drawable/button"
-                                        android:text="   ทำแบบประเมินเด็ก   " />
+                                        android:text="   แบบประเมินเด็ก/ประวัตการทำแบบประเมิน   " />
 
 
                                 </LinearLayout>
@@ -156,7 +160,7 @@
                                 <ImageView
                                     android:id="@+id/imageView2"
                                     android:layout_width="180dp"
-                                    android:layout_height="450dp"
+                                    android:layout_height="367dp"
                                     android:src="@drawable/nurse" />
 
                                 <LinearLayout

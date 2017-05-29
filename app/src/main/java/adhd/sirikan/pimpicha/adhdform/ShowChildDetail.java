@@ -64,9 +64,8 @@ public class ShowChildDetail extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ShowChildDetail.this, RecommendActivity.class);
-                intent.putExtra("Login", loginString);
-                startActivity(intent);
+                myAlert objMyAlert = new myAlert(ShowChildDetail.this);
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","หากเด็กมีความเสี่ยงในด้านใด แสดงว่าคะแนนที่ท่านประเมินเด็ก มีค่ามากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ ");
             }
         });
         analyzeRisk();
@@ -586,38 +585,38 @@ public class ShowChildDetail extends AppCompatActivity {
         if(loginString[3].equals("1")){//ผปค
 
             if(Integer.parseInt(risk1)>16){
-                r1 = "มีความเสี่ยงด้านสมาธิ";
+                r1 = "ด้านสมาธิ: มีความเสี่ยง";
             }
             if (Integer.parseInt(risk2)>13){
-                r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
+                r2="ด้านซน อยู่ไม่นิ่ง /หุนหันพลันแล่น: มีความเสี่ยง";
             }
             if(Integer.parseInt(risk3)>15){
-                r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+                r3 = "อาการดื้อ ต่อต้าน: มีความเสี่ยง";
             }
 
             if (r1 == "" && r2 == "" && r3 == "") {
                 textView.setText("ไม่มีความเสี่ยง");
                 textView.setTextColor(Color.parseColor("#1bb730"));
             } else{
-                textView.setText(r1+" "+r2+" " +r3);
+                textView.setText(r1+"\n"+r2+"\n" +r3);
             }
             // ครู
         }else{
             if(Integer.parseInt(risk1)>23){
-                r1 = "มีความเสี่ยงด้านสมาธิ";
+                r1 = "ด้านสมาธิ: มีความเสี่ยง";
             }
             if (Integer.parseInt(risk2)>16){
-                r2="มีความเสี่ยงด้านซน อยู่ไม่นิ่ง หุนหันพลันแล่น";
+                r2="ด้านซน อยู่ไม่นิ่ง /หุนหันพลันแล่น: มีความเสี่ยง";
             }
             if(Integer.parseInt(risk3)>11){
-                r3 = "มีความเสี่ยงด้านดื้อ ต่อต้าน";
+                r3 = "อาการดื้อ ต่อต้าน: มีความเสี่ยง";
             }
 
             if (r1 == "" && r2 == "" && r3 == "") {
                 textView.setText("ไม่มีความเสี่ยง");
                 textView.setTextColor(Color.parseColor("#1bb730"));
             } else{
-                textView.setText(r1+" "+r2+" " +r3);
+                textView.setText(r1+"\n"+r2+"\n" +r3);
             }
 
 

@@ -47,9 +47,8 @@ public class ShowChildDetail3 extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ShowChildDetail3.this, RecommendActivity.class);
-                intent.putExtra("Login", loginString);
-                startActivity(intent);
+                myAlert objMyAlert = new myAlert(ShowChildDetail3.this);
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","ผลการประเมินนี้เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น");
             }
         });
 

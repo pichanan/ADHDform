@@ -19,7 +19,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
 
     private ListView listView;
     private String[] loginString;
-    private  ImageView imageView , deleteImageView;
+    private  ImageView imageView , deleteImageView,backView;
 
     private String[] showTypeStrings = new String[]{"Teacher","Parent"};
     private String tag = "31MarchV2";
@@ -46,6 +46,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     private void imageController() {
         imageView.setOnClickListener(ServiceActivity.this);
         deleteImageView.setOnClickListener(ServiceActivity.this);
+        backView.setOnClickListener(ServiceActivity.this);
     }
 
     private void getValue() {
@@ -109,7 +110,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
             //Build ListView
 
             ChildAdapter childAdapter = new ChildAdapter(ServiceActivity.this, imageStrings,
-                    nameChildStrings,countChildString);
+                    nameChildStrings,genderStrings,ageStrings,countChildString);
             listView.setAdapter(childAdapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -141,6 +142,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     private void InitialView() {
         imageView = (ImageView) findViewById(R.id.imvChild);
         deleteImageView = (ImageView) findViewById(R.id.imvDelete);
+        backView = (ImageView) findViewById(R.id.backfromService);
         listView = (ListView) findViewById(R.id.livChild);
     }
 
@@ -158,6 +160,11 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
         //for graph
         if (v==deleteImageView) {
             Intent intent = new Intent(ServiceActivity.this,DeleteActivity.class);
+            intent.putExtra("Login",loginString);
+            startActivity(intent);
+        }
+        if (v==backView) {
+            Intent intent = new Intent(ServiceActivity.this,AfterLoginActivity.class);
             intent.putExtra("Login",loginString);
             startActivity(intent);
         }

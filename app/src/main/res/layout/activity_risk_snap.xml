@@ -18,15 +18,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="39dp"
+            android:layout_height="50dp"
             android:gravity="center">
 
             <TextView
                 android:id="@+id/snapRisk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF9800"
-                android:textSize="13dp" />
+                android:textColor="#212121"
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -35,6 +35,11 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal">
+            <ImageView
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"/>
 
             <Button
                 android:id="@+id/showRiskSnapPdf"
@@ -89,7 +94,7 @@
 
                 >
                 <TextView
-
+                    android:textSize="10dp"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
@@ -100,32 +105,31 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
                 <TextView
-
+                    android:textSize="10dp"
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="ไมเลย"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
-
-
+                    android:textSize="10dp"
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="เล็กน้อย"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
-
+                    android:textSize="10dp"
                     android:id="@+id/textView7"
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
@@ -133,12 +137,12 @@
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="2"
+                    android:text="ค่อนข้างมากมาก"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
-
+                    android:textSize="10dp"
                     android:id="@+id/textView8"
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
@@ -146,7 +150,7 @@
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="3"
+                    android:text="มาก"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 

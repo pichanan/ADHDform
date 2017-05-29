@@ -10,14 +10,39 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="@dimen/my_margin2"/>
-    <TextView
-        android:layout_gravity="center_vertical"
-        android:textStyle="bold"
-        android:id="@+id/txtChild"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/h2"
-        android:textColor="@color/colorPrimaryDark"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:id="@+id/txtChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/h2"
+            android:textColor="@color/colorPrimaryDark"/>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:id="@+id/txtgenChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+           />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:id="@+id/txtageChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+
 
 
 </LinearLayout>

@@ -19,15 +19,29 @@ public class TreeTestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree_test);
+        //get value
         idString = getIntent().getStringExtra("tmpIndex");
         loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
         nameString = getIntent().getStringExtra("name");
         age = Integer.parseInt(ageString);
+
         Button btnSnap = (Button) findViewById(R.id.buttonSnap);
         Button btnThass = (Button) findViewById(R.id.buttonThass);
         Button btnSdq = (Button) findViewById(R.id.buttonSdq);
+        ImageView back = (ImageView) findViewById(R.id.backfromTreetest);
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(TreeTestActivity.this, DetailActivity.class);
+                intent.putExtra("Login", loginString);
+                intent.putExtra("tmpIndex", idString);
+                intent.putExtra("gender", genderString);
+                intent.putExtra("age", ageString);
+                intent.putExtra("name", nameString);
+                startActivity(intent);
+            }
+        });
        btnSnap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(TreeTestActivity.this, SnapActivity.class);
