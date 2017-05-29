@@ -124,10 +124,10 @@ public class CompareActivity extends AppCompatActivity {
                             Log.d(tag, "18 Result String(" + i + ") ==>" + resultStrings[i]);
                         }
 
-                        cpRisk1 = Integer.parseInt(resultStrings[33]);
-                        cpRisk2 = Integer.parseInt(resultStrings[34]);
-                        cpRisk3 = Integer.parseInt(resultStrings[35]);
-                        cpdate = resultStrings[38];
+                        cpRisk1 = Integer.parseInt(resultStrings[29]);
+                        cpRisk2 = Integer.parseInt(resultStrings[30]);
+                        cpRisk3 = Integer.parseInt(resultStrings[31]);
+                        cpdate = resultStrings[34];
 
                         putIntent();
 
