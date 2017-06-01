@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +42,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     private java.util.Calendar calendar;
     private String currentDateString;
     TextView choice1;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
         findCurrentDate();
         initialView();
         button.setOnClickListener(TassActivity.this);
+        imageView.setOnClickListener(TassActivity.this);
 
 
     }
@@ -335,6 +338,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void initialView() {
         button = (Button) findViewById(R.id.thass3);
+        imageView = (ImageView) findViewById(R.id.backfromThass);
     }
 
     private void checkSpecial(String childID, String doType) {
@@ -381,6 +385,10 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+        }
+        if (v == imageView) {
+            onBackPressed();
+            finish();
         }
 
     }

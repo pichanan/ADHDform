@@ -45,6 +45,8 @@ public class DetailActivity extends AppCompatActivity {
         createListViewTable1();
         createListViewTable2();
         createListViewTable3();
+
+
        /* if (check1 == 0 && check2 == 0 && check3 == 0) {
             myAlert objMyAlert = new myAlert(DetailActivity.this);
             objMyAlert.myDialog("ไม่พบประวัติการทำแบบประเมิน",
@@ -54,6 +56,17 @@ public class DetailActivity extends AppCompatActivity {
             check3 = 1;
         }*/
         Log.d("23_5_60", "CHECK BOOL ==>" + check1+" " );
+
+
+
+    }// main method
+
+    @Override
+    protected void onPostResume() {//**************************************
+        super.onPostResume();
+        createListViewTable1();
+        createListViewTable2();
+        createListViewTable3();
         if (check1 == true&&check2==true&&check3==true) {
             myAlert objMyAlert = new myAlert(DetailActivity.this);
             objMyAlert.myDialog("ไม่พบประวัติการทำแบบประเมิน",
@@ -62,9 +75,7 @@ public class DetailActivity extends AppCompatActivity {
         createTabHost();
 
 
-    }// main method
-
-
+    }
     private void createListViewTable3() {
         try {
 
@@ -288,9 +299,8 @@ public class DetailActivity extends AppCompatActivity {
         ImageView btBack = (ImageView) findViewById(R.id.backfromDetail);
         btBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(DetailActivity.this, ServiceActivity.class);
-                intent.putExtra("Login", loginString);
-                startActivity(intent);
+                onBackPressed();
+                finish();
             }
         });
         btnTreetest.setOnClickListener(new View.OnClickListener() {

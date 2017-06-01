@@ -32,10 +32,11 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
     private Button button;
     private Uri uri; // got only picture
     private String tag = "31MarchV1";
-    private  String pathImageString ,nameImageString,nameChildString,ageString;
+    private  String pathImageString ,nameImageString,nameChildString,ageString,loginString[] ;
     private boolean aBoolean =true;
     private  String gender;
     private int ageInt;
+    ImageView backView;
 
 
 
@@ -44,7 +45,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_child);
-
+        loginString = getIntent().getStringArrayExtra("Login");
 
         //initial View
         initialView();
@@ -57,6 +58,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
     private void controller() {
         imageView.setOnClickListener(AddChildActivity.this);
         button.setOnClickListener(AddChildActivity.this);
+        backView.setOnClickListener(AddChildActivity.this);
     }
 
     private void initialView() {
@@ -67,6 +69,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         maleRadioButton = (RadioButton) findViewById(R.id.radMale);
         femaleRadioButton = (RadioButton) findViewById(R.id.radFemale);
         button = (Button) findViewById(R.id.btnSave);
+        backView = (ImageView) findViewById(R.id.backfromAddchild);
 
     }
 
@@ -133,6 +136,10 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         // for button
         if (v==button) {
             buttonController();
+        }
+        if (v==backView) {
+            onBackPressed();
+            finish();
         }
 
     }//onclick

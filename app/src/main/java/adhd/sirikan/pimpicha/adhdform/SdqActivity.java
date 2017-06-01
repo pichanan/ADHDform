@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
 
     private java.util.Calendar calendar;
     private String currentDateString;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
         findCurrentDate();
 
         button.setOnClickListener(SdqActivity.this);
+        imageView.setOnClickListener(SdqActivity.this);
     }
 
     private void findCurrentDate() {
@@ -64,6 +67,7 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
 
     private void initialView() {
         button = (Button) findViewById(R.id.sdq4);
+        imageView = (ImageView) findViewById(R.id.backfromSdq);
     }
 
     private void initialSpinner() {
@@ -159,6 +163,10 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
             }
 
 
+        }
+        if (v == imageView) {
+            onBackPressed();
+            finish();
         }
     }
 

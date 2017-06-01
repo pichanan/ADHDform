@@ -198,13 +198,8 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (v == imageView) {
-            Intent intent = new Intent(SnapActivity.this, TreeTestActivity.class);
-            intent.putExtra("Login", loginString);
-            intent.putExtra("tmpIndex", idString);
-            intent.putExtra("gender", genderString);
-            intent.putExtra("age", ageString);
-            intent.putExtra("name", nameString);
-            startActivity(intent);
+            onBackPressed();
+            finish();
         }
     }
 

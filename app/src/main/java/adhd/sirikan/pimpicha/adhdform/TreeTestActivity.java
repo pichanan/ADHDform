@@ -33,13 +33,8 @@ public class TreeTestActivity extends AppCompatActivity {
         ImageView back = (ImageView) findViewById(R.id.backfromTreetest);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(TreeTestActivity.this, DetailActivity.class);
-                intent.putExtra("Login", loginString);
-                intent.putExtra("tmpIndex", idString);
-                intent.putExtra("gender", genderString);
-                intent.putExtra("age", ageString);
-                intent.putExtra("name", nameString);
-                startActivity(intent);
+                onBackPressed();
+                finish();
             }
         });
        btnSnap.setOnClickListener(new View.OnClickListener() {

@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     tools:context="adhd.sirikan.pimpicha.adhdform.PDFActivity"
     android:background="@color/colorPrimary">
-
+        <LinearLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/backfromPDF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back"/>
+        </LinearLayout>
         <LinearLayout
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
                 <LinearLayout
                     android:background="#C8E6C9"
                     android:padding="30dp"

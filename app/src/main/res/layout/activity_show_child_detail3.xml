@@ -10,22 +10,50 @@
         android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="39dp"
-            android:gravity="center">
+            android:layout_height="130dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/hisSdqShowRisk"
-                android:layout_width="wrap_content"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#212121"
-                android:textSize="13dp" />
+                >
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/backfromShowchild3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="แบบประเมิน SDQ" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/hisSdqShowRisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
 
         </LinearLayout>
 
@@ -34,11 +62,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_marginRight="60dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/back"/>
+
 
             <Button
                 android:id="@+id/showDetailPdfSdq"
@@ -47,6 +71,7 @@
                 android:background="@drawable/button"
                 android:src="@drawable/pdf"
                 android:text="บันทึกเป็น PDF" />
+
             <Button
                 android:id="@+id/rechisSdq"
                 android:layout_width="wrap_content"
@@ -60,7 +85,7 @@
 
     </LinearLayout>
     <ScrollView
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="180dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

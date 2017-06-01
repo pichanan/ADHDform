@@ -27,6 +27,7 @@ public class ShowChildDetail3 extends AppCompatActivity {
     TextView textView,textView2,spn, spn2, spn3, spn4, spn5, spn6, spn7, spn8, spn9, spn10, spn11, spn12, spn13,
             spn14, spn15, spn16, spn17, spn18, spn19, spn20, spn21, spn22, spn23, spn24, spn25, spn26;
     String idString, loginString[],genderString,ageString,risk1,risk2,risk3,nameString,date,allRisk="";
+    ImageView backView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class ShowChildDetail3 extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.hisSdqShowRisk);
         button2 = (Button) findViewById(R.id.rechisSdq);
         ImageViewPDF = (Button) findViewById(R.id.showDetailPdfSdq);
+        backView = (ImageView) findViewById(R.id.backfromShowchild3);
+
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +52,13 @@ public class ShowChildDetail3 extends AppCompatActivity {
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(ShowChildDetail3.this);
                 objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","ผลการประเมินนี้เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น");
+            }
+        });
+        backView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
             }
         });
 

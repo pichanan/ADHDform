@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -27,12 +28,22 @@ public class DeleteActivity extends AppCompatActivity {
     String tmpGenderStrings ;
      String tmpAgeStrings ;
     String tmpNameChild;
+    ImageView backView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
         listView = (ListView) findViewById(R.id.livDeleteChild);
+        backView = (ImageView) findViewById(R.id.backfromDelete);
+
         getValue();
+        backView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+            }
+        });
     }
     private void getValue() {
         loginString = getIntent().getStringArrayExtra("Login");

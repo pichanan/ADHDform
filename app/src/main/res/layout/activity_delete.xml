@@ -13,6 +13,7 @@
         android:background="@color/colorPrimaryDark"
         android:id="@+id/relativeLayout2">
         <ImageView
+            android:id="@+id/backfromDelete"
             android:layout_margin="5dp"
             android:layout_marginRight="5dp"
             android:layout_width="wrap_content"

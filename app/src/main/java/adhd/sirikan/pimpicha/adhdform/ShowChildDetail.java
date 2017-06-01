@@ -34,7 +34,7 @@ public class ShowChildDetail extends AppCompatActivity {
     String sspn, sspn2, sspn3, sspn4, sspn5, sspn6, sspn7, sspn8, sspn9, sspn10, sspn11, sspn12, sspn13,
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     String r1="",r2="",r3="";
-
+    ImageView backView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class ShowChildDetail extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.hisSnapRisk);
         ImageViewPDF = (Button) findViewById(R.id.showDetailPdf);
         button2 = (Button) findViewById(R.id.btnRegcmHisSnap);
+        backView = (ImageView) findViewById(R.id.backfromShowchild1);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +67,13 @@ public class ShowChildDetail extends AppCompatActivity {
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(ShowChildDetail.this);
                 objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","หากเด็กมีความเสี่ยงในด้านใด แสดงว่าคะแนนที่ท่านประเมินเด็ก มีค่ามากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ ");
+            }
+        });
+        backView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
             }
         });
         analyzeRisk();

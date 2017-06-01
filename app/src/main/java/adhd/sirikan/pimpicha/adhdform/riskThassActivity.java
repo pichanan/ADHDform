@@ -28,6 +28,7 @@ public class riskThassActivity extends AppCompatActivity {
             t26, t27, t28, t29, t30;
     TextView textView;
     String txtRisk1="",txtRisk2="", txtRisk3="",allrisk="";
+    ImageView backView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,16 @@ public class riskThassActivity extends AppCompatActivity {
         analyzeRisk();
         ImageViewPDF = (Button) findViewById(R.id.pdfThass);
         button2 = (Button) findViewById(R.id.recThass);
+        backView = (ImageView) findViewById(R.id.backfromRiskThass);
+        backView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskThassActivity.this,ServiceActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+
+            }
+        });
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

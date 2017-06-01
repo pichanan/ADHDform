@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,7 +71,7 @@ public class PDFActivity extends AppCompatActivity {
     String genderString,ageString, nameString,loginString[];
     String r1="",r2="",r3="";
     String gen, type,doname;
-
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +84,7 @@ public class PDFActivity extends AppCompatActivity {
 
         mCreateButton = (Button) findViewById(R.id.button_create);
         nobtn = (Button) findViewById(R.id.button_notcreate);
-
+        back = (ImageView) findViewById(R.id.backfromPDF);
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,6 +105,15 @@ public class PDFActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PDFActivity.this, ServiceActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

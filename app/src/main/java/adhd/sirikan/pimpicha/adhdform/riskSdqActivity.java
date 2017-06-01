@@ -21,6 +21,7 @@ public class riskSdqActivity extends AppCompatActivity {
     Button ImageViewPDF;
     Button button,button2;
     String allRisk = "";
+    ImageView backView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,16 @@ public class riskSdqActivity extends AppCompatActivity {
         //analyzeRisk();
         ImageViewPDF = (Button) findViewById(R.id.pdfSdq);
         button2 = (Button) findViewById(R.id.recSdq);
+        backView = (ImageView) findViewById(R.id.backfromRiskSdq);
+        backView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskSdqActivity.this,ServiceActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+
+            }
+        });
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -22,6 +22,7 @@ public class riskSnapActivity extends AppCompatActivity {
     Button button2,button;
     String a = "testerrrrrrr";
     String r1="",r2="",r3="";
+    ImageView backView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,16 @@ public class riskSnapActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.btnCompare);
         button2 = (Button) findViewById(R.id.btnRegcmSnap);
         analyzeRisk();
+        backView = (ImageView) findViewById(R.id.backfromRiskSnap);
+        backView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(riskSnapActivity.this,ServiceActivity.class);
+                intent.putExtra("Login", loginString);
+                startActivity(intent);
+
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

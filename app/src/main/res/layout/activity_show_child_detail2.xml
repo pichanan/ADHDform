@@ -6,28 +6,53 @@
     android:layout_height="match_parent"
     tools:context="adhd.sirikan.pimpicha.adhdform.ShowChildDetail2">
     <LinearLayout
-
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentStart="true">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:gravity="center">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/thassRiskhis"
-                android:layout_width="wrap_content"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#212121"
-                android:textSize="13dp" />
+                >
+
+                <ImageView
+                    android:id="@+id/backfromShowchild2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="แบบประเมิน THASS" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/thassRiskhis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
 
         </LinearLayout>
 
@@ -36,11 +61,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_marginRight="60dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/back"/>
+
 
             <Button
                 android:id="@+id/showDetailThassPdf"
@@ -48,15 +69,18 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button"
                 android:src="@drawable/pdf"
-                android:text="  บันทึกเป็น PDF   " />
+                android:text="บันทึกเป็น PDF" />
+
             <Button
                 android:id="@+id/rechisThass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button"
+                android:src="@drawable/pdf"
                 android:text="คำแนะนำ" />
 
         </LinearLayout>
+
 
     </LinearLayout>
 

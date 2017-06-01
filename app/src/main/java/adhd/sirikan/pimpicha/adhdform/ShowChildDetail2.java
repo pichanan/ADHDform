@@ -36,6 +36,7 @@ public class ShowChildDetail2 extends AppCompatActivity {
     int txtDotype, txtChildAge;
     int risk1Int,risk2Int,risk3Int;
     String txtRisk1="",txtRisk2="", txtRisk3 = "",allrisk="";
+    ImageView backView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class ShowChildDetail2 extends AppCompatActivity {
         ImageViewPDF = (Button) findViewById(R.id.showDetailThassPdf);
         button2 = (Button) findViewById(R.id.rechisThass);
         textView = (TextView) findViewById(R.id.thassRiskhis);
+        backView = (ImageView) findViewById(R.id.backfromShowchild2);
         ImageViewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +62,13 @@ public class ShowChildDetail2 extends AppCompatActivity {
                 objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):",
                         "อาจมีความเสี่ยง คำแนะนำคือ: เฝ้าระวัง ติดตาม หรือทำแบบคัดกรองซ้ำ.\n\n" +
                         "เริ่มมีความเสี่ยง  คำแนะนำคือ: เควรให้การช่วยเหลือเบื้องต้น และติดตามผลฝ้าระวัง ติดตาม หรือทำแบบคัดกรองซ้ำ.\n\n"+"มีความเสี่ยงสูง คำแนะนำคือ: ควรนำเด็กไปพบแพทย์ทันทีเพื่อเข้าสู่กระบวนการวินิจฉัยและยืนยันผลอย่างถูกต้อง");
+            }
+        });
+        backView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
             }
         });
 
