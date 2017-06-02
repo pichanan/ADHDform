@@ -45,6 +45,12 @@ public class DetailActivity extends AppCompatActivity {
         createListViewTable1();
         createListViewTable2();
         createListViewTable3();
+        if (check1 == true&&check2==true&&check3==true) {
+            myAlert objMyAlert = new myAlert(DetailActivity.this);
+            objMyAlert.myDialog("ไม่พบประวัติการทำแบบประเมิน",
+                    "คุณยังไม่เคยทำแบบประเมินใดในเด็กคนนี้ กรุณากดปุ่มเริ่มทำแบบประเมินค่ะ");
+        }
+        createTabHost();
 
 
        /* if (check1 == 0 && check2 == 0 && check3 == 0) {
@@ -61,21 +67,8 @@ public class DetailActivity extends AppCompatActivity {
 
     }// main method
 
-    @Override
-    protected void onPostResume() {//**************************************
-        super.onPostResume();
-        createListViewTable1();
-        createListViewTable2();
-        createListViewTable3();
-        if (check1 == true&&check2==true&&check3==true) {
-            myAlert objMyAlert = new myAlert(DetailActivity.this);
-            objMyAlert.myDialog("ไม่พบประวัติการทำแบบประเมิน",
-                    "คุณยังไม่เคยทำแบบประเมินใดในเด็กคนนี้ กรุณากดปุ่มเริ่มทำแบบประเมินค่ะ");
-        }
-        createTabHost();
 
 
-    }
     private void createListViewTable3() {
         try {
 
@@ -268,6 +261,7 @@ public class DetailActivity extends AppCompatActivity {
 
         }
     }
+
 
     private void createTabHost() {
         TabHost host = (TabHost)findViewById(R.id.tabHost);

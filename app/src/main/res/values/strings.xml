@@ -88,7 +88,7 @@
     <string name="thass7">7. เล่นเสียงดัง</string>
     <string name="thass6">6. มักมีเรื่องทะเลาะวิวาทกับเด็กอื่น</string>
     <string name="thass5">5. ใจร้อน วู่วาม</string>
-    <string name="age">age:</string>
+    <string name="age">age: (6-18 ปี)</string>
     <string name="title_activity_before_test">BeforeTestActivity</string>
     <string name="selectTest">กรุณาเลือกแบบประเมินที่่ต้องการทำ</string>
     <string name="sdq1">1.ห่วงใยความรู้สึกคนอื่น</string>

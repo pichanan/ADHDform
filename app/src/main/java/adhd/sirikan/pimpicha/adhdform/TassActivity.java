@@ -110,7 +110,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             strq15 = "15. ส่งเสียงดังในห้องเรียน";
             strq16 = "16. ขาดความรับผิดชอบ";
             strq17 = "17. ไม่ตั้งใจเรียน";
-            strq18 = "18. ทำงานช้า ทำงานำม่เสร็จตามเวลาที่กำหนด";
+            strq18 = "18. ทำงานช้า ทำงานไม่เาร็จตามเวลาที่กำหนด";
             strq19 = "19. เหม่อ ใจลอย";
             strq20 = "20. ฟังอะไรประเดี๋ยวเดียว ก็หมดความสนใจ";
             strq21 = "21. โอเอ้ ใช้เวลานานกว่าจะเริ่มทำงานได้";
@@ -141,7 +141,7 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             strq15 = "15. ส่งเสียงดังในเวลาเรียน";
             strq16 = "16. ขาดความรับผิดชอบ";
             strq17 = "17. ไม่สนใจเรียน";
-            strq18 = "18. ทำงานช้า ทำงานำม่เสร็จตามเวลาที่กำหนด";
+            strq18 = "18. ทำงานช้า ทำงานไม่เาร็จตามเวลาที่กำหนด";
             strq19 = "19. เหม่อ ใจลอย";
             strq20 = "20. ทำงานสะเพร่า ไม่รอบคอบ";
             strq21 = "21. ชอบหมกงานจนทำให้มีงานค้าง";
@@ -368,8 +368,8 @@ public class TassActivity extends AppCompatActivity implements View.OnClickListe
             if (checkSpinner()) {
                 //have space
                 myAlert objMyAlert = new myAlert(TassActivity.this);
-                objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
-                        getResources().getString(R.string.message_havespece));
+                objMyAlert.myDialog("คำตอบไม่ครบ",
+                        "กรุณาตอบคำถามให้ครล 30 ข้อ");
             } else {
                 // check special
 

@@ -40,9 +40,10 @@
             android:id="@+id/imvChild"
             android:layout_width="45dp"
             android:layout_height="45dp"
-
             android:background="@drawable/add"
-            android:paddingLeft="50dp"></ImageView>
+            android:paddingLeft="50dp">
+
+        </ImageView>
     </LinearLayout>
     <LinearLayout
         android:layout_gravity="center"
@@ -54,6 +55,7 @@
         android:id="@+id/belowlvchild"
         android:layout_alignParentBottom="true">
         <ImageView
+            android:layout_margin="3dp"
             android:layout_gravity="center"
             android:id="@+id/imvDelete"
             android:layout_width="45dp"

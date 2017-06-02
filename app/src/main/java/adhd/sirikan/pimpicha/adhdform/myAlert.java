@@ -18,7 +18,21 @@ public class myAlert {
     public void myDialog(String strTitle,String strMassage) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCancelable(false);
-        builder.setIcon(R.mipmap.ic_user);
+        builder.setIcon(R.drawable.exclamation);
+        builder.setTitle(strTitle);
+        builder.setMessage(strMassage);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
+    }
+    public void myFinish(String strTitle,String strMassage) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.checked);
         builder.setTitle(strTitle);
         builder.setMessage(strMassage);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

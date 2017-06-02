@@ -81,7 +81,7 @@ public class riskSdqActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(riskSdqActivity.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น ");
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก):","ผลการประเมินนี้เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น หากมีข้อสงสัยควรปรึกษาผู้เชียวชาญ");
 
                /* Intent intent = new Intent(riskSdqActivity.this, RecommendActivity.class);
                 intent.putExtra("Login", loginString);

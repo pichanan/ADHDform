@@ -15,6 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.jjoe64.graphview.GraphView;
@@ -43,6 +44,15 @@ public class CompareActivity extends AppCompatActivity {
         getValueFromIntent();
         findCurrentDate();
         createListViewSnap();
+        ImageView imageView = (ImageView) findViewById(R.id.backfromCompare);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+
+            }
+        });
 
     }
     private void findCurrentDate() {

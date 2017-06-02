@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -29,6 +30,15 @@ public class Compare3Activity extends AppCompatActivity {
         getValueFromIntent();
         findCurrentDate();
         createListViewSnap();
+        ImageView imageView = (ImageView) findViewById(R.id.backfromCompare3);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+
+            }
+        });
 
     }
     private void createListViewSnap() {

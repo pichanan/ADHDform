@@ -66,7 +66,7 @@ public class ShowChildDetail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(ShowChildDetail.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","หากเด็กมีความเสี่ยงในด้านใด แสดงว่าคะแนนที่ท่านประเมินเด็ก มีค่ามากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ ");
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก):","หากเด็กมีความเสี่ยงในด้านใด ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ ควรทำแบบประเมินซ้ำ หรือปรึกษาผู้เชี่ยวชาญ");
             }
         });
         backView.setOnClickListener(new View.OnClickListener() {

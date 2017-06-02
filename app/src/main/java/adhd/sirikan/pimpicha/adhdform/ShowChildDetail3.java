@@ -51,7 +51,7 @@ public class ShowChildDetail3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(ShowChildDetail3.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย):","ผลการประเมินนี้เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น");
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก):","ผลการประเมินนี้เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น หากมีข้อสงสัยควรปรึกษาผู้เชียวชาญ");
             }
         });
         backView.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +117,7 @@ public class ShowChildDetail3 extends AppCompatActivity {
         intent.putExtra("age", ageString);
         intent.putExtra("name", nameString);
         intent.putExtra("Login", loginString);
-        intent.putExtra("allrisk", allRisk);
+        intent.putExtra("allRisk", allRisk);
         startActivity(intent);
 
     }

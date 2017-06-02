@@ -1,5 +1,6 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Environment;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -25,6 +27,8 @@ public class GraphCompare3Activity extends AppCompatActivity {
     String idString, loginString[], genderString, ageString,date,nameString,dateToday;
     Button button;
     TextView t1, t2;
+    ImageView imageView;
+    Button back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,16 +37,24 @@ public class GraphCompare3Activity extends AppCompatActivity {
         Log.d(tag, "select ==>" + date +" " +  cpRisk1 +risk1Int);
         button = (Button) findViewById(R.id.takeScreen3);
         t1 = (TextView) findViewById(R.id.txtDateToday3);
+        back = (Button) findViewById(R.id.backfromGraphCompare3);
         t1.setText("ชื่อ :"+nameString+" , "+"เพศ :"+genderString+" , อายุ:"+ageString+"ปี\n"+"วันที่ปัจจุบัน :"+dateToday+"\n"+"วันที่ในอดีต :"+date);
-
         GraphView graph = (GraphView) findViewById(R.id.compareGraphSdq);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(GraphCompare3Activity.this);
-                objMyAlert.myDialog("พื้นที่จัดเก็บ","ในการบันทึกครั้งนี้ไฟล์จะถูกเก็บเป็นรูปภาพ ใน Device storage/Pictures");
+                objMyAlert.myFinish("พื้นที่จัดเก็บ","ในการบันทึกครั้งนี้ไฟล์จะถูกเก็บเป็นรูปภาพ ใน Device storage/Pictures");
                 Bitmap bitmap = takeScreenshot();
                 saveBitmap(bitmap);
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+
             }
         });
         BarGraphSeries<DataPoint> barGraphSeries;
@@ -64,7 +76,7 @@ public class GraphCompare3Activity extends AppCompatActivity {
 
         });
 
-        barGraphSeries.setColor(Color.RED);
+        barGraphSeries.setColor(Color.BLUE);
         graph.addSeries(barGraphSeries);
 
 
@@ -73,7 +85,7 @@ public class GraphCompare3Activity extends AppCompatActivity {
     private void getValueFromIntent() {
         Bundle extras = getIntent().getExtras();
         idString = getIntent().getStringExtra("idString");
-        loginString = getIntent().getStringArrayExtra("loginString");
+        loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
         nameString = getIntent().getStringExtra("name");

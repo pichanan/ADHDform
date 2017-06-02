@@ -67,15 +67,10 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txtCorreParent2"/>
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="คำอธิบายกราฟ:"/>
+                    android:text="\t\t\tแกน X คือจำนวนเด็กที่ถูกทำแบบประเมิน แกน Y คือคะแนนความเสี่ยง"/>
 
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="\t\t\t\tเส้นสีเขียวคือแบบประเมิน SNAP-IV , เส้นสีเน้ำเงินคือแบบประเมิน THASS โดยดึงข้อมูลมาจากผู้ใช้ทีเป็นผู้ปกครองที่ทำแบบประเมินเด็กคนเดียวครบทั้ง 2แบบประเมิน" />
             </LinearLayout>
             <LinearLayout
                 android:gravity="center"

@@ -149,8 +149,8 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
             if (checkSpinner()) {
                 //have space
                 myAlert objMyAlert = new myAlert(SdqActivity.this);
-                objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
-                        getResources().getString(R.string.message_havespece));
+                objMyAlert.myDialog("คำตอบไม่ครบ",
+                        "กรุณาตอบคำถาให้ครบ 25 ข้อ");
             } else {
                 // check special
                 checkSpecial(idString, loginString[3]);

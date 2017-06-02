@@ -27,7 +27,7 @@
                 android:weightSum="1">
 
                 <Button
-                    android:id="@+id/backfromcompare2"
+                    android:id="@+id/backfromGraphCompare2"
                     android:layout_width="47dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:background="@drawable/button"
-                    android:text="Save Pic" />
+                    android:text=" บันทึกผลเป็นรูปภาพ " />
 
             </LinearLayout>
 

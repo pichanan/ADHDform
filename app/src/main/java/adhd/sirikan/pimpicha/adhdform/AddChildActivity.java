@@ -53,6 +53,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         //controller
         controller();
 
+
     }//main method
 
     private void controller() {
@@ -137,10 +138,12 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         if (v==button) {
             buttonController();
         }
-        if (v==backView) {
-            onBackPressed();
-            finish();
+        if (v==backView){
+            Intent intent = new Intent(AddChildActivity.this,ServiceActivity.class);
+            intent.putExtra("Login", loginString);
+            startActivity(intent);
         }
+
 
     }//onclick
 
@@ -154,21 +157,21 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
         //check  choose
         if (aBoolean) {
             //non choose
-            /*objMyAlert.myDialog(getResources().getString(R.string.title_nonChooseImage),
-                    getResources().getString(R.string.message_nonChooseImage));*/
+            objMyAlert.myDialog("ไม่พบรูปภาพ",
+                    "กรุณาเลือกรูปภาพของเด็ก");
 
         } else if (nameChildString.equals("")||ageString.equals("")) {
             //have space
-            objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
-                    getResources().getString(R.string.message_havespece));
+            objMyAlert.myDialog("พบช่องว่าง",
+                    "กรุณากรอกข้อมูลให้ครบ");
         } else if (!(maleRadioButton.isChecked()||femaleRadioButton.isChecked())){
             // radio check gender false
-            objMyAlert.myDialog(getResources().getString(R.string.title_nonGender),
-                    getResources().getString(R.string.message_nonGender));
+            objMyAlert.myDialog("ไม่พบเพศ",
+                    "กรุณาเลือกเพศของเด็ก");
 
         }else  if(ageInt>18||ageInt<6){
-            objMyAlert.myDialog(getResources().getString(R.string.title_overAge),
-                    getResources().getString(R.string.message_overAge));
+            objMyAlert.myDialog("อายุเไม่ได้อยู่ในช่วงที่กำหนอ",
+                    "แอปพลิเคชันนี้ประเมินเด็กอายุ 6 - 18 ปี");
 
         } else{
             //Rad
@@ -181,6 +184,7 @@ public class AddChildActivity extends AppCompatActivity implements View.OnClickL
 
 
         }
+
 
 
     }//butn controller

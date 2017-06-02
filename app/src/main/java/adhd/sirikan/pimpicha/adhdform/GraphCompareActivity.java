@@ -1,5 +1,6 @@
 package adhd.sirikan.pimpicha.adhdform;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Environment;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -26,6 +28,7 @@ public class GraphCompareActivity extends AppCompatActivity {
     Button button;
     TextView t1, t2;
     String gen;
+    Button back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,7 @@ public class GraphCompareActivity extends AppCompatActivity {
         BarGraphSeries<DataPoint> barGraphSeries;
         button = (Button) findViewById(R.id.takeScreen);
         t1 = (TextView) findViewById(R.id.txtDateToday);
+        back = (Button) findViewById(R.id.backfromGraphCompare);
         if(genderString.equals("0")){
             gen="ผู้ชาย";
         }else if(genderString.equals("1")){
@@ -48,9 +52,18 @@ public class GraphCompareActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(GraphCompareActivity.this);
-                    objMyAlert.myDialog("พื้นที่จัดเก็บ","ในการบันทึกครั้งนี้ไฟล์จะถูกเก็บเป็นรูปภาพ ใน Device storage/Pictures");
+                    objMyAlert.myFinish("พื้นที่จัดเก็บ","ในการบันทึกครั้งนี้ไฟล์จะถูกเก็บเป็นรูปภาพ ใน Device storage/Pictures");
                 Bitmap bitmap = takeScreenshot();
                 saveBitmap(bitmap);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+
             }
         });
 
@@ -88,7 +101,7 @@ public class GraphCompareActivity extends AppCompatActivity {
     private void getValueFromIntent() {
         Bundle extras = getIntent().getExtras();
         idString = getIntent().getStringExtra("idString");
-        loginString = getIntent().getStringArrayExtra("loginString");
+        loginString = getIntent().getStringArrayExtra("Login");
         genderString = getIntent().getStringExtra("gender");
         ageString = getIntent().getStringExtra("age");
         nameString = getIntent().getStringExtra("name");

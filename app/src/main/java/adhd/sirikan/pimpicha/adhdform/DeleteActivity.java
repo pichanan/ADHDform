@@ -140,8 +140,8 @@ public class DeleteActivity extends AppCompatActivity {
                     case DialogInterface.BUTTON_NEGATIVE:
                         // No button clicked
                         // do nothing
-                        Toast.makeText(DeleteActivity.this, "No Clicked",
-                                Toast.LENGTH_LONG).show();
+                        /*Toast.makeText(DeleteActivity.this, "No Clicked",
+                                Toast.LENGTH_LONG).show();*/
                         break;
                 }
             }

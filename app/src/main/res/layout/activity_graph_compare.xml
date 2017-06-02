@@ -24,8 +24,7 @@
             android:background="@color/colorPrimaryDark"
             android:weightSum="1">
             <Button
-
-                android:id="@+id/backfromcompare"
+                android:id="@+id/backfromGraphCompare"
                 android:layout_width="54dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -49,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/button"
-                android:text="บันทึกผลเป็นรูปภาพ" />
+                android:text=" บันทึกผลเป็นรูปภาพ " />
 
         </LinearLayout>
 

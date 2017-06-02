@@ -176,8 +176,8 @@ public class SnapActivity extends AppCompatActivity implements View.OnClickListe
             if (checkSpinner()) {
                 //have space
                 myAlert objMyAlert = new myAlert(SnapActivity.this);
-                objMyAlert.myDialog(getResources().getString(R.string.title_havespace),
-                        getResources().getString(R.string.message_havespece));
+                objMyAlert.myDialog("คำตอบไม่ครบ",
+                        "กรุณาตอบคำถามให้ครบ 26 ข้อ ");
             } else {
                 // check special
                 checkSpecial(idString, loginString[3]);

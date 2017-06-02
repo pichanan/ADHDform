@@ -160,7 +160,7 @@ public class PDF3Activity extends AppCompatActivity {
         ageString = getIntent().getStringExtra("age");
         nameString = getIntent().getStringExtra("name");
         date = getIntent().getStringExtra("date");
-        allrisk = getIntent().getStringExtra("allrisk");
+        allrisk = getIntent().getStringExtra("allRisk");
         loginString = getIntent().getStringArrayExtra("Login");
         arrAns = new String[25];
         arrAns[0] = sspn;

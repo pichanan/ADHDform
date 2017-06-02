@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -30,6 +31,15 @@ public class Compare2Activity extends AppCompatActivity {
         getValueFromIntent();
         findCurrentDate();
         createListViewThass();
+        ImageView imageView = (ImageView) findViewById(R.id.backfromCompare2);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+
+            }
+        });
     }
     private void findCurrentDate() {
         calendar = java.util.Calendar.getInstance();
