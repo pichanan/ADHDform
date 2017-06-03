@@ -29,6 +29,7 @@ public class GraphCompare3Activity extends AppCompatActivity {
     TextView t1, t2;
     ImageView imageView;
     Button back;
+    String gen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,12 @@ public class GraphCompare3Activity extends AppCompatActivity {
         button = (Button) findViewById(R.id.takeScreen3);
         t1 = (TextView) findViewById(R.id.txtDateToday3);
         back = (Button) findViewById(R.id.backfromGraphCompare3);
-        t1.setText("ชื่อ :"+nameString+" , "+"เพศ :"+genderString+" , อายุ:"+ageString+"ปี\n"+"วันที่ปัจจุบัน :"+dateToday+"\n"+"วันที่ในอดีต :"+date);
+        if(genderString.equals("0")){
+            gen="ผู้ชาย";
+        }else if(genderString.equals("1")){
+            gen = "ผู้หญิง";
+        }
+        t1.setText("ชื่อ :"+nameString+" , "+"เพศ :"+gen+" , อายุ:"+ageString+"ปี\n"+"วันที่ปัจจุบัน :"+dateToday+"\n"+"วันที่ในอดีต :"+date);
         GraphView graph = (GraphView) findViewById(R.id.compareGraphSdq);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
