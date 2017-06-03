@@ -84,7 +84,7 @@ public class riskSnapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(riskSnapActivity.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก):","หากเด็กมีความเสี่ยงในด้านใด แสดงว่าคะแนนที่ท่านประเมินเด็ก มีค่ามากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ ");
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :","หากเด็กมีความเสี่ยงในด้านใด แสดงว่าคะแนนที่ท่านประเมินเด็ก มีค่ามากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ\n" + "หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย");
                 /*Intent intent = new Intent(riskSnapActivity.this, RecommendActivity.class);
                 intent.putExtra("Login", loginString);
                 startActivity(intent);*/
