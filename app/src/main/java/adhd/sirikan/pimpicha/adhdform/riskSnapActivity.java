@@ -84,8 +84,13 @@ public class riskSnapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(riskSnapActivity.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :","หากเด็กมีความเสี่ยงในด้านใด แสดงว่าคะแนนที่ท่านประเมินเด็ก มีค่ามากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ\n" + "หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย");
-                /*Intent intent = new Intent(riskSnapActivity.this, RecommendActivity.class);
+                if(loginString[3].equals("1")) {//ผปค
+                    objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :",
+                            "คะแนนมาตรฐานด้านสมาธิ:16\nด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:13\nด้านดื้อ ต่อต้าน:25"+"\nหากคะแนนที่ได้ด้านใดมากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ");
+                }else{
+                    objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :",
+                            "คะแนนมาตรฐานด้านสมาธิ:23\nด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:16\nด้านดื้อ ต่อต้าน:11"+"\nหากคะแนนที่ได้ด้านใดมากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ");
+                }                /*Intent intent = new Intent(riskSnapActivity.this, RecommendActivity.class);
                 intent.putExtra("Login", loginString);
                 startActivity(intent);*/
             }
@@ -541,45 +546,36 @@ public class riskSnapActivity extends AppCompatActivity {
 
 
    private void analyzeRisk() {
-        if(loginString[3].equals("1")){//ผปค
+       if(loginString[3].equals("1")){//ผปค
 
-            if(risk1Int>16){
-                r1 = "ด้านสมาธิ: มีความเสี่ยง";
-            }
-            if (risk2Int>13){
-                r2="ด้านซน อยู่ไม่นิ่ง /หุนหันพลันแล่น: มีความเสี่ยง";
-            }
-            if(risk3Int>15){
-                r3 = "อาการดื้อ ต่อต้าน: มีความเสี่ยง";
-            }
-
-            if (r1 == "" && r2 == "" && r3 == "") {
-                textView.setText("ไม่มีความเสี่ยง");
-                textView.setTextColor(Color.parseColor("#1bb730"));
-            } else{
-                textView.setText(r1+"\n"+r2+"\n" +r3);
-            }
-            // ครู
-        }else{
-            if(risk1Int>23){
-                r1 = "ด้านสมาธิ: มีความเสี่ยง";
-            }
-            if (risk2Int>16){
-                r2="ด้านซน อยู่ไม่นิ่ง/หุนหันพลันแล่น: มีความเสี่ยง";
-            }
-            if(risk3Int>11){
-                r3 = "อาการดื้อ ต่อต้าน: มีความเสี่ยง";
-            }
-
-            if (r1 == "" && r2 == "" && r3 == "") {
-                textView.setText("ไม่มีความเสี่ยง");
-                textView.setTextColor(Color.parseColor("#1bb730"));
-            } else{
-                textView.setText(r1+"\n"+r2+"\n" +r3);
-            }
+           if(risk1Int>16){
+               r1 = "มีความเสี่ยง";
+           }
+           if (risk2Int>13){
+               r2="มีความเสี่ยง";
+           }
+           if(risk3Int>15){
+               r3 = "มีความเสี่ยง";
+           }
 
 
-        }
+          textView.setText("คะแนนด้านสมาธิ:"+risk1Int+":"+r1+"\n"+"คะแนนด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:"+risk2Int+":"+r2+"\n"+"คะแนนด้านดื้อ ต่อต้าน:"+risk3Int+":"+r3+"\n");
+
+           // ครู
+       }else{
+           if(risk1Int>23){
+               r1 = "มีความเสี่ยง";
+           }
+           if (risk2Int>16){
+               r2="มีความเสี่ยง";
+           }
+           if(risk3Int>11){
+               r3 = "มีความเสี่ยง";
+           }
+
+           textView.setText("คะแนนด้านสมาธิ:"+risk1Int+":"+r1+"\n"+"คะแนนด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:"+risk2Int+":"+r2+"\n"+"คะแนนด้านดื้อ ต่อต้าน:"+risk3Int+":"+r3+"\n");
+
+       }
 
     }
 

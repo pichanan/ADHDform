@@ -345,7 +345,8 @@ public class PDF3Activity extends AppCompatActivity {
             document.add(table);
             document.add(new Paragraph("คะแนนที่ได้ของอาการสมาธิสั้น : "+String.valueOf(risk1Int), font));
             document.add(new Paragraph("ผลการประเมินเบื้องติน : " + allrisk, font));
-
+            document.add(new Paragraph("-------------------------------------------------------------------", font));
+            document.add(new Paragraph("0-5 คะแนน : ปกติ , 6 คะแนน : เสี่ยง , 7 – 0 คะแนน : มีปัญหา", font));
 
             document.close();
             previewPdf();

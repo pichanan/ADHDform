@@ -51,7 +51,8 @@ public class ShowChildDetail3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(ShowChildDetail3.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :","ผลการประเมินนี้เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น หากมีข้อสงสัยควรปรึกษาผู้เชียวชาญ\n" + "หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย");
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :",
+                        "0-5 คะแนน : ปกติ , 6 คะแนน : เสี่ยง , 7 – 0 คะแนน : มีปัญหา");
             }
         });
         backView.setOnClickListener(new View.OnClickListener() {
@@ -74,12 +75,11 @@ public class ShowChildDetail3 extends AppCompatActivity {
         }else  if(Integer.parseInt(risk1)>=7&&Integer.parseInt(risk1)<=10){
             allRisk = "มีปัญหา";
         }
-        if(allRisk.equals("ปกติ")){
-            textView.setText(allRisk);
-            textView.setTextColor(Color.parseColor("#1bb730"));
-        }else{
-            textView.setText(allRisk);
-        }
+
+
+            textView.setText("คะแนนที่ได้ : "+risk1+" "+allRisk);
+
+
         findId();
     }
 
@@ -346,13 +346,13 @@ public class ShowChildDetail3 extends AppCompatActivity {
             }
 
             if(ch21.equals("0")){
-                ch21 = "0";
+                ch21 = "2";
                 spn21 = (TextView) findViewById(R.id.hisSdq21Choice1);
             }else if(ch21.equals("1")){
                 ch21 = "1";
                 spn21 = (TextView) findViewById(R.id.hisSdq21Choice2);
             }else if(ch21.equals("2")){
-                ch21 = "2";
+                ch21 = "0";
                 spn21 = (TextView) findViewById(R.id.hisSdq21Choice3);
             }
 
@@ -390,13 +390,13 @@ public class ShowChildDetail3 extends AppCompatActivity {
             }
 
             if(ch25.equals("0")){
-                ch25 = "0";
+                ch25 = "2";
                 spn25 = (TextView) findViewById(R.id.hisSdq25Choice1);
             }else if(ch25.equals("1")){
                 ch25 = "1";
                 spn25 = (TextView) findViewById(R.id.hisSdq25Choice2);
             }else if(ch25.equals("2")){
-                ch25 = "2";
+                ch25 = "0";
                 spn25 = (TextView) findViewById(R.id.hisSdq25Choice3);
             }
 

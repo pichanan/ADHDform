@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button"
                 android:src="@drawable/pdf"
-                android:text="คำแนะนำ" />
+                android:text="เกณฑ์การแปลผล" />
 
         </LinearLayout>
 

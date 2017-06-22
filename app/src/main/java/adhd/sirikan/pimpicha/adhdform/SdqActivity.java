@@ -397,11 +397,11 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
         if(spn21.equals("-")){
             spn21 = "-";
         }else if(spn21.equals("ไม่จริง")){
-            spn21 = "0";
+            spn21 = "2";
         }else if(spn21.equals("จริงบางครั้ง")){
             spn21 = "1";
         }else {
-            spn21 = "2";
+            spn21 = "0";
         }
         spn22 = spinnerView22.getSelectedItem().toString();
         tmpspn22 = spn22;
@@ -441,11 +441,11 @@ public class SdqActivity extends AppCompatActivity implements View.OnClickListen
         if(spn25.equals("-")){
             spn25 = "-";
         }else if(spn25.equals("ไม่จริง")){
-            spn25 = "0";
+            spn25 = "2";
         }else if(spn25.equals("จริงบางครั้ง")){
             spn25 = "1";
         }else {
-            spn25 = "2";
+            spn25 = "0";
         }
 
     }

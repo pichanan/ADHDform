@@ -111,7 +111,7 @@ public class Compare2Activity extends AppCompatActivity {
                         cpRisk1 = Integer.parseInt(resultStrings[33]);
                         cpRisk2 = Integer.parseInt(resultStrings[34]);
                         cpRisk3 = Integer.parseInt(resultStrings[35]);
-                        date = resultStrings[34];
+                        date = resultStrings[38];
 
                         putIntent();
 

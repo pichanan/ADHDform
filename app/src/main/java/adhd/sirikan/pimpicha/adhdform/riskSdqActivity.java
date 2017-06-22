@@ -81,8 +81,8 @@ public class riskSdqActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(riskSdqActivity.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :","ผลการประเมินนี้เป็นการประเมินความเสี่ยงเบื้องต้นสมาธิสั้นโดยรวมเท่านั้น หากมีข้อสงสัยควรปรึกษาผู้เชียวชาญ\n" + "หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย");
-
+                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :",
+                        "0-5 คะแนน : ปกติ , 6 คะแนน : เสี่ยง , 7 – 0 คะแนน : มีปัญหา");
                /* Intent intent = new Intent(riskSdqActivity.this, RecommendActivity.class);
                 intent.putExtra("Login", loginString);
                 startActivity(intent);*/
@@ -449,7 +449,7 @@ public class riskSdqActivity extends AppCompatActivity {
             }else  if(riskInt>=7&&riskInt<=10){
                 allRisk = "มีปัญหา";
             }
-        textView.setText(allRisk);
+        textView.setText("คะแนนที่ได้ : "+riskInt+" "+allRisk);
 
     }
 

@@ -35,6 +35,7 @@ public class ShowChildDetail extends AppCompatActivity {
             sspn14, sspn15, sspn16, sspn17, sspn18, sspn19, sspn20, sspn21, sspn22, sspn23, sspn24, sspn25, sspn26,date;
     String r1="",r2="",r3="";
     ImageView backView;
+    String txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,14 @@ public class ShowChildDetail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myAlert objMyAlert = new myAlert(ShowChildDetail.this);
-                objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :","หากเด็กมีความเสี่ยงในด้านใด ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ ควรทำแบบประเมินซ้ำ หรือปรึกษาผู้เชี่ยวชาญ\n" + "หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย");
+                if(loginString[3].equals("1")) {//ผปค
+                    objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :",
+                            "คะแนนมาตรฐานด้านสมาธิ:16\nด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:13\nด้านดื้อ ต่อต้าน:25"+"\nหากคะแนนที่ได้ด้านใดมากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ");
+                }else{
+                    objMyAlert.myDialog("คำแนะนำ(ไม่ใช่การวินิจฉัย ในการตัดสินปัญหาเด็ก)หากต้องการพบแพทย์ ควรบันทึกผลการประเมินเบื้องต้นเป็น PDF เพื่อประกอบการวินิจฉัย :",
+                            "คะแนนมาตรฐานด้านสมาธิ:23\nด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:16\nด้านดื้อ ต่อต้าน:11"+"\nหากคะแนนที่ได้ด้านใดมากกว่าคะแนนมาตรฐาน ให้สงสัยว่าเด็กมีความเสี่ยงในด้านนั้นๆ");
+                }
+
             }
         });
         backView.setOnClickListener(new View.OnClickListener() {
@@ -534,6 +542,8 @@ public class ShowChildDetail extends AppCompatActivity {
 
 
 
+
+
         } catch (Exception e) {
             Log.d(tag, "e query ==>" + e.toString());
         }
@@ -593,39 +603,34 @@ public class ShowChildDetail extends AppCompatActivity {
         if(loginString[3].equals("1")){//ผปค
 
             if(Integer.parseInt(risk1)>16){
-                r1 = "ด้านสมาธิ: มีความเสี่ยง";
+                r1 = "มีความเสี่ยง";
             }
             if (Integer.parseInt(risk2)>13){
-                r2="ด้านซน อยู่ไม่นิ่ง /หุนหันพลันแล่น: มีความเสี่ยง";
+                r2="มีความเสี่ยง";
             }
             if(Integer.parseInt(risk3)>15){
-                r3 = "อาการดื้อ ต่อต้าน: มีความเสี่ยง";
+                r3 = "มีความเสี่ยง";
             }
 
-            if (r1 == "" && r2 == "" && r3 == "") {
-                textView.setText("ไม่มีความเสี่ยง");
-                textView.setTextColor(Color.parseColor("#1bb730"));
-            } else{
-                textView.setText(r1+"\n"+r2+"\n" +r3);
-            }
+
+            textView.setText("คะแนนด้านสมาธิ:"+risk1+":"+r1+"\n"+"คะแนนด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:"+risk2+":"+r2+"\n"+"คะแนนด้านดื้อ ต่อต้าน:"+risk3+":"+r3+"\n");
+
             // ครู
         }else{
             if(Integer.parseInt(risk1)>23){
-                r1 = "ด้านสมาธิ: มีความเสี่ยง";
+                r1 = "มีความเสี่ยง";
             }
             if (Integer.parseInt(risk2)>16){
-                r2="ด้านซน อยู่ไม่นิ่ง /หุนหันพลันแล่น: มีความเสี่ยง";
+                r2="มีความเสี่ยง";
             }
             if(Integer.parseInt(risk3)>11){
-                r3 = "อาการดื้อ ต่อต้าน: มีความเสี่ยง";
+                r3 = "มีความเสี่ยง";
             }
 
-            if (r1 == "" && r2 == "" && r3 == "") {
-                textView.setText("ไม่มีความเสี่ยง");
-                textView.setTextColor(Color.parseColor("#1bb730"));
-            } else{
-                textView.setText(r1+"\n"+r2+"\n" +r3);
-            }
+
+
+                textView.setText("คะแนนด้านสมาธิ:"+risk1+":"+r1+"\n"+"คะแนนด้านซนอยู่ไม่นิ่ง/หุนหันพลันแล่น:"+risk2+":"+r2+"\n"+"คะแนนด้านดื้อ ต่อต้าน:"+risk3+":"+r3+"\n");
+
 
 
         }
